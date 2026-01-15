@@ -1,0 +1,34 @@
+.correct_values_wrapper{
+    padding: 50px 0;
+    position: relative;
+}
+.correct_values_content_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.correct_values_left{
+    width: 48%;
+}
+.correct_values_right{
+    width: 48%;
+    border-radius: 10px;
+    max-height: 700px;
+    overflow: hidden;
+}
+.correct_values_right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.correct_values_left h1{
+    margin-bottom: 30px;
+}
+.correct_values_left h2{
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+.correct_values_left p{
+    margin: 10px 0;
+    color: rgba(55, 54, 54, 1);
+}

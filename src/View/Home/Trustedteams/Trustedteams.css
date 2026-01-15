@@ -1,0 +1,18 @@
+.trusted_teams_wrapper {
+  padding: 50px 0;
+}
+.trusted_teams_content_wrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.trusted_teams_slider_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trusted_teams_slider_wrapper img {
+  width: 160px !important;
+  height: auto;
+  min-width: 100px !important;
+  object-fit: cover;
+}

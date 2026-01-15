@@ -1,0 +1,58 @@
+.meet_engage_wrapper {
+  padding: 50px 0;
+}
+.meet_engage_content_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.left_engage_content {
+  width: 60%;
+}
+.right_engage_img {
+  width: 35%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.right_engage_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.left_engage_content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.left_engage_content p {
+  font-size: 1rem;
+  color: rgba(55, 54, 54, 1);
+}
+.left_engage_content li {
+  font-size: 1rem;
+  color: rgba(55, 54, 54, 1);
+  margin-left: 20px;
+}
+.engage_btn_wrapper{
+    display: flex;
+    gap: 20px;
+    margin: 25px 0;
+}
+.engage_btn_wrapper button:first-child{
+    color: rgba(0, 0, 128, 1);
+    border: 1px solid rgba(0, 0, 0, 1);
+    background-color: transparent;
+}
+.engage_btn_wrapper button:last-child{
+    border: 1px solid rgba(1, 130, 252, 1);
+    background-color: transparent;
+    color: rgba(1, 130, 252, 1);
+}
+.enage_img_grid_wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 25px;
+}
+.enage_img_grid_wrapper img{
+    width: 100%;
+    height: 290px;
+}

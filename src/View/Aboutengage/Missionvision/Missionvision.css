@@ -1,0 +1,80 @@
+.mission_vission_wrapper{
+    padding: 80px 0;
+}
+.mission_vision_content_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mission_vission_box_wrapper{
+    display: flex;
+    gap: 20px;
+}
+.mission_box{
+    width: 48%;
+    padding: 25px;
+    background-color: #f0f4fe;
+    border-radius: 10px;
+}
+.mission_content{
+    width: 52%;
+}
+.mission_content ul li{
+    color: rgba(55, 54, 54, 1);
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.mission_content ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-bottom: 30px;
+}
+.mission_box h2{
+    padding: 14px 20px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgba(1, 130, 252, 1);
+    margin-bottom: 15px;
+    letter-spacing: 0.1rem;
+}
+.mission_box p{
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+
+}
+.mission_img_wrapper{
+    width: 45%;
+    height: 60vh;
+    position: relative;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;  
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+}
+.mission_img_wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    z-index: 8;
+}
+.mission_img_wrapper h1{
+    color: #fff;
+    z-index: 9;
+    font-size: 3.1rem;
+    font-weight: 700;
+    width: fit-content;
+    letter-spacing: 0.2rem;
+    line-height: 3.7rem;
+    text-align: right;
+}
