@@ -4,6 +4,8 @@ import Mainlayout from './View/Mainlayout/Mainlayout'
 import Home from './View/Home/Home'
 import EngagementSolutions from './View/EngagementSolutions/EngagementSolutions'
 import Aboutengage from './View/Aboutengage/Aboutengage'
+import Ongoingengage from './View/Ongoingengage/Ongoingengage'
+import Onboarding from './View/Onboarding/Onboarding'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
              <Route path='/' element={<Home/>} />
              <Route path='/solutions/engagement' element={<EngagementSolutions/>}/>
              <Route path='/about' element={<Aboutengage/>}/>
+             <Route path='/solutions/ongoing-engage' element={<Ongoingengage/>}/> 
+             <Route path='/solutions/onboarding' element={<Onboarding/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

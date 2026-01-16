@@ -1,0 +1,38 @@
+.team_participate_Wrappper {
+  padding: 40px 0 50px 0;
+}
+.team_participate_content_Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.team_participate_img {
+  width: 48%;
+  height: 60vh;
+  max-height: 60vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.team_participate_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team_participate_content {
+  width: 48%;
+}
+.team_participate_content p {
+  font-size: 1rem;
+  color: rgba(55, 54, 54, 1);
+}
+.team_participate_content ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 20px;
+}
+.team_participate_content ul li {
+  font-size: 1rem;
+  color: rgba(55, 54, 54, 1);
+  margin-left: 25px;
+}

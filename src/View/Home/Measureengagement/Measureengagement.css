@@ -11,6 +11,16 @@
   margin-inline: auto;
   border-radius: 15px;
   padding: 30px 0;
+  align-items: center;
+}
+.measure_engagement_content ul{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  margin: 10px 0;
+}
+.measure_engagement_content ul li{
+  margin-left: 45px;
 }
 
 .measure_engagement_img {

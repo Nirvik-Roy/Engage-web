@@ -1,0 +1,57 @@
+import React from 'react'
+import BannerLayout from '../Layout/BannerLayout/BannerLayout'
+import Buildculture from './Buildculture/Buildculture'
+import Engagerythm from './Engagerythm/Engagerythm'
+import Teamparticipate from './Teamparticipate/Teamparticipate'
+import sample from '../../assets/image 222.png'
+import Rythmsteps from './Rythmsteps/Rythmsteps'
+import Rythmpackage from './Rythmpackage/Rythmpackage'
+import Teamchoose from './Teamchoose/Teamchoose'
+import Buildengagement from '../Home/Buildengagement/Buildengagement'
+const Ongoingengage = () => {
+    return (
+        <>
+            <BannerLayout title={'Ongoing engagement that fits the flow of work'} />
+            <Buildculture />
+            <Engagerythm />
+            <Teamparticipate />
+            <div className='measure_engagement_wrapper'>
+                <div className='container measure_engagement_content_wrapper'>
+                    <div className='measure_engagement_content'>
+                        <h1 className='heading' style={{
+                            marginBottom: '15px',
+                            fontSize: '3.8rem',
+                            lineHeight: '5rem'
+                        }}>Measure engagement with confidence</h1>
+                        <p>Ngage tracks participation and engagement trends using the Ngage Engagement Score (NES) — a clear, leadership-ready view of engagement over time.
+                        </p>
+
+                        <p style={{
+                            marginTop: '15px'
+                        }}>NES helps HR teams:</p>
+
+                        <ul>
+                            <li>See who is participating</li>
+                            <li>Understand engagement consistency</li>
+                            <li>Spot trends early</li>
+                            <li>Report engagement clearly to leadership</li>
+                        </ul>
+                        <p style={{
+                            marginTop: '15px'
+                        }}>No complex dashboards. Just insight that makes sense.
+                        </p>
+                    </div>
+                    <div className='measure_engagement_img'>
+                        <img src={sample} />
+                    </div>
+                </div>
+            </div>
+            <Rythmsteps />
+            <Rythmpackage/>
+            <Teamchoose/>
+            <Buildengagement demobtn={true} explorebtn={true} para={'Ngage Rhythm gives teams a simple way to stay connected — without turning engagement into a project.'} title={'Ready to build your rhythm?'}/>
+        </>
+    )
+}
+
+export default Ongoingengage

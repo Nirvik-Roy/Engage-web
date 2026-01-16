@@ -1,5 +1,6 @@
 .build_engagement_wrapper {
   margin: 50px 0 70px 0;
+  padding: 30px 0;
 }
 .build_engagement_content {
   width: 550px;
@@ -20,6 +21,15 @@
   font-weight: 700;
   font-size: 1.3rem;
   margin-top: 15px;
+}
+.build_engagement_content ul{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.build_engagement_content ul li{
+  color: #fff;
+  margin-left: 15px;
 }
 .build_engagement_btn_wrapper {
   display: flex;

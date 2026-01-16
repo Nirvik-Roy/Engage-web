@@ -1,0 +1,20 @@
+.ngage_pricing_wrapper{
+    padding: 50px 0;
+}
+.ngage_pricing_wrapper .heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.ngage_pricing_wrapper .para_head{
+    color: rgba(55, 54, 54, 1);
+    text-align: center;
+    width: 900px;
+    margin-inline: auto;
+    font-size: 1.2rem;
+}
+.ngage_pricing_wrapper .para_head span{
+    font-weight: 700;
+}
+.ngage_pricing_wrapper .solutions_engage_world{
+    max-height: 450px;
+}
