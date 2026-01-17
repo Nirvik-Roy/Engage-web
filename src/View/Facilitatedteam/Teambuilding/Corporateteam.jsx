@@ -1,0 +1,45 @@
+import React from 'react'
+import bgImg from '../../../assets/Rectangle 6682.png'
+import img from '../../../assets/Group 1597882971 (1).png'
+import button from '../../../assets/svg159.svg'
+import buttonIcon2 from '../../../assets/svg159 (2).svg'
+import './Teambuilding.css'
+const Corporateteam = () => {
+    return (
+        <>
+            <div className='help_new_hires_wrapper'>
+                <img src={bgImg} style={{
+                    position: 'absolute',
+                    top: '-100%',
+                    left: '0'
+                }} />
+                <div className='container  help_new_hires_content_wrapper'>
+                    <div className='help_new_hires_content'>
+                        <h1 className='heading' style={{
+                            lineHeight:'4rem'
+                        }}> A better way to run corporate team building</h1>
+                        <p style={{
+                            marginBottom: '10px',
+                            marginTop:'10px'
+                        }}>Ngage Play Day is a fully facilitated, in-person team building experience powered by the Ngage engagement system.
+                            <pre />
+                            Activities are designed to encourage collaboration, communication, and light competition — without requiring athletic ability or confidence to participate.
+                            <pre />
+                            The result is team building that feels natural, inclusive, and engaging.
+                        </p>
+                        <div className='corporate_btn_wrapper'>
+                            <button className='base_btn_design'>Explore Ngage World<img src={button} /></button>
+                            <button className='base_btn_design'>Get a demo<img src={buttonIcon2} /></button>
+                        </div>
+
+                    </div>
+                    <div className='help_new_hires_img'>
+                        <img src={img} />
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default Corporateteam

@@ -1,0 +1,17 @@
+.corporate_btn_wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.corporate_btn_wrapper button:nth-child(1){
+    color: rgba(0, 0, 128, 1);
+    border: 1px solid rgba(0, 0, 128, 1);
+    background-color: transparent;
+}
+.corporate_btn_wrapper button:nth-child(2){
+    color: rgba(1, 130, 252, 1);
+    border: 1px solid rgba(1, 130, 252, 1);
+    background-color: transparent;
+}

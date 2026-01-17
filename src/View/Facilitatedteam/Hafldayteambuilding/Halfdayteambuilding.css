@@ -1,0 +1,9 @@
+.half_day_team_build_Wrapper{
+    flex-direction: row;
+}
+.half_day_team_wrapper{
+    padding-bottom: 50px;
+}
+.half_day_team_wrapper .solutions_engage_world{
+    height: 600px;
+}

@@ -1,0 +1,40 @@
+.pagination_wrapper {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+    align-items: center;
+    margin-top: 60px;
+    gap: 5px;
+}
+
+.pagination_wrapper p {
+    border-radius: 5px;
+    font-size: 13px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    transition: 0.2s linear all;
+    cursor: pointer;
+    border: 1px solid rgba(241, 241, 241, 1);
+}
+
+.pagination_wrapper p:hover {
+    background-color: #e2e2e2;
+}
+
+.pagination_wrapper i {
+    font-size: 0.7rem;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+        border: 1px solid rgba(241, 241, 241, 1);
+        border-radius: 50%;
+}

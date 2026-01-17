@@ -1,0 +1,81 @@
+.games_filter_wrapper{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.search_input{
+    width: 100%;
+    position: relative;
+}
+.search_input input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(217, 217, 217, 1);
+    padding-left: 40px;
+    font-size: 1rem;
+    border-radius: 12px;
+}
+.search_input img{
+    position: absolute;
+    top: 14px;
+    left: 10px;
+}
+.games_filter_dropdown_wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 10px;
+}
+.games_filter_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.games_filter_head h4{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.games_filter_checkbox_Wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 20px;
+}
+.games_filter_checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+.games_filter_checkbox p{
+    color: rgba(70, 70, 70, 1);
+    font-size: 18px;
+}
+.games_filter_checkbox input{
+    width: 20px;
+    height: 20px;
+    accent-color: rgba(0, 0, 128, 1);
+}
+.games_button_dropdown_rapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.games_button_dropdown_rapper button:first-child{
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 128, 1);
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.games_button_dropdown_rapper button:last-child{
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgba(157, 157, 157, 1);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

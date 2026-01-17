@@ -3,7 +3,7 @@ import './Buildengagement.css'
 import bgImg from '../../../assets/Rectangle 6690.png'
 import buttonIcon from '../../../assets/svg159.svg'
 import buttonIcon2 from '../../../assets/svg159 (1).svg'
-const Buildengagement = ({ title, description, demobtn, explorebtn, para, list = [],para2 }) => {
+const Buildengagement = ({ title, description, demobtn, explorebtn, para, list = [],para2,expertBtn }) => {
     return (
         <>
             <div className='build_engagement_wrapper' style={{
@@ -24,9 +24,9 @@ const Buildengagement = ({ title, description, demobtn, explorebtn, para, list =
                         <p>{para2}</p>
 
                         <div className='build_engagement_btn_wrapper'>
+                            {expertBtn && <button className='base_btn_design white_btn'>Talk to an Expert <img src={buttonIcon} /></button>}
                             {demobtn && <button className='base_btn_design white_btn'>Get a Demo <img src={buttonIcon} /></button>}
                             {explorebtn && <button className='base_btn_design transparent_btn'>Explore Ngage World <img src={buttonIcon2} /></button>}
-
                         </div>
                     </div>
 

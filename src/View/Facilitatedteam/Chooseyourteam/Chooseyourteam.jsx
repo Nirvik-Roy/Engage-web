@@ -1,0 +1,101 @@
+import React from 'react'
+import cardImg from '../../../assets/c916209092a6d3fef78320b3722db5f4b286cbe1.jpg'
+import cardImg2 from '../../../assets/76eb601ae8cbdb510a11f197e2af52a513a36fc9.jpg'
+import cardImg3 from '../../../assets/b191c8ca226e6d6e84daec673db7abc4b9a3a71b.jpg'
+const Chooseyourteam = () => {
+    const cardData = [
+        {
+            id: 1,
+            img: cardImg,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 2,
+            img: cardImg,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 3,
+            img: cardImg2,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 4,
+            img: cardImg3,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 5,
+            img: cardImg,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 6,
+            img: cardImg2,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 7,
+            img: cardImg,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 8,
+            img: cardImg3,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 9,
+            img: cardImg,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            id: 10,
+            img: cardImg,
+            title: 'Christmas  Challenge',
+            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+    ]
+    return (
+        <>
+            <div className='container engage_rythm_content_wrapper'>
+                <h1 className='heading'>Choose your team building experience</h1>
+                <p>All Ngage Play Day sessions are built around a set of proven team building formats.
+                    Teams choose one experience as the foundation, regardless of duration.
+                </p>
+
+            </div>
+
+            <div className='engage_rythm_cards_wrapper'>
+                {cardData.map((e, i) => (
+                    <div key={i} className='engage_rythm_card' >
+                        <div className='engage_rythm_img'>
+                            <img src={e.img} />
+                            <div className='number'>{e.id}</div>
+                        </div>
+                        <h4>{e.title}</h4>
+                        <small>{e.para}</small>
+                    </div>
+
+                ))}
+            </div>
+            <span style={{
+                fontWeight: '700',
+                textAlign: 'center',
+                display: 'block',
+                marginTop: '20px'
+            }}>Pricing varies by experience and format. Select an experience to receive a tailored quote.</span>
+        </>
+    )
+}
+
+export default Chooseyourteam

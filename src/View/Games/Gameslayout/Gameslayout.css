@@ -1,0 +1,7 @@
+.games_layout_wrapper {
+  padding: 70px  0 50px 0;
+}
+.games_layout_content_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
