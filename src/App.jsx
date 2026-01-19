@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes,Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
 import Mainlayout from './View/Mainlayout/Mainlayout'
 import Home from './View/Home/Home'
@@ -14,31 +14,39 @@ import RefundPolicy from './View/RefundPolicy/RefundPolicy'
 import TermsConditions from './View/TermsConditions/TermsConditions'
 import PrivacyPolicy from './View/PrivacyPolicy/PrivacyPolicy'
 import Contact from './View/Contact/Contact'
+import { useEffect } from 'react'
 
 function App() {
+  const location = useLocation()
+  useEffect(() => {
+    window.scrollTo({
+      top: '0',
+      behavior: 'instant'
+    })
+  }, [location.pathname])
   return (
     <>
-      <BrowserRouter>
+      
         <Routes>
-          <Route path='/' element={<Mainlayout/>}>
-             <Route path='/' element={<Home/>} />
-             <Route path='/solutions/engagement' element={<EngagementSolutions/>}/>
-             <Route path='/about-engage' element={<Aboutengage/>}/>
-             <Route path='/solutions/ongoing-engage' element={<Ongoingengage/>}/> 
-             <Route path='/solutions/onboarding' element={<Onboarding/>}/>
-             <Route path='/solutions/facilitated-team' element={<Facilitatedteam/>}/>
-             <Route path='/games' element={<Gameslayout/>}>
-                 <Route path='library' element={<Gameslibrary/>}/>
-             </Route>
-             <Route path='/faq' element={<Faq/>}/>
-             <Route path='/refund-policy' element={<RefundPolicy/>}/>
-             <Route path='/terms-conditions' element={<TermsConditions/>}/>
-             <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
-             <Route path='/contact-us' element={<Contact/>}/>
+          <Route path='/' element={<Mainlayout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/solutions/engagement' element={<EngagementSolutions />} />
+            <Route path='/about-engage' element={<Aboutengage />} />
+            <Route path='/solutions/ongoing-engage' element={<Ongoingengage />} />
+            <Route path='/solutions/onboarding' element={<Onboarding />} />
+            <Route path='/solutions/facilitated-team' element={<Facilitatedteam />} />
+            <Route path='/games' element={<Gameslayout />}>
+              <Route path='library' element={<Gameslibrary />} />
+            </Route>
+            <Route path='/faq' element={<Faq />} />
+            <Route path='/refund-policy' element={<RefundPolicy />} />
+            <Route path='/terms-conditions' element={<TermsConditions />} />
+            <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+            <Route path='/contact-us' element={<Contact />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </>
+      </>
+    
   )
 }
 

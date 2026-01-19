@@ -3,6 +3,7 @@
     position: relative;
     padding: 50px 0;
     background: linear-gradient(to top,#f2f9ff,#fff);
+    z-index: 99;
 }
 .footer_container{
     width: 80%;
@@ -50,4 +51,5 @@
     margin-bottom: 12px;
     text-decoration: none;
     color: rgba(52, 52, 52, 1);
+    cursor: pointer;
 }

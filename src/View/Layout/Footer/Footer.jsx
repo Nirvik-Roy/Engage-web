@@ -11,51 +11,51 @@ const Footer = () => {
     <>
       <div className='footer_wrapper'>
         <div className='footer_container '>
-        <div className='footer_content_wrapper'>
+          <div className='footer_content_wrapper'>
 
-          <div className='footer_logo_content'>
-            <img className='footer_logo' src={img} />
-            <p>Happier Teams. Stronger Connections.</p>
-            <div className='icons_wrapper'>
-              <img src={icon} />
-              <img src={icon2} />
-              <img src={icon3} />
+            <div className='footer_logo_content'>
+              <img className='footer_logo' src={img} />
+              <p>Happier Teams. Stronger Connections.</p>
+              <div className='icons_wrapper'>
+                <img src={icon} />
+                <img src={icon2} />
+                <img src={icon3} />
+              </div>
+            </div>
+
+            <div className='footer_1'>
+              <h3>Company</h3>
+              <Link to='/'>Home</Link>
+              <Link to='/solutions/engagement'>Solutions</Link>
+              <Link to='/about-engage'>About</Link>
+              <Link to='/games/library'>Ngage Game Library</Link>
+              <Link to='/'>Ngage Game Experience</Link>
+              <Link to='/'>Blogs</Link>
+              <Link to='/faq'>FAQ</Link>
+              <Link to='/contact-us'>Contact</Link>
+            </div>
+
+
+            <div className='footer_1'>
+              <h3>Legal</h3>
+              <Link to='/terms-conditions'>Terms & Conditions</Link>
+              <Link to='/privacy-policy'>Privacy Policy</Link>
+              <Link to='/refund-policy'>Refund Policy</Link>
+            </div>
+
+
+            <div className='footer_1'>
+              <h3>Contact</h3>
+              <Link>Greyson Lane 6212-648  Palarni. </Link>
+              <Link>(610) 945-7986</Link>
+              <Link>hello@Transparent.co</Link>
             </div>
           </div>
-
-          <div className='footer_1'>
-            <h3>Company</h3>
-            <Link>Home</Link>
-            <Link>Solutions</Link>
-            <Link>About</Link>
-            <Link>Solutions</Link>
-            <Link>Ngage Game Library</Link>
-            <Link>Ngage Game Experience</Link>
-            <Link>Blogs</Link>
-            <Link>Contact</Link>
-          </div>
-
-
-          <div className='footer_1'>
-            <h3>Legal</h3>
-            <Link>Terms & Conditions</Link>
-            <Link>Privacy Policy</Link>
-            <Link>Refund Policy</Link>
-          </div>
-
-
-          <div className='footer_1'>
-            <h3>Contact</h3>
-            <Link>Greyson Lane 6212-648  Palarni. </Link>
-            <Link>(610) 945-7986</Link>
-            <Link>hello@Transparent.co</Link>
-          </div>
-        </div>
           <p style={{
-            marginLeft:'auto',
-            color:'rgba(19, 19, 19, 1)',
-            fontSize:'1rem',
-            width:'fit-content'
+            marginLeft: 'auto',
+            color: 'rgba(19, 19, 19, 1)',
+            fontSize: '1rem',
+            width: 'fit-content'
           }}>© Copyright 2024, All Rights Reserved</p>
         </div>
         <img src={bgImg} style={{
@@ -66,7 +66,8 @@ const Footer = () => {
           objectPosition: 'center',
           objectFit: 'cover',
           opacity: '0.2',
-          height: '100%'
+          height: '100%',
+          zIndex: -1
         }} />
       </div>
     </>
