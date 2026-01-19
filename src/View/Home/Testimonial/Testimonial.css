@@ -5,18 +5,22 @@
     text-align: center;
 }
 .testimonial_cards_wrapper{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 70px 0;
+    align-items: center; */
 }
 .testimonial_card{
-    width: 31%;
+    width: 95% !important;
     background-color: rgba(255, 255, 255, 1);
     padding: 25px;
     box-shadow: 0px 4px 30px 0px rgba(203, 203, 203, 0.47);
     border-radius: 15px;
     position: relative;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.testimonial_cards_wrapper .slick-dots{
+    bottom: 10px !important;
 }
 .client_logo{
     width: 80px;

@@ -1,11 +1,23 @@
 import React from 'react'
 import './MeetEngage.css'
-import img from '../../../assets/Group 1597882983.png'
+import img from '../../../assets/3864bda0c85d9309028b4066ef6a22484fd9dfc8.jpg'
 import buttoIcon from '../../../assets/svg159.svg'
 import buttoIcon2 from '../../../assets/svg159 (2).svg'
 import engageImg from '../../../assets/Rectangle 6672.png'
 import engageImg2 from '../../../assets/Rectangle 6673.png'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick'
 const MeetEngage = () => {
+    var settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay:true,
+
+    };
     return (
         <>
             <div className='meet_engage_wrapper'>
@@ -31,12 +43,18 @@ const MeetEngage = () => {
                         </div>
 
                         <div className='enage_img_grid_wrapper'>
-                            <img src={engageImg}/>
-                            <img src={engageImg2}/>
+                            <img src={engageImg} />
+                            <img src={engageImg2} />
                         </div>
-                    </div> 
+                    </div>
                     <div className='right_engage_img'>
-                        <img src={img} />
+                        <Slider {...settings}>
+                            {[1, 2, 3, 4, 5].map((e) => (
+                                <div>
+                                <img key={e} src={img} />
+                                </div>
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </div>

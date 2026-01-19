@@ -2,13 +2,16 @@
   padding: 50px 0;
 }
 .our_team_slider_Wrapper {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 25px; */
   padding: 50px 0;
 }
+.our_team_slider_Wrapper .slick-dots{
+  bottom: -70px;
+}
 .team_div {
-  width: 24%;
+  width: 95% !important;
   display: flex;
   flex-direction: column;
   row-gap: 10px;

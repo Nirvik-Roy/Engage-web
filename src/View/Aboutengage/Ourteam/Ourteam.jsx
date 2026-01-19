@@ -2,7 +2,18 @@ import './Ourteam.css'
 import img from '../../../assets/Rectangle 18.png'
 import img2 from '../../../assets/Rectangle 18 (1).png'
 import img3 from '../../../assets/Rectangle 18 (2).png'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick'
 const Ourteam = () => {
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+    };
     const slideData = [
         {
             title: 'Archie Connelly',
@@ -24,6 +35,13 @@ const Ourteam = () => {
             designation: 'Designer',
             img: ''
         },
+          {
+            title: 'Archie Connelly',
+            designation: 'Founder & CEO',
+            img: img
+        },
+     
+    
     ]
     return (
         <>
@@ -33,14 +51,16 @@ const Ourteam = () => {
                         textAlign: 'center'
                     }}>Our Team</h1>
                     <div className='our_team_slider_Wrapper'>
+                    <Slider {...settings}>
+
                         {slideData.map((e, i) => (
                             <div className='team_div' key={i}>
 
                                 <div className='team_img_div'>
                                     <div className='overlay_green' style={e.img == "" ? {
-                                        background:'#f0f4ff',
-                                        opacity:1
-                                    }:{}}>
+                                        background: '#f0f4ff',
+                                        opacity: 1
+                                    } : {}}>
                                         <div className='social_mediaLinks_wrapper'>
                                             <i class="fa-brands fa-facebook-f"></i>
                                             <i class="fa-brands fa-instagram"></i>
@@ -56,6 +76,7 @@ const Ourteam = () => {
                                 <h6>{e.designation}</h6>
                             </div>
                         ))}
+                    </Slider>
 
                     </div>
                 </div>

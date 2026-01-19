@@ -12,11 +12,19 @@
   width: 35%;
   border-radius: 15px;
   overflow: hidden;
+  height: 100vh;
+}
+.right_engage_img div{
+  height: 100%;
 }
 .right_engage_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+.right_engage_img .slick-dots {
+  bottom: 15px;
 }
 .left_engage_content h1 {
   font-size: 3rem;

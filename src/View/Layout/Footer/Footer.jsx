@@ -42,6 +42,7 @@ const Footer = () => {
               <Link to='/privacy-policy'>Privacy Policy</Link>
               <Link to='/refund-policy'>Refund Policy</Link>
             </div>
+            
 
 
             <div className='footer_1'>
