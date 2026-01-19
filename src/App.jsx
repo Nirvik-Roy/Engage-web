@@ -9,6 +9,11 @@ import Onboarding from './View/Onboarding/Onboarding'
 import Facilitatedteam from './View/Facilitatedteam/Facilitatedteam'
 import Gameslayout from './View/Games/Gameslayout/Gameslayout'
 import Gameslibrary from './View/Games/Gameslibrary/Gameslibrary'
+import Faq from './View/Faq/Faq'
+import RefundPolicy from './View/RefundPolicy/RefundPolicy'
+import TermsConditions from './View/TermsConditions/TermsConditions'
+import PrivacyPolicy from './View/PrivacyPolicy/PrivacyPolicy'
+import Contact from './View/Contact/Contact'
 
 function App() {
   return (
@@ -25,6 +30,11 @@ function App() {
              <Route path='/games' element={<Gameslayout/>}>
                  <Route path='library' element={<Gameslibrary/>}/>
              </Route>
+             <Route path='/faq' element={<Faq/>}/>
+             <Route path='/refund-policy' element={<RefundPolicy/>}/>
+             <Route path='/terms-conditions' element={<TermsConditions/>}/>
+             <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+             <Route path='/contact-us' element={<Contact/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

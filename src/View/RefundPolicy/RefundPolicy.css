@@ -1,0 +1,8 @@
+.policy_wrapper{
+    padding: 70px 0 50px 0;
+}
+.policy_content_Wrapper p{
+    font-size: 0.9rem;
+    color: rgba(20, 20, 20, 0.8);
+    line-height: 1.4rem;
+}
