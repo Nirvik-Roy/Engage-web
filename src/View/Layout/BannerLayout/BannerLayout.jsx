@@ -6,7 +6,7 @@ const BannerLayout = ({title}) => {
     <>
       <div className='banner_layout_wrapper' style={{
         background:`url(${bgImg})`,
-        backgroundSize:'cover',
+        backgroundSize:'100% 100%',
         backgroundRepeat:'no-repeat'
       }}>
 
