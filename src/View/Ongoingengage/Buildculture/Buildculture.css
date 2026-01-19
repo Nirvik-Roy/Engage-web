@@ -3,6 +3,7 @@
   position: relative;
   background-image: url("../../../assets/image 218.png");
   background-size: contain;
+  overflow-x: hidden;
   background-repeat: no-repeat;
 }
 .build_culture_content_wrapper {

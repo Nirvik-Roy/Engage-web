@@ -12,15 +12,10 @@ const Navbar = () => {
   const togglebtnref2 = useRef();
   useEffect(() => {
     const closeDropdowns = (e) => {
-      const outsideDropdown1 = dropdownRef.current && !dropdownRef.current.contains(e.target);
-      const outsideToggle1 = togglebtnref.current && !togglebtnref.current.contains(e.target);
-
-      const outsideDropdown2 = dropdownRef2.current && !dropdownRef2.current.contains(e.target);
-      const outsideToggle2 = togglebtnref2.current && !togglebtnref2.current.contains(e.target);
-
-
-      if (outsideDropdown1 && outsideToggle1 &&
-        outsideDropdown2 && outsideToggle2) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target) &&
+        togglebtnref.current && !togglebtnref.current.contains(e.target) ||
+        dropdownRef2.current && !dropdownRef2.current.contains(e.target) &&
+        togglebtnref2.current && !togglebtnref2.current.contains(e.target)) {
         setsolutiondropdown(false);
         setgamesDropdown(false)
       }
