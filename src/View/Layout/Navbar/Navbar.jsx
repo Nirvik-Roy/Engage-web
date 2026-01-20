@@ -55,7 +55,8 @@ const Navbar = () => {
               color: 'rgba(238, 150, 1, 1)'
             } : {}} class="fa-solid fa-angle-down"></i>
             {gamesDropdown && <div ref={dropdownRef} onClick={((e) => e.stopPropagation())} className='solutions_dropdown'>
-              <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/library'}>Library</NavLink>
+              <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/library'}>Games Library</NavLink>
+                            <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/library'}>Game Experience</NavLink>
             </div>}
           </div>
           <NavLink to={'/about-engage'}>About</NavLink>
