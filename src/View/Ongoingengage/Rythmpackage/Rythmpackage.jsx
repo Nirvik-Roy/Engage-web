@@ -2,9 +2,8 @@ import React from 'react'
 import './Rythmpackage.css'
 import img from '../../../assets/Rectangle 6679.png'
 import listimg from '../../../assets/Vector (8).svg'
-import buttonIcon from '../../../assets/Frame 1984078911.svg'
-import icon2 from '../../../assets/Frame 1984078808.svg'
 import Rythmpackageprices from './Rythmpackageprices'
+import buttonIconNew from '../../../assets/g165.svg'
 const Rythmpackage = () => {
     const data = [
         {
@@ -17,7 +16,7 @@ const Rythmpackage = () => {
                     point1: 'Single, ready-made engagement experience',
                     point2: 'Up to 50 participants included',
                     point3: 'Perfect for testing Rhythm or running a one-off activity',
-                    
+
                 },
 
             ],
@@ -60,7 +59,7 @@ const Rythmpackage = () => {
                                         fontWeight: '700',
                                         fontSize: '20px'
                                     }}>{e.title2}</h3>
-                                    {e.list.map((ele, ) => (
+                                    {e.list.map((ele,) => (
                                         <>
                                             <h5 style={{
                                                 fontWeight: '700'
@@ -70,32 +69,24 @@ const Rythmpackage = () => {
                                                 <li><img src={listimg} />{ele.point2}</li>
                                                 <li><img src={listimg} />{ele.point3}</li>
                                             </ul>
-                                            {i == 0 && <button style={{
-                                                color: 'rgba(1, 130, 252, 1)',
-                                                fontWeight: '700',
-                                                marginTop: '30px',
-                                                border: 'none',
-                                                background: 'transparent',
+                                            <button style={{
                                                 fontSize: '1.1rem',
+                                                fontWeight: '600',
+                                                cursor: 'pointer',
+                                                background: 'transparent',
+                                                marginTop: '30px',
+                                                marginBottom: '10px',
+                                                paddingBottom: '5px',
                                                 display: 'flex',
                                                 justifyContent: 'flex-start',
                                                 alignItems: 'center',
                                                 gap: '10px',
-                                                marginBottom: '40px'
-                                            }}>Buy Now <img src={buttonIcon} /></button>}
-                                                     {i == 1 && <button style={{
-                                                color: 'rgba(1, 130, 252, 1)',
-                                                fontWeight: '700',
-                                                marginTop: '30px',
-                                                border: 'none',
-                                                background: 'transparent',
-                                                fontSize: '1.1rem',
-                                                display: 'flex',
-                                                justifyContent: 'flex-start',
-                                                alignItems: 'center',
-                                                gap: '10px',
-                                                marginBottom: '0px'
-                                            }}> <img src={icon2} /></button>}
+                                                borderTop: 'none',
+                                                borderLeft: 'none',
+                                                borderRight: 'none',
+                                                borderBottom: '3px solid rgba(1, 130, 252, 1)',
+                                                color: 'rgba(1, 130, 252, 1)'
+                                            }}>Buy Now <img src={buttonIconNew} /></button>
                                         </>
                                     ))}
                                 </div>
@@ -103,7 +94,7 @@ const Rythmpackage = () => {
                         ))}
                     </div>
                 </div>
-                <Rythmpackageprices/>
+                <Rythmpackageprices />
             </div>
         </>
     )

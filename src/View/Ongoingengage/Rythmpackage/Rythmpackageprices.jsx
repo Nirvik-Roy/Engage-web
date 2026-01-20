@@ -1,6 +1,8 @@
 import React from 'react'
 import img from '../../../assets/Rectangle 6679.png'
 import listimg from '../../../assets/Vector (8).svg'
+import buttonIconNew from '../../../assets/g165.svg'
+
 const Rythmpackageprices = () => {
     const data = [
         {
@@ -76,7 +78,7 @@ const Rythmpackageprices = () => {
                                     fontWeight: '800',
                                     fontSize: '20px',
                                     margin: '12px 0',
-                                    letterSpacing:'0.0rem'
+                                    letterSpacing: '0.0rem'
                                 }}>{e.title2}</h2>
                                 <h3 style={{
                                     letterSpacing: '0.3rem',
@@ -95,22 +97,43 @@ const Rythmpackageprices = () => {
                                             <li><img src={listimg} />{ele.point2}</li>
                                             <li><img src={listimg} />{ele.point3}</li>
                                         </ul>
+
                                     </>
                                 ))}
                             </div>
+
+                            <button style={{
+                                fontSize: '1.1rem',
+                                fontWeight: '600',
+                                cursor: 'pointer',
+                                background: 'transparent',
+                                marginTop: '30px',
+                                marginBottom: '10px',
+                                paddingBottom: '5px',
+                                display: 'flex',
+                                justifyContent: 'flex-start',
+                                alignItems: 'center',
+                                gap: '10px',
+                                borderTop: 'none',
+                                borderLeft: 'none',
+                                borderRight: 'none',
+                                borderBottom: '3px solid rgba(1, 130, 252, 1)',
+                                color: 'rgba(1, 130, 252, 1)',
+                                width: 'fit-content'
+                            }}>Buy Now <img src={buttonIconNew} /></button>
                         </div>
                     ))}
 
                     <p style={{
-                        gridColumn:'1/-1',
-                        color:'rgba(55, 54, 54, 1)',
-                        fontWeight:'600',
-                        fontSize:'20px',
-                        display:'flex',
-                        alignItems:'center',
-                        gap:'40px',
-                        marginLeft:'auto',
-                        marginTop:'20px'
+                        gridColumn: '1/-1',
+                        color: 'rgba(55, 54, 54, 1)',
+                        fontWeight: '600',
+                        fontSize: '20px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '40px',
+                        marginLeft: 'auto',
+                        marginTop: '20px'
                     }}>First 50 players included<span>|</span>Additional players: $2.50 per person
                     </p>
                 </div>
