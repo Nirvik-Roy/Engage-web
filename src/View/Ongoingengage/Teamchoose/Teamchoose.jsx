@@ -12,10 +12,10 @@ const Teamchoose = () => {
                     <div className='team_participate_content'>
                         <h1 className='heading'>Why teams choose Ngage Rhythm</h1>
                         <ul>
-                            <li>	Easy for HR to run</li>
-                            <li>	Easy for employees to join
+                            <li>Easy for HR to run</li>
+                            <li>Easy for employees to join
                             </li>
-                            <li>	Designed for participation, not pressure
+                            <li>Designed for participation, not pressure
                             </li>
                             <li>Works alongside everyday work</li>
                             <li>Engagement results you can actually report</li>

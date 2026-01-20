@@ -83,7 +83,8 @@
 .engage_rythm_card:hover {
   z-index: 999 !important;
   transform: rotate(0deg) !important;
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.571);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.381);
+  backdrop-filter: blur(18px);
 }
 .engage_rythm_img {
   width: 100%;

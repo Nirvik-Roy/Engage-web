@@ -6,13 +6,14 @@
   margin-bottom: 30px;
 }
 .trusted_teams_slider_wrapper {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+  margin-top: 40px;
 }
 .trusted_teams_slider_wrapper img {
-  width: 160px !important;
-  height: auto;
+  width: 95% !important;
+  height: 100px;
   min-width: 100px !important;
-  object-fit: cover;
+  object-fit: contain;
 }

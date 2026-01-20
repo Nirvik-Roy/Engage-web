@@ -18,16 +18,15 @@ const Buildonboarding = () => {
                         <img src={img} />
                     </div>
                     <div className='build_culture_content'>
-                        <h1 className='heading'>Build your onboarding once. Run it every time.</h1>
-                        <p>Ngage Launchpad is a custom-built onboarding experience designed specifically for your organization — your culture, your people, your way of working.<pre />
-                            Once it’s set up, HR can run the same onboarding journey every time a new hire joins, without repeating presentations, walkthroughs, or sessions.
+                        <h1 className='heading'>Turn onboarding into a shared starting experience — not a checklist.</h1>
+                        <p>Most onboarding is overloaded with information and short on connection.
+                        <br/>
+                        <br/>
+                        New hires skim documents, forget key details, and take weeks to feel part of the team — while HR and managers repeat the same sessions.
+                         <br/>
+                        <br/>
+                        <span>Ngage Launchpad transforms onboarding into an interactive journey</span> that helps new hires learn, explore, and connect — at their own pace.
                         </p>
-
-                        <span style={{
-                            fontWeight: '700',
-                            marginTop: '20px',
-                            display: 'block'
-                        }}>It’s how culture shows up from day one — without adding to HR’s workload.</span>
                     </div>
                 </div>
                 <Helpnewhires/>

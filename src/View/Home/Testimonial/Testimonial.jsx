@@ -7,13 +7,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
 const Testimonial = () => {
-       var settings = {
+    var settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay:true,
+        autoplay: true,
+        autoplaySpeed: 1000
+
     };
     const data = [
         {
@@ -39,7 +41,7 @@ const Testimonial = () => {
             name: 'Sophia Anderson',
             designation: 'People & Culture Lead'
         },
-         {
+        {
             id: 1,
             img: ellipse2,
             review: '“Ngage helped us get more people involved — not just the usual participants.”',
@@ -62,7 +64,7 @@ const Testimonial = () => {
             name: 'Sophia Anderson',
             designation: 'People & Culture Lead'
         },
-        
+
     ]
     return (
         <>
@@ -70,20 +72,20 @@ const Testimonial = () => {
                 <div className='container testimonial_content_wrapper'>
                     <h1 className='heading'>Testimonial</h1>
                     <div className='testimonial_cards_wrapper'>
-                    <Slider {...settings}>
-                        {data.map((e, i) => (
-                            <div className='testimonial_card' key={i}>
-                                <img className='client_logo' src={e.img} />
-                                <img className='star_img' src={star} alt='rating_img' />
+                        <Slider {...settings}>
+                            {data.map((e, i) => (
+                                <div className='testimonial_card' key={i}>
+                                    <img className='client_logo' src={e.img} />
+                                    <img className='star_img' src={star} alt='rating_img' />
 
-                                <p>“{e.review}”</p>
+                                    <p>“{e.review}”</p>
 
-                                <h6>{e.name}</h6>
-                                <small>{e.designation}</small>
-                            </div>
+                                    <h6>{e.name}</h6>
+                                    <small>{e.designation}</small>
+                                </div>
 
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
                     </div>
 
                 </div>

@@ -16,10 +16,15 @@
   padding: 20px;
   border-radius: 15px;
   position: relative;
+  transition: 0.3s linear all;
 }
-.build_step:nth-child(1) {
+.build_step:hover {
   border: 1px solid rgba(1, 130, 252, 1);
   background-color: #fff;
+}
+.build_step:hover h2{
+  background-color: rgba(1, 130, 252, 1);
+  color: #fff;
 }
 .build_once_content_wrapper h2 {
   width: fit-content;
@@ -35,11 +40,9 @@
   transform: translateX(-50%);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  transition: 0.3s linear all;
 }
-.build_step:nth-child(1) h2{
-    background-color: rgba(1, 130, 252, 1);
-    color: #fff;
-}
+
 .build_once_content_wrapper h4 {
   font-size: 1.2rem;
   color: #000;

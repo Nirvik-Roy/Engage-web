@@ -1,17 +1,22 @@
 import React from 'react'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import Buildonboarding from './Buildonboarding/Buildonboarding'
-import Buildonce from './Buildonce/Buildonce'
+import Launchpadworks from './Launchpadworks/Launchpadworks'
 import sample from '../../assets/image 222.png'
 import Ngagepricing from './Ngagepricing/Ngagepricing'
 import Buildengagement from '../Home/Buildengagement/Buildengagement'
+import Onboardingmoudles from './Onboardingmodules.jsx/Onboardingmoudles'
+import Buildonce from './Buildonce/Buildonce'
+import Launchpadsteps from './Launchpadsteps/Launchpadsteps'
 
 const Onboarding = () => {
     return (
         <>
             <BannerLayout title={'Onboarding that builds culture from day one'} />
             <Buildonboarding />
+            <Onboardingmoudles />
             <Buildonce />
+            <Launchpadworks />
             <div className='measure_engagement_wrapper'>
                 <div className='container measure_engagement_content_wrapper'>
                     <div className='measure_engagement_content'>
@@ -43,8 +48,9 @@ const Onboarding = () => {
                     </div>
                 </div>
             </div>
+            <Launchpadsteps/>
             <Ngagepricing />
-            <Buildengagement demobtn={true} explorebtn={true} para2={'Whether you onboard occasionally or constantly, Launchpad gives you a simple, repeatable way to start every relationship right.'} list={['Introduce culture consistently','Reduce HR and manager onboarding time','Create a welcoming first-week experience','Understand what information actually sticks']} para={'Launchpad helps organizations:'} title={'Start onboarding the Ngage way'}/>
+            <Buildengagement demobtn={true} explorebtn={true} para={'Ngage Launchpad helps organizations build culture, clarity, and connection from the first week.'} title={'Start onboarding the Ngage way'}  />
         </>
     )
 }

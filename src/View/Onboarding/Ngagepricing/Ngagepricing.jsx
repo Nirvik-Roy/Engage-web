@@ -20,7 +20,7 @@ const Ngagepricing = () => {
                 'Tech support & software updates'
             ],
 
-            access: '1-year access • unlimited employees • renew annually for $900'
+         
 
         },
         {
@@ -40,7 +40,6 @@ const Ngagepricing = () => {
                 'Tech support & software updates'
             ],
 
-            access: '1-year access • unlimited employees • renew annually for $1,400'
 
         },
         {
@@ -60,24 +59,22 @@ const Ngagepricing = () => {
                 'Tech support & software updates'
             ],
 
-            access: '1-year access • unlimited employees • renew annually for $2,000'
         },
     ]
     return (
         <>
             <div className='ngage_pricing_wrapper'>
-                <h1 className='heading'>Pricing — Ngage Launchpad</h1>
-                <p className='para_head'>Each Launchpad package includes <span>1 year of unlimited employee</span> access, plus ongoing technical support and software updates.</p>
+                <h1 className='heading'>Pricing</h1>
                 <div className='container world_solutions_wrapper' style={{
                     paddingTop: '50px'
                 }}>
                     <div className='solutions_engage_world'>
                         <img src={img} />
-                        <h1 style={{
+                        {/* <h1 style={{
                             textAlign: 'right',
                             fontSize: '3rem',
                             lineHeight: '3.5rem'
-                        }}>Annual Engagement Plans</h1>
+                        }}>Annual Engagement Plans</h1> */}
                     </div>
                     <div className='soultions_launch_pad_wrapper'>
                         {data.map((e, i) => (
