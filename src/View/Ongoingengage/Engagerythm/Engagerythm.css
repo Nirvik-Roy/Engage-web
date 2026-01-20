@@ -28,7 +28,9 @@
   position: absolute;
   top: 0;
   left: 0;
+  transition: 0.3s linear all;
 }
+
 .engage_rythm_card:first-child {
   z-index: 10;
   transform: rotate(3deg);
@@ -77,6 +79,11 @@
   left: 81%;
   z-index: 1;
   transform: rotate(3deg);
+}
+.engage_rythm_card:hover {
+  z-index: 999 !important;
+  transform: rotate(0deg) !important;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.571);
 }
 .engage_rythm_img {
   width: 100%;

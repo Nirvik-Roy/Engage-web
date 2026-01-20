@@ -23,11 +23,20 @@
   border-radius: 15px;
   border: 1px solid rgba(189, 189, 189, 1);
   position: relative;
+  transition: 0.2s linear all;
 }
 
-.steps_wrapper .step:first-child{
- border: 2px solid rgba(1, 130, 252, 1)
+.step:hover{
+     border: 2px solid rgba(1, 130, 252, 1);
+       transition: 0.2s linear all;
 }
+.step:hover h2{
+    background-color: rgba(1, 130, 252, 1);
+    color: #fff;
+}
+/* .steps_wrapper .step:first-child{
+ border: 2px solid rgba(1, 130, 252, 1)
+} */
 
 .steps_wrapper .step:nth-child(2){
     transform: translateY(50%);
@@ -36,10 +45,10 @@
     transform: translateY(50%);
 }
 
-.steps_wrapper .step:first-child h2{
+/* .steps_wrapper .step:first-child h2{
     color: #fff;
     background-color: rgba(1, 130, 252, 1);
-}
+} */
 
 .step h2{
   text-align: center;
@@ -54,6 +63,7 @@
   letter-spacing: 0.1rem;
   position: absolute;
   top: -20px;
+  transition: 0.2s linear all;
 }
 .step h4{
     margin-bottom: 0px;
