@@ -31,16 +31,16 @@ const Ourteam = () => {
             img: img3
         },
         {
-            title: 'String value',
-            designation: 'Designer',
-            img: ''
-        },
-          {
             title: 'Archie Connelly',
             designation: 'Founder & CEO',
             img: img
         },
-    
+        {
+            title: 'Archie Connelly',
+            designation: 'Founder & CEO',
+            img: img
+        },
+
     ]
     return (
         <>
@@ -50,32 +50,22 @@ const Ourteam = () => {
                         textAlign: 'center'
                     }}>Our Team</h1>
                     <div className='our_team_slider_Wrapper'>
-                    <Slider {...settings}>
+                        <Slider {...settings}>
 
-                        {slideData.map((e, i) => (
-                            <div className='team_div' key={i}>
-
-                                <div className='team_img_div'>
-                                    <div className='overlay_green' style={e.img == "" ? {
-                                        background: '#f0f4ff',
-                                        opacity: 1
-                                    } : {}}>
-                                        <div className='social_mediaLinks_wrapper'>
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                            <i class="fa-brands fa-instagram"></i>
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                            <i class="fa-brands fa-x-twitter"></i>
+                            {slideData.map((e, i) => (
+                                <div className='team_div' key={i}>
+                                    <div className='team_img_div'>
+                                        <div className='overlay_green'>
+                                         
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                         </div>
-
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <img alt='team_img' src={e.img} />
                                     </div>
-                                    <img alt='team_img' src={e.img} />
+                                    <h4>{e.title}</h4>
+                                    <h6>{e.designation}</h6>
                                 </div>
-                                <h4>{e.title}</h4>
-                                <h6>{e.designation}</h6>
-                            </div>
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
 
                     </div>
                 </div>
