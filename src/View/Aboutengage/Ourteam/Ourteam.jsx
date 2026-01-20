@@ -40,7 +40,6 @@ const Ourteam = () => {
             designation: 'Founder & CEO',
             img: img
         },
-     
     
     ]
     return (

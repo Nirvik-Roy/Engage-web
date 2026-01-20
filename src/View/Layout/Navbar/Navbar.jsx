@@ -42,9 +42,9 @@ const Navbar = () => {
             } : {}} class="fa-solid fa-angle-down"></i>
             {solutionDropdown && <div ref={dropdownRef} onClick={((e) => e.stopPropagation())} className='solutions_dropdown'>
               <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/engagement'}>Engagement</NavLink>
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ongoing-engage'}>Ongoing</NavLink>
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/onboarding'}>Onboarding</NavLink>
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/facilitated-team'}>Team Building</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ongoing-engage'}>Ngage Rhythm</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/onboarding'}>Ngage Launchpad</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/facilitated-team'}>Ngage Playday</NavLink>
             </div>}
           </div>
           <div ref={togglebtnref2} onClick={(() => { setgamesDropdown(!gamesDropdown) })} className='nav_dropdown'>
@@ -56,7 +56,6 @@ const Navbar = () => {
             } : {}} class="fa-solid fa-angle-down"></i>
             {gamesDropdown && <div ref={dropdownRef} onClick={((e) => e.stopPropagation())} className='solutions_dropdown'>
               <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/library'}>Library</NavLink>
-
             </div>}
           </div>
           <NavLink to={'/about-engage'}>About</NavLink>
