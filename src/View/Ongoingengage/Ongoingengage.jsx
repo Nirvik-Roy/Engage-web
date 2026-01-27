@@ -25,7 +25,7 @@ const Ongoingengage = () => {
 
     return (
         <>
-            <BannerLayout title={responsiveTitle ? 'NGAGE Rhythm':'Ongoing engagement that fits the flow of work'} />
+            <BannerLayout title={'NGAGE Rhythm'} subTitle={'Ongoing engagement that fits the flow of work'}/>
             <Buildculture />
             <Engagerythm />
             <Teamparticipate />

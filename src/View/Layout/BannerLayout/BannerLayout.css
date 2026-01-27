@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     background-position: center;
+    flex-direction: column;
 }
 .banner_layout_wrapper h1{
     font-size: 3.7rem;
@@ -12,15 +13,33 @@
     width: 1100px;
     text-align: center;
 }
+.banner_layout_wrapper h3{
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    width: 1100px;
+    text-align: center;
+}
 
 @media(max-width:1199px){
     .banner_layout_wrapper h1{
         width: 85%;
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+    .banner_layout_wrapper h3{
+        width: 85%;
+        font-size: 1.2rem;
     }
 }
 @media(max-width:576px){
     .banner_layout_wrapper h1{
         width: 90%;
+    }
+     .banner_layout_wrapper h3{
+        width: 90%;
+    }
+    .banner_layout_wrapper{
+        background-image: url('../../../assets/Group 1597882989 (1).png') !important;
+        min-height: 50vh;
     }
 }
