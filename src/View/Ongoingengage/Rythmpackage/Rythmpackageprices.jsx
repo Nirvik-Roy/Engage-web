@@ -124,7 +124,7 @@ const Rythmpackageprices = () => {
                         </div>
                     ))}
 
-                    <p style={{
+                    <p className='additional_players_para' style={{
                         gridColumn: '1/-1',
                         color: 'rgba(55, 54, 54, 1)',
                         fontWeight: '600',

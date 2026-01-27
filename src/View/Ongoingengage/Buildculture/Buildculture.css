@@ -47,3 +47,48 @@
   line-height: 3.8rem;
   margin-bottom: 20px;
 }
+
+@media (max-width: 850px) {
+  .build_culture_content_wrapper {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .build_culture_img {
+    width: 100%;
+    max-height:max-content;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .build_culture_content {
+    width: 100%;
+  }
+  .engage_world_content_wrapper{
+    flex-direction: column-reverse;
+    row-gap: 40px;
+  }
+  .engage_world_content{
+    width: 100%;
+  }
+  .engage_world_content_wrapper img{
+    width: 100%;
+  }
+  .engamen_report_wrapper img{
+    height: 100vh;
+  }
+}
+@media(max-width:600px){
+  .engamen_report_wrapper img{
+    height: 60vh;
+    max-height: 60vh;
+  }
+}
+
+@media(max-width:499px){
+  .engamen_report_wrapper img{
+    height: auto;
+    max-height: auto;
+  }
+  .build_culture_wrapper {
+    padding: 70px 0 10px 0;
+  }
+}

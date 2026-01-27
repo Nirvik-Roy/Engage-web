@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import Buildculture from './Buildculture/Buildculture'
 import Engagerythm from './Engagerythm/Engagerythm'
@@ -9,9 +9,23 @@ import Rythmpackage from './Rythmpackage/Rythmpackage'
 import Teamchoose from './Teamchoose/Teamchoose'
 import Buildengagement from '../Home/Buildengagement/Buildengagement'
 const Ongoingengage = () => {
+    const [responsiveTitle, setresponsiveTitle] = useState(false);
+
+    const onResize = () => {
+        const width = window.innerWidth;
+
+        if (width <= 576) {
+            setresponsiveTitle(true)
+        } else {
+            setresponsiveTitle(false)
+        }
+    };
+
+    window.addEventListener("resize", onResize);
+
     return (
         <>
-            <BannerLayout title={'Ongoing engagement that fits the flow of work'} />
+            <BannerLayout title={responsiveTitle ? 'NGAGE Rhythm':'Ongoing engagement that fits the flow of work'} />
             <Buildculture />
             <Engagerythm />
             <Teamparticipate />
@@ -46,10 +60,10 @@ const Ongoingengage = () => {
                     </div>
                 </div>
             </div>
-            <Rythmsteps />  
-            <Rythmpackage/>
-            <Teamchoose/>
-            <Buildengagement demobtn={true} explorebtn={true} para={'Ngage Rhythm gives teams a simple way to stay connected — without turning engagement into a project.'} title={'Ready to build your rhythm?'}/>
+            <Rythmsteps />
+            <Rythmpackage />
+            <Teamchoose />
+            <Buildengagement demobtn={true} explorebtn={true} para={'Ngage Rhythm gives teams a simple way to stay connected — without turning engagement into a project.'} title={'Ready to build your rhythm?'} />
         </>
     )
 }

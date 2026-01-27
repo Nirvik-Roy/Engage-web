@@ -13,3 +13,14 @@
     text-align: center;
 }
 
+@media(max-width:1199px){
+    .banner_layout_wrapper h1{
+        width: 85%;
+        font-size: 3rem;
+    }
+}
+@media(max-width:576px){
+    .banner_layout_wrapper h1{
+        width: 90%;
+    }
+}

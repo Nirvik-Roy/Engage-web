@@ -36,3 +36,25 @@
     flex-direction: column;
     row-gap: 5px;
 }
+@media(max-width:850px){
+    .help_new_hires_content_wrapper{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .help_new_hires_content{
+        width: 100%;
+    }
+    .help_new_hires_img{
+        width: 100%;
+        height: 100vh;
+    }
+}
+@media(max-width:576px){
+     .help_new_hires_img{
+        width: 100%;
+        height: auto;
+    }
+    .help_new_hires_wrapper{
+        padding: 40px 0 0 0;
+    }
+}

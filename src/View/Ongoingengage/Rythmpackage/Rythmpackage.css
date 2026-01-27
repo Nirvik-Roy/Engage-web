@@ -1,43 +1,77 @@
-.rythm_package_wrapper{
-    padding: 50px 0;
+.rythm_package_wrapper {
+  padding: 50px 0;
 }
-.rythm_package_content_wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
+.rythm_package_content_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.rythm_spark_wrapper{
+.rythm_spark_wrapper {
+  display: grid;
+  gap: 25px;
+  width: 68%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.rythm_spark_wrapper .launch_pad {
+  width: 100%;
+  height: fit-content;
+}
+
+.rythm_package_wrapper .solutions_engage_world {
+  height: 400px;
+}
+
+.rythm_prices_wrapper .launch_pad {
+  width: 100%;
+}
+.rythm_prices_wrapper {
+  display: grid;
+  gap: 25px;
+  width: 68%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.rythm_package_prices_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 70px 0 0 0;
+}
+.rythm_package_prices_wrapper .solutions_engage_world {
+  height: 520px;
+}
+@media (max-width: 1010px) {
+  .rythm_spark_wrapper {
     display: grid;
     gap: 25px;
-    width: 68%;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-}
-.rythm_spark_wrapper .launch_pad{
     width: 100%;
-    height: fit-content;
-}
-
-.rythm_package_wrapper .solutions_engage_world{
-    height: 400px;
-}
-
-.rythm_prices_wrapper .launch_pad{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .rythm_package_prices_wrapper {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .rythm_prices_wrapper {
     width: 100%;
+  }
 }
-.rythm_prices_wrapper{
-     display: grid;
-    gap: 25px;
-    width: 68%;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+@media (max-width: 576px) {
+  .additional_players_para {
+    display: none !important;
+  }
 }
-.rythm_package_prices_wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding: 70px 0 0 0;
-}
-.rythm_package_prices_wrapper .solutions_engage_world{
-    height: 520px;
+@media (max-width: 499px) {
+  .rythm_steps_wrapper_container {
+    padding: 20px 0 50px 0;
+  }
+  .rythm_package_wrapper {
+    padding: 0 0 50px 0;
+  }
+  .rythm_package_wrapper .solutions_engage_world {
+    height: 50vh;
+  }
+  .rythm_package_prices_wrapper .solutions_engage_world {
+    height: 55vh;
+  }
 }

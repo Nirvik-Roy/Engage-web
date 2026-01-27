@@ -136,10 +136,8 @@
   .measure_box_div_wrapper {
     flex-wrap: wrap;
   }
-}
-@media (max-width: 480px) {
   .measure_engagement_content h1 {
-    font-size: 2rem;
+    font-size: 2rem !important;
     font-weight: 700;
     line-height: 2.5rem;
   }

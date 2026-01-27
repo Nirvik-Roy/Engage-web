@@ -69,4 +69,8 @@
     width: fit-content;
     font-size: 1.2rem;
   }
+  .build_engagement_content p{
+    width: 100%;
+    line-height: 2rem;
+  }
 }
