@@ -17,7 +17,7 @@ const Simplesteps = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 1000,
         centerMode: true,
         centerPadding: "40px",
