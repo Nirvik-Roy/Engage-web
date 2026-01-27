@@ -1,9 +1,30 @@
-.half_day_team_build_Wrapper{
-    flex-direction: row;
+.half_day_team_build_Wrapper {
+  flex-direction: row;
 }
-.half_day_team_wrapper{
-    padding-bottom: 50px;
+.half_day_team_wrapper {
+  padding-bottom: 50px;
 }
-.half_day_team_wrapper .solutions_engage_world{
-    height: 600px;
+.half_day_team_wrapper .solutions_engage_world {
+  height: 600px;
+}
+
+@media (max-width: 999px) {
+  .half_day_team_build_Wrapper {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .half_day_team_wrapper .solutions_engage_world {
+    height: 55vh;
+  }
+  .half_day_team_build_Wrapper{
+    padding: 0px 0 0 0 !important;
+  }
+  .half_day_team_wrapper{
+    padding-bottom: 0;
+  }
+  .corporate_btn_wrapper button{
+    font-size: 0.8rem;
+  }
 }
