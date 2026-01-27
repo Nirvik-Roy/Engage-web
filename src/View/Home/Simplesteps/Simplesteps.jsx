@@ -1,8 +1,39 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './Simplesteps.css'
 import buttonIcon from '../../../assets/svg159.svg'
 import buttonIcon2 from '../../../assets/svg159 (2).svg'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick'
 const Simplesteps = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+    var settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    };
     const data = [
         {
             id: 1,
@@ -50,10 +81,26 @@ const Simplesteps = () => {
                             </div>
                         ))}
                     </div>
+                    {/* Responsive design */}
+                    <div className='steps_wrapper responsive_steps_wrapper'>
+                        {mounted && <Slider {...settings}>
+
+                            {data.map((e, i) => (
+                                <>
+
+                                    <div key={i} className='step'>
+                                        <h2>Step {e.step}</h2>
+                                        <h4>{e.title}</h4>
+                                        <p>{e.para}</p>
+                                    </div>
+                                </>
+                            ))}
+                        </Slider>}
+                    </div>
 
                     <div className='steps_btn_wrapper'>
-                        <button className='base_btn_design'>Explore Ngage World <img src={buttonIcon}/></button>
-                        <button className='base_btn_design'>Get a demo <img src={buttonIcon2}/></button>
+                        <button className='base_btn_design'>Explore Ngage World <img src={buttonIcon} /></button>
+                        <button className='base_btn_design'>Get a demo <img src={buttonIcon2} /></button>
                     </div>
                 </div>
             </div>

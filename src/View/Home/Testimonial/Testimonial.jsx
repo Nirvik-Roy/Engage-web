@@ -14,7 +14,23 @@ const Testimonial = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1000
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 999,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 699,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
 
     };
     const data = [

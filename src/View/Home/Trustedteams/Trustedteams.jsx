@@ -15,14 +15,30 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
 const Trustedteams = () => {
-      var settings = {
+    var settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay:true,
-        autoplaySpeed:1000
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     };
     const data = [
         {
@@ -76,15 +92,15 @@ const Trustedteams = () => {
                 <div className='container trusted_teams_content_wrapper'>
                     <h1 className='heading'>Trusted by teams across Industries</h1>
                     <div className='trusted_teams_slider_wrapper'>
-                    <Slider {...settings}>
-                        {data.map((e, i) => {
-                            return (
-                                <>
-                                    <img src={e.logo} key={i} alt='company_logos' />
-                                </>
-                            )
-                        })}
-                    </Slider>
+                        <Slider {...settings}>
+                            {data.map((e, i) => {
+                                return (
+                                    <>
+                                        <img src={e.logo} key={i} alt='company_logos' />
+                                    </>
+                                )
+                            })}
+                        </Slider>
                     </div>
                 </div>
             </div>

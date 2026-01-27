@@ -1,5 +1,6 @@
 .trusted_teams_wrapper {
   padding: 50px 0;
+  overflow: hidden;
 }
 .trusted_teams_content_wrapper h1 {
   text-align: center;

@@ -32,3 +32,16 @@ p {
   font-size: 3rem;
   font-weight: 700;
 }
+
+@media(max-width:576px){
+  .container{
+    width: 90%;
+    min-width: 90%;
+  }
+  .heading{
+    font-size: 2rem;
+  }
+  html{
+    font-size: 15px;
+  }
+}

@@ -53,3 +53,25 @@
     color: rgba(52, 52, 52, 1);
     cursor: pointer;
 }
+@media(max-width:999px){
+    .footer_1{
+        width: 28%;
+    }
+    .footer_content_wrapper{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media(max-width:576px){
+    .footer_logo_content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer_1{
+        width: 45%;
+    }
+}

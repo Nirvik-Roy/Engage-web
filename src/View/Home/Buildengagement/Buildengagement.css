@@ -52,3 +52,21 @@
     line-height: 2.5rem;
     width: 450px;
 }
+@media(max-width:840px){
+  .build_engagement_content{
+    width: 90%;
+  }
+  .build_engagement_wrapper{
+    background-size: 100% 100% !important;
+  }
+}
+@media(max-width:499px){
+  .build_engagement_btn_wrapper{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .build_engagement_btn_wrapper button{
+    width: fit-content;
+    font-size: 1.2rem;
+  }
+}

@@ -1,5 +1,6 @@
 .problem_statement_wrapper {
   padding: 50px 0;
+  overflow: hidden;
 }
 .problem_statement_content_wrapper {
   display: flex;
@@ -10,31 +11,66 @@
   width: 40%;
   height: 78vh;
 }
-.after_img_div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.after_img_div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.statement_problem_div{
-    width: 56%;
+.after_img_div div[data-testid="container"] {
+  height: 100% !important;
 }
-.statement_problem_div h1{
-    font-size: 3.2rem;
-    letter-spacing: 0.4rem;
-    font-weight: 700;
+.statement_problem_div {
+  width: 56%;
+}
+.statement_problem_div h1 {
+  font-size: 3.2rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
 }
 
-.statement_problem_div h3{
-    font-size: 1.95rem;
-    line-height: 2.5rem;
+.statement_problem_div h3 {
+  font-size: 1.95rem;
+  line-height: 2.5rem;
+  margin: 20px 0;
+}
+.statement_problem_div p {
+  font-size: 1rem;
+  color: rgba(55, 54, 54, 1);
+}
+.statement_problem_div li {
+  font-size: 1rem;
+  color: rgba(55, 54, 54, 1);
+  margin-left: 20px;
+}
+@media (max-width: 850px) {
+  .problem_statement_content_wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .after_img_div {
+    width: 100%;
+    height: 100vh;
+  }
+  .statement_problem_div {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .after_img_div {
+    height: 60vh;
+  }
+  .statement_problem_div h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    line-height: 2.9rem;
+  }
+  .statement_problem_div h3 {
+    font-size: 1.55rem;
+    line-height: 2rem;
     margin: 20px 0;
-}
-.statement_problem_div p{
-    font-size: 1rem;
-    color: rgba(55, 54, 54, 1);
-}
-.statement_problem_div li{
-      font-size: 1rem;
-    color: rgba(55, 54, 54, 1);
-    margin-left: 20px;
+  }
+  .problem_statement_wrapper {
+    padding: 50px 0 0 0;
+  }
 }

@@ -73,3 +73,45 @@
     border: 1px solid #fff;
     color: #fff;
 }
+
+@media(max-width:999px){
+  .home_banner_content_wrapper{
+    width: 85%;
+  }
+  .home_banner_btn_wrapper{
+    display: none;
+  }
+}
+
+@media(max-width:799px){
+  .home_banner_content_wrapper p{
+    width: 100%;
+  }
+}
+
+@media(max-width:576px){
+  .home_banner_content_wrapper h1{
+    font-size: 3.5rem;
+    line-height:normal;
+  }
+  .home_banner_wrapper .banner_overlay_img{
+    display: none;
+  }
+  .home_banner_wrapper{
+    background-image: url('../../../assets/Group 1597882994.png');
+    background-size: 100% 100%;
+  }
+  .home_banner_content_wrapper{
+    gap: 10px;
+  }
+}
+
+@media(max-width:480px){
+  .home_banner_content_wrapper h1{
+    font-size: 2.5rem;
+    line-height:normal;
+  }
+  .home_banner_wrapper{
+    min-height: 50vh;
+  }
+}

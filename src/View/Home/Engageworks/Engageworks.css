@@ -29,3 +29,15 @@
   font-size: 1rem;
   margin-bottom: 20px;
 }
+@media(max-width:850px){
+  .engage_works_content_wrapper{
+    flex-direction: column;
+    gap: 40px;
+  }
+  .engage_works_img_wrapper{
+    width: 100%;
+  }
+  .engage_works_content{
+    width: 100%;
+  }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 import logo from '../../../assets/image 214.svg'
 import { NavLink, useLocation } from 'react-router-dom'
+import bars from '../../../assets/Vector (9).svg'
 const Navbar = () => {
   const [solutionDropdown, setsolutiondropdown] = useState(false);
   const [gamesDropdown, setgamesDropdown] = useState(false)
@@ -63,6 +64,9 @@ const Navbar = () => {
           <NavLink to={'/contact-us'}>Contact Us</NavLink>
           <button>Book a Demo <span>Free</span></button>
         </div>
+        <img className='bar_img' style={{
+          width:'auto'
+        }} src={bars}/>
       </div>
     </>
   )

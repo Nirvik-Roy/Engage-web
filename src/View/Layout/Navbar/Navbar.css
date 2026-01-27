@@ -97,3 +97,26 @@
   text-wrap: nowrap;
   cursor: pointer;
 }
+.bar_img{
+  display: none;
+}
+@media (max-width: 999px) {
+  .navbar_wrapper {
+    width: 95%;
+    border: none;
+    top: 30px;
+    background-color: transparent;
+  }
+  .navbar_wrapper a{
+    display: none;
+  }
+  .nav_dropdown{
+    display: none;
+  }
+  .navbar_wrapper button{
+    display: none;
+  }
+  .bar_img{
+    display: block;
+  }
+}

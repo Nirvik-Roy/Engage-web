@@ -2,6 +2,7 @@
     padding: 50px 0 0 0;
     background-image: url('../../../assets/ann-arbor-transparent-layers-gradient-landmarks-skyline 1.png');
     background-size: cover;
+    overflow: hidden;
 }
 .why_engage_content_wrapper h1{
     text-align: center;
@@ -37,4 +38,19 @@
 .why_1 h4{
     font-size: 1rem;
     font-weight: 600;
+}
+@media(max-width:999px){
+    .why_engage_app_wrapper{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .why_left{
+        width: 100%;
+    }
+    .why_right{
+        width: 100%;
+    }
+    .why_engage_app_wrapper img{
+        width: 80%;
+    }
 }
