@@ -124,6 +124,14 @@
   }
 
 }
+@media(max-width:480px){
+      .responsive_steps_wrapper .step{
+    width: 95% !important;
+    min-width: 95% !important;
+    margin-top: 20px;
+    min-height: 100px;
+  }
+}
 
 @media(max-width:420px){
   .steps_btn_wrapper button{
