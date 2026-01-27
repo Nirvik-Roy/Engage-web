@@ -1,6 +1,7 @@
 .correct_values_wrapper{
     padding: 50px 0;
     position: relative;
+    overflow: hidden;
 }
 .correct_values_content_wrapper{
     display: flex;
@@ -31,4 +32,17 @@
 .correct_values_left p{
     margin: 10px 0;
     color: rgba(55, 54, 54, 1);
+}
+
+@media(max-width:999px){
+    .correct_values_content_wrapper{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .correct_values_left{
+        width: 100%;
+    }
+    .correct_values_right{
+        width: 100%;
+    }
 }

@@ -1,5 +1,6 @@
 .our_team_wrapper {
   padding: 50px 0;
+  overflow: hidden;
 }
 .our_team_slider_Wrapper {
   /* display: flex;
@@ -82,4 +83,15 @@
     font-size: 1.1rem;
     color: grey;
     line-height: 1.7rem;
+}
+@media(max-width:576px){
+ .team_img_div{
+  height: 250px;
+ }
+}
+
+@media(max-width:480px){
+ .team_img_div{
+  height: 200px;
+ }
 }

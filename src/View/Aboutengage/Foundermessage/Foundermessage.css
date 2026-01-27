@@ -10,7 +10,6 @@
     width: 40%;
     border-radius: 10px;
     overflow: hidden;
-    min-height: 100vh;
     object-fit: cover;
 }
 .founder_img_div img{
@@ -39,4 +38,22 @@
 .founder_content_div span{
     font-weight: 700;
 
+}
+
+@media(max-width:999px){
+    .founder_message_content_Wrapper{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .founder_img_div{
+        width: 100%;
+    }
+    .founder_content_div{
+        width: 100%;
+    }
+}
+@media(max-width:480px){
+    .founder_message_wrapper{
+        padding:30px 0 40px 0;
+    }
 }

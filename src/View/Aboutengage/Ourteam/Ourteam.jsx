@@ -13,6 +13,26 @@ const Ourteam = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 799,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+        ]
     };
     const slideData = [
         {
@@ -56,7 +76,7 @@ const Ourteam = () => {
                                 <div className='team_div' key={i}>
                                     <div className='team_img_div'>
                                         <div className='overlay_green'>
-                                         
+
                                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                         </div>
                                         <img alt='team_img' src={e.img} />

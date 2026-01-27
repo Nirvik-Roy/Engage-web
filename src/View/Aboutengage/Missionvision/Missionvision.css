@@ -1,5 +1,5 @@
 .mission_vission_wrapper{
-    padding: 80px 0;
+    padding: 80px 0 50px 0;
 }
 .mission_vision_content_wrapper{
     display: flex;
@@ -77,4 +77,34 @@
     letter-spacing: 0.2rem;
     line-height: 3.7rem;
     text-align: right;
+}
+@media(max-width:1099px){
+    .mission_img_wrapper h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .mission_img_wrapper{
+        height: 80vh;
+    }
+}
+@media(max-width:999px){
+    .mission_vision_content_wrapper{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .mission_content{
+        width: 100%;
+    }
+    .mission_img_wrapper{
+        width: 100%;
+    }
+}
+@media(max-width:576px){
+    .mission_vission_box_wrapper{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .mission_box{
+        width: 100%;
+    }
 }
