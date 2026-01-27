@@ -127,3 +127,26 @@
 .contact__box img{
     width: 35px;
 }
+@media(max-width:999px){
+  .contact_content_wrapper{
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .contact_form_left{
+    width: 100%;
+  }
+  .contact_right{
+    width: 100%;
+  }
+  .input_div_grid_wrapper{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  }
+  .contact_right_grid{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media(max-width:480px){
+  .contact_right{
+    height: 100vh;
+  }
+}
