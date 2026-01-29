@@ -15,6 +15,9 @@ const Checkoutlaunchpad = () => {
     const [dropdown, setdropdown] = useState(false)
     const { id } = useParams();
     const [currentData, setCurrentData] = useState({})
+    const [experienceDropdown, setexperienceDropdown] = useState(true);
+    const [addonDropdown, setaddonDropdown] = useState(true);
+    const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true)
     var settings = {
         dots: false,
         infinite: true,
@@ -27,7 +30,19 @@ const Checkoutlaunchpad = () => {
         centerPadding: "30px",
         responsive: [
             {
-                breakpoint: 750,
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 }
@@ -73,11 +88,11 @@ const Checkoutlaunchpad = () => {
                     <div className='select_experience_wrapper'>
                         <div className='select_experience_head'>
                             <h1>Select Experience</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setexperienceDropdown(!experienceDropdown))}>
+                                {experienceDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
                             </div>
                         </div>
-                        <div className='select_experience_card_wrapper'>
+                        {experienceDropdown && <div className='select_experience_card_wrapper'>
                             <Slider {...settings}>
                                 {[img, img1, img, img1, img].map(() => (
                                     <div className='select_experience_card'>
@@ -89,18 +104,18 @@ const Checkoutlaunchpad = () => {
                                     </div>
                                 ))}
                             </Slider>
-                        </div>
+                        </div>}
                     </div>
 
                     <div className='select_add_on_wrapper'>
                         <div className='select_experience_head'>
                             <h1>Select Add-on</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setaddonDropdown(!addonDropdown))}>
+                                {addonDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
                             </div>
                         </div>
 
-                        <div className='select_add_on_content_wrapper'>
+                        {addonDropdown && <div className='select_add_on_content_wrapper'>
                             <div className='add_ons_wrapper'>
                                 <h3>Grand Prizes</h3>
                                 <ul>
@@ -119,18 +134,18 @@ const Checkoutlaunchpad = () => {
 
                                 </ul>
                             </div>
-                        </div>
+                        </div>}
                     </div>
 
                     <div className='ngage_account_details_wrapper'>
                         <div className='select_experience_head'>
                             <h1>NGAGE account details</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setaccountDetailsDropdown(!accountDetailsDropdown))}>
+                                {accountDetailsDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
                             </div>
                         </div>
 
-                        <form className='account_form_content_wrapper'>
+                        {accountDetailsDropdown && <form className='account_form_content_wrapper'>
                             <div className='account_input_form'>
                                 <label>First Name <span>*</span></label>
                                 <input placeholder='Enter your first name' />
@@ -247,7 +262,7 @@ const Checkoutlaunchpad = () => {
                                     <input type='text' placeholder='Enter zip code' />
                                 </div>
                             </div>
-                        </form>
+                        </form>}
                     </div>
                 </div>
                 <div className='checout_prices_box'>

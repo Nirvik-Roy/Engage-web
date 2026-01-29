@@ -13,8 +13,11 @@ import { useParams } from 'react-router-dom'
 const CheckoutRythm = () => {
     const [src, setSrc] = useState('');
     const [dropdown, setdropdown] = useState(false);
-    const [currentData,setCurrentData] = useState({})
-    const {id} = useParams()
+    const [currentData, setCurrentData] = useState({});
+    const [experienceDropdown, setexperienceDropdown] = useState(true);
+    const [addonDropdown, setaddonDropdown] = useState(true);
+    const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true)
+    const { id } = useParams()
     var settings = {
         dots: false,
         infinite: true,
@@ -27,7 +30,19 @@ const CheckoutRythm = () => {
         centerPadding: "30px",
         responsive: [
             {
-                breakpoint: 750,
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 }
@@ -44,19 +59,19 @@ const CheckoutRythm = () => {
 
     const data = [
         {
-            id:1,
-            title:'Rhythm Spark',
-            price:'$699',
+            id: 1,
+            title: 'Rhythm Spark',
+            price: '$699',
         },
         {
-            id:2,
+            id: 2,
             title: 'Rhythm Pulse ',
             price: '$1,499',
         },
         {
-            id:3,
-            title:'Boost Rhythm ',
-            price:' $1,249 / quarter'
+            id: 3,
+            title: 'Boost Rhythm ',
+            price: ' $1,249 / quarter'
         },
         {
             id: 4,
@@ -70,11 +85,11 @@ const CheckoutRythm = () => {
         },
     ]
 
-    useEffect(()=>{
-        if(id){
+    useEffect(() => {
+        if (id) {
             setCurrentData(data[id])
         }
-    },[id])
+    }, [id])
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -83,11 +98,11 @@ const CheckoutRythm = () => {
                     <div className='select_experience_wrapper'>
                         <div className='select_experience_head'>
                             <h1>Select Experience</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setexperienceDropdown(!experienceDropdown))}>
+                                {experienceDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
-                        <div className='select_experience_card_wrapper'>
+                        {experienceDropdown && <div className='select_experience_card_wrapper'>
                             <Slider {...settings}>
                                 {[img, img1, img, img1, img].map(() => (
                                     <div className='select_experience_card'>
@@ -99,18 +114,18 @@ const CheckoutRythm = () => {
                                     </div>
                                 ))}
                             </Slider>
-                        </div>
+                        </div>}
                     </div>
 
                     <div className='select_add_on_wrapper'>
                         <div className='select_experience_head'>
                             <h1>Select Add-on</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setaddonDropdown(!addonDropdown))}>
+                                {addonDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
 
-                        <div className='select_add_on_content_wrapper'>
+                        {addonDropdown && <div className='select_add_on_content_wrapper'>
                             <div className='add_ons_wrapper'>
                                 <h3>Grand Prizes</h3>
                                 <ul>
@@ -135,18 +150,18 @@ const CheckoutRythm = () => {
                                     <li><input type='radio' />Extra players $2.50 each</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div>}
                     </div>
 
                     <div className='ngage_account_details_wrapper'>
                         <div className='select_experience_head'>
                             <h1>NGAGE account details</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setaccountDetailsDropdown(!accountDetailsDropdown))}>
+                                {accountDetailsDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
 
-                        <form className='account_form_content_wrapper'>
+                        {accountDetailsDropdown && <form className='account_form_content_wrapper'>
                             <div className='account_input_form'>
                                 <label>First Name <span>*</span></label>
                                 <input placeholder='Enter your first name' />
@@ -263,7 +278,7 @@ const CheckoutRythm = () => {
                                     <input type='text' placeholder='Enter zip code' />
                                 </div>
                             </div>
-                        </form>
+                        </form>}
                     </div>
                 </div>
                 <div className='checout_prices_box'>

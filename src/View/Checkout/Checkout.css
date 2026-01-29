@@ -393,3 +393,28 @@ label span {
 .phone-input input::placeholder {
   color: #999;
 }
+
+@media(max-width:1199px){
+  .checkout_wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .checout_prices_box{
+    width: 100%;
+  }
+  .checkout_content_wrapper{
+    width: 100%;
+  }
+ 
+}
+@media(max-width:699px){
+  .account_form_content_wrapper{
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width:576px){
+  .select_experience_head h1{
+    font-size: 1.2rem;
+  }
+}

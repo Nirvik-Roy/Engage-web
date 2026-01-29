@@ -13,8 +13,11 @@ import { useParams } from 'react-router-dom'
 const CheckoutPlayday = () => {
     const [src, setSrc] = useState('');
     const [dropdown, setdropdown] = useState(false);
-    const {id} = useParams();
-    const [currentData,setCurrentData] = useState({})
+    const { id } = useParams();
+    const [experienceDropdown, setexperienceDropdown] = useState(true);
+    const [addonDropdown, setaddonDropdown] = useState(true);
+    const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true)
+    const [currentData, setCurrentData] = useState({})
     var settings = {
         dots: false,
         infinite: true,
@@ -27,7 +30,19 @@ const CheckoutPlayday = () => {
         centerPadding: "30px",
         responsive: [
             {
-                breakpoint: 750,
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 }
@@ -43,9 +58,9 @@ const CheckoutPlayday = () => {
     };
     const data = [
         {
-            id:1,
-            title:'90-Minute Team Building',
-            price:'$999'
+            id: 1,
+            title: '90-Minute Team Building',
+            price: '$999'
         },
         {
             id: 2,
@@ -59,13 +74,13 @@ const CheckoutPlayday = () => {
         },
     ]
 
-    useEffect(()=>{
-        if(id){
+    useEffect(() => {
+        if (id) {
             setCurrentData(data[id])
         }
-    },[id])
+    }, [id])
 
-    
+
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -74,11 +89,11 @@ const CheckoutPlayday = () => {
                     <div className='select_experience_wrapper'>
                         <div className='select_experience_head'>
                             <h1>Select Experience</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setexperienceDropdown(!experienceDropdown))}>
+                                {experienceDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
                             </div>
                         </div>
-                        <div className='select_experience_card_wrapper'>
+                        {experienceDropdown && <div className='select_experience_card_wrapper'>
                             <Slider {...settings}>
                                 {[img, img1, img, img1, img].map(() => (
                                     <div className='select_experience_card'>
@@ -90,54 +105,50 @@ const CheckoutPlayday = () => {
                                     </div>
                                 ))}
                             </Slider>
-                        </div>
+                        </div>}
                     </div>
 
                     <div className='select_add_on_wrapper'>
                         <div className='select_experience_head'>
                             <h1>Select Add-on</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setaddonDropdown(!addonDropdown))}>
+                                {addonDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
                             </div>
                         </div>
 
-                        <div className='select_add_on_content_wrapper'>
+                        {addonDropdown && <div className='select_add_on_content_wrapper'>
                             <div className='add_ons_wrapper'>
                                 <h3>Grand Prizes</h3>
                                 <ul>
-                                    <li><input type='radio' />Top 10 - $299</li>
-                                    <li><input type='radio' />Prize pack: top 3 pro - $399</li>
-                                    <li><input type='radio' />Pack: top 3 deluxe - $699</li>
+                                    <li><input type='radio' />50 trophies A - $799</li>
+                                    <li><input type='radio' />100
+                                        trophies B - $1499</li>
+                                    <li><input type='radio' />AI characters - $199</li>
                                 </ul>
                             </div>
 
                             <div className='add_ons_wrapper'>
                                 <h3>Prize pack</h3>
                                 <ul>
-                                    <li><input type='radio' />Prize pack: 25 digital prize - $499</li>
-                                    <li><input type='radio' />Prize pack: 50 digital prize - $999</li>
-                                    <li><input type='radio' />Prize pack: 100 digital prize - $1599</li>
+                                    <li><input type='radio' />50 treasure hunt prizes - $799 </li>
+                                    <li><input type='radio' />Additional facilitators - $99/each</li>
+
                                 </ul>
                             </div>
 
-                            <div className='add_ons_wrapper'>
-                                <h3>Other</h3>
-                                <ul>
-                                    <li><input type='radio' />Extra players $2.50 each</li>
-                                </ul>
-                            </div>
-                        </div>
+
+                        </div>}
                     </div>
 
                     <div className='ngage_account_details_wrapper'>
                         <div className='select_experience_head'>
                             <h1>NGAGE account details</h1>
-                            <div className='arrow_circle'>
-                                <i class="fa-solid fa-angle-up"></i>
+                            <div className='arrow_circle' onClick={(() => setaccountDetailsDropdown(!accountDetailsDropdown))}>
+                                {accountDetailsDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
                             </div>
                         </div>
 
-                        <form className='account_form_content_wrapper'>
+                        {accountDetailsDropdown && <form className='account_form_content_wrapper'>
                             <div className='account_input_form'>
                                 <label>First Name <span>*</span></label>
                                 <input placeholder='Enter your first name' />
@@ -254,7 +265,7 @@ const CheckoutPlayday = () => {
                                     <input type='text' placeholder='Enter zip code' />
                                 </div>
                             </div>
-                        </form>
+                        </form>}
                     </div>
                 </div>
                 <div className='checout_prices_box'>
@@ -280,27 +291,27 @@ const CheckoutPlayday = () => {
                         <div className='payment_summary_wrapper' style={{
                             border: 'none',
                             marginTop: '-30px',
-                            marginBottom:'0'
+                            marginBottom: '0'
                         }}>
                             <div style={{
-                                display:'flex',
-                                justifyContent:'space-between',
-                                alignItems:'center',
-                                gap:'15px',
-                                flexWrap:'wrap',
-                                paddingBottom:'10px',
-                                borderBottom:'1px solid rgba(231, 233, 235, 1)'
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                gap: '15px',
+                                flexWrap: 'wrap',
+                                paddingBottom: '10px',
+                                borderBottom: '1px solid rgba(231, 233, 235, 1)'
                             }}>
-                            <h3 style={{
-                                marginTop: '15px',
-                                borderBottom:'none',
-                                marginBottom:'0px',
-                                paddingBottom:'0px'
-                            }}>Duration Tier </h3>
-                            <p >Full-day</p>
+                                <h3 style={{
+                                    marginTop: '15px',
+                                    borderBottom: 'none',
+                                    marginBottom: '0px',
+                                    paddingBottom: '0px'
+                                }}>Duration Tier </h3>
+                                <p >Full-day</p>
 
                             </div>
-                           
+
                         </div>
 
                         <div className='payment_summary_wrapper' style={{
@@ -309,8 +320,8 @@ const CheckoutPlayday = () => {
                         }}>
                             <h3 style={{
                                 marginTop: '15px',
-                                paddingBottom:'5px',
-                                marginBottom:'10px'
+                                paddingBottom: '5px',
+                                marginBottom: '10px'
                             }}>Add-ons</h3>
                             <p style={{
                                 marginBottom: '10px'
