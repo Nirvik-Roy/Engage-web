@@ -12,7 +12,12 @@ import img10 from '../../../assets/Riddle- colour fill.svg'
 import img11 from '../../../assets/Quest 1.svg'
 import img12 from '../../../assets/Layer 2.svg'
 import Pagination from '../../../Components/Pagination/Pagination.jsx'
+import search from '../../../assets/Search (1).svg'
+import filterImg from '../../../assets/filter_list.svg'
+import GamesFilterSidebar from '../Gamesfilter/GamesFilterSidebar.jsx'
+import { useState } from 'react'
 const Gameslibrary = () => {
+    const [showFilter,setshowFilter] = useState(false)
     const gamesData = [
         {
             title: 'Treasure Hunt',
@@ -77,6 +82,15 @@ const Gameslibrary = () => {
     ]
     return (
         <>
+            {showFilter &&  <GamesFilterSidebar setshowFilter={setshowFilter}/>}
+            <div className='big_search_input'>
+                <input placeholder='Search..'/>
+                <img src={search}/>
+            </div>
+            <div className='filter_head_wrapper'>
+                <span onClick={(()=>setshowFilter(!showFilter))}>Filter <img src={filterImg}/></span>
+                <p>Sort 1 out of 4 <i class="fa-solid fa-angle-down"></i></p>
+            </div>
             <div className='games_library_wrapper'>
                 <div className='games_grid_wrapper'>
                     {
@@ -88,10 +102,8 @@ const Gameslibrary = () => {
                             </div>
                         ))
                     }
-
                 </div>
-
-                <Pagination/>
+                <Pagination />
             </div>
         </>
     )

@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from '../../../assets/image 214.svg'
 import { NavLink, useLocation } from 'react-router-dom'
 import bars from '../../../assets/Vector (9).svg'
+import NavbarSidebar from './NavbarSidebar'
 const Navbar = () => {
   const [solutionDropdown, setsolutiondropdown] = useState(false);
   const [gamesDropdown, setgamesDropdown] = useState(false)
@@ -11,6 +12,7 @@ const Navbar = () => {
   const dropdownRef2 = useRef();
   const togglebtnref = useRef();
   const togglebtnref2 = useRef();
+  const [show,setShow] = useState(false)
   useEffect(() => {
     const closeDropdowns = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target) &&
@@ -28,8 +30,18 @@ const Navbar = () => {
       document.removeEventListener("mousedown", closeDropdowns);
     };
   }, [])
+  
+  useEffect(()=>{
+     if(show){
+       document.body.style.overflowY = 'hidden'     
+      }else{
+       document.body.style.overflowY = 'scroll'     
+      }
+  },[show])
+
   return (
     <>
+      <NavbarSidebar setShow={setShow } show={show}/>
       <div className='navbar_wrapper'>
         <img src={logo} />
         <div className='navbar_links_wrapper'>
@@ -42,7 +54,7 @@ const Navbar = () => {
               color: 'rgba(238, 150, 1, 1)'
             } : {}} class="fa-solid fa-angle-down"></i>
             {solutionDropdown && <div ref={dropdownRef} onClick={((e) => e.stopPropagation())} className='solutions_dropdown'>
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/engagement'}>Engagement <br/> Solutions</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/engagement'}>Solution Hub</NavLink>
               <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ongoing-engage'}>Ngage  Rhythm</NavLink>
               <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/onboarding'}>Ngage Launchpad</NavLink>
               <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/facilitated-team'}>Ngage Playday</NavLink>
@@ -57,16 +69,16 @@ const Navbar = () => {
             } : {}} class="fa-solid fa-angle-down"></i>
             {gamesDropdown && <div ref={dropdownRef} onClick={((e) => e.stopPropagation())} className='solutions_dropdown'>
               <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/library'}>Games Library</NavLink>
-                            <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/library'}>Game Experience</NavLink>
+              <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/experience'}>Game Experience</NavLink>
             </div>}
           </div>
           <NavLink to={'/about-engage'}>About</NavLink>
           <NavLink to={'/contact-us'}>Contact Us</NavLink>
           <button>Book a Demo <span>Free</span></button>
         </div>
-        <img className='bar_img' style={{
-          width:'auto'
-        }} src={bars}/>
+        <img onClick={(() => setShow(true))} className='bar_img' style={{
+          width: 'auto'
+        }} src={bars} />
       </div>
     </>
   )

@@ -15,6 +15,8 @@ import TermsConditions from './View/TermsConditions/TermsConditions'
 import PrivacyPolicy from './View/PrivacyPolicy/PrivacyPolicy'
 import Contact from './View/Contact/Contact'
 import { useEffect } from 'react'
+import Gamesexperience from './View/Games/Gamesexperience/Gamesexperience'
+import CheckoutRythmSpark from './View/Checkout/CheckoutRythmSpark'
 
 function App() {
   const location = useLocation()
@@ -37,12 +39,14 @@ function App() {
             <Route path='/solutions/facilitated-team' element={<Facilitatedteam />} />
             <Route path='/games' element={<Gameslayout />}>
               <Route path='library' element={<Gameslibrary />} />
+              <Route path='experience' element={<Gamesexperience/>}/>
             </Route>
             <Route path='/faq' element={<Faq />} />
             <Route path='/refund-policy' element={<RefundPolicy />} />
             <Route path='/terms-conditions' element={<TermsConditions />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/contact-us' element={<Contact />} />
+            <Route path='/checkout' element={<CheckoutRythmSpark/>}/>
           </Route>
         </Routes>
       </>

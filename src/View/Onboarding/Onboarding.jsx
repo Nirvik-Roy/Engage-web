@@ -12,7 +12,7 @@ import Launchpadsteps from './Launchpadsteps/Launchpadsteps'
 const Onboarding = () => {
     return (
         <>
-            <BannerLayout subTitle={'Lorem Ipsum is simply'} title={'NGAGE Launchpad'} />
+            <BannerLayout subTitle={'Onboarding that builds culture from day one'} title={'NGAGE Launchpad'} />
             <Buildonboarding />
             <Onboardingmoudles />
             <Buildonce />

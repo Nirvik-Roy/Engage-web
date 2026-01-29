@@ -15,7 +15,7 @@ const Pagination = () => {
         <p>3</p>
         <p>...</p>
         <p>10</p>
-               <i class="fa-solid fa-angle-right"></i>
+          <i class="fa-solid fa-angle-right"></i>
         <i class="fa-solid fa-angles-right"></i>
       </div>
     </>

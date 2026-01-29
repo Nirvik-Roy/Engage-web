@@ -114,4 +114,7 @@
   .home_banner_wrapper{
     min-height: 50vh;
   }
+  .banner_layout_wrapper h3{
+    font-size: 0.9rem !important;
+  }
 }

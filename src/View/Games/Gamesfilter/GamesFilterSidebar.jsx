@@ -1,14 +1,18 @@
 import './Gamesfilter.css'
 import searchIcon from '../../../assets/Search (1).svg'
-import {  useState } from 'react'
+import { useState } from 'react'
 import buttonIcon from '../../../assets/svg159.svg'
-const Gamesfilter = () => {
+import filterImg from '../../../assets/filter_list.svg'
+const GamesFilterSidebar = ({ setshowFilter }) => {
     const [useCase, setuseCase] = useState(true);
     const [duration, setduration] = useState(true)
-
     return (
         <>
-            <div className='games_filter_wrapper'>
+            <div className='games_responsive_filter_Wrapper' onClick={(() => setshowFilter(false))}>
+            <div className='games_filter_wrapper ' onClick={((e)=>e.stopPropagation())}>
+             <div className='filter_head_wrapper'>
+                            <span>Filter <img src={filterImg}/></span>
+                        </div>
                 <div className='search_input'>
                     <input placeholder='Search..' />
                     <img src={searchIcon} />
@@ -69,12 +73,13 @@ const Gamesfilter = () => {
                 </div>
 
                 <div className='games_button_dropdown_rapper'>
-                    <button className='base_btn_design'>Apply <img src={buttonIcon}/></button>
+                    <button className='base_btn_design'>Apply <img src={buttonIcon} /></button>
                     <button>Reset</button>
                 </div>
             </div>
+        </div>
         </>
     )
 }
 
-export default Gamesfilter
+export default GamesFilterSidebar

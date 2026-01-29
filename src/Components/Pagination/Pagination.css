@@ -38,3 +38,10 @@
         border: 1px solid rgba(241, 241, 241, 1);
         border-radius: 50%;
 }
+@media(max-width:480px){
+    .pagination_wrapper p{
+        width: 25px;
+        height: 25px;
+        font-size: 11px;
+    }
+}
