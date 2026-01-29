@@ -100,19 +100,19 @@
 .engage_rythm_cards_wrapper {
   display: flex;
   position: relative;
-  min-height: 60vh;
+  min-height: 420px;
   width: 85%;
   margin-inline: auto;
   margin-top: 50px;
-  /* margin-bottom: 1%; */
+  /* margin-bottom: 50px; */
 }
 .responsive_rythm_cards_wrapper{
-   min-height: 60vh;
+   min-height: 420px;
    position: relative;
   width: 85%;
   margin-inline: auto;
   margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   display: none;
 }
 .engage_rythm_card h4 {
