@@ -2,8 +2,10 @@ import React from 'react'
 import img from '../../../assets/Rectangle 6679.png'
 import listimg from '../../../assets/Vector (8).svg'
 import buttonIconNew from '../../../assets/g165.svg'
+import { useNavigate } from 'react-router-dom'
 
 const Rythmpackageprices = () => {
+    const navigate =useNavigate()
     const data = [
         {
             id: 1,
@@ -102,7 +104,14 @@ const Rythmpackageprices = () => {
                                 ))}
                             </div>
 
-                            <button style={{
+                            <button onClick={() => {
+                                const routes = [
+                                    "/checkout/rythm/2",
+                                    "/checkout/rythm/3",
+                                    "/checkout/rythm/4"
+                                ];
+                                navigate(routes[i] ?? "/");
+                            }} style={{
                                 fontSize: '1.1rem',
                                 fontWeight: '600',
                                 cursor: 'pointer',

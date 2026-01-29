@@ -4,7 +4,9 @@ import listimg from '../../../assets/Vector (8).svg'
 import button from '../../../assets/svg159.svg'
 import buttonIcon2 from '../../../assets/svg159 (2).svg'
 import './Corporatefunday.css'
+import { useNavigate } from 'react-router-dom'
 const Corporatefunday = () => {
+    const navigate = useNavigate()
     const data = [
         {
             id: 1,
@@ -82,7 +84,9 @@ const Corporatefunday = () => {
                             gridColumn: '1/-1',
                             marginTop: '20px'
                         }}>
-                            <button className='base_btn_design'>Request a Quote<img src={button} /></button>
+                            <button onClick={() => {
+                                navigate("/checkout/playday/2");
+                            }} className='base_btn_design'>Request a Quote<img src={button} /></button>
                             <button className='base_btn_design'>Talk to an Expert<img src={buttonIcon2} /></button>
                         </div>
                     </div>

@@ -16,7 +16,10 @@ import PrivacyPolicy from './View/PrivacyPolicy/PrivacyPolicy'
 import Contact from './View/Contact/Contact'
 import { useEffect } from 'react'
 import Gamesexperience from './View/Games/Gamesexperience/Gamesexperience'
-import CheckoutRythmSpark from './View/Checkout/CheckoutRythmSpark'
+import CheckoutRythmSpark from './View/Checkout/CheckoutRythm'
+import CheckoutRythm from './View/Checkout/CheckoutRythm'
+import CheckoutPlayday from './View/Checkout/CheckoutPlayday'
+import Checkoutlaunchpad from './View/Checkout/Checkoutlaunchpad'
 function App() {
   const location = useLocation()
   useEffect(() => {
@@ -45,7 +48,9 @@ function App() {
             <Route path='/terms-conditions' element={<TermsConditions />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/contact-us' element={<Contact />} />
-            <Route path='/checkout' element={<CheckoutRythmSpark/>}/>
+            <Route path='/checkout/rythm/:id' element={<CheckoutRythm/>}/>
+            <Route path='/checkout/playday/:id' element={<CheckoutPlayday/>}/>
+            <Route path='/checkout/launchpad/:id' element={<Checkoutlaunchpad/>}/>
           </Route>
         </Routes>
       </>

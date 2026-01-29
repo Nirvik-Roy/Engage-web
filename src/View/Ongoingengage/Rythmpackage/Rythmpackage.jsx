@@ -4,7 +4,9 @@ import img from '../../../assets/Rectangle 6679.png'
 import listimg from '../../../assets/Vector (8).svg'
 import Rythmpackageprices from './Rythmpackageprices'
 import buttonIconNew from '../../../assets/g165.svg'
+import { useNavigate } from 'react-router-dom'
 const Rythmpackage = () => {
+    const navigate = useNavigate()
     const data = [
         {
             id: 1,
@@ -59,7 +61,7 @@ const Rythmpackage = () => {
                                         fontWeight: '700',
                                         fontSize: '20px'
                                     }}>{e.title2}</h3>
-                                    {e.list.map((ele,) => (
+                                    {e.list.map((ele) => (
                                         <>
                                             <h5 style={{
                                                 fontWeight: '700'
@@ -69,7 +71,13 @@ const Rythmpackage = () => {
                                                 <li><img src={listimg} />{ele.point2}</li>
                                                 <li><img src={listimg} />{ele.point3}</li>
                                             </ul>
-                                            <button style={{
+                                            <button onClick={() => {
+                                                const routes = [
+                                                    "/checkout/rythm/0",
+                                                    "/checkout/rythm/1",
+                                                ];
+                                                navigate(routes[i] ?? "/");
+                                            }} style={{
                                                 fontSize: '1.1rem',
                                                 fontWeight: '600',
                                                 cursor: 'pointer',

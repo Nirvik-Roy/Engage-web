@@ -105,7 +105,7 @@
 }
 .add_ons_wrapper h3 {
   color: black;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.2rem;
 }
 .add_ons_wrapper ul {
@@ -230,7 +230,7 @@
   padding: 0 10px 0 20px;
 }
 .coupon_input_wrapper input{
-    width: 80%;
+    width: 70%;
     height: 100%;
     border: none;
     padding: 0 15px;
@@ -238,7 +238,7 @@
     font-size: 1rem;
 }
 .coupon_input_wrapper p{
-    width: calc(100% - 82%);
+    /* width: calc(100% - 68%); */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -310,7 +310,86 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 .proceed_btn img{
     cursor: pointer;
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+}
+.flag_dropdown{
+  position: absolute;
+  width: 60px;
+  height: 30vh;
+  background-color: #fff;
+  top: 81px;
+  left: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+   border: 1px solid #dcdcdc;
+}
+.flag_dropdown img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-left: 15px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+label span {
+  color: red;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 999px;
+  padding: 0px 14px;
+  height: 50px;
+  background: #fff;
+}
+
+.country-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 12px;
+  border-right: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.flag {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.arrow {
+  font-size: 10px;
+  color: #777;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  padding-left: 12px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.phone-input input::placeholder {
+  color: #999;
 }

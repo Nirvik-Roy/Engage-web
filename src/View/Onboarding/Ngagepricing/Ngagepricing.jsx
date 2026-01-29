@@ -3,7 +3,9 @@ import './Ngagepricing.css'
 import img from '../../../assets/Group 1597882962 (1).png'
 import listimg from '../../../assets/Vector (8).svg'
 import icon from '../../../assets/svg159.svg'
+import { useNavigate } from 'react-router-dom'
 const Ngagepricing = () => {
+    const navigate = useNavigate()
     const data = [
         {
             id: 1,
@@ -97,7 +99,14 @@ const Ngagepricing = () => {
                                     </ul>
                                 </div>
 
-                                <button className='base_btn_design'>Request a Quote <img src={icon}/></button>
+                                <button onClick={() => {
+                                    const routes = [
+                                        "/checkout/launchpad/0",
+                                        "/checkout/launchpad/1",
+                                        "/checkout/launchpad/2",
+                                    ];
+                                    navigate(routes[i] ?? "/");
+                                }} className='base_btn_design'>Request a Quote <img src={icon}/></button>
                               {/* <p style={{
                                 fontWeight:'700',
                                 fontSize:'1rem',

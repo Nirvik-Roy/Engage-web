@@ -131,7 +131,6 @@ const Engagerythm = () => {
 
             <div className='engage_rythm_cards_wrapper responsive_rythm_cards_wrapper'>
             {mounted && <Slider {...settings}>
-
                 {cardData.map((e, i) => (
                     <div key={i} className='engage_rythm_card' >
                         <div className='engage_rythm_img'>

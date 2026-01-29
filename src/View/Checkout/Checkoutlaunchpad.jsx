@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import img from '../../assets/Rectangle 6692.png'
@@ -7,8 +7,14 @@ import icon from '../../assets/svg159 (3).svg'
 import icon2 from '../../assets/svg159 (4).svg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import countryData from '../../../countries.json'
 import Slider from "react-slick";
-const CheckoutRythmSpark = () => {
+import { useParams } from 'react-router-dom'
+const Checkoutlaunchpad = () => {
+    const [src, setSrc] = useState('');
+    const [dropdown, setdropdown] = useState(false)
+    const { id } = useParams();
+    const [currentData, setCurrentData] = useState({})
     var settings = {
         dots: false,
         infinite: true,
@@ -35,6 +41,30 @@ const CheckoutRythmSpark = () => {
             },
         ]
     };
+
+    const data = [
+        {
+            id: 1,
+            title: 'Starter',
+            price: '$4,499'
+        },
+        {
+            id: 2,
+            title: 'Pro (AI)',
+            price: '$6,999'
+        },
+        {
+            id: 3,
+            title: 'Ultimate',
+            price: '$6,999'
+        },
+    ]
+
+    useEffect(() => {
+        if (id) {
+            setCurrentData(data[id])
+        }
+    }, [id])
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -74,25 +104,19 @@ const CheckoutRythmSpark = () => {
                             <div className='add_ons_wrapper'>
                                 <h3>Grand Prizes</h3>
                                 <ul>
-                                    <li><input type='radio' />Top 10 - $299</li>
-                                    <li><input type='radio' />Prize pack: top 3 pro - $399</li>
-                                    <li><input type='radio' />Pack: top 3 deluxe - $699</li>
+                                    <li><input type='radio' />Prizes 50 - $999</li>
+                                    <li><input type='radio' />Prize 100 - $1599</li>
+                                    <li><input type='radio' />AI characters - $199</li>
                                 </ul>
                             </div>
 
                             <div className='add_ons_wrapper'>
                                 <h3>Prize pack</h3>
                                 <ul>
-                                    <li><input type='radio' />Prize pack: 25 digital prize - $499</li>
-                                    <li><input type='radio' />Prize pack: 50 digital prize - $999</li>
-                                    <li><input type='radio' />Prize pack: 100 digital prize - $1599</li>
-                                </ul>
-                            </div>
+                                    <li><input type='radio' />Video
+                                        modules - $99</li>
+                                    <li><input type='radio' />Extra level - $99</li>
 
-                            <div className='add_ons_wrapper'>
-                                <h3>Other</h3>
-                                <ul>
-                                    <li><input type='radio' />Extra players $2.50 each</li>
                                 </ul>
                             </div>
                         </div>
@@ -122,9 +146,33 @@ const CheckoutRythmSpark = () => {
                                 <input placeholder='Enter your email' />
                             </div>
 
-                            <div className='account_input_form'>
+                            <div class="form-group">
                                 <label>Phone number <span>*</span></label>
-                                <input placeholder='Enter your phone number' />
+
+                                <div class="phone-input">
+                                    <div class="country-select" onClick={(() => { setdropdown(!dropdown) })}>
+                                        <img
+                                            src={src != '' ? src : "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/US.svg"}
+                                            alt="US"
+                                            class="flag"
+                                        />
+                                        <i style={{
+                                            color: '#6b6b6b'
+                                        }} class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    {dropdown && <div className='flag_dropdown'>
+                                        {countryData?.map((e) => (
+                                            <img onClick={(() => {
+                                                setSrc(e?.flag_svg)
+                                                setdropdown(false)
+                                            })} src={e?.flag_svg} />
+                                        ))}
+                                    </div>}
+                                    <input
+                                        type="tel"
+                                        placeholder="Enter your phone number"
+                                    />
+                                </div>
                             </div>
 
                             <div className='account_input_form' style={{
@@ -207,53 +255,44 @@ const CheckoutRythmSpark = () => {
                     <div className='order_content_wrapper'>
                         <div className='order_head_wrapper'>
                             <div className='order_head_left'>
-                                <h5>Rhythm Spark </h5>
-                                <h6>NGAGE Rhythm</h6>
+                                <h5>{currentData?.title}</h5>
+                                <h6>NGAGE Launchpad</h6>
                             </div>
-                            <div className='order_head_right'>
-                                <h3>$699.00</h3>
+                            <div className='order_head_left' style={{
+                                rowGap: '0'
+                            }}>
+                                <p>Starting from</p>
+                                <h3>{currentData?.price}.00</h3>
                             </div>
                         </div>
 
-                        <div className='order_coupon_wrapper'>
-                            <div className='order_coupon_head'>
-                                <h5>Coupon</h5>
-                                <p>Add Coupon</p>
-                            </div>
+                        <small><span style={{
+                            fontWeight: '700'
+                        }}>Note:</span> Final pricing is customized based on your requirements. You’ll receive a detailed quote after discussion.</small>
 
-                            <div className='coupon_input_wrapper'>
-                                <input placeholder='Add coupon code' />
-                                <p>Apply <img src={icon} /></p>
-
-                            </div>
-                            <h3>NGAGE 90 <span>Applied</span></h3>
-                        </div>
-
-                        <div className='payment_summary_wrapper'>
-                            <h3>Payment Summary</h3>
-                            <p style={{
-                                marginBottom: '10px'
-                            }}>Plan Price <span>$699.00</span></p>
-                            <p>Discount <span>-$0.00</span></p>
+                        <div className='payment_summary_wrapper' style={{
+                            border: 'none',
+                            marginTop: '-30px'
+                        }}>
 
                             <h3 style={{
-                                marginTop:'15px'
+                                marginTop: '15px'
                             }}>Add-ons</h3>
 
                             <p style={{
                                 marginBottom: '10px'
-                            }}>Pack: top 3 deluxe<span>$699 <small>Remove</small></span></p>
-                            <p>Prize pack: 100 digital prize <span>$1,599 <small>Remove</small></span></p>
+                            }}>Prizes 50 <span>$999.00 <small>Remove</small></span></p>
+                            <p>Video
+                                modules <span>$99.00<small>Remove</small></span></p>
                         </div>
 
-                        <h1 className='total_number'>Total <span>$1,797.00</span></h1>
                     </div>
 
-                    <button className='proceed_btn'>Proceed to pay <img src={icon2}/></button>
-                </div> 
+                    <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>
+                </div>
             </div>
         </>
     )
 }
 
-export default CheckoutRythmSpark
+export default Checkoutlaunchpad
