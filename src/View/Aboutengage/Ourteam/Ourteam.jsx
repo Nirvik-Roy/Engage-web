@@ -1,7 +1,8 @@
 import './Ourteam.css'
-import img from '../../../assets/Rectangle 18.png'
-import img2 from '../../../assets/Rectangle 18 (1).png'
-import img3 from '../../../assets/Rectangle 18 (2).png'
+import img from '../../../assets/Rectangle 18 (3).png'
+import img2 from '../../../assets/Rectangle 18 (4).png'
+import img3 from '../../../assets/Rectangle 18 (5).png'
+import img4 from '../../../assets/Rectangle 18 (6).png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
@@ -36,30 +37,46 @@ const Ourteam = () => {
     };
     const slideData = [
         {
-            title: 'Archie Connelly',
-            designation: 'Founder & CEO',
+            title: 'Damani Brown ',
+            designation: 'Managing Director',
             img: img
         },
         {
-            title: 'Kevin Ullrich',
-            designation: 'Founder & CTO',
+            title: 'Dr. George Scarlett',
+            designation: 'Founding Member',
             img: img2
         },
         {
-            title: 'Yvonne Mayer',
-            designation: 'Chief of staff',
+            title: 'Matthew Webster ',
+            designation: 'Director of Marketing & Sales',
             img: img3
         },
         {
-            title: 'Archie Connelly',
-            designation: 'Founder & CEO',
+            title: 'Winston Blackwood',
+            designation: 'Director Projects & Data Analytics',
+            img: img4
+        },
+        {
+            title: 'Damani Brown ',
+            designation: 'Managing Director',
             img: img
         },
         {
-            title: 'Archie Connelly',
-            designation: 'Founder & CEO',
-            img: img
+            title: 'Dr. George Scarlett',
+            designation: 'Founding Member',
+            img: img2
         },
+        {
+            title: 'Matthew Webster ',
+            designation: 'Director of Marketing & Sales',
+            img: img3
+        },
+        {
+            title: 'Winston Blackwood',
+            designation: 'Director Projects & Data Analytics',
+            img: img4
+        },
+       
 
     ]
     return (

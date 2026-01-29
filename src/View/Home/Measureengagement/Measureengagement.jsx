@@ -4,8 +4,8 @@ import sample from '../../../assets/image 222.png'
 import ellipse from '../../../assets/Ellipse 254.svg'
 import star from '../../../assets/Frame 1984078715.svg'
 import event from '../../../assets/Event colour fill.svg'
-import engagementImg from '../../../assets/Group 1597882951.png'
-import img2 from '../../../assets/Group 1597882952.png'
+import engagementImg from '../../../assets/Frame 1984078720 (1).svg'
+import img2 from '../../../assets/Group 1597882952.svg'
 import img3 from '../../../assets/Frame 1984078716.png'
 import img4 from '../../../assets/Frame 1984078720.svg'
 import img5 from '../../../assets/Frame 1984078717.svg'
@@ -33,26 +33,7 @@ const Measureengagement = () => {
                             <div style={{
                                 marginBottom: '15px'
                             }} className='measure_box_div_wrapper'>
-                                {/* <div className='measure_box_div'>
-                                <div className='ellipse_img'>
-                                    <img src={ellipse} />
-                                    <h2>+85%</h2>
-                                </div>
-                                <h3>Average Participation</h3>
-                            </div>
-                            <div className='measure_box_div'>
-                                <h4>9.2/10</h4>
-                                <img style={{
-                                    width: '100%'
-                                }} src={star} />
-                                <h3>Average Satisfaction
-                                </h3>
-                            </div>
-                            <div className='measure_box_div'>
-                                <h4>31+</h4>
-                                <img src={event} />
-                                <h3>Events Powered in 2024</h3>
-                            </div> */}
+                              
 
                                 <div className='measure_box_div'>
                                     <img src={engagementImg} />

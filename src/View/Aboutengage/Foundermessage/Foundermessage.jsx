@@ -1,6 +1,6 @@
 import React from 'react'
 import './Foundermessage.css'
-import img from '../../../assets/medium-shot-male-flight-attendant-posing 1.png'
+import img from '../../../assets/medium-shot-male-flight-attendant-posing 1 (1).png'
 const Foundermessage = () => {
     return (
         <>

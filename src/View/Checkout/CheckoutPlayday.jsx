@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
-import img from '../../assets/Rectangle 6692.png'
-import img1 from '../../assets/Rectangle 6693.png'
+import img from '../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.png'
+import img1 from '../../assets/411ff4766e8e675b11f4af6ae34083103a95ec00.png'
 import icon from '../../assets/svg159 (3).svg'
 import icon2 from '../../assets/svg159 (4).svg'
 import "slick-carousel/slick/slick.css";
@@ -284,8 +284,11 @@ const CheckoutPlayday = () => {
                             </div>
                         </div>
 
-                        <small><span style={{
-                            fontWeight: '700'
+                        <small style={{
+                            marginLeft: '5px'
+                        }}><span style={{
+                            fontWeight: '700',
+                            
                         }}>Note:</span> Final pricing is customized based on your requirements. You’ll receive a detailed quote after discussion.</small>
 
                         <div className='payment_summary_wrapper' style={{
@@ -300,10 +303,11 @@ const CheckoutPlayday = () => {
                                 gap: '15px',
                                 flexWrap: 'wrap',
                                 paddingBottom: '10px',
+                                marginTop:'20px',
                                 borderBottom: '1px solid rgba(231, 233, 235, 1)'
                             }}>
                                 <h3 style={{
-                                    marginTop: '15px',
+                                    // marginTop: '15px',
                                     borderBottom: 'none',
                                     marginBottom: '0px',
                                     paddingBottom: '0px'

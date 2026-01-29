@@ -63,6 +63,8 @@
 .measure_box_div_wrapper {
   display: flex;
   gap: 15px;
+  justify-content: center;
+  align-items: center;
 }
 .measure_box_div {
   width: 120px;
@@ -71,6 +73,9 @@
   row-gap: 5px;
   justify-content: center;
   align-items: center;
+}
+.measure_box_div img{
+  width: 100%;
 }
 .measure_box_div h3 {
   font-size: 0.9rem;
@@ -140,5 +145,14 @@
     font-size: 2rem !important;
     font-weight: 700;
     line-height: 2.5rem;
+  }
+  .measure_box_div{
+    width: 90px;
+  }
+}
+
+@media(max-width:400px){
+  .measure_box_div{
+    width: 70px;
   }
 }

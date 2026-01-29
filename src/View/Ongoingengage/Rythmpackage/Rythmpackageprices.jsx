@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../../assets/Rectangle 6679.png'
+import img from '../../../assets/Rectangle 6679 (4).png'
 import listimg from '../../../assets/Vector (8).svg'
 import buttonIconNew from '../../../assets/g165.svg'
 import { useNavigate } from 'react-router-dom'

@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../../assets/Group 1597882971 (2).png'
+import img from '../../../assets/Group 1597882971 (3).png'
 import '../../Ongoingengage/Teamparticipate/Teamparticipate.css'
 const Playday = () => {
   return (

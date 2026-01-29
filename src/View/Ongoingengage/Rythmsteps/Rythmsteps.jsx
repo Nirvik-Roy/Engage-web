@@ -1,6 +1,6 @@
 import React from 'react'
 import './Rythmsteps.css'
-import img from '../../../assets/Group 1597882974.png'
+import img from '../../../assets/Group 1597882974 (2).png'
 import oneImg from '../../../assets/1.svg'
 import twoImg from '../../../assets/2.svg'
 import threeImg from '../../../assets/3.svg'

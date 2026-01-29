@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
-import img from '../../assets/Rectangle 6692.png'
-import img1 from '../../assets/Rectangle 6693.png'
+import img from '../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.png'
+import img1 from '../../assets/411ff4766e8e675b11f4af6ae34083103a95ec00.png'
 import icon from '../../assets/svg159 (3).svg'
 import icon2 from '../../assets/svg159 (4).svg'
 import "slick-carousel/slick/slick.css";

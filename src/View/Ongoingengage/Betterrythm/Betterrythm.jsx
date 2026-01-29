@@ -1,5 +1,5 @@
 import './Betterrythm.css'
-import img from '../../../assets/Group 1597882971 (1).png'
+import img from '../../../assets/Rectangle 6667 (6).png'
 import bgImg from '../../../assets/Rectangle 6682.png'
 const Betterrythm = () => {
     return (

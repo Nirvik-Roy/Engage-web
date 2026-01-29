@@ -1,12 +1,16 @@
 import React from 'react'
 import './Missionvision.css'
-import img from '../../../assets/Rectangle 6679 (1).png'
+import img from '../../../assets/Rectangle 6679 (5).png'
 const Missionvision = () => {
     return (
         <>
             <div className='mission_vission_wrapper'>
                 <div className='container mission_vision_content_wrapper'>
+               
                     <div className='mission_content'>
+                        <h1 className='heading' style={{
+                            marginBottom:'10px'
+                        }}>About NGAGE</h1>
                         <ul>
                             <li>Ngage is an employee engagement system designed to help organizations build stronger cultures by creating meaningful moments of connection.</li>
                             <li>We believe culture isn’t shaped by policies or statements alone.</li>

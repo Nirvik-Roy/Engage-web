@@ -40,7 +40,7 @@
         width: 90%;
     }
     .banner_layout_wrapper{
-        background-image: url('../../../assets/Group 1597882989 (1).png') !important;
+        /* background-image: url('../../../assets/Group 1597882989 (1).png') !important; */
         min-height: 50vh;
     }
 }

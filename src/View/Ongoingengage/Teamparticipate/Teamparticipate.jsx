@@ -1,6 +1,6 @@
 import React from 'react'
 import './Teamparticipate.css'
-import img from '../../../assets/Rectangle 6674 (2).png'
+import img from '../../../assets/Rectangle 6674 (7).png'
 const Teamparticipate = () => {
     return (
         <>

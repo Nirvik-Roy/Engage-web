@@ -1,6 +1,6 @@
 import React from 'react'
 import './Rythmpackage.css'
-import img from '../../../assets/Rectangle 6679.png'
+import img from '../../../assets/Rectangle 6679 (3).png'
 import listimg from '../../../assets/Vector (8).svg'
 import Rythmpackageprices from './Rythmpackageprices'
 import buttonIconNew from '../../../assets/g165.svg'

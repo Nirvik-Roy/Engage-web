@@ -1,6 +1,6 @@
 import React from 'react'
 import './BannerLayout.css'
-import bgImg from '../../../assets/Group 1597882989.png'
+import bgImg from '../../../assets/Mask group.png'
 const BannerLayout = ({ title, subTitle }) => {
   return (
     <>

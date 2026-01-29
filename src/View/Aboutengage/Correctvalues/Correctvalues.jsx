@@ -1,6 +1,6 @@
 import React from 'react'
 import './Correctvalues.css'
-import img from '../../../assets/Rectangle 6674.png'
+import img from '../../../assets/Rectangle 6674 (9).png'
 import bgImg from '../../../assets/Rectangle 6682.png'
 const Correctvalues = () => {
     const data = [

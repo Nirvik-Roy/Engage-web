@@ -1,6 +1,8 @@
 import React from 'react'
 import './MeetEngage.css'
-import img from '../../../assets/3864bda0c85d9309028b4066ef6a22484fd9dfc8.jpg'
+import img from '../../../assets/Group 1597882995.png'
+import img2 from '../../../assets/388196778_4e64b692-3706-4c0d-b86b-0914459f8107 1.png'
+import img3 from '../../../assets/388196778_4e64b692-3706-4c0d-b86b-0914459f8107 2.png'
 import buttoIcon from '../../../assets/svg159.svg'
 import buttoIcon2 from '../../../assets/svg159 (2).svg'
 import engageImg from '../../../assets/Rectangle 6672.png'
@@ -49,9 +51,9 @@ const MeetEngage = () => {
                     </div>
                     <div className='right_engage_img'>
                         <Slider {...settings}>
-                            {[1, 2, 3, 4, 5].map((e) => (
+                            {[img,img2,img3].map((e) => (
                                 <div>
-                                <img key={e} src={img} />
+                                <img key={e} src={e} />
                                 </div>
                             ))}
                         </Slider>

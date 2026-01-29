@@ -1,5 +1,5 @@
 import './Buildculture.css'
-import img from '../../../assets/Rectangle 6674 (1).png'
+import img from '../../../assets/Rectangle 6674 (6).png'
 import shadow from '../../../assets/Rectangle 6684.png'
 import Betterrythm from '../Betterrythm/Betterrythm'
 const Buildculture = () => {
