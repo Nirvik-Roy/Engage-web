@@ -95,10 +95,10 @@ const CheckoutPlayday = () => {
                         </div>
                         {experienceDropdown && <div className='select_experience_card_wrapper'>
                             <Slider {...settings}>
-                                {[img, img1, img, img1, img].map(() => (
+                                {[img, img1, img, img1, img].map((e) => (
                                     <div className='select_experience_card'>
                                         <div className='select_experience_img'>
-                                            <img src={img} />
+                                            <img src={e} />
                                         </div>
                                         <h4>Christmas  Challenge</h4>
                                         <p>Select <img src={icon} /></p>
