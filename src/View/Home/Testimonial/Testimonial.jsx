@@ -37,49 +37,50 @@ const Testimonial = () => {
         {
             id: 1,
             img: ellipse2,
-            review: '“Ngage helped us get more people involved — not just the usual participants.”',
-            name: 'Sophia Anderson',
-            designation: 'HR Manager'
+            review: 'Our company fun Day was a hit! The games and overall experience provided to our team was excellent! We are looking forward to future engagements. Thanks team Ngage ',
+            name: 'Yanique Dixon',
+            designation: 'J. Wray & Nephew'
         },
         {
             id: 2,
             img: ellipse,
-            review: '“It made engagement easier to manage and easier for staff to enjoy.”',
-            name: 'Sophia Anderson',
-            designation: 'People & Culture Lead'
+            review: 'We held a Girls in ICT Day event for over 200 young ladies. Ngage created an immersive and cohesive experience to educate our girls on ICT. Participants were able to meet each other, complete challenges and earn points. Ngage was an amazing partner for us. It was a solid 10/10.  ',
+            name: 'Deleen Powell',
+            designation: 'Flow Jamaica'
         },
 
 
         {
             id: 3,
             img: ellipse,
-            review: '“It made engagement easier to manage and easier for staff to enjoy.”',
-            name: 'Sophia Anderson',
-            designation: 'People & Culture Lead'
+            review: 'Ngage helped us raise the energy of our team; who had been under a lot of stress with restoration activities after Hurricane Beryl. Team members across the company were able to connect with each other through the fun challenges. The staff loved it and Ngage even provided prizes. ',
+            name: 'Gina Tomlinson',
+            designation: 'JPSco'
         },
         {
             id: 1,
             img: ellipse2,
-            review: '“Ngage helped us get more people involved — not just the usual participants.”',
-            name: 'Sophia Anderson',
-            designation: 'HR Manager'
+            review: 'Our company fun Day was a hit! The games and overall experience provided to our team was excellent! We are looking forward to future engagements. Thanks team Ngage ',
+            name: 'Yanique Dixon',
+            designation: 'J. Wray & Nephew'
         },
         {
             id: 2,
             img: ellipse,
-            review: '“It made engagement easier to manage and easier for staff to enjoy.”',
-            name: 'Sophia Anderson',
-            designation: 'People & Culture Lead'
+            review: 'We held a Girls in ICT Day event for over 200 young ladies. Ngage created an immersive and cohesive experience to educate our girls on ICT. Participants were able to meet each other, complete challenges and earn points. Ngage was an amazing partner for us. It was a solid 10/10.  ',
+            name: 'Deleen Powell',
+            designation: 'Flow Jamaica'
         },
 
 
         {
             id: 3,
             img: ellipse,
-            review: '“It made engagement easier to manage and easier for staff to enjoy.”',
-            name: 'Sophia Anderson',
-            designation: 'People & Culture Lead'
+            review: 'Ngage helped us raise the energy of our team; who had been under a lot of stress with restoration activities after Hurricane Beryl. Team members across the company were able to connect with each other through the fun challenges. The staff loved it and Ngage even provided prizes. ',
+            name: 'Gina Tomlinson',
+            designation: 'JPSco'
         },
+      
 
     ]
     return (

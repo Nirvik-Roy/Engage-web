@@ -1,6 +1,6 @@
 import React from 'react'
 import './Buildonboarding.css'
-import img from '../../../assets/Rectangle 6667 (1).png'
+import img from '../../../assets/Rectangle 6667 (2).png'
 import shadow from '../../../assets/Rectangle 6684.png'
 import Helpnewhires from './Helpnewhires'
 const Buildonboarding = () => {

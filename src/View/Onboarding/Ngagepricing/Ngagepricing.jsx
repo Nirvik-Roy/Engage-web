@@ -1,7 +1,8 @@
 import React from 'react'
 import './Ngagepricing.css'
-import img from '../../../assets/Rectangle 6679.png'
+import img from '../../../assets/Group 1597882962 (1).png'
 import listimg from '../../../assets/Vector (8).svg'
+import icon from '../../../assets/svg159.svg'
 const Ngagepricing = () => {
     const data = [
         {
@@ -95,11 +96,13 @@ const Ngagepricing = () => {
                                         ))}
                                     </ul>
                                 </div>
-                              <p style={{
+
+                                <button className='base_btn_design'>Request a Quote <img src={icon}/></button>
+                              {/* <p style={{
                                 fontWeight:'700',
                                 fontSize:'1rem',
                                 margin:'20px 0 0 0'
-                              }}>{e.access}</p>
+                              }}>{e.access}</p> */}
                             </div>
                         ))}
                     </div>

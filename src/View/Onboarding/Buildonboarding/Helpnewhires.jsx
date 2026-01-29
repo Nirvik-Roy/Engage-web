@@ -1,6 +1,6 @@
 import React from 'react'
 import bgImg from '../../../assets/Rectangle 6682.png'
-import img from '../../../assets/Group 1597882936.png'
+import img from '../../../assets/Rectangle 6674 (4).png'
 const Helpnewhires = () => {
   return (
     <>

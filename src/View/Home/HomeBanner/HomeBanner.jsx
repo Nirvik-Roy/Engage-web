@@ -1,5 +1,5 @@
 import './HomeBanner.css'
-import bannerImg from '../../../assets/Home.png'
+import bannerImg from '../../../assets/Group 1597883006.png'
 import buttoIcon from '../../../assets/svg159.svg'
 import buttoIcon2 from '../../../assets/svg159 (1).svg'
 const HomeBanner = ({ data }) => {

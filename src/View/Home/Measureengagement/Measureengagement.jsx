@@ -4,6 +4,11 @@ import sample from '../../../assets/image 222.png'
 import ellipse from '../../../assets/Ellipse 254.svg'
 import star from '../../../assets/Frame 1984078715.svg'
 import event from '../../../assets/Event colour fill.svg'
+import engagementImg from '../../../assets/Group 1597882951.png'
+import img2 from '../../../assets/Group 1597882952.png'
+import img3 from '../../../assets/Frame 1984078716.png'
+import img4 from '../../../assets/Frame 1984078720.svg'
+import img5 from '../../../assets/Frame 1984078717.svg'
 const Measureengagement = () => {
     return (
         <>
@@ -11,24 +16,24 @@ const Measureengagement = () => {
                 <div className='container measure_engagement_content_wrapper'>
                     <div className='measure_engagement_content'>
                         <h1 className='heading' style={{
-                            marginBottom:'15px'
+                            marginBottom: '15px'
                         }}>Measure engagement without the guesswork.</h1>
                         <p style={{
-                            marginBottom:'15px'
+                            marginBottom: '15px'
                         }}>Ngage also gives HR teams a <span style={{
-                            paddingLeft:'0'
+                            paddingLeft: '0'
                         }}>clear, simple way to track engagement progress over time.</span></p>
                         <span>Introducing the Ngage Engagement Score (NES)</span>
                         <p style={{
-                            marginTop:'15px',
-                            marginBottom:'15px'
+                            marginTop: '15px',
+                            marginBottom: '15px'
                         }}>NES brings participation, consistency, and feedback together into one easy-to-understand engagement score — so you can:</p>
 
                         <div className='content_wrapper5656'>
-                        <div style={{
-                            marginBottom:'15px'
-                        }} className='measure_box_div_wrapper'>
-                            <div className='measure_box_div'>
+                            <div style={{
+                                marginBottom: '15px'
+                            }} className='measure_box_div_wrapper'>
+                                {/* <div className='measure_box_div'>
                                 <div className='ellipse_img'>
                                     <img src={ellipse} />
                                     <h2>+85%</h2>
@@ -47,14 +52,33 @@ const Measureengagement = () => {
                                 <h4>31+</h4>
                                 <img src={event} />
                                 <h3>Events Powered in 2024</h3>
-                            </div>
-                        </div>
+                            </div> */}
 
-                        <p style={{
-                            paddingLeft:'0'
-                        }}>See how engaged your teams actually are,
-                            Track progress across initiatives and time, Share clear engagement insights with leadership, No complicated dashboards, No survey overload.
-                        </p>
+                                <div className='measure_box_div'>
+                                    <img src={engagementImg} />
+                                </div>
+
+                                <div className='measure_box_div'>
+                                    <img src={img2} />
+                                </div>
+
+                                <div className='measure_box_div'>
+                                    <img src={img3} />
+                                </div>
+
+                                <div className='measure_box_div'>
+                                    <img src={img4} />
+                                </div>
+                                <div className='measure_box_div'>
+                                    <img src={img5} />
+                                </div>
+                            </div>
+
+                            <p style={{
+                                paddingLeft: '0'
+                            }}>See how engaged your teams actually are,
+                                Track progress across initiatives and time, Share clear engagement insights with leadership, No complicated dashboards, No survey overload.
+                            </p>
                         </div>
                         <span>Engagement that's easy to run. Results you can report.</span>
                     </div>

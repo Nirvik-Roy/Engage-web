@@ -24,24 +24,19 @@ const Onboarding = () => {
                             marginBottom: '15px',
                             fontSize: '3.5rem',
                             lineHeight: '4.5rem'
-                        }}>Measure onboarding engagement with confidence</h1>
-                        <p>Every Launchpad journey contributes to the Ngage Engagement Score (NES), giving HR teams a clear view of onboarding effectiveness.
-                        </p>
+                        }}>Measure onboarding with confidence</h1>
+                        
 
                         <p style={{
                             marginTop: '15px'
-                        }}>You can:</p>
+                        }}>Launchpad includes an NES onboarding summary, helping HR understand:</p>
 
                         <ul>
-                            <li>Track engagement across onboarding cohorts</li>
-                            <li>See participation and completion trends</li>
-                            <li>Share simple, leadership-ready insights</li>
+                            <li>Completion rates</li>
+                            <li>Engagement levels</li>
+                            <li>Information retention trends</li>
                         </ul>
-                        <p style={{
-                            marginTop: '15px',
-                            fontWeight: '700'
-                        }}>Engagement that's easy to run. Results you can report.
-                        </p>
+                       
                     </div>
                     <div className='measure_engagement_img'>
                         <img src={sample} />
