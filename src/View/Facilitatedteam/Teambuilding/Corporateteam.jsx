@@ -4,7 +4,9 @@ import img from '../../../assets/Group 1597882971 (1).png'
 import button from '../../../assets/svg159.svg'
 import buttonIcon2 from '../../../assets/svg159 (2).svg'
 import './Teambuilding.css'
+import { useNavigate } from 'react-router-dom'
 const Corporateteam = () => {
+    const navigate = useNavigate()
     return (
         <>
             <div className='help_new_hires_wrapper'>
@@ -29,8 +31,10 @@ const Corporateteam = () => {
                             The result is team building that feels natural, inclusive, and engaging.
                         </p>
                         <div className='corporate_btn_wrapper'>
-                            <button className='base_btn_design'>Explore Ngage World<img src={button} /></button>
-                            <button className='base_btn_design'>Get a demo<img src={buttonIcon2} /></button>
+                            <button className='base_btn_design' onClick={(()=>{
+                                navigate('/solutions/engagement')
+                            })}>Explore Ngage World<img src={button} /></button>
+                            <button className='base_btn_design' onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))}>Get a demo<img src={buttonIcon2} /></button>
                         </div>
 
                     </div>

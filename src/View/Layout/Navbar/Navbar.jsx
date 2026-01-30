@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
           <NavLink to={'/about-engage'}>About</NavLink>
           <NavLink to={'/contact-us'}>Contact Us</NavLink>
-          <button>Book a Demo <span>Free</span></button>
+          <button onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))}>Book a Demo <span>Free</span></button>
         </div>
         <img onClick={(() => setShow(true))} className='bar_img' style={{
           width: 'auto'

@@ -45,7 +45,7 @@ const MeetEngage = () => {
                             <button className='base_btn_design' onClick={(()=>{
                                 navigate('/solutions/engagement')
                             })}>Explore Ngage World <img src={buttoIcon} /></button>
-                            <button className='base_btn_design'>Get a demo <img src={buttoIcon2} /></button>
+                            <button onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))} className='base_btn_design'>Get a demo <img src={buttoIcon2} /></button>
                         </div>
 
                         <div className='enage_img_grid_wrapper'>

@@ -104,7 +104,7 @@ const Simplesteps = () => {
 
                     <div className='steps_btn_wrapper'>
                         <button onClick={(() => navigate('/solutions/engagement'))} className='base_btn_design'>Explore Ngage World <img src={buttonIcon} /></button>
-                        <button className='base_btn_design'>Get a demo <img src={buttonIcon2} /></button>
+                        <button className='base_btn_design' onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))}>Get a demo <img src={buttonIcon2} /></button>
                     </div>
                 </div>
             </div>

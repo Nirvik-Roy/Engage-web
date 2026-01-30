@@ -29,6 +29,7 @@ const Problemstatement = () => {
                                     height: '70px'
                                 }} />
                             }
+                            
                             // controlled position
                             sliderPositionPercentage={position / 100}
 

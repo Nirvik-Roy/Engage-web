@@ -27,7 +27,7 @@ const Buildengagement = ({ title, description, demobtn, explorebtn, para, list =
 
                         <div className='build_engagement_btn_wrapper'>
                             {expertBtn && <button className='base_btn_design white_btn'>Talk to an Expert <img src={buttonIcon} /></button>}
-                            {demobtn && <button className='base_btn_design white_btn'>Get a Demo <img src={buttonIcon} /></button>}
+                            {demobtn && <button onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))} className='base_btn_design white_btn'>Get a Demo <img src={buttonIcon} /></button>}
                             {explorebtn && <button onClick={(()=>{
                                 navigate('/solutions/engagement')
                             })} className='base_btn_design transparent_btn'>Explore Ngage World <img src={buttonIcon2} /></button>}

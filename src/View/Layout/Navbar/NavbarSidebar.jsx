@@ -43,7 +43,7 @@ const NavbarSidebar = ({ show, setShow }) => {
                         </div>}
                     </div>
                     <NavLink to={'/contact-us'}>Contact Us</NavLink>
-                    <NavLink to={'//'}>Book a Demo(Free)</NavLink>
+                    <NavLink onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))} to={'//'}>Book a Demo(Free)</NavLink>
                 </div>
             </div>
         </div>
