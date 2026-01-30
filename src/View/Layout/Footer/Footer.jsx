@@ -47,9 +47,9 @@ const Footer = () => {
 
             <div className='footer_1'>
               <h3>Contact</h3>
-              <Link>Greyson Lane 6212-648  Palarni. </Link>
-              <Link>(610) 945-7986</Link>
-              <Link>hello@Transparent.co</Link>
+              <Link>5 Old Church Rd. Kingston 8, Kingston Jamaica</Link>
+              <Link>8762767188</Link>
+              <Link>admin@timcorporation.net</Link>
             </div>
           </div>
           <p style={{

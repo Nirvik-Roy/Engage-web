@@ -28,7 +28,8 @@
 }
 .game_experience_img img{
     width: 100%;
-    height: 100%;
+    height: 645px;
+    border-radius: 20px;
     object-fit: cover;
 }
 .game_experience_img .slick-dots{
@@ -90,6 +91,12 @@
     .game_experience_img{
         width: 100%;
     }
+    .game_experience_img img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
     .game_experience_details{
         width: 100%;
     }

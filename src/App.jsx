@@ -70,7 +70,7 @@ function App() {
           <Route path='/solutions/facilitated-team' element={<Facilitatedteam />} />
           <Route path='/games' element={<Gameslayout />}>
             <Route path='library' element={<Gameslibrary />} />
-            {/* <Route path='experience' element={<Gamesexperience/>}/> */}
+            <Route path='experience' element={<Gamesexperience/>}/>
           </Route>
           <Route path='/faq' element={<Faq />} />
           <Route path='/refund-policy' element={<RefundPolicy />} />
