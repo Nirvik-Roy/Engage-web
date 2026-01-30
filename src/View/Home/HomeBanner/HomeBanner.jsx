@@ -8,7 +8,7 @@ const HomeBanner = ({ data }) => {
   return (
     <>
       <div className='home_banner_wrapper'>
-        <img className='banner_overlay_img' src={bannerImg} />
+        <img className='banner_overlay_img'  src={bannerImg} />
 
         <div className='home_banner_content_wrapper'>
           <h1>{data?.title1} <span>{data?.title2}</span></h1>

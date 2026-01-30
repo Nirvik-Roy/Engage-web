@@ -90,9 +90,9 @@ const PrivacyPolicy = () => {
                         marginBottom: '10px'
                     }}>2.2 Communication:
                     </h4>
-                    <p>To contact you during or after the event for purposes such as:<br/>
+                    <p>To contact you during or after the event for purposes such as:<br />
                         • Notifying you of prizes won during gameplay.
-                        <br/>
+                        <br />
                         • Sending invitations to participate in related platforms, services, or events (with your
                         consent).
                     </p>
@@ -109,6 +109,72 @@ const PrivacyPolicy = () => {
                     <p>With your explicit consent, we may use your information to send promotional materials, event
                         updates, or marketing campaigns related to Ngage and its services. You can opt out at any
                         time (see Section 5.2).</p>
+
+                    <h4>2.5 Data Storage and Retention:
+                    </h4>
+                    <p>We store data on a secured platform for two (2) years post-event to ensure data integrity and
+                        availability for analytics, customer request, or service improvement.</p>
+
+                    <h4>2.6 Data Access Requests:
+                    </h4>
+                    <p>Customers (our clients) can request access to their data at any time within the prescribed
+                        retention period.</p>
+
+                    <h4>2.7 Data Deletion:
+                    </h4>
+                    <p>We delete data once the retention period has been reached. If customers request deletion of
+                        their data before the retention period ends, we will comply with the request in accordance
+                        with applicable laws and our data retention policies.
+                    </p>
+
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>3 Information Sharing:
+                    </h3>
+                    <p>We respect your privacy and ensure transparency about sharing data.
+                    </p>
+
+                    <h4>3.1 Third-Party Service Providers:
+                    </h4>
+                    <p>We may share your information with third-party service providers who assist us in delivering
+                        our services, such as hosting, analytics, and customer support.
+                    </p>
+
+                    <h4>3.2 Marketing Partners
+                    </h4>
+                    <p>We do not sell your personal information to third parties. However, we may share
+                        aggregated, anonymized data for marketing analysis and strategy development.
+                    </p>
+
+
+                    <h4>3.3 Legal Compliance:
+                    </h4>
+                    <p>We may disclose your information to comply with legal obligations, enforce our terms of
+                        service, or protect the rights, property, and safety of Ngage, its users, or others.
+                    </p>
+
+                    
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>4 Data Security:
+                    </h3>
+                    <p>We employ industry-standard security measures to safeguard your information from
+                        unauthorized access, disclosure, alteration, and destruction. These measures include data
+                        encryption, access controls, intrusion prevention, and regular security updates.
+                        <br/>
+                        <br/>
+                        While we strive to protect your information, no system is 100% secure. We encourage users
+                        to practice safe account management and report any suspicious activity.
+                    </p>
+
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>5 Your Rights and Choices:
+                    </h3>
+                    <h4>5.1 Access, Update, or Delete Your Data
+                    </h4>
+                    <p>In accordance with the Jamaica Data Protection Act, you have the right to: <br/>
+                    </p>
                 </div>
             </div>
         </>

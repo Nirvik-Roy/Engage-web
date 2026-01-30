@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 import logo from '../../../assets/image 214.svg'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import bars from '../../../assets/Vector (9).svg'
 import NavbarSidebar from './NavbarSidebar'
 const Navbar = () => {
@@ -12,6 +12,7 @@ const Navbar = () => {
   const dropdownRef2 = useRef();
   const togglebtnref = useRef();
   const togglebtnref2 = useRef();
+  const navigate = useNavigate()
   const [show,setShow] = useState(false)
   useEffect(() => {
     const closeDropdowns = (e) => {
@@ -43,7 +44,7 @@ const Navbar = () => {
     <>
       <NavbarSidebar setShow={setShow } show={show}/>
       <div className='navbar_wrapper'>
-        <img src={logo} />
+        <img onClick={(()=>navigate('/'))} src={logo} />
         <div className='navbar_links_wrapper'>
           <NavLink to={'/'}>Home</NavLink>
           <div ref={togglebtnref} onClick={(() => { setsolutiondropdown(!solutionDropdown) })} className='nav_dropdown'>
