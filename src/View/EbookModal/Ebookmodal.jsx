@@ -6,7 +6,7 @@ const Ebookmodal = ({ setShowModal }) => {
         <>
             <div class="modal-overlay" onClick={(() => setShowModal(false))}>
                 <div class="ebook-modal" onClick={((e)=>e.stopPropagation())}>
-                    <button type="button" class="modal-close">×</button>
+                    <button type="button" class="modal-close" onClick={(() => setShowModal(false))}>×</button>
 
                     <div class="modal-image">
                         <img src={img}
