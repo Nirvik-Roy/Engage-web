@@ -21,6 +21,7 @@ import CheckoutRythm from './View/Checkout/CheckoutRythm'
 import CheckoutPlayday from './View/Checkout/CheckoutPlayday'
 import Checkoutlaunchpad from './View/Checkout/Checkoutlaunchpad'
 import Ebookmodal from './View/EbookModal/Ebookmodal'
+import { Toaster } from 'react-hot-toast'
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [isModalClosed,setisModalClosed] = useState(false)
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <>
+    <Toaster/>
       {showModal && <Ebookmodal setShowModal={setShowModal}/>}
       <Routes>
         <Route path='/' element={<Mainlayout />}>

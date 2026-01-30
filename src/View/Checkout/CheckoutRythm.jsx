@@ -13,6 +13,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import arrowRight from '../../assets/oui_arrow-up.svg'
 import arrowLeft from '../../assets/oui_arrow-up (1).svg'
+import toast from 'react-hot-toast'
 const CheckoutRythm = () => {
     const [src, setSrc] = useState('');
     const [dropdown, setdropdown] = useState(false);
@@ -106,7 +107,6 @@ const CheckoutRythm = () => {
     const totalWithDecimals = result.toFixed(2);
     const uniqueOrderId = `oid_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const paymentRequest = async () => {
-     
         if (
             forminputData.firstName !== '' &&
             forminputData.lastName !== '' &&
@@ -177,7 +177,7 @@ const CheckoutRythm = () => {
                 setLoaders(false)
             }
         }else{
-            alert('Plz fill all the fileds...')
+            toast.error('Plz enter all the fields..')
         }
        
     }
