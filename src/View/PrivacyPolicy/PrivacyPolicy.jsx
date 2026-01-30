@@ -105,22 +105,34 @@ const PrivacyPolicy = () => {
                         updates, or marketing campaigns related to Ngage and its services. You can opt out at any
                         time (see Section 5.2).</p>
 
-                    <h4>2.4 Analytics:</h4>
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>2.4 Analytics:</h4>
                     <p>With your explicit consent, we may use your information to send promotional materials, event
                         updates, or marketing campaigns related to Ngage and its services. You can opt out at any
                         time (see Section 5.2).</p>
 
-                    <h4>2.5 Data Storage and Retention:
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>2.5 Data Storage and Retention:
                     </h4>
                     <p>We store data on a secured platform for two (2) years post-event to ensure data integrity and
                         availability for analytics, customer request, or service improvement.</p>
 
-                    <h4>2.6 Data Access Requests:
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>2.6 Data Access Requests:
                     </h4>
                     <p>Customers (our clients) can request access to their data at any time within the prescribed
                         retention period.</p>
 
-                    <h4>2.7 Data Deletion:
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>2.7 Data Deletion:
                     </h4>
                     <p>We delete data once the retention period has been reached. If customers request deletion of
                         their data before the retention period ends, we will comply with the request in accordance
@@ -134,26 +146,35 @@ const PrivacyPolicy = () => {
                     <p>We respect your privacy and ensure transparency about sharing data.
                     </p>
 
-                    <h4>3.1 Third-Party Service Providers:
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>3.1 Third-Party Service Providers:
                     </h4>
                     <p>We may share your information with third-party service providers who assist us in delivering
                         our services, such as hosting, analytics, and customer support.
                     </p>
 
-                    <h4>3.2 Marketing Partners
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>3.2 Marketing Partners
                     </h4>
                     <p>We do not sell your personal information to third parties. However, we may share
                         aggregated, anonymized data for marketing analysis and strategy development.
                     </p>
 
 
-                    <h4>3.3 Legal Compliance:
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>3.3 Legal Compliance:
                     </h4>
                     <p>We may disclose your information to comply with legal obligations, enforce our terms of
                         service, or protect the rights, property, and safety of Ngage, its users, or others.
                     </p>
 
-                    
+
                     <h3 style={{
                         marginTop: '10px'
                     }}>4 Data Security:
@@ -161,8 +182,8 @@ const PrivacyPolicy = () => {
                     <p>We employ industry-standard security measures to safeguard your information from
                         unauthorized access, disclosure, alteration, and destruction. These measures include data
                         encryption, access controls, intrusion prevention, and regular security updates.
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         While we strive to protect your information, no system is 100% secure. We encourage users
                         to practice safe account management and report any suspicious activity.
                     </p>
@@ -171,10 +192,94 @@ const PrivacyPolicy = () => {
                         marginTop: '10px'
                     }}>5 Your Rights and Choices:
                     </h3>
-                    <h4>5.1 Access, Update, or Delete Your Data
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>5.1 Access, Update, or Delete Your Data
                     </h4>
-                    <p>In accordance with the Jamaica Data Protection Act, you have the right to: <br/>
+                    <p>In accordance with the Jamaica Data Protection Act, you have the right to: <br />
+                        <p>• Access the personal data we store about you.</p>
+                        <p>• Request corrections or updates to inaccurate data</p>
+                        <p>• Request deletion of your personal data before the retention period ends.
+                        </p>
+                        <p>To exercise these rights, contact us at admin@timcorporation.net.</p>
                     </p>
+
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>5.2 Opt-Out of Marketing
+                    </h4>
+                    <p>You can opt out of receiving marketing communications or invitations by:</p>
+                    <p>• Clicking the “unsubscribe” link in any promotional email.</p>
+                    <p>• Contacting us directly at admin@timcorporation.net.</p>
+
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>5.3 Withdraw Consent
+                    </h4>
+                    <p>If you previously provided consent for specific data processing activities, you can withdraw
+                        it at any time.</p>
+
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>6 Marketing Purposes:
+                    </h3>
+                    <p>By accepting the terms of this Privacy Notice, you acknowledge and consent that Ngage's
+                        customers, including Transforming Inspirational Minds Limited (TIM), the owner of the Ngage platform, may use aggregate data for marketing purposes. This means that no personal
+                        information is used; instead, we analyze trends and behaviors across our user base. For
+                        example, we might examine aggregate data to understand the most popular features of our
+                        platform and use this information to develop targeted promotional offers and marketing
+                        strategies. </p>
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>7 Changes to this Privacy Notice:
+                    </h3>
+                    <p>We may update this Privacy Notice periodically to reflect changes in our practices, technology,
+                        or legal requirements. The latest version will always be posted on the Ngage website. Your
+                        continued use of the platform constitutes your acceptance of these changes</p>
+
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>8 Contact Us:
+                    </h3>
+                    <p>If you have any questions, concerns, or complaints about this Privacy Notice or handling of
+                        your personal data, please contact us at <strong>admin@timcorporation.net.</strong></p>
+                    <br />
+                    <p>Thank you for choosing Ngage Gamification Platform!
+                    </p>
+                    <br />
+
+                    <p>By using the Ngage Event Gamification Platform, you acknowledge that you have read,
+                        understood, and agree to this Privacy Notice.
+                    </p>
+
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        alignItems: 'center',
+                        gap: '10px'
+                    }}>
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            gap: '5px'
+                        }}>
+                            <input type='radio' />
+                            <p>Yes</p>
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            gap: '5px'
+                        }}>
+                            <input type='radio' />
+                            <p>No</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
