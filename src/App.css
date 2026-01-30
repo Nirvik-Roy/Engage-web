@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Source Sans 3";
 }
+body{
+  margin: 0px;
+}
 h1,
 h2,
 h3,
