@@ -64,6 +64,51 @@ const PrivacyPolicy = () => {
                         marginBottom: '10px'
                     }}>1.3 Device Information:
                     </h4>
+                    <p>We may collect information about the device you use to access Ngage, including device type,
+                        operating system, and browser details and other technical information.</p>
+
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>1.4 Marketing and Communication Preferences
+                    </h4>
+                    <p>If you consent, we may collect your preferences regarding receiving marketing materials,
+                        promotional invitations, or updates about our platform.</p>
+
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>2 How We Use Your Information:</h3>
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>2.1 Providing Services:
+                    </h4>
+                    <p>We use your information collected for the following purposes:
+                    </p>
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>2.2 Communication:
+                    </h4>
+                    <p>To contact you during or after the event for purposes such as:<br/>
+                        • Notifying you of prizes won during gameplay.
+                        <br/>
+                        • Sending invitations to participate in related platforms, services, or events (with your
+                        consent).
+                    </p>
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>2.3 Marketing
+                    </h4>
+                    <p>With your explicit consent, we may use your information to send promotional materials, event
+                        updates, or marketing campaigns related to Ngage and its services. You can opt out at any
+                        time (see Section 5.2).</p>
+
+                    <h4>2.4 Analytics:</h4>
+                    <p>With your explicit consent, we may use your information to send promotional materials, event
+                        updates, or marketing campaigns related to Ngage and its services. You can opt out at any
+                        time (see Section 5.2).</p>
                 </div>
             </div>
         </>
