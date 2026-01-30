@@ -30,7 +30,7 @@ const Footer = () => {
               <Link to='/about-engage'>About</Link>
               <Link to='/games/library'>Ngage Game Library</Link>
               <Link to='/games/experience'>Ngage Game Experience</Link>
-              <Link to='/'>Blogs</Link>
+              {/* <Link to='/'>Blogs</Link> */}
               <Link to='/faq'>FAQ</Link>
               <Link to='/contact-us'>Contact</Link>
             </div>
