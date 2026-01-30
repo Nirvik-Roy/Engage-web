@@ -5,7 +5,7 @@ const Ebookmodal = ({ setShowModal }) => {
     return (
         <>
             <div class="modal-overlay" onClick={(() => setShowModal(false))}>
-                <div class="ebook-modal">
+                <div class="ebook-modal" onClick={((e)=>e.stopPropagation())}>
                     <button type="button" class="modal-close">×</button>
 
                     <div class="modal-image">
@@ -23,7 +23,7 @@ const Ebookmodal = ({ setShowModal }) => {
                         <form class="email-form">
                             <div class="email-field">
                                 <input type="email" placeholder="Your Email" />
-                                <button class="email-submit" type="submit">
+                                <button onClick={(() => setShowModal(false))} class="email-submit" type="submit">
                                     Submit
                                     <img src={icon}/>
                                 </button>
