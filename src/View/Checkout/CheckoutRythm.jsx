@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import img from '../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.png'
@@ -9,14 +9,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import countryData from '../../../countries.json'
 import Slider from "react-slick";
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import arrowRight from '../../assets/oui_arrow-up.svg'
+import arrowLeft from '../../assets/oui_arrow-up (1).svg'
 const CheckoutRythm = () => {
     const [src, setSrc] = useState('');
     const [dropdown, setdropdown] = useState(false);
     const [currentData, setCurrentData] = useState({});
     const [experienceDropdown, setexperienceDropdown] = useState(true);
     const [addonDropdown, setaddonDropdown] = useState(true);
-    const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true)
+    const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true);
+    const sliderRef = useRef()
     const { id } = useParams()
     var settings = {
         dots: false,
@@ -62,26 +66,31 @@ const CheckoutRythm = () => {
             id: 1,
             title: 'Rhythm Spark',
             price: '$699',
+            total: 2997
         },
         {
             id: 2,
             title: 'Rhythm Pulse ',
             price: '$1,499',
+            total: 3797
         },
         {
             id: 3,
             title: 'Boost Rhythm ',
-            price: ' $1,249 / quarter'
+            price: ' $1,249 / quarter',
+            total: 7294
         },
         {
             id: 4,
             title: 'Build Rhythm ',
-            price: '  $999 / month'
+            price: ' $999 / month',
+            total: 3297
         },
         {
             id: 5,
             title: 'Sustain Rhythm ',
-            price: '$1,999 / month'
+            price: '$1,999 / month',
+            total: 4297
         },
     ]
 
@@ -90,6 +99,75 @@ const CheckoutRythm = () => {
             setCurrentData(data[id])
         }
     }, [id])
+    const [loaders, setLoaders] = useState(false);
+    const [index, setIndex] = useState(null)
+    // const jamaicaCurrencyValue = 120
+    const result = (1797 * 161) + 0;
+    const totalWithDecimals = result.toFixed(2);
+    const uniqueOrderId = `oid_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const paymentRequest = async () => {
+        setLoaders(true)
+        try {
+            // Create FormData instead of URLSearchParams
+            const formData = new FormData();
+
+            // Append all parameters to FormData
+            formData.append('account_number', '1234567890');
+            formData.append('avs', '0');
+            formData.append('country_code', 'JM');
+            formData.append('currency', 'JMD');
+            formData.append('data', '{"a":"b"}');
+            formData.append('environment', 'sandbox');
+            formData.append('fee_structure', 'customer_pay');
+            formData.append('method', 'credit_card');
+            formData.append('order_id', uniqueOrderId);
+            formData.append('origin', 'WiPay-example_app');
+            formData.append('response_url', 'https://tt.wipayfinancial.com/response/');
+            formData.append('total', totalWithDecimals);
+
+            // Configure headers
+            const headers = {
+                'Accept': 'application/json',
+                // Axios will automatically set Content-Type for FormData
+            };
+
+            // Make the POST request using axios
+            const response = await axios.post(
+                'https://tt.wipayfinancial.com/plugins/payments/request',
+                formData,
+                {
+                    headers: headers,
+                }
+            );
+
+            // Axios automatically parses JSON responses when Accept header includes application/json
+            // Perform redirect
+            if (response.data && response.data.url) {
+                window.location.href = response.data.url;
+            }
+
+        } catch (error) {
+            console.log('error', error);
+
+            // You can also access error response details if available
+            if (error.response) {
+                console.error('Response error:', error.response.status, error.response.data);
+            } else if (error.request) {
+                console.error('No response received:', error.request);
+            } else {
+                console.error('Request setup error:', error.message);
+            }
+        } finally {
+            setLoaders(false)
+        }
+    }
+    const indexFunc = (i) => {
+        if (index == i) {
+            setIndex(null)
+        } else {
+            setIndex(i)
+        }
+    }
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -102,15 +180,47 @@ const CheckoutRythm = () => {
                                 {experienceDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
-                        {experienceDropdown && <div className='select_experience_card_wrapper'>
-                            <Slider {...settings}>
-                                {[img, img1, img, img1, img].map((e) => (
-                                    <div className='select_experience_card'>
+                        {experienceDropdown && <div className='select_experience_card_wrapper' style={{
+                            position:'relative'
+                        }}>
+                            <img onClick={(() => {
+                                sliderRef.current.slickNext();
+                            })} src={arrowLeft} style={{
+                                position: 'absolute',
+                                zIndex: 9,
+                                top: '100px',
+                                left: '-20px',
+                                width: '60px',
+                                cursor: 'pointer'
+                            }} />
+                            <img onClick={(() => {
+                                sliderRef.current.slickPrev();
+                            })} src={arrowRight} style={{
+                                position: 'absolute',
+                                zIndex: 9,
+                                top: '100px',
+                                right: '-20px',
+                                width: '60px',
+                                cursor: 'pointer'
+                            }} />
+                            <Slider ref={sliderRef} {...settings}>
+                                {[img, img1, img, img1, img].map((e, i) => (
+                                    <div onClick={(() => indexFunc(i))} className={index == i ? 'select_experience_card_selected' : 'select_experience_card'}>
                                         <div className='select_experience_img'>
                                             <img src={e} />
                                         </div>
                                         <h4>Christmas  Challenge</h4>
-                                        <p>Select <img src={icon} /></p>
+                                        {index == i ? <div style={{
+                                            display: 'flex',
+                                            justifyContent: 'end'
+                                        }}>
+                                            <span style={{
+                                                fontSize: '0.9rem',
+                                                fontWeight: '700',
+                                                color: 'rgba(31, 144, 31, 1)',
+                                            }}>Selected</span>
+                                        </div>
+                                            : <p>Select <img src={icon} /></p>}
                                     </div>
                                 ))}
                             </Slider>
@@ -226,6 +336,9 @@ const CheckoutRythm = () => {
                                 <select className='select_input_form'>
                                     <option>--select-company-size--</option>
                                     <option>1-50</option>
+                                    <option>51-200</option>
+                                    <option>201-500</option>
+                                    <option>500+</option>
                                 </select>
                             </div>
 
@@ -238,6 +351,8 @@ const CheckoutRythm = () => {
                                 <select className='select_input_form'>
                                     <option>--select-mode--</option>
                                     <option>Virtual</option>
+                                    <option>In-person</option>
+                                    <option>Hybrid</option>
                                 </select>
                             </div>
 
@@ -312,7 +427,7 @@ const CheckoutRythm = () => {
                             <h3>Payment Summary</h3>
                             <p style={{
                                 marginBottom: '10px'
-                            }}>Plan Price <span>$699.00</span></p>
+                            }}>Plan Price <span>{currentData?.price}</span></p>
                             <p>Discount <span>-$0.00</span></p>
 
                             <h3 style={{
@@ -325,10 +440,10 @@ const CheckoutRythm = () => {
                             <p>Prize pack: 100 digital prize <span>$1,599 <small>Remove</small></span></p>
                         </div>
 
-                        <h1 className='total_number'>Total <span>$1,797.00</span></h1>
+                        <h1 className='total_number'>Total <span>${currentData?.total}.00</span></h1>
                     </div>
 
-                    <button className='proceed_btn'>Proceed to pay <img src={icon2} /></button>
+                    <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>
                 </div>
             </div>
         </>

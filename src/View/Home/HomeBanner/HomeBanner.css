@@ -63,6 +63,7 @@
   align-items: center;
   gap: 15px;
   border: none;
+  cursor: pointer;
 }
 .home_banner_btn_wrapper button:nth-child(1) {
     background-color: #fff;

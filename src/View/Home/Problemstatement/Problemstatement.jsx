@@ -38,18 +38,24 @@ const Problemstatement = () => {
                         />
                     </div>
                     <div className='statement_problem_div'>
-                        <h1>Problem Statement</h1>
+                        <h1>Engagement, simplified</h1>
                         <h3>No more expensive staff activities with low participation</h3>
-                        <p>Most engagement efforts look good on paper — yet most HR teams experience:</p>
+                        <p>With tight budgets and year-round expectations, keeping people engaged shouldn’t feel this hard.<pre />
+                            Most HR teams experience:
+                        </p>
                         <ul>
-                            <li>	High spend, low participation at staff activities </li>
-                            <li>The same people participating every time</li>
-                            <li>Pressure to keep coming up with new engagement ideas </li>
-                            <li>No clear way to track what’s actually working</li>
+                            <li>Stress to execute engaging staff experiences </li>
+                            <li>Difficulty finding fresh engagement ideas all year long
+                            </li>
+                            <li>No clear way to track engagement success
+                            </li>
+                            <li>HR carrying the load to keep people motivated</li>
 
                             <p style={{
                                 marginTop: '40px'
-                            }}>With tight budgets and year-round expectations, keeping people engaged can feel tiring.</p>
+                            }}>Too often, engagement depends on one-off activities that take time to plan, cost more than expected, and reach only a fraction of the team. When participation drops, HR is left questioning whether the effort was worth it — and how to do better next time.
+                                What’s missing isn’t effort or intent. It’s a simpler way to run engagement consistently, without starting from scratch every time or carrying the burden alone.
+                            </p>
                         </ul>
                     </div>
                 </div>

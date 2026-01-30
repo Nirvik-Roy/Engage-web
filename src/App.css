@@ -22,6 +22,10 @@ p {
   margin-left: 0px;
 }
 
+button{
+  cursor: pointer;
+}
+
 .container {
   width: 85%;
   min-width: 85%;

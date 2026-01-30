@@ -5,7 +5,9 @@ import buttonIcon2 from '../../../assets/svg159 (2).svg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
+import { useNavigate } from 'react-router-dom';
 const Simplesteps = () => {
+    const navigate = useNavigate()
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -101,7 +103,7 @@ const Simplesteps = () => {
                     </div>
 
                     <div className='steps_btn_wrapper'>
-                        <button className='base_btn_design'>Explore Ngage World <img src={buttonIcon} /></button>
+                        <button onClick={(() => navigate('/solutions/engagement'))} className='base_btn_design'>Explore Ngage World <img src={buttonIcon} /></button>
                         <button className='base_btn_design'>Get a demo <img src={buttonIcon2} /></button>
                     </div>
                 </div>

@@ -15,15 +15,19 @@ const Launchpadworks = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1000,
         centerMode: true,
         centerPadding: "10px",
+        draggable: false,
         responsive: [
             {
                 breakpoint: 750,
                 settings: {
                     slidesToShow: 2,
+                    autoplay: true,
+                    
+                    draggable: true,
                 }
             },
             {
@@ -31,6 +35,9 @@ const Launchpadworks = () => {
                 settings: {
                     slidesToShow: 2,
                     centerPadding: "10px",
+                    autoplay: true,
+                    draggable: true,
+
                 }
             },
             {
@@ -38,6 +45,8 @@ const Launchpadworks = () => {
                 settings: {
                     slidesToShow: 1,
                     centerPadding: "70px",
+                    autoplay: true,
+                    draggable: true,
                 }
             },
         ]
@@ -61,17 +70,17 @@ const Launchpadworks = () => {
             <div className='build_once_wrapper'>
                 <h1 className='heading'>How Launchpad works</h1>
                 <div className='container build_once_content_wrapper'>
-                {mounted && <Slider {...settings}>
-                    {data.map((e, i) => (
-                        <>
-                        <div className='build_step'>
-                            <h2>Step {i + 1}</h2>
-                            <h4>{e.title}</h4>
-                            <p>{e.para}</p>
-                        </div>
-                        </>
-                    ))}
-                </Slider>}
+                    {mounted && <Slider {...settings}>
+                        {data.map((e, i) => (
+                            <>
+                                <div className='build_step'>
+                                    <h2>Step {i + 1}</h2>
+                                    <h4>{e.title}</h4>
+                                    <p>{e.para}</p>
+                                </div>
+                            </>
+                        ))}
+                    </Slider>}
                 </div>
             </div>
         </>

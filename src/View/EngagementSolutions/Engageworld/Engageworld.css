@@ -119,7 +119,7 @@
 .engamenet_report_Wrapper {
   padding: 50px 0;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .engamen_report_wrapper img {
   height: 70vh;
@@ -146,6 +146,10 @@
   .launch_pad {
     width: 47%;
   }
+  .engage_report_bg{
+    display: none;
+  }
+  
 }
 @media (max-width: 576px) {
   .launch_pad ul li {
@@ -157,7 +161,9 @@
     color: rgba(52, 52, 52, 1);
     font-size: 0.9rem;
   }
-  
+  .engage_world_wrapper{
+    padding-bottom: 30px;
+  }
 }
 @media (max-width: 499px) {
   .world_solutions_wrapper {

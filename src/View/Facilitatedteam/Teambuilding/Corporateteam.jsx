@@ -11,7 +11,8 @@ const Corporateteam = () => {
                 <img src={bgImg} style={{
                     position: 'absolute',
                     top: '-100%',
-                    left: '0'
+                    left: '0',
+                    pointerEvents:'none'
                 }} />
                 <div className='container  help_new_hires_content_wrapper'>
                     <div className='help_new_hires_content'>

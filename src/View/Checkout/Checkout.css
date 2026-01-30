@@ -60,6 +60,17 @@
   border-radius: 10px;
   width: 95% !important;
   margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.select_experience_card_selected {
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07);
+  padding: 15px;
+  border-radius: 10px;
+  width: 95% !important;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #040480;
 }
 .select_experience_img {
   width: 100%;
@@ -159,6 +170,14 @@
   padding: 0 15px;
   height: 48px;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../../assets/Vector.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 15px); /* Position it near the right edge */
+  background-position-y: center;
+  background-size: 12px; /* Adjust the size of the arrow */
 }
 .account_form_content_wrapper h3 {
   font-size: 1.5rem;

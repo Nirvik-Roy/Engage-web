@@ -10,7 +10,9 @@ import engageImg2 from '../../../assets/Rectangle 6673.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
+import { useNavigate } from 'react-router-dom'
 const MeetEngage = () => {
+    const navigate = useNavigate()
     var settings = {
         dots: true,
         infinite: true,
@@ -40,7 +42,9 @@ const MeetEngage = () => {
                         </p>
 
                         <div className='engage_btn_wrapper'>
-                            <button className='base_btn_design'>Explore Ngage World <img src={buttoIcon} /></button>
+                            <button className='base_btn_design' onClick={(()=>{
+                                navigate('/solutions/engagement')
+                            })}>Explore Ngage World <img src={buttoIcon} /></button>
                             <button className='base_btn_design'>Get a demo <img src={buttoIcon2} /></button>
                         </div>
 

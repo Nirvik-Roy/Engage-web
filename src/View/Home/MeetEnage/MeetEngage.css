@@ -10,7 +10,7 @@
   width: 60%;
 }
 .right_engage_img {
-  width: 35%;
+  width: 37%;
   border-radius: 15px;
   overflow: hidden;
   height: 100vh;
@@ -75,10 +75,24 @@
   }
   .right_engage_img{
     width: 100%;
+    height: 70vh;
   }
 }
 @media(max-width:576px){
   .left_engage_content h1{
     font-size: 2.5rem;
+  }
+   .right_engage_img{
+    width: 100%;
+    height: 80vh;
+  }
+  .meet_engage_wrapper{
+    padding-bottom: 0;
+  }
+}
+@media(max-width:480px){
+   .right_engage_img{
+    width: 100%;
+    height: auto;
   }
 }

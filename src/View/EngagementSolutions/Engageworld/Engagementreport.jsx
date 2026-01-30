@@ -5,7 +5,7 @@ const Engagementreport = () => {
     return (
         <>
             <div className='engamenet_report_Wrapper'>
-            <img src={bgImg} style={{
+            <img src={bgImg} className='engage_report_bg' style={{
                 position:'absolute',
                 top:'-100%',
                 left:'0'

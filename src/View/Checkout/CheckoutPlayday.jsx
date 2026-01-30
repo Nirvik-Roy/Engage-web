@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import img from '../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.png'
@@ -10,14 +10,19 @@ import "slick-carousel/slick/slick-theme.css";
 import countryData from '../../../countries.json'
 import Slider from "react-slick";
 import { useParams } from 'react-router-dom'
+import arrowRight from '../../assets/oui_arrow-up.svg'
+import arrowLeft from '../../assets/oui_arrow-up (1).svg'
 const CheckoutPlayday = () => {
     const [src, setSrc] = useState('');
+    const [index, setIndex] = useState(null)
+
     const [dropdown, setdropdown] = useState(false);
     const { id } = useParams();
     const [experienceDropdown, setexperienceDropdown] = useState(true);
     const [addonDropdown, setaddonDropdown] = useState(true);
     const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true)
-    const [currentData, setCurrentData] = useState({})
+    const [currentData, setCurrentData] = useState({});
+    const sliderRef = useRef()
     var settings = {
         dots: false,
         infinite: true,
@@ -80,6 +85,14 @@ const CheckoutPlayday = () => {
         }
     }, [id])
 
+    const indexFunc = (i) => {
+        if (index == i) {
+            setIndex(null)
+        } else {
+            setIndex(i)
+        }
+    }
+
 
     return (
         <>
@@ -93,15 +106,47 @@ const CheckoutPlayday = () => {
                                 {experienceDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
                             </div>
                         </div>
-                        {experienceDropdown && <div className='select_experience_card_wrapper'>
-                            <Slider {...settings}>
-                                {[img, img1, img, img1, img].map((e) => (
-                                    <div className='select_experience_card'>
+                        {experienceDropdown && <div className='select_experience_card_wrapper' style={{
+                            position:'relative'
+                        }}>
+                            <img onClick={(()=>{
+                                sliderRef.current.slickNext();
+                            })} src={arrowLeft} style={{
+                                position: 'absolute',
+                                zIndex: 9,
+                                top: '100px',
+                                left: '-20px',
+                                width: '60px',
+                                cursor: 'pointer'
+                            }} />
+                            <img onClick={(() => {
+                                sliderRef.current.slickPrev();
+                            })} src={arrowRight} style={{
+                            position:'absolute',
+                            zIndex:9,
+                            top:'100px',
+                            right:'-20px',
+                            width:'60px',
+                            cursor:'pointer'
+                        }}/>
+                            <Slider ref={sliderRef} {...settings}>
+                                {[img, img1, img, img1, img].map((e, i) => (
+                                    <div onClick={(() => indexFunc(i))} className={index == i ? 'select_experience_card_selected' : 'select_experience_card'}>
                                         <div className='select_experience_img'>
                                             <img src={e} />
                                         </div>
                                         <h4>Christmas  Challenge</h4>
-                                        <p>Select <img src={icon} /></p>
+                                        {index == i ? <div style={{
+                                            display: 'flex',
+                                            justifyContent: 'end'
+                                        }}>
+                                            <span style={{
+                                                fontSize: '0.9rem',
+                                                fontWeight: '700',
+                                                color: 'rgba(31, 144, 31, 1)',
+                                            }}>Selected</span>
+                                        </div>
+                                            : <p>Select <img src={icon} /></p>}
                                     </div>
                                 ))}
                             </Slider>
@@ -213,6 +258,9 @@ const CheckoutPlayday = () => {
                                 <select className='select_input_form'>
                                     <option>--select-company-size--</option>
                                     <option>1-50</option>
+                                    <option>51-200</option>
+                                    <option>201-500</option>
+                                    <option>500+</option>
                                 </select>
                             </div>
 
@@ -225,6 +273,8 @@ const CheckoutPlayday = () => {
                                 <select className='select_input_form'>
                                     <option>--select-mode--</option>
                                     <option>Virtual</option>
+                                    <option>In-person</option>
+                                    <option>Hybrid</option>
                                 </select>
                             </div>
 
@@ -288,7 +338,7 @@ const CheckoutPlayday = () => {
                             marginLeft: '5px'
                         }}><span style={{
                             fontWeight: '700',
-                            
+
                         }}>Note:</span> Final pricing is customized based on your requirements. You’ll receive a detailed quote after discussion.</small>
 
                         <div className='payment_summary_wrapper' style={{
@@ -303,7 +353,7 @@ const CheckoutPlayday = () => {
                                 gap: '15px',
                                 flexWrap: 'wrap',
                                 paddingBottom: '10px',
-                                marginTop:'20px',
+                                marginTop: '20px',
                                 borderBottom: '1px solid rgba(231, 233, 235, 1)'
                             }}>
                                 <h3 style={{
@@ -329,14 +379,14 @@ const CheckoutPlayday = () => {
                             }}>Add-ons</h3>
                             <p style={{
                                 marginBottom: '10px'
-                            }}>Prizes 50 <span>$999.00 <small>Remove</small></span></p>
+                            }}>Prizes 50 <span>{currentData?.price}.00 <small>Remove</small></span></p>
                             <p>Video
                                 modules <span>$99.00<small>Remove</small></span></p>
                         </div>
 
                     </div>
 
-                    <button className='proceed_btn'>Proceed to pay <img src={icon2} /></button>
+                    <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>
                 </div>
             </div>
         </>

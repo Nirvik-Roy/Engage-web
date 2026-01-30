@@ -9,7 +9,7 @@ const Teambuilding = () => {
             <div className='build_culture_wrapper'>
                 <img src={shadow} style={{
                     position: 'absolute',
-                    top: '-60%',
+                    top: '-80%',
                     left: '50%',
                     transform: 'translateX(-50%)'
                 }} />

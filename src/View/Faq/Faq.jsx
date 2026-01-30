@@ -18,17 +18,17 @@ const Faq = () => {
                 {
                     id: 1,
                     question: 'What is Ngage?',
-                    answer: "No.Employees access Ngage experiences through their browser on their phone or device. No app installation is required."
+                    answer: "Ngage is an employee engagement system that helps organizations strengthen culture through connection. It provides structured ways to engage employees across onboarding, everyday engagement, and company-wide moments — all through one platform."
                 },
                 {
                     id: 2,
                     question: 'Is Ngage a software platform or a service?',
-                    answer: "No.Employees access Ngage experiences through their browser on their phone or device. No app installation is required."
+                    answer: "Both.\n  •	Rhythm and Launchpad are platform-powered engagement experiences \n •	Play Day is a fully facilitated, live experience powered by the Ngage system."
                 },
                 {
                     id: 3,
                     question: 'Is Ngage training or performance management?',
-                    answer: "No.Employees access Ngage experiences through their browser on their phone or device. No app installation is required."
+                    answer: "No.\n Ngage is not a learning management system (LMS), training platform, or performance management tool. \n Its primary focus is participation, connection, and culture, not assessments or productivity tracking."
                 },
             ]
         },
@@ -40,7 +40,7 @@ const Faq = () => {
                 {
                     id: 4,
                     question: 'Will everyone actually participate?',
-                    answer: "No.Employees access Ngage experiences through their browser on their phone or device. No app installation is required."
+                    answer: "Ngage is designed specifically to increase participation, not just reward high performers or outgoing personalities.\n Experiences are: \n •	Inclusive \n •	Easy to join \n •	Designed for different personalities and abilities \n While participation levels vary by organization, most clients see broader involvement than with traditional engagement activities."
 
                 },
                 {
@@ -182,7 +182,7 @@ const Faq = () => {
                 </div>
             </div>
 
-            <Buildengagement demobtn={true} para={"The easiest way is to book a demo. We’ll walk you through Ngage World, show relevant solutions, and answer questions specific to your organization."} title={'What’s the best way to get started?'}/>
+            <Buildengagement demobtn={true} para={"The easiest way is to book a demo. We’ll walk you through Ngage World, show relevant solutions, and answer questions specific to your organization."} title={'What’s the best way to get started?'} />
         </>
     )
 }

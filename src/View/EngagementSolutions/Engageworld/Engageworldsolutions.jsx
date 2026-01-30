@@ -2,7 +2,9 @@ import React from 'react'
 import img from '../../../assets/Rectangle 6679.png'
 import listimg from '../../../assets/Vector (8).svg'
 import buttonIcon from '../../../assets/svg159.svg'
+import { useNavigate } from 'react-router-dom'
 const Engageworldsolutions = () => {
+    const navigate = useNavigate()
     const data = [
         {
             id: 1,
@@ -44,7 +46,7 @@ const Engageworldsolutions = () => {
             ],
             buttonTitle: 'Explore Rhythm'
         },
-          {
+        {
             id: 3,
             title: 'Ngage Play Day',
             title2: 'Live, facilitated corporate fun experiences',
@@ -93,7 +95,14 @@ const Engageworldsolutions = () => {
                                 ))}
                             </div>
 
-                            <button className='base_btn_design'>{e.buttonTitle} <img src={buttonIcon} /></button>
+                            <button className='base_btn_design' onClick={(() => {
+                                const links = {
+                                    "Explore Launchpad": "/solutions/onboarding",
+                                    "Explore Rhythm": "/solutions/ongoing-engage",
+                                    "Explore Play Day": "/solutions/facilitated-team"
+                                }
+                                navigate(links[e.buttonTitle])
+                            })}>{e.buttonTitle} <img src={buttonIcon} /></button>
                         </div>
                     ))}
                 </div>
