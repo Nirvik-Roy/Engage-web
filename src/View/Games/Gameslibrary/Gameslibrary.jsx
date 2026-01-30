@@ -125,7 +125,7 @@ const Gameslibrary = () => {
                         ))
                     }
                 </div>
-                <Pagination />
+                {/* <Pagination /> */}
             </div>
         </>
     )

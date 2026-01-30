@@ -64,6 +64,11 @@
   gap: 15px;
   border: none;
   cursor: pointer;
+  transition: 0.2s linear all;
+}
+.base_btn_design:hover{
+  transform: scale(1.05) !important;
+   transition: 0.2s linear all;
 }
 .home_banner_btn_wrapper button:nth-child(1) {
     background-color: #fff;
