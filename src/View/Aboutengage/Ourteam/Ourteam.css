@@ -60,9 +60,9 @@
     row-gap: 15px;
 
 }
-.team_img_div:hover .overlay_green{
+/* .team_img_div:hover .overlay_green{
     opacity: 1;
-}
+} */
 .social_mediaLinks_wrapper{
     display: flex;
     justify-content: flex-start;

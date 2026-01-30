@@ -2,24 +2,72 @@ import React from 'react'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import '../RefundPolicy/RefundPolicy.css'
 const PrivacyPolicy = () => {
-  return (
-       <>
+    return (
+        <>
             <BannerLayout title={'Privacy Policy'} />
             <div className='policy_wrapper'>
                 <div className='container policy_content_Wrapper'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-                        Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
-                        Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.
-                        Vestibulum sit amet metus eget velit gravida venenatis. Integer a risus. Donec sagittis euismod purus. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-                        Phasellus vitae mauris sit amet arcu mollis interdum. Sed viverra, ligula in suscipit malesuada, quam tortor dignissim risus, vitae consequat dolor turpis a erat. Sed vitae nulla et sapien malesuada pretium. Nulla facilisi. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat.
-                        Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.
-                        Vestibulum sit amet metus eget velit gravida venenatis. Integer a risus. Donec sagittis euismod purus. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
-                        Phasellus vitae mauris sit amet arcu mollis interdum. Sed viverra, ligula in suscipit malesuada, quam tortor dignissim risus, vitae consequat dolor turpis a erat. Sed vitae nulla et sapien malesuada pretium. Nulla facilisi. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat.
-                        Donec magna nulla, feugiat id, vehicula ac, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.</p>
+                    <h3 style={{
+                        marginBottom: '10px'
+                    }}>Last Updated: July 15, 2025
+                    </h3>
+                    <p>Welcome to The Ngage Event Gamification Platform! At Ngage, we are committed to ensuring
+                        the privacy and security of your personal information. This Privacy Notice outlines our
+                        practices regarding the collection, use, and disclosure of your information when you use our
+                        gamification platform. By accessing and using Ngage, you agree to the terms outlined in this
+                        Privacy Notice.</p>
+                    <h3 style={{
+                        marginTop: '10px'
+                    }}>1 Information We Collect:</h3>
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>1.1 Personal Information:</h4>
+                    <p>When you register on Ngage, we may collect information required for our patrons to fully
+                        enjoy their experience. The type of information collected may vary depending on the specific
+                        event and at the request of our customer (event organizers). The information collected during
+                        registration is as follows:
+                        <br />
+                        i. Name
+                        <br />
+                        ii. Email
+                        <br />
+                        iii. Telephone
+                        <br />
+                        iv. Company
+                        <br />
+                        v. Department
+                        <br />
+                        vi. Division
+                        <br />
+                        vii. School
+                        <br />
+                        viii. Gender
+                        <br />
+                        ix. Age
+                    </p>
+
+                    <p><strong>Note:</strong> We do not collect or process sensitive personal data such as ethnicity, political
+                        associations, religion, or sexual orientation.</p>
+
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>1.2 Usage Information:
+                    </h4>
+                    <p>We collect information about your interactions with the platform, including the games you
+                        play, achievements unlocked, and other engagement metrics that are either derived or
+                        explicitly as an input from the user.</p>
+
+                    <h4 style={{
+                        marginTop: '10px',
+                        marginBottom: '10px'
+                    }}>1.3 Device Information:
+                    </h4>
                 </div>
             </div>
         </>
-  )
+    )
 }
 
 export default PrivacyPolicy
