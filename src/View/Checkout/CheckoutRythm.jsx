@@ -106,60 +106,80 @@ const CheckoutRythm = () => {
     const totalWithDecimals = result.toFixed(2);
     const uniqueOrderId = `oid_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const paymentRequest = async () => {
-        setLoaders(true)
-        try {
-            // Create FormData instead of URLSearchParams
-            const formData = new FormData();
+     
+        if (
+            forminputData.firstName !== '' &&
+            forminputData.lastName !== '' &&
+            forminputData.email !== '' &&
+            forminputData.phone !== '' &&
+            forminputData.companyName !== '' &&
+            forminputData.country !== '' &&
+            forminputData.companySize !== '' &&
+            forminputData.mode !== '' &&
+            forminputData.date !== '' &&
+            forminputData.addressLine1 !== '' &&
+            forminputData.addressLine2 !== '' &&
+            forminputData.city !== '' &&
+            forminputData.state !== '' &&
+            forminputData.zipCode !== ''
+        ){
+            try {
+                // Create FormData instead of URLSearchParams
+                const formData = new FormData();
+                setLoaders(true)
+                // Append all parameters to FormData
+                formData.append('account_number', '1234567890');
+                formData.append('avs', '0');
+                formData.append('country_code', 'JM');
+                formData.append('currency', 'JMD');
+                formData.append('data', '{"a":"b"}');
+                formData.append('environment', 'sandbox');
+                formData.append('fee_structure', 'customer_pay');
+                formData.append('method', 'credit_card');
+                formData.append('order_id', uniqueOrderId);
+                formData.append('origin', 'WiPay-example_app');
+                formData.append('response_url', 'https://tt.wipayfinancial.com/response/');
+                formData.append('total', totalWithDecimals);
 
-            // Append all parameters to FormData
-            formData.append('account_number', '1234567890');
-            formData.append('avs', '0');
-            formData.append('country_code', 'JM');
-            formData.append('currency', 'JMD');
-            formData.append('data', '{"a":"b"}');
-            formData.append('environment', 'sandbox');
-            formData.append('fee_structure', 'customer_pay');
-            formData.append('method', 'credit_card');
-            formData.append('order_id', uniqueOrderId);
-            formData.append('origin', 'WiPay-example_app');
-            formData.append('response_url', 'https://tt.wipayfinancial.com/response/');
-            formData.append('total', totalWithDecimals);
+                // Configure headers
+                const headers = {
+                    'Accept': 'application/json',
+                    // Axios will automatically set Content-Type for FormData
+                };
 
-            // Configure headers
-            const headers = {
-                'Accept': 'application/json',
-                // Axios will automatically set Content-Type for FormData
-            };
+                // Make the POST request using axios
+                const response = await axios.post(
+                    'https://tt.wipayfinancial.com/plugins/payments/request',
+                    formData,
+                    {
+                        headers: headers,
+                    }
+                );
 
-            // Make the POST request using axios
-            const response = await axios.post(
-                'https://tt.wipayfinancial.com/plugins/payments/request',
-                formData,
-                {
-                    headers: headers,
+                // Axios automatically parses JSON responses when Accept header includes application/json
+                // Perform redirect
+                if (response.data && response.data.url) {
+                    window.location.href = response.data.url;
                 }
-            );
 
-            // Axios automatically parses JSON responses when Accept header includes application/json
-            // Perform redirect
-            if (response.data && response.data.url) {
-                window.location.href = response.data.url;
+            } catch (error) {
+                console.log('error', error);
+
+                // You can also access error response details if available
+                if (error.response) {
+                    console.error('Response error:', error.response.status, error.response.data);
+                } else if (error.request) {
+                    console.error('No response received:', error.request);
+                } else {
+                    console.error('Request setup error:', error.message);
+                }
+            } finally {
+                setLoaders(false)
             }
-
-        } catch (error) {
-            console.log('error', error);
-
-            // You can also access error response details if available
-            if (error.response) {
-                console.error('Response error:', error.response.status, error.response.data);
-            } else if (error.request) {
-                console.error('No response received:', error.request);
-            } else {
-                console.error('Request setup error:', error.message);
-            }
-        } finally {
-            setLoaders(false)
+        }else{
+            alert('Plz fill all the fileds...')
         }
+       
     }
     const indexFunc = (i) => {
         if (index == i) {
@@ -167,6 +187,30 @@ const CheckoutRythm = () => {
         } else {
             setIndex(i)
         }
+    }
+
+    const [forminputData,setformInputdata] = useState({
+        firstName:'',
+        lastName:'',
+        email:'',
+        phone:'',
+        companyName:'',
+        country:'',
+        companySize:'',
+        mode:'',
+        date:'',
+        addressLine1:'',
+        addressLine2:'',
+        city:'',
+        state:'',
+        zipCode:''
+    })
+    const onChange = (e) =>{
+        const {name,value} = e.target;
+        setformInputdata({
+            ...forminputData,
+            [name]:value
+        })
     }
     return (
         <>
@@ -274,17 +318,17 @@ const CheckoutRythm = () => {
                         {accountDetailsDropdown && <form className='account_form_content_wrapper'>
                             <div className='account_input_form'>
                                 <label>First Name <span>*</span></label>
-                                <input placeholder='Enter your first name' />
+                                <input name='firstName' value={forminputData.firstName} onChange={onChange} placeholder='Enter your first name' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Last Name <span>*</span></label>
-                                <input placeholder='Enter your last name' />
+                                <input name='lastName' value={forminputData.lastName} onChange={onChange} placeholder='Enter your last name' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Email <span>*</span></label>
-                                <input placeholder='Enter your email' />
+                                <input onChange={onChange} name='email' value={forminputData.email} placeholder='Enter your email' />
                             </div>
 
                             <div class="form-group">
@@ -310,6 +354,9 @@ const CheckoutRythm = () => {
                                         ))}
                                     </div>}
                                     <input
+                                    onChange={onChange}
+                                    name='phone'
+                                    value={forminputData.phone}
                                         type="tel"
                                         placeholder="Enter your phone number"
                                     />
@@ -320,20 +367,23 @@ const CheckoutRythm = () => {
                                 gridColumn: '1/-1'
                             }}>
                                 <label>Company Name <span>*</span></label>
-                                <input placeholder='Enter your first name' />
+                                <input name='companyName' value={forminputData.companyName} 
+                                onChange={onChange}
+                                 placeholder='Enter your first name' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Country <span>*</span></label>
-                                <select className='select_input_form'>
+                                {/* <select className='select_input_form'>
                                     <option>--select-country--</option>
                                     <option>India</option>
-                                </select>
+                                </select> */}
+                                <input onChange={onChange} name='country' value={forminputData.country} placeholder='Enter country'/>
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Company size <span>*</span></label>
-                                <select className='select_input_form'>
+                                <select name='companySize' onChange={onChange} value={forminputData.companySize} className='select_input_form'>
                                     <option>--select-company-size--</option>
                                     <option>1-50</option>
                                     <option>51-200</option>
@@ -348,7 +398,7 @@ const CheckoutRythm = () => {
 
                             <div className='account_input_form'>
                                 <label>Mode <span>*</span></label>
-                                <select className='select_input_form'>
+                                <select name='mode' onChange={onChange} value={forminputData.mode} className='select_input_form'>
                                     <option>--select-mode--</option>
                                     <option>Virtual</option>
                                     <option>In-person</option>
@@ -358,39 +408,45 @@ const CheckoutRythm = () => {
 
                             <div className='account_input_form'>
                                 <label>Preferred date <span>*</span></label>
-                                <input type='date' />
+                                <input onChange={onChange} value={forminputData.date}
+                                name='date' type='date' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Address Line 1 <span>*</span></label>
-                                <input type='text' placeholder='Enter addresss line 1...' />
+                                <input onChange={onChange} name='addressLine1' value={forminputData.addressLine1} type='text' placeholder='Enter addresss line 1...' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Address Line 2 <span>*</span></label>
-                                <input type='text' placeholder='Enter addresss line 2...' />
+                                <input name='addressLine2' onChange={onChange} value={forminputData.addressLine2} type='text' placeholder='Enter addresss line 2...' />
                             </div>
 
                             <div className='account_gird_wrapper'>
                                 <div className='account_input_form'>
                                     <label>City <span>*</span></label>
-                                    <select className='select_input_form'>
+                                    {/* <select className='select_input_form'>
                                         <option>--select-city--</option>
                                         <option>Kolkata</option>
-                                    </select>
+                                    </select> */}
+                                    <input onChange={onChange} value={forminputData.city} 
+                                        name='city' placeholder='Enter city' />
+
                                 </div>
 
                                 <div className='account_input_form'>
                                     <label>State <span>*</span></label>
-                                    <select className='select_input_form'>
+                                    {/* <select className='select_input_form'>
                                         <option>--select-state--</option>
                                         <option>West Bengal</option>
-                                    </select>
+                                    </select> */}
+                                    <input onChange={onChange} name='state' value={forminputData.state} placeholder='Enter state' />
                                 </div>
 
                                 <div className='account_input_form'>
                                     <label>Zip code <span>*</span></label>
-                                    <input type='text' placeholder='Enter zip code' />
+                                    <input onChange={onChange} 
+                                        value={forminputData.zipCode} name='zipCode' type='text' placeholder='Enter zip code' />
                                 </div>
                             </div>
                         </form>}
