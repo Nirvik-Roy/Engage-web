@@ -3,6 +3,13 @@ import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import img from '../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.png'
 import img1 from '../../assets/411ff4766e8e675b11f4af6ae34083103a95ec00.png'
+import cardImg4 from '../../assets/4fdfaf3f45ca3e76ea24a44e27f7804aabf34a12.png';
+import cardImg5 from '../../assets/d38733bc95c7b74fae14454b186dd4cb422272e6.png';
+import cardImg6 from '../../assets/d60774e520db301441bf9c47a8b03447473d83d2.png';
+import cardImg7 from '../../assets/5373bdb8bf46a949e263c32e5f4154880fb081da.png';
+import cardImg8 from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png';
+import cardImg9 from '../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png';
+import cardImg10 from '../../assets/d29844c21cf8e4e13a79268f724706ddb5f883cf.png';
 import icon from '../../assets/svg159 (3).svg'
 import icon2 from '../../assets/svg159 (4).svg'
 import "slick-carousel/slick/slick.css";
@@ -129,7 +136,7 @@ const Checkoutlaunchpad = () => {
                                 cursor: 'pointer'
                             }} />
                             <Slider ref={sliderRef} {...settings}>
-                                {[img, img1, img, img1, img].map((e, i) => (
+                                {[img, img1, cardImg4, cardImg5, cardImg6,cardImg7,cardImg8,cardImg9].map((e, i) => (
                                     <div onClick={(() => indexFunc(i))} className={index == i ? 'select_experience_card_selected' : 'select_experience_card'}>
                                         <div className='select_experience_img'>
                                             <img src={e} />
