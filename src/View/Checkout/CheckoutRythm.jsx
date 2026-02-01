@@ -9,7 +9,6 @@ import cardImg6 from '../../assets/d60774e520db301441bf9c47a8b03447473d83d2.png'
 import cardImg7 from '../../assets/5373bdb8bf46a949e263c32e5f4154880fb081da.png';
 import cardImg8 from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png';
 import cardImg9 from '../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png';
-import cardImg10 from '../../assets/d29844c21cf8e4e13a79268f724706ddb5f883cf.png';
 import icon from '../../assets/svg159 (3).svg'
 import icon2 from '../../assets/svg159 (4).svg'
 import "slick-carousel/slick/slick.css";
@@ -129,7 +128,7 @@ const CheckoutRythm = () => {
             forminputData.city !== '' &&
             forminputData.state !== '' &&
             forminputData.zipCode !== ''
-        ){
+        ) {
             try {
                 // Create FormData instead of URLSearchParams
                 const formData = new FormData();
@@ -183,10 +182,10 @@ const CheckoutRythm = () => {
             } finally {
                 setLoaders(false)
             }
-        }else{
+        } else {
             toast.error('Plz enter all the fields..')
         }
-       
+
     }
     const indexFunc = (i) => {
         if (index == i) {
@@ -196,29 +195,31 @@ const CheckoutRythm = () => {
         }
     }
 
-    const [forminputData,setformInputdata] = useState({
-        firstName:'',
-        lastName:'',
-        email:'',
-        phone:'',
-        companyName:'',
-        country:'',
-        companySize:'',
-        mode:'',
-        date:'',
-        addressLine1:'',
-        addressLine2:'',
-        city:'',
-        state:'',
-        zipCode:''
+    const [forminputData, setformInputdata] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        companyName: '',
+        country: '',
+        companySize: '',
+        mode: '',
+        date: '',
+        addressLine1: '',
+        addressLine2: '',
+        city: '',
+        state: '',
+        zipCode: ''
     })
-    const onChange = (e) =>{
-        const {name,value} = e.target;
+    const onChange = (e) => {
+        const { name, value } = e.target;
         setformInputdata({
             ...forminputData,
-            [name]:value
+            [name]: value
         })
     }
+
+  
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -232,7 +233,7 @@ const CheckoutRythm = () => {
                             </div>
                         </div>
                         {experienceDropdown && <div className='select_experience_card_wrapper' style={{
-                            position:'relative'
+                            position: 'relative'
                         }}>
                             <img onClick={(() => {
                                 sliderRef.current.slickNext();
@@ -255,7 +256,7 @@ const CheckoutRythm = () => {
                                 cursor: 'pointer'
                             }} />
                             <Slider ref={sliderRef} {...settings}>
-                                {[img, img1, cardImg4, cardImg5, cardImg6,cardImg7,cardImg8,cardImg9].map((e, i) => (
+                                {[img, img1, cardImg4, cardImg5, cardImg6, cardImg7, cardImg8, cardImg9].map((e, i) => (
                                     <div onClick={(() => indexFunc(i))} className={index == i ? 'select_experience_card_selected' : 'select_experience_card'}>
                                         <div className='select_experience_img'>
                                             <img src={e} />
@@ -361,9 +362,9 @@ const CheckoutRythm = () => {
                                         ))}
                                     </div>}
                                     <input
-                                    onChange={onChange}
-                                    name='phone'
-                                    value={forminputData.phone}
+                                        onChange={onChange}
+                                        name='phone'
+                                        value={forminputData.phone}
                                         type="tel"
                                         placeholder="Enter your phone number"
                                     />
@@ -374,9 +375,9 @@ const CheckoutRythm = () => {
                                 gridColumn: '1/-1'
                             }}>
                                 <label>Company Name <span>*</span></label>
-                                <input name='companyName' value={forminputData.companyName} 
-                                onChange={onChange}
-                                 placeholder='Enter your first name' />
+                                <input name='companyName' value={forminputData.companyName}
+                                    onChange={onChange}
+                                    placeholder='Enter your first name' />
                             </div>
 
                             <div className='account_input_form'>
@@ -385,7 +386,7 @@ const CheckoutRythm = () => {
                                     <option>--select-country--</option>
                                     <option>India</option>
                                 </select> */}
-                                <input onChange={onChange} name='country' value={forminputData.country} placeholder='Enter country'/>
+                                <input onChange={onChange} name='country' value={forminputData.country} placeholder='Enter country' />
                             </div>
 
                             <div className='account_input_form'>
@@ -416,7 +417,7 @@ const CheckoutRythm = () => {
                             <div className='account_input_form'>
                                 <label>Preferred date <span>*</span></label>
                                 <input onChange={onChange} value={forminputData.date}
-                                name='date' type='date' />
+                                    name='date' type='date' />
                             </div>
 
                             <div className='account_input_form'>
@@ -436,7 +437,7 @@ const CheckoutRythm = () => {
                                         <option>--select-city--</option>
                                         <option>Kolkata</option>
                                     </select> */}
-                                    <input onChange={onChange} value={forminputData.city} 
+                                    <input onChange={onChange} value={forminputData.city}
                                         name='city' placeholder='Enter city' />
 
                                 </div>
@@ -452,7 +453,7 @@ const CheckoutRythm = () => {
 
                                 <div className='account_input_form'>
                                     <label>Zip code <span>*</span></label>
-                                    <input onChange={onChange} 
+                                    <input onChange={onChange}
                                         value={forminputData.zipCode} name='zipCode' type='text' placeholder='Enter zip code' />
                                 </div>
                             </div>
