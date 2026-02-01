@@ -77,9 +77,7 @@ function App() {
           <Route path='/terms-conditions' element={<TermsConditions />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/contact-us' element={<Contact />} />
-          <Route path='/checkout/rythm/:id' element={<CheckoutRythm />} />
-          <Route path='/checkout/playday/:id' element={<CheckoutPlayday />} />
-          <Route path='/checkout/launchpad/:id' element={<Checkoutlaunchpad />} />
+          <Route path='/checkout/:id' element={<CheckoutRythm />} />
         </Route>
       </Routes>
     </>

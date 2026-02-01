@@ -23,7 +23,7 @@ const Ngagepricing = () => {
                 'Tech support & software updates'
             ],
 
-         
+
 
         },
         {
@@ -101,13 +101,13 @@ const Ngagepricing = () => {
 
                                 <button onClick={() => {
                                     const routes = [
-                                        "/checkout/launchpad/0",
-                                        "/checkout/launchpad/1",
-                                        "/checkout/launchpad/2",
+                                        "/checkout/5",
+                                        "/checkout/6",
+                                        "/checkout/7",
                                     ];
                                     navigate(routes[i] ?? "/");
-                                }} className='base_btn_design'>Request a Quote <img src={icon}/></button>
-                              {/* <p style={{
+                                }} className='base_btn_design'>Request a Quote <img src={icon} /></button>
+                                {/* <p style={{
                                 fontWeight:'700',
                                 fontSize:'1rem',
                                 margin:'20px 0 0 0'

@@ -106,9 +106,9 @@ const Rythmpackageprices = () => {
 
                             <button onClick={() => {
                                 const routes = [
-                                    "/checkout/rythm/2",
-                                    "/checkout/rythm/3",
-                                    "/checkout/rythm/4"
+                                    "/checkout/2",
+                                    "/checkout/3",
+                                    "/checkout/4"
                                 ];
                                 navigate(routes[i] ?? "/");
                             }} style={{

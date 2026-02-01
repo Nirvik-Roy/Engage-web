@@ -20,6 +20,7 @@ import { useParams } from 'react-router-dom'
 import arrowRight from '../../assets/oui_arrow-up.svg'
 import arrowLeft from '../../assets/oui_arrow-up (1).svg'
 import toast from 'react-hot-toast'
+import { checkoutData } from './CheckoutData'
 const CheckoutRythm = () => {
     const [src, setSrc] = useState('');
     const [dropdown, setdropdown] = useState(false);
@@ -68,42 +69,9 @@ const CheckoutRythm = () => {
         ]
     };
 
-    const data = [
-        {
-            id: 1,
-            title: 'Rhythm Spark',
-            price: '$699',
-            total: 2997
-        },
-        {
-            id: 2,
-            title: 'Rhythm Pulse ',
-            price: '$1,499',
-            total: 3797
-        },
-        {
-            id: 3,
-            title: 'Boost Rhythm ',
-            price: ' $1,249 / quarter',
-            total: 7294
-        },
-        {
-            id: 4,
-            title: 'Build Rhythm ',
-            price: ' $999 / month',
-            total: 3297
-        },
-        {
-            id: 5,
-            title: 'Sustain Rhythm ',
-            price: '$1,999 / month',
-            total: 4297
-        },
-    ]
-
     useEffect(() => {
         if (id) {
-            setCurrentData(data[id])
+            setCurrentData(...checkoutData.filter((e) => e.id == id))
         }
     }, [id])
     const [loaders, setLoaders] = useState(false);
@@ -219,7 +187,7 @@ const CheckoutRythm = () => {
         })
     }
 
-  
+
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -288,30 +256,17 @@ const CheckoutRythm = () => {
                         </div>
 
                         {addonDropdown && <div className='select_add_on_content_wrapper'>
-                            <div className='add_ons_wrapper'>
-                                <h3>Grand Prizes</h3>
-                                <ul>
-                                    <li><input type='radio' />Top 10 - $299</li>
-                                    <li><input type='radio' />Prize pack: top 3 pro - $399</li>
-                                    <li><input type='radio' />Pack: top 3 deluxe - $699</li>
-                                </ul>
-                            </div>
+                            {currentData?.addOns?.map((element) => (
+                                <div className='add_ons_wrapper'>
+                                    <h3>{element.title}</h3>
+                                    <ul>
+                                        {element?.list?.map((e) => (
+                                            <li><input type='radio' />{e.title} - {e.price}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
 
-                            <div className='add_ons_wrapper'>
-                                <h3>Prize pack</h3>
-                                <ul>
-                                    <li><input type='radio' />Prize pack: 25 digital prize - $499</li>
-                                    <li><input type='radio' />Prize pack: 50 digital prize - $999</li>
-                                    <li><input type='radio' />Prize pack: 100 digital prize - $1599</li>
-                                </ul>
-                            </div>
-
-                            <div className='add_ons_wrapper'>
-                                <h3>Other</h3>
-                                <ul>
-                                    <li><input type='radio' />Extra players $2.50 each</li>
-                                </ul>
-                            </div>
                         </div>}
                     </div>
 
@@ -341,7 +296,6 @@ const CheckoutRythm = () => {
 
                             <div class="form-group">
                                 <label>Phone number <span>*</span></label>
-
                                 <div class="phone-input">
                                     <div class="country-select" onClick={(() => { setdropdown(!dropdown) })}>
                                         <img
@@ -466,14 +420,17 @@ const CheckoutRythm = () => {
                         <div className='order_head_wrapper'>
                             <div className='order_head_left'>
                                 <h5>{currentData?.title} </h5>
-                                <h6>NGAGE Rhythm</h6>
+                                <h6>{currentData?.subTitle}</h6>
                             </div>
-                            <div className='order_head_right'>
+                            <div className='order_head_left' style={{
+                                rowGap: '0'
+                            }}>
+                                {currentData?.startingFrom && <p>Starting from</p>}
                                 <h3>{currentData?.price}</h3>
                             </div>
                         </div>
 
-                        <div className='order_coupon_wrapper'>
+                        {/* {currentData?.coupon && <div className='order_coupon_wrapper'>
                             <div className='order_coupon_head'>
                                 <h5>Coupon</h5>
                                 <p>Add Coupon</p>
@@ -482,32 +439,86 @@ const CheckoutRythm = () => {
                             <div className='coupon_input_wrapper'>
                                 <input placeholder='Add coupon code' />
                                 <p>Apply <img src={icon} /></p>
-
                             </div>
                             <h3>NGAGE 90 <span>Applied</span></h3>
-                        </div>
+                        </div>} */}
 
-                        <div className='payment_summary_wrapper'>
+                        {currentData?.note && <small style={{
+                            marginLeft: '5px'
+                        }}><span style={{
+                            fontWeight: '700',
+
+                        }}>Note:</span> Final pricing is customized based on your requirements. You’ll receive a detailed quote after discussion.</small>}
+
+
+                        {currentData?.durationTier && <div className='payment_summary_wrapper' style={{
+                            border: 'none',
+                            marginTop: '-30px',
+                            marginBottom: '0'
+                        }}>
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                gap: '15px',
+                                flexWrap: 'wrap',
+                                paddingBottom: '10px',
+                                marginTop: '20px',
+                                borderBottom: '1px solid rgba(231, 233, 235, 1)'
+                            }}>
+                                <h3 style={{
+                                    // marginTop: '15px',
+                                    borderBottom: 'none',
+                                    marginBottom: '0px',
+                                    paddingBottom: '0px'
+                                }}>Duration Tier </h3>
+                                <p >Full-day</p>
+
+                            </div>
+
+                        </div>}
+
+                        {(!currentData?.paymentSummary && currentData?.addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
+                            border: 'none',
+                            marginTop: '-50px'
+                        }}>
+                            <h3 style={{
+                                marginTop: '15px',
+                                paddingBottom: '5px',
+                                marginBottom: '10px'
+                            }}>Add-ons</h3>
+                            {currentData?.addOnsFeatures?.map((e) => (
+                                <p style={{
+                                    marginBottom: '10px'
+                                }}>{e?.title}<span>{e?.price} <small>Remove</small></span></p>
+                            ))}
+                        </div>}
+                        {currentData?.paymentSummary && <div className='payment_summary_wrapper'>
                             <h3>Payment Summary</h3>
                             <p style={{
                                 marginBottom: '10px'
                             }}>Plan Price <span>{currentData?.price}</span></p>
                             <p>Discount <span>-$0.00</span></p>
 
-                            <h3 style={{
-                                marginTop: '15px'
-                            }}>Add-ons</h3>
+                            {currentData?.addOnsFeatures?.length > 0 && <>
+                                <h3 style={{
+                                    marginTop: '15px'
+                                }}>Add-ons</h3>
+                                {currentData?.addOnsFeatures?.map((e) => (
+                                    <p style={{
+                                        marginBottom: '10px'
+                                    }}>{e?.title}<span>{e?.price} <small>Remove</small></span></p>
+                                ))}
 
-                            <p style={{
-                                marginBottom: '10px'
-                            }}>Pack: top 3 deluxe<span>$699 <small>Remove</small></span></p>
-                            <p>Prize pack: 100 digital prize <span>$1,599 <small>Remove</small></span></p>
-                        </div>
+                            </>}
+                        </div>}
 
-                        <h1 className='total_number'>Total <span>${currentData?.total}.00</span></h1>
+                        {currentData?.total && <h1 className='total_number'>Total <span>${currentData?.total}.00</span></h1>}
                     </div>
 
-                    <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>
+                    {currentData?.paymentBtn && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
+
+                    {currentData?.submitBtn && <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>}
                 </div>
             </div>
         </>

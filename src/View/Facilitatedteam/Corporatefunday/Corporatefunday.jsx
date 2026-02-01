@@ -85,7 +85,7 @@ const Corporatefunday = () => {
                             marginTop: '20px'
                         }}>
                             <button onClick={() => {
-                                navigate("/checkout/playday/2");
+                                navigate("/checkout/10");
                             }} className='base_btn_design'>Request a Quote<img src={button} /></button>
                             <button className='base_btn_design'>Talk to an Expert<img src={buttonIcon2} /></button>
                         </div>

@@ -73,8 +73,8 @@ const Rythmpackage = () => {
                                             </ul>
                                             <button onClick={() => {
                                                 const routes = [
-                                                    "/checkout/rythm/0",
-                                                    "/checkout/rythm/1",
+                                                    "/checkout/0",
+                                                    "/checkout/1",
                                                 ];
                                                 navigate(routes[i] ?? "/");
                                             }} style={{
