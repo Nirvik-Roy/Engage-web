@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
 import img from '../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.png'
@@ -9,26 +9,27 @@ import cardImg6 from '../../assets/d60774e520db301441bf9c47a8b03447473d83d2.png'
 import cardImg7 from '../../assets/5373bdb8bf46a949e263c32e5f4154880fb081da.png';
 import cardImg8 from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png';
 import cardImg9 from '../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png';
-import cardImg10 from '../../assets/d29844c21cf8e4e13a79268f724706ddb5f883cf.png';
 import icon from '../../assets/svg159 (3).svg'
 import icon2 from '../../assets/svg159 (4).svg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import countryData from '../../../countries.json'
 import Slider from "react-slick";
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import arrowRight from '../../assets/oui_arrow-up.svg'
 import arrowLeft from '../../assets/oui_arrow-up (1).svg'
-const Checkoutlaunchpad = () => {
+import toast from 'react-hot-toast'
+import { checkoutData } from './CheckoutData'
+const Checkout = () => {
     const [src, setSrc] = useState('');
-    const [index, setIndex] = useState(null)
-    const [dropdown, setdropdown] = useState(false)
-    const { id } = useParams();
-    const sliderRef = useRef()
-    const [currentData, setCurrentData] = useState({})
+    const [dropdown, setdropdown] = useState(false);
+    const [currentData, setCurrentData] = useState({});
     const [experienceDropdown, setexperienceDropdown] = useState(true);
     const [addonDropdown, setaddonDropdown] = useState(true);
-    const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true)
+    const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true);
+    const sliderRef = useRef()
+    const { id } = useParams()
     var settings = {
         dots: false,
         infinite: true,
@@ -68,31 +69,92 @@ const Checkoutlaunchpad = () => {
         ]
     };
 
-    const data = [
-        {
-            id: 1,
-            title: 'Starter',
-            price: '$4,499'
-        },
-        {
-            id: 2,
-            title: 'Pro (AI)',
-            price: '$6,999'
-        },
-        {
-            id: 3,
-            title: 'Ultimate',
-            price: '$6,999'
-        },
-    ]
-
     useEffect(() => {
         if (id) {
-            setCurrentData(data[id])
+            setCurrentData(...checkoutData.filter((e) => e.id == id))
         }
     }, [id])
+    const [loaders, setLoaders] = useState(false);
+    const [index, setIndex] = useState(null)
+    // const jamaicaCurrencyValue = 120
+    const result = (1797 * 161) + 0;
+    const totalWithDecimals = result.toFixed(2);
+    const uniqueOrderId = `oid_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const paymentRequest = async () => {
+        if (
+            forminputData.firstName !== '' &&
+            forminputData.lastName !== '' &&
+            forminputData.email !== '' &&
+            forminputData.phone !== '' &&
+            forminputData.companyName !== '' &&
+            forminputData.country !== '' &&
+            forminputData.companySize !== '' &&
+            forminputData.mode !== '' &&
+            forminputData.date !== '' &&
+            forminputData.addressLine1 !== '' &&
+            forminputData.addressLine2 !== '' &&
+            forminputData.city !== '' &&
+            forminputData.state !== '' &&
+            forminputData.zipCode !== ''
+        ) {
+            try {
+                // Create FormData instead of URLSearchParams
+                const formData = new FormData();
+                setLoaders(true)
+                // Append all parameters to FormData
+                formData.append('account_number', '1234567890');
+                formData.append('avs', '0');
+                formData.append('country_code', 'JM');
+                formData.append('currency', 'JMD');
+                formData.append('data', '{"a":"b"}');
+                formData.append('environment', 'sandbox');
+                formData.append('fee_structure', 'customer_pay');
+                formData.append('method', 'credit_card');
+                formData.append('order_id', uniqueOrderId);
+                formData.append('origin', 'WiPay-example_app');
+                formData.append('response_url', 'https://tt.wipayfinancial.com/response/');
+                formData.append('total', totalWithDecimals);
 
+                // Configure headers
+                const headers = {
+                    'Accept': 'application/json',
+                    // Axios will automatically set Content-Type for FormData
+                };
 
+                // Make the POST request using axios
+                const response = await axios.post(
+                    'https://tt.wipayfinancial.com/plugins/payments/request',
+                    formData,
+                    {
+                        headers: headers,
+                    }
+                );
+
+                // Axios automatically parses JSON responses when Accept header includes application/json
+                // Perform redirect
+                if (response.data && response.data.url) {
+                    window.location.href = response.data.url;
+                }
+
+            } catch (error) {
+                console.log('error', error);
+
+                // You can also access error response details if available
+                if (error.response) {
+                    console.error('Response error:', error.response.status, error.response.data);
+                } else if (error.request) {
+                    console.error('No response received:', error.request);
+                } else {
+                    console.error('Request setup error:', error.message);
+                }
+            } finally {
+                setLoaders(false)
+            }
+        } else {
+            toast.error('Plz enter all the fields..')
+        }
+
+    }
     const indexFunc = (i) => {
         if (index == i) {
             setIndex(null)
@@ -100,6 +162,32 @@ const Checkoutlaunchpad = () => {
             setIndex(i)
         }
     }
+
+    const [forminputData, setformInputdata] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        companyName: '',
+        country: '',
+        companySize: '',
+        mode: '',
+        date: '',
+        addressLine1: '',
+        addressLine2: '',
+        city: '',
+        state: '',
+        zipCode: ''
+    })
+    const onChange = (e) => {
+        const { name, value } = e.target;
+        setformInputdata({
+            ...forminputData,
+            [name]: value
+        })
+    }
+
+
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -109,7 +197,7 @@ const Checkoutlaunchpad = () => {
                         <div className='select_experience_head'>
                             <h1>Select Experience</h1>
                             <div className='arrow_circle' onClick={(() => setexperienceDropdown(!experienceDropdown))}>
-                                {experienceDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
+                                {experienceDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
                         {experienceDropdown && <div className='select_experience_card_wrapper' style={{
@@ -136,7 +224,7 @@ const Checkoutlaunchpad = () => {
                                 cursor: 'pointer'
                             }} />
                             <Slider ref={sliderRef} {...settings}>
-                                {[img, img1, cardImg4, cardImg5, cardImg6,cardImg7,cardImg8,cardImg9].map((e, i) => (
+                                {[img, img1, cardImg4, cardImg5, cardImg6, cardImg7, cardImg8, cardImg9].map((e, i) => (
                                     <div onClick={(() => indexFunc(i))} className={index == i ? 'select_experience_card_selected' : 'select_experience_card'}>
                                         <div className='select_experience_img'>
                                             <img src={e} />
@@ -163,29 +251,22 @@ const Checkoutlaunchpad = () => {
                         <div className='select_experience_head'>
                             <h1>Select Add-on</h1>
                             <div className='arrow_circle' onClick={(() => setaddonDropdown(!addonDropdown))}>
-                                {addonDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
+                                {addonDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
 
                         {addonDropdown && <div className='select_add_on_content_wrapper'>
-                            <div className='add_ons_wrapper'>
-                                <h3>Grand Prizes</h3>
-                                <ul>
-                                    <li><input type='radio' />Prizes 50 - $999</li>
-                                    <li><input type='radio' />Prize 100 - $1599</li>
-                                    <li><input type='radio' />AI characters - $199</li>
-                                </ul>
-                            </div>
+                            {currentData?.addOns?.map((element) => (
+                                <div className='add_ons_wrapper'>
+                                    <h3>{element.title}</h3>
+                                    <ul>
+                                        {element?.list?.map((e) => (
+                                            <li><input type='radio' />{e.title} - {e.price}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
 
-                            <div className='add_ons_wrapper'>
-                                <h3>Prize pack</h3>
-                                <ul>
-                                    <li><input type='radio' />Video
-                                        modules - $99</li>
-                                    <li><input type='radio' />Extra level - $99</li>
-
-                                </ul>
-                            </div>
                         </div>}
                     </div>
 
@@ -193,29 +274,28 @@ const Checkoutlaunchpad = () => {
                         <div className='select_experience_head'>
                             <h1>NGAGE account details</h1>
                             <div className='arrow_circle' onClick={(() => setaccountDetailsDropdown(!accountDetailsDropdown))}>
-                                {accountDetailsDropdown ? <i class="fa-solid fa-angle-up"></i> : <i class="fa-solid fa-angle-down"></i>}
+                                {accountDetailsDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
 
                         {accountDetailsDropdown && <form className='account_form_content_wrapper'>
                             <div className='account_input_form'>
                                 <label>First Name <span>*</span></label>
-                                <input placeholder='Enter your first name' />
+                                <input name='firstName' value={forminputData.firstName} onChange={onChange} placeholder='Enter your first name' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Last Name <span>*</span></label>
-                                <input placeholder='Enter your last name' />
+                                <input name='lastName' value={forminputData.lastName} onChange={onChange} placeholder='Enter your last name' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Email <span>*</span></label>
-                                <input placeholder='Enter your email' />
+                                <input onChange={onChange} name='email' value={forminputData.email} placeholder='Enter your email' />
                             </div>
 
                             <div class="form-group">
                                 <label>Phone number <span>*</span></label>
-
                                 <div class="phone-input">
                                     <div class="country-select" onClick={(() => { setdropdown(!dropdown) })}>
                                         <img
@@ -236,6 +316,9 @@ const Checkoutlaunchpad = () => {
                                         ))}
                                     </div>}
                                     <input
+                                        onChange={onChange}
+                                        name='phone'
+                                        value={forminputData.phone}
                                         type="tel"
                                         placeholder="Enter your phone number"
                                     />
@@ -246,20 +329,23 @@ const Checkoutlaunchpad = () => {
                                 gridColumn: '1/-1'
                             }}>
                                 <label>Company Name <span>*</span></label>
-                                <input placeholder='Enter your first name' />
+                                <input name='companyName' value={forminputData.companyName}
+                                    onChange={onChange}
+                                    placeholder='Enter your first name' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Country <span>*</span></label>
-                                <select className='select_input_form'>
+                                {/* <select className='select_input_form'>
                                     <option>--select-country--</option>
                                     <option>India</option>
-                                </select>
+                                </select> */}
+                                <input onChange={onChange} name='country' value={forminputData.country} placeholder='Enter country' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Company size <span>*</span></label>
-                                <select className='select_input_form'>
+                                <select name='companySize' onChange={onChange} value={forminputData.companySize} className='select_input_form'>
                                     <option>--select-company-size--</option>
                                     <option>1-50</option>
                                     <option>51-200</option>
@@ -274,7 +360,7 @@ const Checkoutlaunchpad = () => {
 
                             <div className='account_input_form'>
                                 <label>Mode <span>*</span></label>
-                                <select className='select_input_form'>
+                                <select name='mode' onChange={onChange} value={forminputData.mode} className='select_input_form'>
                                     <option>--select-mode--</option>
                                     <option>Virtual</option>
                                     <option>In-person</option>
@@ -284,39 +370,45 @@ const Checkoutlaunchpad = () => {
 
                             <div className='account_input_form'>
                                 <label>Preferred date <span>*</span></label>
-                                <input type='date' />
+                                <input onChange={onChange} value={forminputData.date}
+                                    name='date' type='date' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Address Line 1 <span>*</span></label>
-                                <input type='text' placeholder='Enter addresss line 1...' />
+                                <input onChange={onChange} name='addressLine1' value={forminputData.addressLine1} type='text' placeholder='Enter addresss line 1...' />
                             </div>
 
                             <div className='account_input_form'>
                                 <label>Address Line 2 <span>*</span></label>
-                                <input type='text' placeholder='Enter addresss line 2...' />
+                                <input name='addressLine2' onChange={onChange} value={forminputData.addressLine2} type='text' placeholder='Enter addresss line 2...' />
                             </div>
 
                             <div className='account_gird_wrapper'>
                                 <div className='account_input_form'>
                                     <label>City <span>*</span></label>
-                                    <select className='select_input_form'>
+                                    {/* <select className='select_input_form'>
                                         <option>--select-city--</option>
                                         <option>Kolkata</option>
-                                    </select>
+                                    </select> */}
+                                    <input onChange={onChange} value={forminputData.city}
+                                        name='city' placeholder='Enter city' />
+
                                 </div>
 
                                 <div className='account_input_form'>
                                     <label>State <span>*</span></label>
-                                    <select className='select_input_form'>
+                                    {/* <select className='select_input_form'>
                                         <option>--select-state--</option>
                                         <option>West Bengal</option>
-                                    </select>
+                                    </select> */}
+                                    <input onChange={onChange} name='state' value={forminputData.state} placeholder='Enter state' />
                                 </div>
 
                                 <div className='account_input_form'>
                                     <label>Zip code <span>*</span></label>
-                                    <input type='text' placeholder='Enter zip code' />
+                                    <input onChange={onChange}
+                                        value={forminputData.zipCode} name='zipCode' type='text' placeholder='Enter zip code' />
                                 </div>
                             </div>
                         </form>}
@@ -327,43 +419,110 @@ const Checkoutlaunchpad = () => {
                     <div className='order_content_wrapper'>
                         <div className='order_head_wrapper'>
                             <div className='order_head_left'>
-                                <h5>{currentData?.title}</h5>
-                                <h6>NGAGE Launchpad</h6>
+                                <h5>{currentData?.title} </h5>
+                                <h6>{currentData?.subTitle}</h6>
                             </div>
                             <div className='order_head_left' style={{
                                 rowGap: '0'
                             }}>
-                                <p>Starting from</p>
-                                <h3>{currentData?.price}.00</h3>
+                                {currentData?.startingFrom && <p>Starting from</p>}
+                                <h3>{currentData?.price}</h3>
                             </div>
                         </div>
 
-                        <small><span style={{
-                            fontWeight: '700'
-                        }}>Note:</span> Final pricing is customized based on your requirements. You’ll receive a detailed quote after discussion.</small>
+                        {/* {currentData?.coupon && <div className='order_coupon_wrapper'>
+                            <div className='order_coupon_head'>
+                                <h5>Coupon</h5>
+                                <p>Add Coupon</p>
+                            </div>
 
-                        <div className='payment_summary_wrapper' style={{
+                            <div className='coupon_input_wrapper'>
+                                <input placeholder='Add coupon code' />
+                                <p>Apply <img src={icon} /></p>
+                            </div>
+                            <h3>NGAGE 90 <span>Applied</span></h3>
+                        </div>} */}
+
+                        {currentData?.note && <small style={{
+                            marginLeft: '5px'
+                        }}><span style={{
+                            fontWeight: '700',
+
+                        }}>Note:</span> Final pricing is customized based on your requirements. You’ll receive a detailed quote after discussion.</small>}
+
+
+                        {currentData?.durationTier && <div className='payment_summary_wrapper' style={{
                             border: 'none',
-                            marginTop: '-30px'
+                            marginTop: '-30px',
+                            marginBottom: '0'
                         }}>
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                gap: '15px',
+                                flexWrap: 'wrap',
+                                paddingBottom: '10px',
+                                marginTop: '20px',
+                                borderBottom: '1px solid rgba(231, 233, 235, 1)'
+                            }}>
+                                <h3 style={{
+                                    // marginTop: '15px',
+                                    borderBottom: 'none',
+                                    marginBottom: '0px',
+                                    paddingBottom: '0px'
+                                }}>Duration Tier </h3>
+                                <p >Full-day</p>
 
+                            </div>
+
+                        </div>}
+
+                        {(!currentData?.paymentSummary && currentData?.addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
+                            border: 'none',
+                            marginTop: '-50px'
+                        }}>
                             <h3 style={{
-                                marginTop: '15px'
+                                marginTop: '15px',
+                                paddingBottom: '5px',
+                                marginBottom: '10px'
                             }}>Add-ons</h3>
-
+                            {currentData?.addOnsFeatures?.map((e) => (
+                                <p style={{
+                                    marginBottom: '10px'
+                                }}>{e?.title}<span>{e?.price} <small>Remove</small></span></p>
+                            ))}
+                        </div>}
+                        {currentData?.paymentSummary && <div className='payment_summary_wrapper'>
+                            <h3>Payment Summary</h3>
                             <p style={{
                                 marginBottom: '10px'
-                            }}>Prizes 50 <span>{currentData?.price}.00 <small>Remove</small></span></p>
-                            <p>Video
-                                modules <span>$99.00<small>Remove</small></span></p>
-                        </div>
+                            }}>Plan Price <span>{currentData?.price}</span></p>
+                            <p>Discount <span>-$0.00</span></p>
+
+                            {currentData?.addOnsFeatures?.length > 0 && <>
+                                <h3 style={{
+                                    marginTop: '15px'
+                                }}>Add-ons</h3>
+                                {currentData?.addOnsFeatures?.map((e) => (
+                                    <p style={{
+                                        marginBottom: '10px'
+                                    }}>{e?.title}<span>{e?.price} <small>Remove</small></span></p>
+                                ))}
+
+                            </>}
+                        </div>}
+
+                        {currentData?.total && <h1 className='total_number'>Total <span>${currentData?.total}.00</span></h1>}
                     </div>
 
-                    <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>
+                    {currentData?.paymentBtn && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
+
+                    {currentData?.submitBtn && <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>}
                 </div>
             </div>
         </>
     )
 }
 
-export default Checkoutlaunchpad
+export default Checkout

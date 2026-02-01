@@ -16,12 +16,9 @@ import PrivacyPolicy from './View/PrivacyPolicy/PrivacyPolicy'
 import Contact from './View/Contact/Contact'
 import { useEffect, useState } from 'react'
 import Gamesexperience from './View/Games/Gamesexperience/Gamesexperience'
-import CheckoutRythmSpark from './View/Checkout/CheckoutRythm'
-import CheckoutRythm from './View/Checkout/CheckoutRythm'
-import CheckoutPlayday from './View/Checkout/CheckoutPlayday'
-import Checkoutlaunchpad from './View/Checkout/Checkoutlaunchpad'
 import Ebookmodal from './View/EbookModal/Ebookmodal'
 import { Toaster } from 'react-hot-toast'
+import Checkout from './View/Checkout/Checkout'
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [isModalClosed,setisModalClosed] = useState(false)
@@ -77,7 +74,7 @@ function App() {
           <Route path='/terms-conditions' element={<TermsConditions />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/contact-us' element={<Contact />} />
-          <Route path='/checkout/:id' element={<CheckoutRythm />} />
+          <Route path='/checkout/:id' element={<Checkout />} />
         </Route>
       </Routes>
     </>
