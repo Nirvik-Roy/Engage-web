@@ -19,6 +19,8 @@ import Gamesexperience from './View/Games/Gamesexperience/Gamesexperience'
 import Ebookmodal from './View/EbookModal/Ebookmodal'
 import { Toaster } from 'react-hot-toast'
 import Checkout from './View/Checkout/Checkout'
+import Engagelayout from './View/Engageexperience/Engagelayout'
+import Engageexperience from './View/Engageexperience/Engageexperience'
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [isModalClosed,setisModalClosed] = useState(false)
@@ -43,15 +45,15 @@ function App() {
 
 
 
-  useEffect(() => {
-    if(isModalClosed){
-      const interval = setInterval(() => {
-        setShowModal(true);
-      }, 2 * 60 * 1000); // 2 minutes in ms
+  // useEffect(() => {
+  //   if(isModalClosed){
+  //     const interval = setInterval(() => {
+  //       setShowModal(true);
+  //     }, 2 * 60 * 1000); // 2 minutes in ms
 
-      return () => clearInterval(interval);
-    }
-  }, [isModalClosed]);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [isModalClosed]);
 
   return (
     <>
@@ -69,12 +71,16 @@ function App() {
             <Route path='library' element={<Gameslibrary />} />
             <Route path='experience' element={<Gamesexperience/>}/>
           </Route>
+
+          <Route path='/engage' element={<Engagelayout/>}>
+            <Route path='experience' element={<Engageexperience/>}/>
+          </Route>
           <Route path='/faq' element={<Faq />} />
           <Route path='/refund-policy' element={<RefundPolicy />} />
           <Route path='/terms-conditions' element={<TermsConditions />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/contact-us' element={<Contact />} />
-          <Route path='/checkout/:id' element={<Checkout />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Route>
       </Routes>
     </>

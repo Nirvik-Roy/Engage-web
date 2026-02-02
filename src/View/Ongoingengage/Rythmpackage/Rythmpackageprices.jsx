@@ -5,13 +5,15 @@ import buttonIconNew from '../../../assets/g165.svg'
 import { useNavigate } from 'react-router-dom'
 
 const Rythmpackageprices = () => {
-    const navigate =useNavigate()
+    const navigate = useNavigate()
     const data = [
         {
             id: 1,
             title: 'Boost Rhythm  ',
             title2: 'US $1,249 / quarter',
             title3: 'Billed Annually',
+            onlyPrice: 1249,
+            totalPrice:4996,
             list: [
                 {
                     title: '1 experience per quarter',
@@ -28,7 +30,8 @@ const Rythmpackageprices = () => {
             title: 'Build Rhythm ',
             title2: 'US $999 / month',
             title3: 'Billed Annually',
-
+            onlyPrice: 999,
+            totalPrice:11988,
             list: [
                 {
                     title: '1 experience per quarter',
@@ -45,7 +48,8 @@ const Rythmpackageprices = () => {
             title: 'Sustain Rhythm ',
             title2: 'US $1,999 / month',
             title3: 'Billed Annually',
-
+            onlyPrice: 1999,
+            totalPrice:23988,
             list: [
                 {
                     title: 'Unlimited experiences',
@@ -105,12 +109,10 @@ const Rythmpackageprices = () => {
                             </div>
 
                             <button onClick={() => {
-                                const routes = [
-                                    "/checkout/2",
-                                    "/checkout/3",
-                                    "/checkout/4"
-                                ];
-                                navigate(routes[i] ?? "/");
+                                navigate({
+                                    pathname: '/engage/experience',
+                                    search: `?category=NGAGE Rythm&price=${e.onlyPrice}&filter=${e.title}&totalprice=${e.totalPrice}`
+                                })
                             }} style={{
                                 fontSize: '1.1rem',
                                 fontWeight: '600',

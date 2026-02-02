@@ -1,14 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Checkout.css'
 import BannerLayout from '../Layout/BannerLayout/BannerLayout'
-import img from '../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.png'
-import img1 from '../../assets/411ff4766e8e675b11f4af6ae34083103a95ec00.png'
-import cardImg4 from '../../assets/4fdfaf3f45ca3e76ea24a44e27f7804aabf34a12.png';
-import cardImg5 from '../../assets/d38733bc95c7b74fae14454b186dd4cb422272e6.png';
-import cardImg6 from '../../assets/d60774e520db301441bf9c47a8b03447473d83d2.png';
-import cardImg7 from '../../assets/5373bdb8bf46a949e263c32e5f4154880fb081da.png';
-import cardImg8 from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png';
-import cardImg9 from '../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png';
 import icon from '../../assets/svg159 (3).svg'
 import icon2 from '../../assets/svg159 (4).svg'
 import "slick-carousel/slick/slick.css";
@@ -16,64 +8,222 @@ import "slick-carousel/slick/slick-theme.css";
 import countryData from '../../../countries.json'
 import Slider from "react-slick";
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { Navigate, useLocation, useSearchParams } from 'react-router-dom'
 import arrowRight from '../../assets/oui_arrow-up.svg'
 import arrowLeft from '../../assets/oui_arrow-up (1).svg'
-import toast from 'react-hot-toast'
-import { checkoutData } from './CheckoutData'
+import toast from 'react-hot-toast';
+import { experienceData } from '../Engageexperience/ExpereienceData'
+
 const Checkout = () => {
     const [src, setSrc] = useState('');
     const [dropdown, setdropdown] = useState(false);
+    const [selectedExperience, setselectedExperience] = useState([])
+    const [priceOfAddons, setPriceOfAddons] = useState(0)
     const [currentData, setCurrentData] = useState({});
     const [experienceDropdown, setexperienceDropdown] = useState(true);
     const [addonDropdown, setaddonDropdown] = useState(true);
     const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true);
     const sliderRef = useRef()
-    const { id } = useParams()
-    var settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 1000,
-        centerMode: true,
-        centerPadding: "30px",
-        responsive: [
-            {
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 4,
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [addOnsFeatures, setaddOnfeatures] = useState([])
+    const category = searchParams.get('category');
+    const subcategory = searchParams.get('subcategory');
+    const price = searchParams.get('price');
+    const experience = searchParams.get('experience');
+    const totalprice = searchParams.get('totalprice')
+    // var settings = {
+    //     dots: false,
+    //     infinite: false,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     autoplaySpeed: 1000,
+    //     centerPadding: "30px",
+    //     responsive: [
+    //         {
+    //             breakpoint: 1199,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 850,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 576,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 centerPadding: "20px",
+    //             }
+    //         },
+    //     ]
+    // };
+
+    const addOnData = [
+        {
+            title: 'NGAGE Rythm',
+            addOns: [
+                {
+                    title: 'Grand Prizes',
+                    list: [
+                        {
+                            title: 'Top 10',
+                            price: '299',
+                            onlyPrice: 299
+                        },
+                        {
+                            title: 'Prize pack: top 3 pro',
+                            price: '399',
+                            onlyPrice: 399
+
+
+                        },
+                        {
+                            title: 'Pack: top 3 deluxe',
+                            price: '699',
+                            onlyPrice: 699
+
+                        }
+                    ]
+                },
+                {
+                    title: 'Prize pack',
+                    list: [
+                        {
+                            title: 'Prize pack: 25 digital prize',
+                            price: '499',
+                            onlyPrice: 499
+
+                        },
+                        {
+                            title: 'Prize pack: 50 digital prize',
+                            price: '999',
+                            onlyPrice: 999
+
+                        },
+                        {
+                            title: 'Prize pack: 100 digital prize',
+                            price: '1599',
+                            onlyPrice: 1599
+
+                        }
+                    ]
+                },
+                {
+                    title: 'Other',
+                    list: [
+                        {
+                            title: 'Extra players',
+                            price: ' 2.50 each',
+                            onlyPrice: 2.50
+                        }
+
+                    ]
                 }
-            },
-            {
-                breakpoint: 850,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    centerPadding: "20px",
-                }
-            },
-        ]
-    };
+            ],
+        },
+
+        {
+            title: 'NGAGE Launchpad',
+            addOns: [
+                {
+                    title: 'Grand Prizes',
+                    list: [
+                        {
+                            title: 'Prizes 50',
+                            price: '999',
+                            onlyPrice: 999
+                        },
+                        {
+                            title: 'Prize 100',
+                            price: '1599',
+                            onlyPrice: 1599
+                        },
+                        {
+                            title: 'AI characters',
+                            price: '199',
+                            onlyPrice: 199
+                        }
+                    ]
+                },
+                {
+                    title: 'Prize pack',
+                    list: [
+                        {
+                            title: 'Video modules',
+                            price: '99',
+                            onlyPrice: 99
+                        },
+                        {
+                            title: 'Extra level',
+                            price: '99',
+                            onlyPrice: 99
+                        }
+                    ]
+                },
+            ],
+        },
+        {
+            title: 'NGAGE Playday',
+            addOns: [
+                {
+                    title: 'Grand Prizes',
+                    list: [
+                        {
+                            title: '50 trophies A',
+                            price: '799',
+                            onlyPrice: 799
+                        },
+                        {
+                            title: '100 trophies B',
+                            price: '1499',
+                            onlyPrice: 1499
+                        },
+                        {
+                            title: 'AI characters',
+                            price: '199',
+                            onlyPrice: 199
+                        }
+                    ]
+                },
+                {
+                    title: 'Prize pack',
+                    list: [
+                        {
+                            title: '50 treasure hunt prizes',
+                            price: '799',
+                            onlyPrice: 799
+                        },
+                        {
+                            title: 'Additional facilitators',
+                            price: '99/each',
+                            onlyPrice: 99
+                        }
+                    ]
+                },
+            ],
+        },
+    ]
 
     useEffect(() => {
-        if (id) {
-            setCurrentData(...checkoutData.filter((e) => e.id == id))
-        }
-    }, [id])
+        setCurrentData(...addOnData.filter((e) => e.title == category))
+    }, [])
+
+    useEffect(() => {
+        setselectedExperience(experienceData.filter((e) => e.title == experience))
+    })
+
+
     const [loaders, setLoaders] = useState(false);
     const [index, setIndex] = useState(null)
     // const jamaicaCurrencyValue = 120
@@ -187,7 +337,22 @@ const Checkout = () => {
         })
     }
 
+    const deleteFunc = (id) => {
+        console.log(id);
 
+        const dummydata = [...addOnsFeatures];
+        const filterData = dummydata.filter((e) => e.id != id)
+        console.log(filterData)
+        setaddOnfeatures(filterData)
+    }
+
+    const totalCalculatedPriceofAddOns = () => {
+        return addOnsFeatures.reduce((total, cur) => total + cur.price, 0);
+    };
+
+    useEffect(() => {
+        setPriceOfAddons(Number(Math.floor(totalCalculatedPriceofAddOns())))
+    }, [addOnsFeatures])
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -195,7 +360,7 @@ const Checkout = () => {
                 <div className='checkout_content_wrapper'>
                     <div className='select_experience_wrapper'>
                         <div className='select_experience_head'>
-                            <h1>Select Experience</h1>
+                            <h1>Selected Experience</h1>
                             <div className='arrow_circle' onClick={(() => setexperienceDropdown(!experienceDropdown))}>
                                 {experienceDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
@@ -211,7 +376,8 @@ const Checkout = () => {
                                 top: '100px',
                                 left: '-20px',
                                 width: '60px',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                display: 'none'
                             }} />
                             <img onClick={(() => {
                                 sliderRef.current.slickPrev();
@@ -221,29 +387,29 @@ const Checkout = () => {
                                 top: '100px',
                                 right: '-20px',
                                 width: '60px',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                display: 'none'
                             }} />
-                            <Slider ref={sliderRef} {...settings}>
-                                {[img, img1, cardImg4, cardImg5, cardImg6, cardImg7, cardImg8, cardImg9].map((e, i) => (
-                                    <div onClick={(() => indexFunc(i))} className={index == i ? 'select_experience_card_selected' : 'select_experience_card'}>
-                                        <div className='select_experience_img'>
-                                            <img src={e} />
-                                        </div>
-                                        <h4>Christmas  Challenge</h4>
-                                        {index == i ? <div style={{
-                                            display: 'flex',
-                                            justifyContent: 'end'
-                                        }}>
-                                            <span style={{
-                                                fontSize: '0.9rem',
-                                                fontWeight: '700',
-                                                color: 'rgba(31, 144, 31, 1)',
-                                            }}>Selected</span>
-                                        </div>
-                                            : <p>Select <img src={icon} /></p>}
+
+                            {selectedExperience.map((e, i) => (
+                                <div onClick={(() => indexFunc(i))} className={'select_experience_card_selected'}>
+                                    <div className='select_experience_img'>
+                                        <img src={e.img} />
                                     </div>
-                                ))}
-                            </Slider>
+                                    <h4>{e.title}</h4>
+                                    {<div style={{
+                                        display: 'flex',
+                                        justifyContent: 'end'
+                                    }}>
+                                        <span style={{
+                                            fontSize: '0.9rem',
+                                            fontWeight: '700',
+                                            color: 'rgba(31, 144, 31, 1)',
+                                        }}>Selected</span>
+                                    </div>
+                                    }
+                                </div>
+                            ))}
                         </div>}
                     </div>
 
@@ -257,11 +423,17 @@ const Checkout = () => {
 
                         {addonDropdown && <div className='select_add_on_content_wrapper'>
                             {currentData?.addOns?.map((element) => (
-                                <div className='add_ons_wrapper'>
+                                <div className='add_ons_wrapper' >
                                     <h3>{element.title}</h3>
                                     <ul>
                                         {element?.list?.map((e) => (
-                                            <li><input type='radio' />{e.title} - {e.price}</li>
+                                            <li><input onChange={(() => {
+                                                setaddOnfeatures([...addOnsFeatures, {
+                                                    id: Date.now(),
+                                                    title: e.title,
+                                                    price: e.onlyPrice
+                                                }])
+                                            })} type='radio' checked={addOnsFeatures.some(item => item.title === e.title)} />{e.title} - ${e.price}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -419,18 +591,18 @@ const Checkout = () => {
                     <div className='order_content_wrapper'>
                         <div className='order_head_wrapper'>
                             <div className='order_head_left'>
-                                <h5>{currentData?.title} </h5>
-                                <h6>{currentData?.subTitle}</h6>
+                                <h5>{subcategory && subcategory} </h5>
+                                <h6>{category && category}</h6>
                             </div>
                             <div className='order_head_left' style={{
                                 rowGap: '0'
                             }}>
-                                {currentData?.startingFrom && <p>Starting from</p>}
-                                <h3>{currentData?.price}</h3>
+                                {category != 'NGAGE Rythm' && <p>Starting from</p>}
+                                <h3>${price && price}.00</h3>
                             </div>
                         </div>
 
-                        {/* {currentData?.coupon && <div className='order_coupon_wrapper'>
+                        {/* {coupon && <div className='order_coupon_wrapper'>
                             <div className='order_coupon_head'>
                                 <h5>Coupon</h5>
                                 <p>Add Coupon</p>
@@ -443,7 +615,7 @@ const Checkout = () => {
                             <h3>NGAGE 90 <span>Applied</span></h3>
                         </div>} */}
 
-                        {currentData?.note && <small style={{
+                        {category === 'NGAGE Launchpad' && <small style={{
                             marginLeft: '5px'
                         }}><span style={{
                             fontWeight: '700',
@@ -451,7 +623,7 @@ const Checkout = () => {
                         }}>Note:</span> Final pricing is customized based on your requirements. You’ll receive a detailed quote after discussion.</small>}
 
 
-                        {currentData?.durationTier && <div className='payment_summary_wrapper' style={{
+                        {category == 'NGAGE Playday' && <div className='payment_summary_wrapper' style={{
                             border: 'none',
                             marginTop: '-30px',
                             marginBottom: '0'
@@ -478,7 +650,7 @@ const Checkout = () => {
 
                         </div>}
 
-                        {(!currentData?.paymentSummary && currentData?.addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
+                        {(!category == 'NGAGE Rythm' && addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
                             border: 'none',
                             marginTop: '-50px'
                         }}>
@@ -487,38 +659,38 @@ const Checkout = () => {
                                 paddingBottom: '5px',
                                 marginBottom: '10px'
                             }}>Add-ons</h3>
-                            {currentData?.addOnsFeatures?.map((e) => (
+
+                            {addOnsFeatures?.map((e) => (
                                 <p style={{
                                     marginBottom: '10px'
-                                }}>{e?.title}<span>{e?.price} <small>Remove</small></span></p>
+                                }}>{e?.title}<span>{e?.price} <small >Remove</small></span></p>
                             ))}
                         </div>}
-                        {currentData?.paymentSummary && <div className='payment_summary_wrapper'>
+                        {category == 'NGAGE Rythm' && <div className='payment_summary_wrapper'>
                             <h3>Payment Summary</h3>
                             <p style={{
                                 marginBottom: '10px'
-                            }}>Plan Price <span>{currentData?.price}</span></p>
-                            <p>Discount <span>-$0.00</span></p>
+                            }}>Plan Price <span>${price && price}.00</span></p>
+                            {/* <p>Discount <span>-$0.00</span></p> */}
 
-                            {currentData?.addOnsFeatures?.length > 0 && <>
+                            {addOnsFeatures?.length > 0 && <>
                                 <h3 style={{
                                     marginTop: '15px'
                                 }}>Add-ons</h3>
-                                {currentData?.addOnsFeatures?.map((e) => (
+                                {addOnsFeatures?.map((e) => (
                                     <p style={{
                                         marginBottom: '10px'
-                                    }}>{e?.title}<span>{e?.price} <small>Remove</small></span></p>
+                                    }}>{e?.title}<span>${e?.price} <small onClick={(() => deleteFunc(e.id))}>Remove</small></span></p>
                                 ))}
-
                             </>}
                         </div>}
 
-                        {currentData?.total && <h1 className='total_number'>Total <span>${currentData?.total}.00</span></h1>}
+                        {category == 'NGAGE Rythm' && <h1 className='total_number'>Total <span>${totalprice && Number(totalprice) + priceOfAddons}.00</span></h1>}
                     </div>
 
-                    {currentData?.paymentBtn && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
+                    {category == 'NGAGE Rythm' && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
 
-                    {currentData?.submitBtn && <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>}
+                    {category != 'NGAGE Rythm' && <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>}
                 </div>
             </div>
         </>

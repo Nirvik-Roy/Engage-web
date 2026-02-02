@@ -11,7 +11,9 @@ const Rythmpackage = () => {
         {
             id: 1,
             title: 'Rhythm Spark ',
-            title2: 'US$699',
+            price: '699',
+            onlyPrice: 699,
+            totalPrice: 699,
             list: [
                 {
                     title: '1-Day Experience',
@@ -26,7 +28,9 @@ const Rythmpackage = () => {
         {
             id: 2,
             title: 'Rhythm Pulse ',
-            title2: 'US$1,499',
+            price: '1,499',
+            onlyPrice: 1499,
+            totalPrice: 1499,
             list: [
                 {
                     title: '3-Day Experience',
@@ -48,7 +52,7 @@ const Rythmpackage = () => {
                     Buy a Rhythm Package Today
                 </h1>
                 <div style={{
-                    padding:'40px 0'
+                    padding: '40px 0'
                 }} className='container world_solutions_wrapper'>
                     <div className='solutions_engage_world'>
                         <img src={img} />
@@ -62,7 +66,7 @@ const Rythmpackage = () => {
                                     <h3 style={{
                                         fontWeight: '700',
                                         fontSize: '20px'
-                                    }}>{e.title2}</h3>
+                                    }}>US${e.price}</h3>
                                     {e.list.map((ele) => (
                                         <>
                                             <h5 style={{
@@ -74,11 +78,10 @@ const Rythmpackage = () => {
                                                 <li><img src={listimg} />{ele.point3}</li>
                                             </ul>
                                             <button onClick={() => {
-                                                const routes = [
-                                                    "/checkout/0",
-                                                    "/checkout/1",
-                                                ];
-                                                navigate(routes[i] ?? "/");
+                                                navigate({
+                                                    pathname: '/engage/experience',
+                                                    search: `?category=NGAGE Rythm&price=${e.onlyPrice}&filter=${e.title}&totalprice=${e.totalPrice}`
+                                                })
                                             }} style={{
                                                 fontSize: '1.1rem',
                                                 fontWeight: '600',
