@@ -8,7 +8,8 @@
 }
 .rythm_img_wrapper {
   width: 48%;
-  height: 53vh;
+  height: 53dvh;
+  max-height: 477px;
   border-radius: 50px;
   overflow: hidden;
   position: relative;

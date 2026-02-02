@@ -9,7 +9,8 @@
 }
 .after_img_div {
   width: 40%;
-  height: 78vh;
+  height: 78dvh;
+  max-height: 542px;
 }
 .after_img_div img {
   width: 100%;

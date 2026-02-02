@@ -113,7 +113,7 @@ const Gameslibrary = () => {
                 <span onClick={(() => setshowFilter(!showFilter))}>Filter <img src={filterImg} /></span>
                 <p>Sort 1 out of 4 <i class="fa-solid fa-angle-down"></i></p>
             </div>
-            <div className='games_library_wrapper'>
+            <div className='games_library_wrapper games_library_full_width_wrapper'>
                 <div className='games_grid_wrapper'>
                     {
                         gamesData.map((e, i) => (

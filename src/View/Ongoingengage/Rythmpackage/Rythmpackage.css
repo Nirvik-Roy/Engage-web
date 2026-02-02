@@ -19,7 +19,8 @@
 }
 
 .rythm_package_wrapper .solutions_engage_world {
-  height: 400px;
+  height: 60dvh;
+  max-height: 400px;
 }
 
 .rythm_prices_wrapper .launch_pad {
@@ -39,7 +40,8 @@
   padding: 70px 0 0 0;
 }
 .rythm_package_prices_wrapper .solutions_engage_world {
-  height: 520px;
+    height: 70dvh;
+    max-height: 520px;
 }
 @media (max-width: 1010px) {
   .rythm_spark_wrapper {

@@ -122,7 +122,8 @@
   /* overflow: hidden; */
 }
 .engamen_report_wrapper img {
-  height: 70vh;
+  height: 70dvh;
+  max-height: 630px;
   object-fit: cover;
 }
 @media (max-width: 1010px) {

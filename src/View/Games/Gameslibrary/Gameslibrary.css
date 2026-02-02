@@ -37,6 +37,9 @@
 .filter_head_wrapper{
     display: none;
 }
+.games_library_full_width_wrapper{
+    width: 100%;
+}
 @media(max-width:768px){
 
     .games_grid_wrapper{

@@ -1,6 +1,7 @@
 .home_banner_wrapper {
   width: 100%;
-  min-height: 100vh;
+  height: 100dvh;
+  max-height: 695.9px;
   position: relative;
   display: flex;
   justify-content: center;

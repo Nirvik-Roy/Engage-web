@@ -9,11 +9,12 @@ const Navbar = () => {
   const [gamesDropdown, setgamesDropdown] = useState(false)
   const location = useLocation();
   const dropdownRef = useRef();
+  const [stickNavbar, setstickyNavbar] = useState(false)
   const dropdownRef2 = useRef();
   const togglebtnref = useRef();
   const togglebtnref2 = useRef();
   const navigate = useNavigate()
-  const [show,setShow] = useState(false)
+  const [show, setShow] = useState(false)
   useEffect(() => {
     const closeDropdowns = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target) &&
@@ -31,20 +32,33 @@ const Navbar = () => {
       document.removeEventListener("mousedown", closeDropdowns);
     };
   }, [])
-  
-  useEffect(()=>{
-     if(show){
-       document.body.style.overflowY = 'hidden'     
-      }else{
-       document.body.style.overflowY = 'scroll'     
-      }
-  },[show])
+
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflowY = 'hidden'
+    } else {
+      document.body.style.overflowY = 'scroll'
+    }
+  }, [show])
+
+
+  const stickYNavbar = () => {
+    if (window.scrollY > 350) {
+      setstickyNavbar(true)
+    } else {
+      setstickyNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll', stickYNavbar)
+
+
 
   return (
     <>
-      <NavbarSidebar setShow={setShow } show={show}/>
-      <div className='navbar_wrapper'>
-        <img onClick={(()=>navigate('/'))} src={logo} />
+      <NavbarSidebar setShow={setShow} show={show} />
+      <div className={stickNavbar ? 'navbar_wrapper_fixed navbar_wrapper' : 'navbar_wrapper '}>
+        <img onClick={(() => navigate('/'))} src={logo} />
         <div className='navbar_links_wrapper'>
           <NavLink to={'/'}>Home</NavLink>
           <div ref={togglebtnref} onClick={(() => { setsolutiondropdown(!solutionDropdown) })} className='nav_dropdown'>

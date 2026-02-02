@@ -43,11 +43,13 @@ const Rythmpackage = () => {
         <>
             <div className='rythm_package_wrapper'>
                 <h1 className='heading' style={{
-                    textAlign: 'center'
+                    textAlign: 'center',
                 }}>
                     Buy a Rhythm Package Today
                 </h1>
-                <div className='container world_solutions_wrapper'>
+                <div style={{
+                    padding:'40px 0'
+                }} className='container world_solutions_wrapper'>
                     <div className='solutions_engage_world'>
                         <img src={img} />
                         <h1>One-Off Experiences</h1>

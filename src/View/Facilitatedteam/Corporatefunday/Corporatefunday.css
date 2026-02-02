@@ -2,5 +2,6 @@
     padding-bottom: 50px;
 }
 .corporate_fun_wrapper .solutions_engage_world{
-    height: 600px;
+    height: 75dvh;
+    max-height: 600px;
 }
