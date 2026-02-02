@@ -14,7 +14,7 @@ const Contact = () => {
                 <div className='container contact_content_wrapper'>
                     <div className='contact_form_left'>
                         <h1 className='heading'>Connect with us</h1>
-                        <p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
+                       
                         <form className='contact_form'>
                             <div className='input_div'>
                                 <label>Name <span>*</span></label>

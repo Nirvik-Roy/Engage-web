@@ -15,12 +15,10 @@ const Ngagepricing = () => {
             price: 'US$4,499',
             listHead: 'Includes:',
             list: [
+                'Up to 3 onboarding modules',
                 'Guided onboarding journey',
-                'Interactive HR policy walkthrough',
-                'Department introduction challenges',
                 'Leaderboard & progress dashboard',
-                '5 custom game levels',
-                'Tech support & software updates'
+                '1-year access • unlimited employees',
             ],
 
 
@@ -32,15 +30,13 @@ const Ngagepricing = () => {
             subhHeading: '',
             title2: 'Starting from ',
             price: 'US$6,999',
-            listHead: 'Includes everything in Starter, plus::',
+            listHead: 'Includes everything in Starter, plus:',
             list: [
-                'AI characters guiding policies & procedures',
-                'Gamified compliance modules',
+                'Up to 4 onboarding modules',
+                'AI characters guiding selected modules',
+                'Gamified compliance experiences',
                 'Custom branding & reporting dashboard',
-                '5 themed game levels',
-                'Tech support & software updates',
-                '5 custom game levels',
-                'Tech support & software updates'
+                '1-year access • unlimited employees',
             ],
 
 
@@ -51,15 +47,13 @@ const Ngagepricing = () => {
             subhHeading: '(Video + Quests)',
             title2: 'Starting from ',
             price: 'US$6,999',
-            listHead: 'Includes everything in Starter, plus::',
+            listHead: 'Includes everything in Starter, plus:',
             list: [
-                'AI characters guiding policies & procedures',
-                'Gamified compliance modules',
-                'Custom branding & reporting dashboard',
-                '5 themed game levels',
-                'Tech support & software updates',
-                '5 custom game levels',
-                'Tech support & software updates'
+                'All onboarding modules included',
+                'Pre-recorded manager videos',
+                'Facility exploration quests',
+                '10 game levels + NES onboarding summary',
+                '1-year access • unlimited employees',
             ],
 
         },

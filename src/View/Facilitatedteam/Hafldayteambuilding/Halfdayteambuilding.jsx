@@ -13,20 +13,20 @@ const Halfdayteambuilding = () => {
             title: 'How it works',
             list: [
                 'Choose one team building experience',
-                '	Fast-paced, facilitated session',
-                'Live scoring and prizes'
+                'Extended play with multiple rounds',
+                'Facilitated flow throughout'
             ],
         },
         {
             id: 2,
             title: 'What’s included',
             list: [
-                'Ngage facilitator(s) on-site',
-                'One selected team building experience',
+                'Multiple Ngage facilitators',
+                'One selected team building experience (expanded)',
                 'Ngage-powered leaderboard & scoring',
                 'Digital game setup and management',
                 'Prize tokens for top teams',
-                'Session coordination and flow management'
+                'On-site coordination and experience flow'
             ],
 
         },
@@ -34,9 +34,9 @@ const Halfdayteambuilding = () => {
             id: 3,
             title: 'Best for',
             list: [
-                'Team meetings',
-                'Icebreakers',
-                'Morale boosts'
+                'Department off-sites',
+                'Staff retreats',
+                'Team resets'
             ],
 
         },

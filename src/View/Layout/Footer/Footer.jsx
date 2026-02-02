@@ -47,9 +47,9 @@ const Footer = () => {
 
             <div className='footer_1'>
               <h3>Contact</h3>
-              <Link>5 Old Church Rd. Kingston 8, Kingston Jamaica</Link>
-              <Link>8762767188</Link>
-              <Link>admin@timcorporation.net</Link>
+              <Link><strong>Address</strong> - 5 Old Church Rd. Kingston 8, Kingston Jamaica</Link>
+              <Link><strong>Phone</strong> - 8762767188</Link>
+              <Link><strong>Email</strong> - sales@ngageworld.com</Link>
             </div>
           </div>
           <p style={{

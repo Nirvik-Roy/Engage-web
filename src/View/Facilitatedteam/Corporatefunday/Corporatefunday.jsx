@@ -12,21 +12,21 @@ const Corporatefunday = () => {
             id: 1,
             title: 'How it works',
             list: [
-                'Choose one team building experience',
-                '	Fast-paced, facilitated session',
-                'Live scoring and prizes'
+                'Choose one team building experience as the foundation',
+                'Activities expanded and customized for scale',
+                'Multiple activity zones and full-day facilitation'
             ],
         },
         {
             id: 2,
             title: 'What’s included',
             list: [
-                'Ngage facilitator(s) on-site',
-                'One selected team building experience',
-                'Ngage-powered leaderboard & scoring',
-                'Digital game setup and management',
-                'Prize tokens for top teams',
-                'Session coordination and flow management'
+                'Full Ngage facilitation team on-site',
+                'Customised activity design and run-of-show',
+                'Multiple game zones and activity formats',
+                'Ngage-powered leaderboard & scoring system',
+                'Prize tokens, awards, and recognition moments',
+                'End-to-end coordination and event execution'
             ],
 
         },
@@ -34,9 +34,9 @@ const Corporatefunday = () => {
             id: 3,
             title: 'Best for',
             list: [
-                'Team meetings',
-                'Icebreakers',
-                'Morale boosts'
+                'Annual sports days',
+                'Company celebrations',
+                'Large-scale staff events'
             ],
 
         },
