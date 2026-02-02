@@ -644,13 +644,13 @@ const Checkout = () => {
                                     marginBottom: '0px',
                                     paddingBottom: '0px'
                                 }}>Duration Tier </h3>
-                                <p >Full-day</p>
+                                {subcategory.startsWith('Half') ? <p>Half Day</p> : subcategory.startsWith('90') ? <p>90 Min</p> : <p>Full-day</p>}
 
                             </div>
 
                         </div>}
 
-                        {(!category == 'NGAGE Rythm' && addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
+                        {(category != 'NGAGE Rythm' && addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
                             border: 'none',
                             marginTop: '-50px'
                         }}>
@@ -663,7 +663,7 @@ const Checkout = () => {
                             {addOnsFeatures?.map((e) => (
                                 <p style={{
                                     marginBottom: '10px'
-                                }}>{e?.title}<span>{e?.price} <small >Remove</small></span></p>
+                                }}>{e?.title}<span>${e?.price} <small onClick={(() => deleteFunc(e.id))}>Remove</small></span></p>
                             ))}
                         </div>}
                         {category == 'NGAGE Rythm' && <div className='payment_summary_wrapper'>

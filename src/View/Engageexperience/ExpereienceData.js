@@ -97,7 +97,7 @@ export const experienceData = [
     {
         category: 'ENGAGE Playday',
         subTitle: "FULL-DAY EXPERIENCE",
-        subCategory: "",
+        subCategory: "Corporate Fun Day / Sports Day",
         title: "Corporate Play Day (Signature Experience)",
         time: "Full Day",
         duration: "Full Day",

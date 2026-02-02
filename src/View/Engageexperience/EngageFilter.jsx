@@ -89,15 +89,26 @@ const EngageFilter = () => {
         {
             title: 'NGAGE Playday',
             list: [
-                '90-Minute Team Building',
-                'Half-Day Team Building',
-                'Corporate Fun Day / Sports Day',
+                {
+                    title: '90-Minute Team Building',
+                    price:999,
+                    totalPrice:999
+                },
+                {
+                    title: 'Half-Day Team Building',
+                    price: 2999,
+                    totalPrice: 2999
+                },
+                {
+                    title: 'Corporate Fun Day / Sports Day',
+                    price: 4999,
+                    totalPrice: 4999
+                },
             ]
         }
     ]
     useEffect(() => {
         setmainFilterData(filterData.filter((e) => e.title == category))
-
     }, [filter, category])
     return (
         <>
