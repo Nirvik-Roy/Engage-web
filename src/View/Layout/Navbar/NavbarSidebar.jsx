@@ -26,9 +26,9 @@ const NavbarSidebar = ({ show, setShow }) => {
                         } : {}} onClick={(() => { setsolutiondropdown(!solutionDropdown) })}>Solutions <i class="fa-solid fa-angle-down"></i></p>
                         {solutionDropdown && <div className='solution_dropdown5463'>
                             {/* <NavLink to={'/solutions/engagement'}>Solution Hub</NavLink> */}
-                            <NavLink to={'/solutions/ongoing-engage'}>NGAGE rhythm</NavLink>
-                            <NavLink to={'/solutions/facilitated-team'}>NGAGE playday</NavLink>
-                            <NavLink to={'/solutions/onboarding'}>NGAGE launchpad</NavLink>
+                            <NavLink to={'/solutions/ongoing-engage'}>NGAGE Rhythm</NavLink>
+                            <NavLink to={'/solutions/facilitated-team'}>NGAGE Playday</NavLink>
+                            <NavLink to={'/solutions/onboarding'}>NGAGE Launchpad</NavLink>
                         </div>}
                     </div>
 
