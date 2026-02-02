@@ -9,10 +9,12 @@ const Ngagepricing = () => {
     const data = [
         {
             id: 1,
-            title: 'Starter ',
+            title: 'Starter',
             subhHeading: '',
             title2: 'Starting from ',
             price: 'US$4,499',
+            onlyPrice:4499,
+            totalPrice:4499,
             listHead: 'Includes:',
             list: [
                 'Up to 3 onboarding modules',
@@ -26,10 +28,12 @@ const Ngagepricing = () => {
         },
         {
             id: 2,
-            title: 'Pro (AI)  ',
+            title: 'Pro (AI)',
             subhHeading: '',
             title2: 'Starting from ',
             price: 'US$6,999',
+            onlyPrice:6999,
+            totalPrice:6999,
             listHead: 'Includes everything in Starter, plus:',
             list: [
                 'Up to 4 onboarding modules',
@@ -47,6 +51,8 @@ const Ngagepricing = () => {
             subhHeading: '(Video + Quests)',
             title2: 'Starting from ',
             price: 'US$6,999',
+            onlyPrice:6999,
+            totalPrice:6999,
             listHead: 'Includes everything in Starter, plus:',
             list: [
                 'All onboarding modules included',
@@ -94,12 +100,10 @@ const Ngagepricing = () => {
                                 </div>
 
                                 <button onClick={() => {
-                                    const routes = [
-                                        "/checkout/5",
-                                        "/checkout/6",
-                                        "/checkout/7",
-                                    ];
-                                    navigate(routes[i] ?? "/");
+                                    navigate({
+                                        pathname: '/engage/experience',
+                                        search: `?category=NGAGE Launchpad&price=${e.onlyPrice}&filter=${e.title}&totalprice=${e.totalPrice}`
+                                    })
                                 }} className='base_btn_design'>Request a Quote <img src={icon} /></button>
                                 {/* <p style={{
                                 fontWeight:'700',
