@@ -40,7 +40,7 @@
     color: #fff;
     background-color: rgba(1, 130, 252, 1);
     margin-bottom: 15px;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.1rem; 
 }
 .mission_box p{
     font-size: 0.95rem;
