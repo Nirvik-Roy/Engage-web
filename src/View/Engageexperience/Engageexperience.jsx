@@ -18,6 +18,7 @@ import cashImg from '../../assets/Frame (2).svg'
 import EngageFilterSidebar from './EngageFilterSidebar.jsx'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { experienceData } from './ExpereienceData.js'
+import { EngageRythmCardData } from './EngageRythmCardData.js'
 const Engageexperience = () => {
     const [showFilter, setshowFilter] = useState(false);
     const navigate = useNavigate()
@@ -60,7 +61,7 @@ const Engageexperience = () => {
             </div>
             <div className="games_library_wrapper">
                 <div className="games_experience_box_wrapper">
-                    {finalExperienceData?.map((element, i) => (
+                    {category != 'NGAGE Rythm' && finalExperienceData?.map((element, i) => (
                         <div onClick={(() => indexFunction(i))} style={index === i ? {
                             border: '1px solid #040480'
                         } : {}} key={element} className='game_experience_box'>
@@ -86,7 +87,7 @@ const Engageexperience = () => {
 
                                     <div className='clock_wrapper'>
                                         <img className='star_img56' src={cashImg} />
-                                        <h6>:{element.price} </h6>
+                                        <h6>{element.price} </h6>
                                     </div>
                                 </div>
                                 <p><strong>Best for:</strong> {element.bestFor}</p>
@@ -164,6 +165,95 @@ const Engageexperience = () => {
                         </div>
 
                     ))}
+
+                    {
+                        category.trim() == 'NGAGE Rythm' && EngageRythmCardData?.map((element,i)=>(
+                            <div onClick={(() => indexFunction(i))} style={index === i ? {
+                                border: '1px solid #040480'
+                            } : {}} key={element} className='game_experience_box'>
+                                <div className='game_experience_img'>
+                                    <Slider {...settings}>
+                                        {[1, 2, 3].map((e) => (
+                                            <img key={e} src={element.img} />
+                                        ))}
+                                    </Slider>
+                                </div>
+                                <div className='game_experience_details'>
+                                    <h5>{element.name}</h5>
+                                    <h1>{element.subTitle}</h1>
+                                    <div className='clock_star_wrapper'>
+                                        <div className='clock_wrapper'>
+                                            <img src={clock} />
+                                            <h6>{element.duration}</h6>
+                                        </div>
+                                        {/* {element.reviews && <div className='clock_wrapper'>
+                                            <img className='star_img56' src={star} />
+                                            <h6>{element.reviews}</h6>
+                                        </div>} */}
+
+                                        <div className='clock_wrapper'>
+                                            <img className='star_img56' src={cashImg} />
+                                            <h6>{element.price} </h6>
+                                        </div>
+                                    </div>
+                                    <p><strong>Best for:</strong> {element.theme}</p>
+
+                                    <p><strong>Season:</strong> {element.season}</p>
+
+                                    <p><strong>Outcome:</strong> {element.outcome}</p>
+
+                                    <div>
+                                        <strong>What it’s about</strong>
+                                        <p> {element.description}</p>
+                                    </div>
+
+                                    <div>
+                                        <strong>How you win</strong>
+                                        <p> {element.howToWin}</p>
+                                    </div>
+                                   
+                                  
+                                    <p><strong>Activities Used:</strong> {element.activities.length}</p>
+
+                                    <p><strong>Prizes:</strong> {element.prizes}</p>
+                                    
+                                <div className='btn_wrapper_game_experience' style={{
+                                    display: 'flex',
+                                    justifyContent: 'flex-start',
+                                    alignItems: 'center',
+                                    gap: '10px',
+                                    flexWrap:'wrap'
+                                }}>
+                                       {element.activities.map((e)=>(
+                                        <button >{e}</button>
+                                       ))}
+                                </div> 
+                                    {index === i ? <p style={{
+                                        fontWeight: '600',
+                                        marginLeft: 'auto',
+                                        fontSize: '1rem',
+                                        marginTop: '10px',
+                                        color: 'rgba(31, 144, 31, 1)',
+                                        cursor: 'pointer'
+                                    }} onClick={() => {
+                                        const url = `http://localhost:5173/checkout?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(filter)}&price=${encodeURIComponent(price)}&totalprice=${encodeURIComponent(totalprice)}&experience=${encodeURIComponent(element.title)}`;
+                                        window.open(url, "_blank"); // "_blank" opens in new tab
+                                    }}>Procced</p> : <p style={{
+                                        display: 'flex',
+                                        justifyContent: 'flex-end',
+                                        alignItems: 'center',
+                                        color: '#040480',
+                                        fontWeight: '600',
+                                        gap: '5px',
+                                        fontSize: '1rem',
+                                        marginTop: '10px',
+                                        cursor: 'pointer'
+                                    }}>Select your first experience <img src={icon} /></p>}
+                                </div>
+
+                            </div>
+                        ))
+                    }
 
                 </div>
                 {/* <Pagination /> */}
