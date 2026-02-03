@@ -5,6 +5,18 @@ import img4 from '../../assets/411ff4766e8e675b11f4af6ae34083103a95ec00.png'
 import img5 from '../../assets/4fdfaf3f45ca3e76ea24a44e27f7804aabf34a12.png'
 import almaMater from '../../assets/1186bb239a9a7ebde4b8be26b693ed2be4644dac.png'
 import safetySmart from '../../assets/0da4047a925e7c5af57b083a5971a9c68c6628a3.jpg'
+import dataprivacy from '../../assets/0da4047a925e7c5af57b083a5971a9c68c6628a3.jpg'
+import awarnessSprint from '../../assets/1dd31dac9e356c1160e31c950b7780716e6e7d5d.png'
+import innovationJam from '../../assets/091ca18ad4cae01028d1012bab19f788c9c0a3ad.png'
+import officeOlmypics from '../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6.png'
+import yearend from '../../assets/d29844c21cf8e4e13a79268f724706ddb5f883cf.png'
+import newyearkickoff from '../../assets/27e42ede90ca830e0df76305541be0f3199f6da0.jpg'
+import customerChallenge from '../../assets/388196778_4e64b692-3706-4c0d-b86b-0914459f8107 1.png'
+import awarnessWeek from '../../assets/27e42ede90ca830e0df76305541be0f3199f6da0.jpg'
+import cyberSecurtiy from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png'
+import diversityWeek from '../../assets/27e42ede90ca830e0df76305541be0f3199f6da0.jpg'
+import salesSprint from '../../assets/1dd31dac9e356c1160e31c950b7780716e6e7d5d.png'
+import hiddentalents from '../../assets/091ca18ad4cae01028d1012bab19f788c9c0a3ad.png'
 export const EngageRythmCardData = [
     {
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
@@ -115,7 +127,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Data Privacy Challenge",
         category: "NGAGE Rhythm",
-        img: "",
+        img: dataprivacy,
         duration: "3 days",
         price: "US$999",
         season: "Year-round",
@@ -130,7 +142,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "AML Awareness Sprint",
         category: "NGAGE Rhythm",
-        img: "",
+        img: awarnessSprint,
         duration: "3 days",
         price: "US$999",
         season: "Year-round",
@@ -145,7 +157,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Innovation Jam",
         category: "NGAGE Rhythm",
-        img: "",
+        img: innovationJam,
         duration: "5 days",
         price: "US$1,499",
         season: "Year-round",
@@ -160,7 +172,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Recognition Rally",
         category: "NGAGE Rhythm",
-        img: "",
+        img: officeOlmypics,
         duration: "3 days",
         price: "US$999",
         season: "Year-round",
@@ -175,7 +187,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Year-End Wrap-Up",
         category: "NGAGE Rhythm",
-        img: "",
+        img: yearend,
         duration: "5 days",
         price: "US$1,499",
         season: "Seasonal (Q4)",
@@ -190,7 +202,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "New Year Kickoff Challenge",
         category: "NGAGE Rhythm",
-        img: "",
+        img: newyearkickoff,
         duration: "3–5 days",
         price: "US$1,499",
         season: "Seasonal (Q1)",
@@ -205,7 +217,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Customer First Challenge",
         category: "NGAGE Rhythm",
-        img: "",
+        img: customerChallenge,
         duration: "3 days",
         price: "US$999",
         season: "Year-round",
@@ -220,7 +232,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "ESG Awareness Week",
         category: "NGAGE Rhythm",
-        img: "",
+        img: awarnessWeek,
         duration: "5 days",
         price: "US$1,499",
         season: "Year-round",
@@ -235,7 +247,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Cybersecurity Basics",
         category: "NGAGE Rhythm",
-        img: "",
+        img: cyberSecurtiy,
         duration: "3 days",
         price: "US$999",
         season: "Year-round",
@@ -250,7 +262,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Diversity & Inclusion Week",
         category: "NGAGE Rhythm",
-        img: "",
+        img: diversityWeek,
         duration: "5 days",
         price: "US$1,499",
         season: "Year-round",
@@ -265,7 +277,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Sales Sprint",
         category: "NGAGE Rhythm",
-        img: "",
+        img: salesSprint,
         duration: "3 days",
         price: "US$999",
         season: "Year-round",
@@ -280,7 +292,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Hidden Talents Showcase",
         category: "NGAGE Rhythm",
-        img: "",
+        img: hiddentalents,
         duration: "5 days",
         price: "US$1,499",
         season: "Year-round",
@@ -295,7 +307,7 @@ export const EngageRythmCardData = [
         name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
         subTitle: "Office Olympics (Virtual Edition)",
         category: "NGAGE Rhythm",
-        img: "",
+        img:officeOlmypics,
         duration: "5 days",
         price: "US$1,499",
         season: "Year-round",

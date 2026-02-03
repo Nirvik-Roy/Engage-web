@@ -13,6 +13,7 @@ import arrowRight from '../../assets/oui_arrow-up.svg'
 import arrowLeft from '../../assets/oui_arrow-up (1).svg'
 import toast from 'react-hot-toast';
 import { experienceData } from '../Engageexperience/ExpereienceData'
+import { PostContact } from '../utils/contact'
 
 const Checkout = () => {
     const [src, setSrc] = useState('');
@@ -221,7 +222,7 @@ const Checkout = () => {
 
     useEffect(() => {
         setselectedExperience(experienceData.filter((e) => e.title == experience))
-    })
+    },[])
 
 
     const [loaders, setLoaders] = useState(false);
@@ -314,10 +315,10 @@ const Checkout = () => {
     }
 
     const [forminputData, setformInputdata] = useState({
-        firstName: '',
+        name: '',
         lastName: '',
         email: '',
-        phone: '',
+        phonenumber: '',
         companyName: '',
         country: '',
         companySize: '',
@@ -353,6 +354,43 @@ const Checkout = () => {
     useEffect(() => {
         setPriceOfAddons(Number(Math.floor(totalCalculatedPriceofAddOns())))
     }, [addOnsFeatures])
+
+
+    const subMitEnqury = async () => {
+        setLoaders(true)
+        if (
+            forminputData.name !== '' &&
+            forminputData.lastName !== '' &&
+            forminputData.email !== '' &&
+            forminputData.phone !== '' &&
+            forminputData.companyName !== '' &&
+            forminputData.country !== '' &&
+            forminputData.companySize !== '' &&
+            forminputData.mode !== '' &&
+            forminputData.date !== '' &&
+            forminputData.addressLine1 !== '' &&
+            forminputData.addressLine2 !== '' &&
+            forminputData.city !== '' &&
+            forminputData.state !== '' &&
+            forminputData.zipCode !== ''
+        ) {
+            try {
+                const res = await PostContact({
+                    name: forminputData.name,
+                    email: forminputData.email,
+                    phonenumber: forminputData.phonenumber,
+                    message: `This user total amount is ${Number(Math.floor(totalCalculatedPriceofAddOns())) + Number(totalprice)} and the addons are - ${addOnsFeatures.map((e) => e.title)}`
+                })
+                console.log(res)
+            } catch (err) {
+                console.log(err)
+            }finally{
+                setLoaders(false)
+            }
+        } else {
+            toast.error('Plz enter all fields')
+        }
+    }    
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -453,7 +491,7 @@ const Checkout = () => {
                         {accountDetailsDropdown && <form className='account_form_content_wrapper'>
                             <div className='account_input_form'>
                                 <label>First Name <span>*</span></label>
-                                <input name='firstName' value={forminputData.firstName} onChange={onChange} placeholder='Enter your first name' />
+                                <input name='name' value={forminputData.name} onChange={onChange} placeholder='Enter your first name' />
                             </div>
 
                             <div className='account_input_form'>
@@ -489,8 +527,8 @@ const Checkout = () => {
                                     </div>}
                                     <input
                                         onChange={onChange}
-                                        name='phone'
-                                        value={forminputData.phone}
+                                        name='phonenumber'
+                                        value={forminputData.phonenumber}
                                         type="tel"
                                         placeholder="Enter your phone number"
                                     />
@@ -690,7 +728,9 @@ const Checkout = () => {
 
                     {category == 'NGAGE Rythm' && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
 
-                    {category != 'NGAGE Rythm' && <button className='proceed_btn'>Submit Enquiry <img src={icon2} /></button>}
+                    {category != 'NGAGE Rythm' && <button onClick={(() => subMitEnqury())} className='proceed_btn'> 
+                    
+                     {loaders ? "Submitting.." : 'Submit Enquiry'} <img src={icon2} /></button>}
                 </div>
             </div>
         </>

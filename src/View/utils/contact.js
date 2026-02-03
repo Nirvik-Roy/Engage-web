@@ -1,6 +1,7 @@
 import axios from "axios"
 import toast from "react-hot-toast"
 export const PostContact = async (data) =>{
+    console.log(data)
     if (data) {
         try {
             const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/contacts`, data);

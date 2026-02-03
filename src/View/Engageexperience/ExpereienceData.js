@@ -2,7 +2,10 @@ import img from '../../assets/df6013b58f9ded6dccb7decb8b982a7fe844a2fe.png'
 import img1 from '../../assets/71797a607c6f7a762dea1a84569e07d0a0b130b4(1).png'
 import img2 from '../../assets/612a7dea21b534a14577dc9810f1802d44410b3f(1).png'
 import img3 from '../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6(1).png'
-
+import img4 from '../../assets/091ca18ad4cae01028d1012bab19f788c9c0a3ad.png'
+import starter from '../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png'
+import pro from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png'
+import ultimate from '../../assets/b7fc6a43317d91ab7ecca081234f00dec40cc88f.jpg'
 export const experienceData = [
     {
         category: 'ENGAGE Playday',
@@ -115,7 +118,7 @@ export const experienceData = [
             "Prize distribution & event wrap-up"
         ],
         outcomes: "Mass participation, shared memories, stronger company culture.",
-        img: "" // Add image path/URL here when available
+        img: img4 // Add image path/URL here when available
     },
     {
         subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
@@ -139,7 +142,7 @@ export const experienceData = [
             "1-year access • unlimited employees"
         ],
         outcomes: "Faster ramp-up, consistent onboarding, reduced HR workload.",
-        img: "" // Add image path/URL here when available
+        img: starter // Add image path/URL here when available
     },
     {
         subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
@@ -163,7 +166,7 @@ export const experienceData = [
             "1-year access • unlimited employees"
         ],
         outcomes: "Improved knowledge retention, stronger culture alignment, consistent messaging.",
-        img: "" // Add image path/URL here when available
+        img: pro // Add image path/URL here when available
     },
     {
         subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
@@ -189,6 +192,6 @@ export const experienceData = [
             "1-year access • unlimited employees"
         ],
         outcomes: "Stronger early connection, faster integration, measurable onboarding success.",
-        img: "" // Add image path/URL here when available
+        img: ultimate // Add image path/URL here when available
     }
 ]
