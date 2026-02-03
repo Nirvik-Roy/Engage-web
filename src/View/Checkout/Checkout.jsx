@@ -14,6 +14,7 @@ import arrowLeft from '../../assets/oui_arrow-up (1).svg'
 import toast from 'react-hot-toast';
 import { experienceData } from '../Engageexperience/ExpereienceData'
 import { PostContact } from '../utils/contact'
+import { EngageRythmCardData } from '../Engageexperience/EngageRythmCardData'
 
 const Checkout = () => {
     const [src, setSrc] = useState('');
@@ -221,7 +222,13 @@ const Checkout = () => {
     }, [])
 
     useEffect(() => {
-        setselectedExperience(experienceData.filter((e) => e.title == experience))
+        if(category == 'NGAGE Rythm'){
+            setselectedExperience(EngageRythmCardData.filter((e) => e.subTitle == experience))
+
+        }else{
+
+            setselectedExperience(experienceData.filter((e) => e.title == experience))
+        }
     },[])
 
 
@@ -340,7 +347,6 @@ const Checkout = () => {
 
     const deleteFunc = (id) => {
         console.log(id);
-
         const dummydata = [...addOnsFeatures];
         const filterData = dummydata.filter((e) => e.id != id)
         console.log(filterData)
@@ -434,7 +440,7 @@ const Checkout = () => {
                                     <div className='select_experience_img'>
                                         <img src={e.img} />
                                     </div>
-                                    <h4>{e.title}</h4>
+                                    <h4>{category== 'NGAGE Rythm' ? e.subTitle : e.title}</h4>
                                     {<div style={{
                                         display: 'flex',
                                         justifyContent: 'end'
