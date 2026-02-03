@@ -236,7 +236,7 @@ const Engageexperience = () => {
                                         color: 'rgba(31, 144, 31, 1)',
                                         cursor: 'pointer'
                                     }} onClick={() => {
-                                        const url = `https://engage-web-eight.vercel.app/checkout?category=${category}&subcategory=${filter}&price=${price}&totalprice=${totalprice}&experience=${element.title}`;
+                                        const url = `https://engage-web-eight.vercel.app/checkout?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(filter)}&price=${encodeURIComponent(price)}&totalprice=${encodeURIComponent(totalprice)}&experience=${encodeURIComponent(element.title)}`;
                                         window.open(url, "_blank"); // "_blank" opens in new tab
                                     }}>Procced</p> : <p style={{
                                         display: 'flex',
