@@ -394,7 +394,8 @@ const Checkout = () => {
                 setLoaders(false)
             }
         } else {
-            toast.error('Plz enter all fields')
+            toast.error('Plz enter all fields');
+            setLoaders(false)
         }
     }    
     return (
