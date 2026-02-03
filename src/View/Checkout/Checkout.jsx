@@ -222,14 +222,14 @@ const Checkout = () => {
     }, [])
 
     useEffect(() => {
-        if(category == 'NGAGE Rythm'){
+        if (category == 'NGAGE Rythm') {
             setselectedExperience(EngageRythmCardData.filter((e) => e.subTitle == experience))
 
-        }else{
+        } else {
 
             setselectedExperience(experienceData.filter((e) => e.title == experience))
         }
-    },[])
+    }, [])
 
 
     const [loaders, setLoaders] = useState(false);
@@ -385,19 +385,19 @@ const Checkout = () => {
                     name: forminputData.name,
                     email: forminputData.email,
                     phonenumber: forminputData.phonenumber,
-                    message: `This user total amount is ${Number(Math.floor(totalCalculatedPriceofAddOns())) + Number(totalprice)} and the addons are - ${addOnsFeatures.map((e) => e.title)}`
+                    message: `Select Solution:${category}, Sub- category:${subcategory}, Select Experience:${experience} , Select Addons: ${addOnsFeatures.map((e) => e.title)}, Starting Price (with addons): ${Number(Math.floor(totalCalculatedPriceofAddOns())) + Number(totalprice)}`
                 })
                 console.log(res)
             } catch (err) {
                 console.log(err)
-            }finally{
+            } finally {
                 setLoaders(false)
             }
         } else {
             toast.error('Plz enter all fields');
             setLoaders(false)
         }
-    }    
+    }
     return (
         <>
             <BannerLayout title={'Checkout'} />
@@ -441,7 +441,7 @@ const Checkout = () => {
                                     <div className='select_experience_img'>
                                         <img src={e.img} />
                                     </div>
-                                    <h4>{category== 'NGAGE Rythm' ? e.subTitle : e.title}</h4>
+                                    <h4>{category == 'NGAGE Rythm' ? e.subTitle : e.title}</h4>
                                     {<div style={{
                                         display: 'flex',
                                         justifyContent: 'end'
@@ -735,9 +735,9 @@ const Checkout = () => {
 
                     {category == 'NGAGE Rythm' && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
 
-                    {category != 'NGAGE Rythm' && <button onClick={(() => subMitEnqury())} className='proceed_btn'> 
-                    
-                     {loaders ? "Submitting.." : 'Submit Enquiry'} <img src={icon2} /></button>}
+                    {category != 'NGAGE Rythm' && <button onClick={(() => subMitEnqury())} className='proceed_btn'>
+
+                        {loaders ? "Submitting.." : 'Submit Enquiry'} <img src={icon2} /></button>}
                 </div>
             </div>
         </>
