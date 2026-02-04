@@ -12,9 +12,9 @@ const Facilitatedteam = () => {
       <BannerLayout subTitle={'Facilitated team building experiences that bring everyone in'} title={'NGAGE Playday'}/>
       <Teambuilding/>
       <Chooseyourteam/>
-      <Minuteteambuilding/>
-      <Halfdayteambuilding/>
       <Corporatefunday/>
+      <Halfdayteambuilding/>
+      <Minuteteambuilding/>
       <Playday/>
       <Buildengagement explorebtn={false} expertBtn={true} demobtn={false} para={'Tell us about your team, goals, and timeline — we’ll help you choose the right Play Day experience.'} title={'Not sure which option fits best?'}/>
     </>

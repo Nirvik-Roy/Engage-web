@@ -23,6 +23,9 @@ const Teambuilding = () => {
                             Ngage Play Day is designed to create inclusive, facilitator-led team building experiences where participation is built in — not left to chance. <br />
                             <br />
                             Whether it’s a short session, a half-day experience, or a full company event, Play Day helps teams connect through play.
+                            <br/>
+                            <br/>
+                            Ngage Play Day is part of the Ngage Engagement System — designed to work seamlessly with Workplace Rhythm and Launchpad. 
                         </p>
                     </div>
                 </div>

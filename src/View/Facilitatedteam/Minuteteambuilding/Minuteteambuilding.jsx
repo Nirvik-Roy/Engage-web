@@ -49,7 +49,7 @@ const Minuteteambuilding = () => {
                         <img src={img} />
                         <h1 style={{
                             textAlign: 'right',
-                        }}>Play Day – 90-Minute Experience</h1>
+                        }}>Play Day Core</h1>
                     </div>
                     <div className='rythm_prices_wrapper'>
                         <div className='team_building_head'>
@@ -58,7 +58,7 @@ const Minuteteambuilding = () => {
                                 fontSize:'1.6rem',
                             }}>Core Experience</h6>
                             <h4>  Starting at US$999</h4>
-                            <p>A focused, fast-paced Play Day designed to energize teams and spark interaction without taking up the whole day. This experience centers around one curated Play Day experience, delivered through facilitator-led activities and Ngage-powered scoring. Teams jump straight into play, earn points, and engage in light competition that feels natural and inclusive. Perfect for meetings, workshops, or morale boosts where time is limited.</p>
+                            <p>A fast, facilitator-led team energizer designed to spark interaction and lift energy in a short time. Ideal for meetings, workshops, or moments where engagement matters but time is limited.</p>
                         </div>
                         {data.map((e, i) => (
                             <div className='launch_pad' style={{

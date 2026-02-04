@@ -49,7 +49,7 @@ const Halfdayteambuilding = () => {
                         <img src={img} />
                         <h1 style={{
                             textAlign: 'right',
-                        }}>Play Day – Half-Day Experience</h1>
+                        }}>Play Day plus</h1>
                     </div>
                     <div className='rythm_prices_wrapper'>
                         <div className='team_building_head'>
@@ -58,7 +58,7 @@ const Halfdayteambuilding = () => {
                                 fontSize: '1.6rem',
                             }}>Plus Experience</h6>
                             <h4> Starting at US$2,999</h4>
-                            <p>A deeper Play Day experience for teams or departments that want more time to connect, collaborate, and build momentum. This format allows for extended play across multiple rounds, blending facilitated activities with Ngage digital games to sustain engagement. Activities are paced to balance energy, inclusion, and participation from start to finish. Best for department off-sites, team resets, and retreats.</p>
+                            <p>A half-day, retreat-ready Play Day experience built for deeper connection and collaboration. Perfect for off-sites, team resets, and retreats where teams need time to engage and build connection.</p>
                         </div>
                         {data.map((e, i) => (
                             <div className='launch_pad' style={{

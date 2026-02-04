@@ -49,7 +49,7 @@ const Corporatefunday = () => {
                         <img src={img} />
                         <h1 style={{
                             textAlign: 'right',
-                        }}>Corporate Fun Day / Sports Day</h1>
+                        }}>Play Day Signature</h1>
                     </div>
                     <div className='rythm_prices_wrapper'>
                         <div className='team_building_head'>
@@ -59,7 +59,7 @@ const Corporatefunday = () => {
                             }}>Signature Experience</h6>
                             <h4> 
                                 Starting at US$4,999</h4>
-                            <p>A fully gamified, all-staff Play Day where every activity contributes to a shared team competition. Using Ngage, employees are registered into teams ahead of time, earn points through pre-event challenges, and continue scoring on the day by participating in any attraction — from sports races and field games to dominoes, bounce houses, QR challenges, and even social interactions. Ngage provides everything you need: equipment, race marshals, field workers, materials, and full project management — designing, coordinating, and running all activities from start to finish. So you can sit back, watch the magic unfold, and enjoy the day alongside your team.</p>
+                            <p>A fully gamified, all-staff Corporate Fun Day or Sports Day where every activity contributes to a shared team competition. Powered by Ngage, the entire experience — from pre-event buildup to on-day participation — is structured, facilitated, and managed end-to-end.</p>
                         </div>
                         {data.map((e, i) => (
                             <div className='launch_pad' style={{
