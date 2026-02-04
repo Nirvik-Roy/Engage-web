@@ -493,10 +493,10 @@ const Checkout = () => {
 
                         </div>}
                     </div>
-                    <div className='account_input_form'>
+                 {category!='NGAGE Rythm' &&   <div className='account_input_form'>
                         <label>Special Message</label>
                         <textarea  name='specialMessage' placeholder='Enter message' ></textarea>
-                    </div>
+                    </div>}
                     <div className='ngage_account_details_wrapper'>
                         <div className='select_experience_head'>
                             <h1>NGAGE account details</h1>
