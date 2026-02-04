@@ -102,7 +102,7 @@ const Engageexperience = () => {
                                     <strong>How it works</strong>
                                     <p> {element.howItWorks}</p>
                                 </div>
-                                <div>
+                                {/* <div>
                                     <strong>What’s included</strong>
                                     <ul style={{
                                         marginLeft: '20px'
@@ -115,7 +115,7 @@ const Engageexperience = () => {
                                         ))}
 
                                     </ul>
-                                </div>
+                                </div> */}
                             { element.Outcomes &&    <div>
                                     <strong>
                                         Outcomes
