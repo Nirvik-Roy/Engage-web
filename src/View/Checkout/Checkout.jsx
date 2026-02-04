@@ -494,7 +494,7 @@ const Checkout = () => {
                         </div>}
                     </div>
                     <div className='account_input_form'>
-                        <label>Special Message <span>*</span></label>
+                        <label>Special Message</label>
                         <textarea  name='specialMessage' placeholder='Enter message' ></textarea>
                     </div>
                     <div className='ngage_account_details_wrapper'>
