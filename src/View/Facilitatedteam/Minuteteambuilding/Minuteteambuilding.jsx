@@ -54,8 +54,11 @@ const Minuteteambuilding = () => {
                     <div className='rythm_prices_wrapper'>
                         <div className='team_building_head'>
                             <h1 className='heading'>90-Minute Team Building</h1>
-                            <h4>Starting at US$999</h4>
-                            <p>A focused team building session for teams of 10–50 people.</p>
+                            <h6 style={{
+                                fontSize:'1.6rem',
+                            }}>Core Experience</h6>
+                            <h4>  Starting at US$999</h4>
+                            <p>A focused, fast-paced Play Day designed to energize teams and spark interaction without taking up the whole day. This experience centers around one curated Play Day experience, delivered through facilitator-led activities and Ngage-powered scoring. Teams jump straight into play, earn points, and engage in light competition that feels natural and inclusive. Perfect for meetings, workshops, or morale boosts where time is limited.</p>
                         </div>
                         {data.map((e, i) => (
                             <div className='launch_pad' style={{

@@ -54,8 +54,11 @@ const Halfdayteambuilding = () => {
                     <div className='rythm_prices_wrapper'>
                         <div className='team_building_head'>
                             <h1 className='heading'>Half-Day Team Building</h1>
-                            <h4>Starting at US$2,999</h4>
-                            <p>A deeper team building experience for teams or departments — on-site or off-site.</p>
+                            <h6 style={{
+                                fontSize: '1.6rem',
+                            }}>Plus Experience</h6>
+                            <h4> Starting at US$2,999</h4>
+                            <p>A deeper Play Day experience for teams or departments that want more time to connect, collaborate, and build momentum. This format allows for extended play across multiple rounds, blending facilitated activities with Ngage digital games to sustain engagement. Activities are paced to balance energy, inclusion, and participation from start to finish. Best for department off-sites, team resets, and retreats.</p>
                         </div>
                         {data.map((e, i) => (
                             <div className='launch_pad' style={{

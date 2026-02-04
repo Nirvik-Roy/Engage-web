@@ -11,6 +11,8 @@ const Engageworks = () => {
           </div>
           <div className='engage_works_content'>
             <h1 className='heading'>How Ngage Works</h1>
+            <p>Choose an experience, invite your team, and watch participation grow.</p>
+            <p>Employees join instantly, earn points for participating, and see progress live — while HR gets a clear view of engagement across the organization.</p>
             <p>Ngage works by turning everyday moments into simple, interactive experiences employees actually want to join. Instead of relying on emails or announcements, engagement happens through play — making participation feel natural, inclusive, and low-pressure.</p>
             <ul style={{
               marginLeft:'15px',

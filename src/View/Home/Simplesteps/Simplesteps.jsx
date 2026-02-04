@@ -42,33 +42,33 @@ const Simplesteps = () => {
         {
             id: 1,
             step: '1',
-            title: 'Choose your experience',
+            title: 'Select your solution',
             para: 'Launchpad, Rhythm, or Play Day'
         },
         {
             id: 2,
             step: '2',
-            title: 'Configure & customize',
-            para: 'Branding, rules, content'
+            title: 'Choose an experience',
+            para: 'Choose a ready-to-run experience.'
         },
         {
             id: 3,
             step: '3',
             title: 'Launch & invite',
-            para: 'Share links via email or QR codes'
+            para: 'Launch and engage your team.'
         },
         {
             id: 4,
             step: '4',
-            title: 'Participate & engage',
-            para: 'Teams earn points and tangible rewards'
+            title: 'Your staff participate',
+            para: 'Teams play and earn rewards.'
         },
 
         {
             id: 5,
             step: '5',
             title: 'Track & improve',
-            para: 'NES insights and participation trends'
+            para: 'Track engagement. Improve outcomes.'
         },
     ]
     return (

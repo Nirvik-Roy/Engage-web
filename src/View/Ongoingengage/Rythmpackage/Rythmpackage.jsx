@@ -3,7 +3,7 @@ import './Rythmpackage.css'
 import img from '../../../assets/Rectangle 6679 (3).png'
 import listimg from '../../../assets/Vector (8).svg'
 import Rythmpackageprices from './Rythmpackageprices'
-import buttonIconNew from '../../../assets/g165.svg'
+import buttonIconNew from '../../../assets/svg159.svg'
 import { useNavigate } from 'react-router-dom'
 const Rythmpackage = () => {
     const navigate = useNavigate()
@@ -77,29 +77,12 @@ const Rythmpackage = () => {
                                                 <li><img src={listimg} />{ele.point2}</li>
                                                 <li><img src={listimg} />{ele.point3}</li>
                                             </ul>
-                                            <button onClick={() => {
+                                            <button className='base_btn_design' onClick={() => {
                                                 navigate({
                                                     pathname: '/engage/experience',
                                                     search: `?category=NGAGE Rythm&price=${e.onlyPrice}&filter=${e.title}&totalprice=${e.totalPrice}`
                                                 })
-                                            }} style={{
-                                                fontSize: '1.1rem',
-                                                fontWeight: '600',
-                                                cursor: 'pointer',
-                                                background: 'transparent',
-                                                marginTop: '30px',
-                                                marginBottom: '10px',
-                                                paddingBottom: '5px',
-                                                display: 'flex',
-                                                justifyContent: 'flex-start',
-                                                alignItems: 'center',
-                                                gap: '10px',
-                                                borderTop: 'none',
-                                                borderLeft: 'none',
-                                                borderRight: 'none',
-                                                borderBottom: '3px solid rgba(1, 130, 252, 1)',
-                                                color: 'rgba(1, 130, 252, 1)'
-                                            }}>Buy Now <img src={buttonIconNew} /></button>
+                                            }} >Buy Now <img src={buttonIconNew} /></button>
                                         </>
                                     ))}
                                 </div>

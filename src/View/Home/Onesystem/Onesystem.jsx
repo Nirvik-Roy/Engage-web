@@ -18,7 +18,7 @@ const Onesystem = () => {
             img: img2,
             title: 'Ngage Rhythm',
             title2: 'Ongoing engagement challenges',
-            para: 'Keep teams involved week after week — remote, hybrid, or in-office.'
+            para: 'Keep teams involved month after month — remote, hybrid, or in-office.'
         },
         {
             id: 3,

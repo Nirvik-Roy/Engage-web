@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Problemstatement.css'
-import afterImg from '../../../assets/after (2).png'
-import beforeImg from '../../../assets/before.png'
+import afterImg from '../../../assets/Homepage - Engageent Simplified AFTER IMAGE.png'
+import beforeImg from '../../../assets/Homepage - Engageent Simplified BEFORE image.png'
 import ReactCompareImage from "react-compare-image";
 import buttonImg from '../../../assets/Button.svg'
 const Problemstatement = () => {

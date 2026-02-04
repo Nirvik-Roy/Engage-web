@@ -87,8 +87,6 @@ const Checkout = () => {
                             title: 'Prize pack: top 3 pro',
                             price: '399',
                             onlyPrice: 399
-
-
                         },
                         {
                             title: 'Pack: top 3 deluxe',
@@ -143,17 +141,17 @@ const Checkout = () => {
                     list: [
                         {
                             title: 'Prizes 50',
-                            price: '999',
+                            price: '',
                             onlyPrice: 999
                         },
                         {
                             title: 'Prize 100',
-                            price: '1599',
+                            price: '',
                             onlyPrice: 1599
                         },
                         {
                             title: 'AI characters',
-                            price: '199',
+                            price: '',
                             onlyPrice: 199
                         }
                     ]
@@ -163,12 +161,12 @@ const Checkout = () => {
                     list: [
                         {
                             title: 'Video modules',
-                            price: '99',
+                            price: '',
                             onlyPrice: 99
                         },
                         {
                             title: 'Extra level',
-                            price: '99',
+                            price: '',
                             onlyPrice: 99
                         }
                     ]
@@ -183,17 +181,17 @@ const Checkout = () => {
                     list: [
                         {
                             title: '50 trophies A',
-                            price: '799',
+                            price: '',
                             onlyPrice: 799
                         },
                         {
                             title: '100 trophies B',
-                            price: '1499',
+                            price: '',
                             onlyPrice: 1499
                         },
                         {
                             title: 'AI characters',
-                            price: '199',
+                            price: '',
                             onlyPrice: 199
                         }
                     ]
@@ -203,12 +201,12 @@ const Checkout = () => {
                     list: [
                         {
                             title: '50 treasure hunt prizes',
-                            price: '799',
+                            price: '',
                             onlyPrice: 799
                         },
                         {
                             title: 'Additional facilitators',
-                            price: '99/each',
+                            price: '',
                             onlyPrice: 99
                         }
                     ]
@@ -410,7 +408,7 @@ const Checkout = () => {
                                 {experienceDropdown ? <i class="fa-solid fa-angle-down"></i> : <i class="fa-solid fa-angle-up"></i>}
                             </div>
                         </div>
-                        {experienceDropdown && <div className='select_experience_card_wrapper' style={{
+                        {experienceDropdown && <div className=' select_experience_card_wrapper' style={{
                             position: 'relative'
                         }}>
                             <img onClick={(() => {
@@ -437,22 +435,31 @@ const Checkout = () => {
                             }} />
 
                             {selectedExperience.map((e, i) => (
-                                <div onClick={(() => indexFunc(i))} className={'select_experience_card_selected'}>
-                                    <div className='select_experience_img'>
-                                        <img src={e.img} />
+                                <div onClick={(() => indexFunc(i))} className={'select_experience_card_selected select_experience_full_width'}>
+                                    <div className='select_experience_new_layout'>
+                                        <div className='select_experience_img'>
+                                            <img src={e.img} />
+                                        </div>
+                                        <div className='selected_head'>
+                                            {<div className='select_content_head' style={{
+                                                display: 'flex',
+                                                justifyContent: 'space-between',
+                                            }}>
+                                                <h4>{category == 'NGAGE Rythm' ? e.subTitle : e.title}</h4>
+
+                                                <span style={{
+                                                    fontSize: '0.9rem',
+                                                    fontWeight: '700',
+                                                    color: 'rgba(31, 144, 31, 1)',
+                                                }}>Selected</span>
+                                            </div>
+                                            }
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                     
                                     </div>
-                                    <h4>{category == 'NGAGE Rythm' ? e.subTitle : e.title}</h4>
-                                    {<div style={{
-                                        display: 'flex',
-                                        justifyContent: 'end'
-                                    }}>
-                                        <span style={{
-                                            fontSize: '0.9rem',
-                                            fontWeight: '700',
-                                            color: 'rgba(31, 144, 31, 1)',
-                                        }}>Selected</span>
-                                    </div>
-                                    }
+                                    
+                                    
                                 </div>
                             ))}
                         </div>}
@@ -478,7 +485,7 @@ const Checkout = () => {
                                                     title: e.title,
                                                     price: e.onlyPrice
                                                 }])
-                                            })} type='radio' checked={addOnsFeatures.some(item => item.title === e.title)} />{e.title} - ${e.price}</li>
+                                            })} type='radio' checked={addOnsFeatures.some(item => item.title === e.title)} />{e.title} {e?.price &&`-$ ${e.price}`}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -486,7 +493,10 @@ const Checkout = () => {
 
                         </div>}
                     </div>
-
+                    <div className='account_input_form'>
+                        <label>Special Message <span>*</span></label>
+                        <textarea  name='specialMessage' placeholder='Enter message' ></textarea>
+                    </div>
                     <div className='ngage_account_details_wrapper'>
                         <div className='select_experience_head'>
                             <h1>NGAGE account details</h1>
@@ -573,9 +583,9 @@ const Checkout = () => {
 
                             <h3 style={{
                                 gridColumn: '1/-1'
-                            }}>Delivery</h3>
+                            }}>Address</h3>
 
-                            <div className='account_input_form'>
+                            {/* <div className='account_input_form'>
                                 <label>Mode <span>*</span></label>
                                 <select name='mode' onChange={onChange} value={forminputData.mode} className='select_input_form'>
                                     <option>--select-mode--</option>
@@ -583,27 +593,32 @@ const Checkout = () => {
                                     <option>In-person</option>
                                     <option>Hybrid</option>
                                 </select>
-                            </div>
+                            </div> */}
 
                             <div className='account_input_form'>
-                                <label>Preferred date <span>*</span></label>
+                                <label>Event start date <span>*</span></label>
                                 <input onChange={onChange} value={forminputData.date}
                                     name='date' type='date' />
                             </div>
 
                             <div className='account_input_form'>
-                                <label>Address Line 1 <span>*</span></label>
+                                <label>Address Line 1</label>
                                 <input onChange={onChange} name='addressLine1' value={forminputData.addressLine1} type='text' placeholder='Enter addresss line 1...' />
                             </div>
 
                             <div className='account_input_form'>
-                                <label>Address Line 2 <span>*</span></label>
+                                <label>Address Line 2 </label>
                                 <input name='addressLine2' onChange={onChange} value={forminputData.addressLine2} type='text' placeholder='Enter addresss line 2...' />
+                            </div>
+
+                            <div className='account_input_form'>
+                                <label>Landmark</label>
+                                <input name='landmark' onChange={onChange} type='text' placeholder='Enter landmark' />
                             </div>
 
                             <div className='account_gird_wrapper'>
                                 <div className='account_input_form'>
-                                    <label>City <span>*</span></label>
+                                    <label>City</label>
                                     {/* <select className='select_input_form'>
                                         <option>--select-city--</option>
                                         <option>Kolkata</option>
@@ -614,7 +629,7 @@ const Checkout = () => {
                                 </div>
 
                                 <div className='account_input_form'>
-                                    <label>State <span>*</span></label>
+                                    <label>State</label>
                                     {/* <select className='select_input_form'>
                                         <option>--select-state--</option>
                                         <option>West Bengal</option>
@@ -623,7 +638,7 @@ const Checkout = () => {
                                 </div>
 
                                 <div className='account_input_form'>
-                                    <label>Zip code <span>*</span></label>
+                                    <label>Zip code</label>
                                     <input onChange={onChange}
                                         value={forminputData.zipCode} name='zipCode' type='text' placeholder='Enter zip code' />
                                 </div>

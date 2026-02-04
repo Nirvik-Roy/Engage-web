@@ -33,7 +33,7 @@ const Measureengagement = () => {
                             <div style={{
                                 marginBottom: '15px'
                             }} className='measure_box_div_wrapper'>
-                              
+
 
                                 <div className='measure_box_div'>
                                     <img src={engagementImg} />
@@ -57,8 +57,7 @@ const Measureengagement = () => {
 
                             <p style={{
                                 paddingLeft: '0'
-                            }}>See how engaged your teams actually are,
-                                Track progress across initiatives and time, Share clear engagement insights with leadership, No complicated dashboards, No survey overload.
+                            }}>See how engaged your teams actually are, track progress across initiatives and time, share clear engagement insights with leadership, no complicated dashboards, no survey overload.
                             </p>
                         </div>
                         <span>Engagement that's easy to run. Results you can report.</span>
