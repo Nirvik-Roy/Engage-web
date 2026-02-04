@@ -467,9 +467,35 @@ label span {
   }
  
 }
+@media(max-width:799px){
+  .select_experience_new_layout{
+    flex-direction: column;
+  }
+  .select_experience_new_layout .select_experience_img{
+    width: 100%;
+    height: auto;
+  }
+  .selected_head{
+    width: 100%;
+  }
+  .select_experience_new_layout p{
+    font-size: 0.8rem;
+  }
+  .select_experience_new_layout h4{
+    font-size: 1.2rem !important  ;
+  }
+}
 @media(max-width:699px){
   .account_form_content_wrapper{
     grid-template-columns: 1fr;
+  }
+  .select_content_head{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .select_content_head span{
+    margin-left: auto;
   }
 }
 @media(max-width:576px){
