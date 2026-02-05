@@ -11,6 +11,8 @@
   width: 40%;
   height: 78dvh;
   max-height: 542px;
+  overflow: hidden;
+  border-radius: 15px;
 }
 .after_img_div img {
   width: 100%;
@@ -27,6 +29,10 @@
   font-size: 3.2rem;
   letter-spacing: 0.4rem;
   font-weight: 700;
+}
+.before-after-slider__second-photo-container img{
+  border-radius: 12px !important;
+  overflow: hidden;
 }
 
 .statement_problem_div h3 {

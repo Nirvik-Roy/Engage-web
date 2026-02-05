@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './Problemstatement.css'
 import afterImg from '../../../assets/Homepage - Engageent Simplified AFTER IMAGE.png'
 import beforeImg from '../../../assets/Homepage - Engageent Simplified BEFORE image.png'
+import ReactBeforeSliderComponent from 'react-before-after-slider-component';
+import 'react-before-after-slider-component/dist/build.css';
 import ReactCompareImage from "react-compare-image";
 import buttonImg from '../../../assets/Button.svg'
 const Problemstatement = () => {
@@ -15,12 +17,30 @@ const Problemstatement = () => {
         scaledPos = Math.max(0, Math.min(1, scaledPos));
         setPosition(scaledPos * 100);
     };
+
+    const FIRST_IMAGE = {
+        imageUrl: beforeImg
+    };
+    const SECOND_IMAGE = {
+        imageUrl: afterImg
+    };
+    const customHandleStyle = {
+        width: "30px",
+        height: "30px",
+        backgroundImage: `url(${buttonImg})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        cursor: "grab",
+        zIndex: 99,
+        border: "none", // removes default border
+    };
     return (
         <>
             <div className='problem_statement_wrapper'>
                 <div className='container problem_statement_content_wrapper'>
                     <div className='after_img_div'>
-                        <ReactCompareImage
+                        {/* <ReactCompareImage
                             leftImage={beforeImg}
                             rightImage={afterImg}
                             handle={
@@ -36,6 +56,12 @@ const Problemstatement = () => {
                             // intercept slider position
                             onSliderPositionChange={handlePositionChange}
                             sliderLineWidth={6}
+                        /> */}
+
+                        <ReactBeforeSliderComponent
+                            firstImage={FIRST_IMAGE}
+                            secondImage={SECOND_IMAGE}
+                            delimiterIconStyles={customHandleStyle}
                         />
                     </div>
                     <div className='statement_problem_div'>
