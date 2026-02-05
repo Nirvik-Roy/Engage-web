@@ -1,9 +1,9 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import cardImg from '../../../assets/c916209092a6d3fef78320b3722db5f4b286cbe1.jpg'
 import cardImg2 from '../../../assets/76eb601ae8cbdb510a11f197e2af52a513a36fc9.jpg'
 import cardImg3 from '../../../assets/b191c8ca226e6d6e84daec673db7abc4b9a3a71b.jpg'
 import cardImg4 from '../../../assets/f1aaa1a90a5023be4ecca72b9a91f46d4508a73f.png'
-import cardImg5 from '../../../assets/71797a607c6f7a762dea1a84569e07d0a0b130b4.png'
+import cardImg5 from '../../../assets/df6013b58f9ded6dccb7decb8b982a7fe844a2fe(1).png'
 import cardImg6 from '../../../assets/612a7dea21b534a14577dc9810f1802d44410b3f.png'
 import cardImg7 from '../../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6.png'
 import cardImg8 from '../../../assets/1dd31dac9e356c1160e31c950b7780716e6e7d5d.png'
@@ -46,65 +46,66 @@ const Chooseyourteam = () => {
         ]
     };
     const cardData = [
+
         {
             id: 1,
-            img: cardImg4,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            img: cardImg5,
+            title: 'Team Ignite ',
+            para: ' A fast-paced team-building session using short challenges to boost communication, collaboration, and energy through inclusive, facilitator-led activities.'
         },
         {
             id: 2,
-            img: cardImg5,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            img: cardImg4,
+            title: 'Puzzle Breakout ',
+            para: ' A problem-solving experience where teams solve riddles and logic challenges, earning points through collaboration, accuracy, and strategic thinking.'
         },
         {
             id: 3,
             img: cardImg6,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: ' Amazing Race: Team Edition ',
+            para: ' A location-based team challenge where groups follow clues, complete tasks, and unlock checkpoints while earning points collaboratively.'
         },
         {
             id: 4,
             img: cardImg7,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Office Olympics ',
+            para: 'An inclusive competition featuring varied mental, social, and light physical challenges that encourage participation, teamwork, and friendly rivalry.'
         },
         {
             id: 5,
             img: cardImg8,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Corporate Play Day (Signature) ',
+            para: ' A fully gamified, all-staff experience combining sports, games, and social activities where every interaction contributes to shared team scoring.'
         },
         {
-            id: 6,
-            img: cardImg9,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            id: 1,
+            img: cardImg5,
+            title: 'Team Ignite ',
+            para: ' A fast-paced team-building session using short challenges to boost communication, collaboration, and energy through inclusive, facilitator-led activities.'
         },
         {
-            id: 7,
-            img: cardImg10,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            id: 2,
+            img: cardImg4,
+            title: 'Puzzle Breakout ',
+            para: ' A problem-solving experience where teams solve riddles and logic challenges, earning points through collaboration, accuracy, and strategic thinking.'
         },
         {
-            id: 8,
-            img: cardImg3,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            id: 3,
+            img: cardImg6,
+            title: ' Amazing Race: Team Edition ',
+            para: ' A location-based team challenge where groups follow clues, complete tasks, and unlock checkpoints while earning points collaboratively.'
         },
         {
-            id: 9,
-            img: cardImg,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            id: 4,
+            img: cardImg7,
+            title: 'Office Olympics ',
+            para: 'An inclusive competition featuring varied mental, social, and light physical challenges that encourage participation, teamwork, and friendly rivalry.'
         },
         {
-            id: 10,
-            img: cardImg,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            id: 5,
+            img: cardImg8,
+            title: 'Corporate Play Day (Signature) ',
+            para: ' A fully gamified, all-staff experience combining sports, games, and social activities where every interaction contributes to shared team scoring.'
         },
     ]
     return (

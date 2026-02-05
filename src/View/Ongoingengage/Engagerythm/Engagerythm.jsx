@@ -5,7 +5,7 @@ import cardImg2 from '../../../assets/fdc7054fb41837eb59941bb403dd20a0c66b0678.p
 import cardImg3 from '../../../assets/411ff4766e8e675b11f4af6ae34083103a95ec00.png'
 import cardImg4 from '../../../assets/4fdfaf3f45ca3e76ea24a44e27f7804aabf34a12.png';
 import cardImg5 from '../../../assets/d38733bc95c7b74fae14454b186dd4cb422272e6.png';
-import cardImg6 from '../../../assets/d60774e520db301441bf9c47a8b03447473d83d2.png';
+import cardImg6 from '../../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6(1).png';
 import cardImg7 from '../../../assets/5373bdb8bf46a949e263c32e5f4154880fb081da.png';
 import cardImg8 from '../../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png';
 import cardImg9 from '../../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png';
@@ -23,62 +23,62 @@ const Engagerythm = () => {
         {
             id: 1,
             img: cardImg,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Rep Your Alma Mater ',
+            para: 'A team experience where employees represent their schools through trivia and creative challenges that spark conversation and friendly rivalry.'
         },
         {
             id: 2,
             img: cardImg2,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Wellness Recharge ',
+            para: 'A week-long wellness experience built around small daily actions that encourage balance, consistency, and positive habits across teams.'
         },
         {
             id: 3,
             img: cardImg3,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Team Trivia League ',
+            para: 'A fast-paced trivia competition designed to energize teams through friendly rivalry, quick participation, and cumulative team scoring.'
         },
         {
             id: 4,
             img: cardImg4,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Easter Scavenger Hunt ',
+            para: 'A seasonal digital hunt where participants solve clues and discover hidden Easter eggs through playful challenges and bonus tasks.'
         },
         {
             id: 5,
             img: cardImg5,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'World Cup Challenge ',
+            para: ' A football-themed team experience combining match predictions, trivia, and fan challenges to drive excitement and natural participation.'
         },
         {
             id: 6,
             img: cardImg6,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Office Olympics (Virtual Edition) ',
+            para: '  A playful virtual competition featuring multiple mini-challenges where teams earn cumulative points to build shared momentum.'
         },
         {
             id: 7,
             img: cardImg7,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Culture Quest ',
+            para: ' An interactive values experience using workplace scenarios, puzzles, and trivia to turn abstract culture principles into recognizable everyday behaviours.'
         },
         {
             id: 8,
             img: cardImg8,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: ' Data Privacy Challenge ',
+            para: 'An interactive experience that builds data privacy awareness through short challenges focused on everyday scenarios and practical decision-making.'
         },
         {
             id: 9,
             img: cardImg9,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'AML Awareness Sprint ',
+            para: 'A focused compliance experience delivering key AML concepts through quick challenges that maintain attention while reinforcing regulatory awareness.'
         },
         {
             id: 10,
             img: cardImg10,
-            title: 'Christmas ',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Year-End Wrap-Up ',
+            para: ' A reflective end-of-year experience highlighting wins, milestones, and memories while creating shared closure through interactive challenges.'
         },
     ]
     var settings = {

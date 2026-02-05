@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import cardImg from '../../../assets/c916209092a6d3fef78320b3722db5f4b286cbe1.jpg'
-import cardImg2 from '../../../assets/76eb601ae8cbdb510a11f197e2af52a513a36fc9.jpg'
-import cardImg3 from '../../../assets/b191c8ca226e6d6e84daec673db7abc4b9a3a71b.jpg'
+import cardImg from '../../../assets/71797a607c6f7a762dea1a84569e07d0a0b130b4(1).png'
+import cardImg2 from '../../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png'
+import cardImg3 from '../../../assets/b7fc6a43317d91ab7ecca081234f00dec40cc88f.jpg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
@@ -41,63 +41,64 @@ const Onboardingmoudles = () => {
         {
             id: 1,
             img: cardImg,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Launchpad Starter — Foundations Journey',
+            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
         },
         {
             id: 2,
-            img: cardImg,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            img: cardImg2,
+            title: 'Launchpad Pro (AI) — Guided Culture Journey',
+            para: ' An AI-guided onboarding experience that delivers culture and compliance content through conversational scenarios and interactive challenges.'
         },
         {
             id: 3,
-            img: cardImg2,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-        },
-        {
-            id: 4,
             img: cardImg3,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Launchpad Ultimate — Immersive Onboarding Quest',
+            para: ' A fully branded, story-driven onboarding experience using real people, locations, and quests to accelerate connection and understanding.'
         },
         {
-            id: 5,
+            id: 1,
             img: cardImg,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Launchpad Starter — Foundations Journey',
+            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
         },
         {
-            id: 6,
+            id: 2,
             img: cardImg2,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Launchpad Pro (AI) — Guided Culture Journey',
+            para: ' An AI-guided onboarding experience that delivers culture and compliance content through conversational scenarios and interactive challenges.'
         },
         {
-            id: 7,
-            img: cardImg,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-        },
-        {
-            id: 8,
+            id: 3,
             img: cardImg3,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Launchpad Ultimate — Immersive Onboarding Quest',
+            para: ' A fully branded, story-driven onboarding experience using real people, locations, and quests to accelerate connection and understanding.'
         },
         {
-            id: 9,
+            id: 1,
             img: cardImg,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            title: 'Launchpad Starter — Foundations Journey',
+            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
         },
         {
-            id: 10,
-            img: cardImg,
-            title: 'Christmas  Challenge',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            id: 2,
+            img: cardImg2,
+            title: 'Launchpad Pro (AI) — Guided Culture Journey',
+            para: ' An AI-guided onboarding experience that delivers culture and compliance content through conversational scenarios and interactive challenges.'
         },
+        {
+            id: 3,
+            img: cardImg3,
+            title: 'Launchpad Ultimate — Immersive Onboarding Quest',
+            para: ' A fully branded, story-driven onboarding experience using real people, locations, and quests to accelerate connection and understanding.'
+        },
+        {
+            id: 1,
+            img: cardImg,
+            title: 'Launchpad Starter — Foundations Journey',
+            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
+        },
+
     ]
     return (
         <>
