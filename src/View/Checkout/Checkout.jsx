@@ -29,7 +29,7 @@ const Checkout = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [addOnsFeatures, setaddOnfeatures] = useState([])
     const category = searchParams.get('category');
-    const subcategory = searchParams.get('subcategory');
+    const subcategory = searchParams.get('subcategory').trim();
     const price = searchParams.get('price');
     const experience = searchParams.get('experience');
     const totalprice = searchParams.get('totalprice')
@@ -233,7 +233,7 @@ const Checkout = () => {
     const [loaders, setLoaders] = useState(false);
     const [index, setIndex] = useState(null)
     // const jamaicaCurrencyValue = 120
-    const result = (1797 * 161) + 0;
+    const result = (28484 * 161) + 0;
     const totalWithDecimals = result.toFixed(2);
     const uniqueOrderId = `oid_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const paymentRequest = async () => {
@@ -245,8 +245,6 @@ const Checkout = () => {
             forminputData.companyName !== '' &&
             forminputData.country !== '' &&
             forminputData.companySize !== '' &&
-            forminputData.mode !== '' &&
-            forminputData.date !== '' &&
             forminputData.addressLine1 !== '' &&
             forminputData.addressLine2 !== '' &&
             forminputData.city !== '' &&
@@ -328,7 +326,6 @@ const Checkout = () => {
         country: '',
         companySize: '',
         mode: '',
-        date: '',
         addressLine1: '',
         addressLine2: '',
         city: '',
@@ -369,9 +366,7 @@ const Checkout = () => {
             forminputData.phone !== '' &&
             forminputData.companyName !== '' &&
             forminputData.country !== '' &&
-            forminputData.companySize !== '' &&
-            forminputData.mode !== '' &&
-            forminputData.date !== '' &&
+            forminputData.companySize !== '' &&          
             forminputData.addressLine1 !== '' &&
             forminputData.addressLine2 !== '' &&
             forminputData.city !== '' &&
@@ -456,13 +451,24 @@ const Checkout = () => {
                                             }
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                         </div>
-                                     
+
                                     </div>
-                                    
-                                    
+
+
                                 </div>
                             ))}
                         </div>}
+
+                        {subcategory == 'Sustain Rhythm' && <small style={{
+                            color: '#000379',
+                            fontWeight: '600',
+                            fontSize: '1rem'
+                        }}>Note - You can have unlimited experiences with this package</small>}
+                        {subcategory == 'Boost Rhythm' || subcategory == 'Build Rhythm' && <small style={{
+                            color: '#000379',
+                            fontWeight: '600',
+                            fontSize: '1rem'
+                        }}>Note - 3 more experiences will be part of this package</small>}
                     </div>
 
                     <div className='select_add_on_wrapper'>
@@ -485,7 +491,7 @@ const Checkout = () => {
                                                     title: e.title,
                                                     price: e.onlyPrice
                                                 }])
-                                            })} type='radio' checked={addOnsFeatures.some(item => item.title === e.title)} />{e.title} {e?.price &&`-$ ${e.price}`}</li>
+                                            })} type='radio' checked={addOnsFeatures.some(item => item.title === e.title)} />{e.title} {e?.price && `-$ ${e.price}`}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -493,9 +499,9 @@ const Checkout = () => {
 
                         </div>}
                     </div>
-                 {category!='NGAGE Rythm' &&   <div className='account_input_form'>
+                    {category != 'NGAGE Rythm' && <div className='account_input_form'>
                         <label>Special Message</label>
-                        <textarea  name='specialMessage' placeholder='Enter message' ></textarea>
+                        <textarea name='specialMessage' placeholder='Enter message' ></textarea>
                     </div>}
                     <div className='ngage_account_details_wrapper'>
                         <div className='select_experience_head'>
