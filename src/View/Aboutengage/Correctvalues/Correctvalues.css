@@ -1,7 +1,6 @@
 .correct_values_wrapper{
     padding: 50px 0;
     position: relative;
-    overflow: hidden;
 }
 .correct_values_content_wrapper{
     display: flex;
@@ -44,5 +43,8 @@
     }
     .correct_values_right{
         width: 100%;
+    }
+    .correct_values_wrapper .bg_img45653{
+        display: none;
     }
 }

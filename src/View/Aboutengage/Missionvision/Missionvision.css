@@ -46,14 +46,15 @@
     font-size: 0.95rem;
     line-height: 1.5rem;
 }
-.mission_img_wrapper{
+.mission_img_wrapper {
     width: 45%;
-    height: 65dvh;
-    max-height: 450px;
+    height: 75dvh;
+    max-height: 550px;
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 30px;
-    display: flex;  
+    display: flex
+;
     flex-direction: column;
     align-items: end;
     justify-content: end;
@@ -64,7 +65,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
     object-fit: cover;
     z-index: 8;
 }
@@ -75,7 +76,7 @@
     font-weight: 700;
     width: fit-content;
     letter-spacing: 0.2rem;
-    line-height: 3.7rem;
+    line-height: 3.2rem;
     text-align: right;
 }
 @media(max-width:1099px){

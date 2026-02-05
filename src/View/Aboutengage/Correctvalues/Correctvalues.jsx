@@ -36,7 +36,7 @@ const Correctvalues = () => {
     return (
         <>
             <div className='correct_values_wrapper'>
-            <img src={bgImg} style={{
+            <img src={bgImg} className='bg_img45653' style={{
                 position:'absolute',
                 top:'-30%',
                 left:'0'
