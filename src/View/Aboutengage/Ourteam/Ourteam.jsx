@@ -9,11 +9,12 @@ import Slider from 'react-slick'
 const Ourteam = () => {
     var settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
+        
         responsive: [
             {
                 breakpoint: 1199,
@@ -56,28 +57,6 @@ const Ourteam = () => {
             designation: 'Director Projects & Data Analytics',
             img: img4
         },
-        {
-            title: 'Damani Brown ',
-            designation: 'Managing Director',
-            img: img
-        },
-        {
-            title: 'Dr. George Scarlett',
-            designation: 'Founding Member',
-            img: img2
-        },
-        {
-            title: 'Matthew Webster ',
-            designation: 'Director of Marketing & Sales',
-            img: img3
-        },
-        {
-            title: 'Winston Blackwood',
-            designation: 'Director Projects & Data Analytics',
-            img: img4
-        },
-       
-
     ]
     return (
         <>

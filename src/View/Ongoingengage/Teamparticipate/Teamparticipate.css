@@ -8,7 +8,7 @@
 }
 .team_participate_img {
   width: 48%;
-  height: 60dvh;
+  height: 63dvh;
   max-height: 540px;
   border-radius: 10px;
   overflow: hidden;
@@ -34,7 +34,7 @@
 .team_participate_content ul li {
   font-size: 1rem;
   color: rgba(55, 54, 54, 1);
-  margin-left: 25px;
+  margin-left: 5px;
 }
 @media (max-width: 850px) {
   .team_participate_content_Wrapper {

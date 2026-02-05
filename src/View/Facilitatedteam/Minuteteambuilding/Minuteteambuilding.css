@@ -15,8 +15,8 @@
   padding: 50px 0;
 }
 .mintue_team_building_wrapper .solutions_engage_world {
-  height: 75dvh;
-  max-height: 600px;
+    height: 85dvh;
+    max-height: 600px;
 }
 
 @media (max-width: 600px) {
