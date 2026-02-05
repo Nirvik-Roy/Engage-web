@@ -19,6 +19,7 @@
   transition: 0.3s linear all;
   margin: 25px 0;
   width: 95% !important;
+  min-height: 139px;
 }
 .build_step:hover {
   border: 1px solid rgba(1, 130, 252, 1);

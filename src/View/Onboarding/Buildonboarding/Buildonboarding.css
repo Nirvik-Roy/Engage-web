@@ -1,5 +1,5 @@
 .help_new_hires_wrapper{
-    padding: 70px 0 0 0;
+    padding: 100px 0 0 0;
     position: relative;
 }
 .help_new_hires_content_wrapper{
@@ -10,9 +10,11 @@
 .help_new_hires_content{
     width: 48%;
 }
-.help_new_hires_img{
+.help_new_hires_img {
     width: 48%;
-    border-radius: 10px;
+    border-radius: 15px;
+    height: 110dvh;
+    max-height: 764px;
     overflow: hidden;
 }
 .help_new_hires_img img{

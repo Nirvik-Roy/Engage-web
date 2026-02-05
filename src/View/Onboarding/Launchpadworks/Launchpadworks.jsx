@@ -17,8 +17,8 @@ const Launchpadworks = () => {
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 1000,
-        centerMode: true,
-        centerPadding: "10px",
+        // centerMode: true,
+        // centerPadding: "10px",
         draggable: false,
         responsive: [
             {
@@ -26,7 +26,8 @@ const Launchpadworks = () => {
                 settings: {
                     slidesToShow: 2,
                     autoplay: true,
-                    
+                    centerMode: true,
+                    centerPadding: "10px",
                     draggable: true,
                 }
             },
@@ -37,7 +38,7 @@ const Launchpadworks = () => {
                     centerPadding: "10px",
                     autoplay: true,
                     draggable: true,
-
+                    centerMode: true,
                 }
             },
             {
@@ -47,6 +48,7 @@ const Launchpadworks = () => {
                     centerPadding: "70px",
                     autoplay: true,
                     draggable: true,
+                    centerMode: true,
                 }
             },
         ]
