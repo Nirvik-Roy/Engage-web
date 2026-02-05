@@ -5,8 +5,8 @@
   padding-bottom: 50px;
 }
 .half_day_team_wrapper .solutions_engage_world {
-    height: 90dvh;
-    max-height: 612px;
+    height: 700px;
+    max-height: 700px;
 }
 
 @media (max-width: 999px) {

@@ -9,16 +9,18 @@
   grid-column: 1/-1;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 6px;
 }
 .mintue_team_building_wrapper {
-  padding: 50px 0;
+  padding: 0px 0 50px 0;
+}
+.mintue_team_building_wrapper .rythm_package_prices_wrapper{
+  padding: 40px 0 0 0;
 }
 .mintue_team_building_wrapper .solutions_engage_world {
-    height: 85dvh;
-    max-height: 600px;
+    height: 107dvh;
+    max-height: 660px;
 }
-
 @media (max-width: 600px) {
   .mintue_team_building_wrapper .solutions_engage_world {
     height: 55vh;

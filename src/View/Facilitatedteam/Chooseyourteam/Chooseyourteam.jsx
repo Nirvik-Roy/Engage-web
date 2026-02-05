@@ -152,12 +152,8 @@ const Chooseyourteam = () => {
                 fontWeight: '700',
                 textAlign: 'center',
                 display: 'block',
-                marginTop: '20px'
+                marginTop: '-20px'
             }}>Pricing varies by experience and format. Select an experience to receive a tailored quote.</span>
-
-
-
-
         </>
     )
 }
