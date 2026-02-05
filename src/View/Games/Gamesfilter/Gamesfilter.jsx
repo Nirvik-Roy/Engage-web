@@ -17,29 +17,24 @@ const Gamesfilter = () => {
                 <div className='games_filter_dropdown_wrapper'>
                     <div className='games_filter'>
                         <div onClick={(() => setuseCase(!useCase))} className='games_filter_head'>
-                            <h4>Use Case</h4>
+                            <h4>Solutions</h4>
                             <i class="fa-solid fa-angle-down"></i>
                         </div>
 
                         {useCase && <div className='games_filter_checkbox_Wrapper'>
                             <div className='games_filter_checkbox'>
                                 <input type='checkbox' value={'Staff'} />
-                                <p>Staff</p>
+                                <p>NGAGE Rhythm</p>
                             </div>
 
                             <div className='games_filter_checkbox'>
                                 <input type='checkbox' value={'Conferences'} />
-                                <p>Conferences</p>
+                                <p>NGAGE PlayDay</p>
                             </div>
 
                             <div className='games_filter_checkbox'>
                                 <input type='checkbox' value={'Expos'} />
-                                <p>Expos</p>
-                            </div>
-
-                            <div className='games_filter_checkbox'>
-                                <input type='checkbox' value={'Marketing'} />
-                                <p>Marketing</p>
+                                <p>NGAGE Launchpad</p>
                             </div>
                         </div>}
                     </div>

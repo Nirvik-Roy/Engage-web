@@ -92,7 +92,7 @@ const Minuteteambuilding = () => {
                                     search: `?category=NGAGE Playday&price=${999}&filter=${'90-Minute Team Building'}&totalprice=${999}`
                                 })
                             }} className='base_btn_design'>Request a Quote<img src={button} /></button>
-                            <button className='base_btn_design'>Talk to an Expert<img src={buttonIcon2} /></button>
+                            <button onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))} className='base_btn_design'>Talk to an Expert<img src={buttonIcon2} /></button>
                         </div>
 
                     </div>
