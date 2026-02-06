@@ -233,7 +233,7 @@ const Checkout = () => {
     const [loaders, setLoaders] = useState(false);
     const [index, setIndex] = useState(null)
     // const jamaicaCurrencyValue = 120
-    const result = (28484 * 161) + 0;
+    const result = (Number(totalprice.trim()) * 161) + 0;
     const totalWithDecimals = result.toFixed(2);
     const uniqueOrderId = `oid_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const paymentRequest = async () => {
