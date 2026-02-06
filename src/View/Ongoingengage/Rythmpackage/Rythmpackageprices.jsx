@@ -16,10 +16,10 @@ const Rythmpackageprices = () => {
             totalPrice:4996,
             list: [
                 {
-                    title: '1 experience per quarter',
-                    point1: 'Quarterly engagement cadence',
-                    point2: 'Choose Spark or Pulse experiences',
-                    point3: 'Ideal for light, consistent engagement',
+                    title: 'Best for maintaining light, ongoing engagement',
+                    point1: '4 Ready-to-run experiences (Choose one per quarter)',
+                    point2: 'Up to 150 users included, $1.75 /additional user',
+                    point3: 'Quarterly engagement report (NES)',
 
                 },
 
@@ -34,10 +34,10 @@ const Rythmpackageprices = () => {
             totalPrice:11988,
             list: [
                 {
-                    title: '1 experience per quarter',
-                    point1: 'Monthly engagement rhythm',
-                    point2: 'Mix of Spark and Pulse experiences',
-                    point3: 'Strong culture-building cadence'
+                    title: 'Best for building culture with a steady rhythm',
+                    point1: '12 Ready-to-run experiences (Choose one per month)',
+                    point2: 'Up to 300 users included, $1.25 /additional user',
+                    point3: 'Monthly engagement reports (NES)'
                 },
 
             ],
@@ -52,10 +52,11 @@ const Rythmpackageprices = () => {
             totalPrice:23988,
             list: [
                 {
-                    title: 'Unlimited experiences',
-                    point1: 'Full access to Rhythm experiences',
-                    point2: 'Includes Spark, Pulse, Flow, and Custom options',
-                    point3: 'Includes 100 digital marketplace rewards per year'
+                    title: 'Best for organizations serious about engagement',
+                    point1: 'Unlimited ready-to-run experiences',
+                    point2: 'Up to 500 users included, $1.25 /additional user',
+                    point3: 'Executive engagement reports (NES)',
+                    point4:'Priority support'
                 },
 
             ],
@@ -71,7 +72,12 @@ const Rythmpackageprices = () => {
                         textAlign: 'right',
                         fontSize: '2.7rem',
                         lineHeight: '3.1rem'
-                    }}>Annual Engagement Plans</h1>
+                    }}>Subscription Plans</h1>
+                    <h1 style={{
+                        fontSize: '1rem',
+                        lineHeight: '1.2rem',
+                        textAlign:'right'
+                    }}>Choose your rhythm once, keep engagement moving all year. No facilitator required. Runs alongside work with minimal disruption. Remote support included.</h1>
                 </div>
                 <div className='rythm_prices_wrapper'>
                     {data.map((e, i) => (
@@ -102,6 +108,7 @@ const Rythmpackageprices = () => {
                                             <li><img src={listimg} />{ele.point1}</li>
                                             <li><img src={listimg} />{ele.point2}</li>
                                             <li><img src={listimg} />{ele.point3}</li>
+                                            {ele?.point4 && <li><img src={listimg} />{ele.point4}</li>}
                                         </ul>
 
                                     </>

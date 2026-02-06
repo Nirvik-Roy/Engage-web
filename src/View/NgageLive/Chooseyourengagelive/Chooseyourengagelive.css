@@ -1,0 +1,84 @@
+.choose_your_engage_wrapper .solutions_engage_world {
+  width: 32%;
+}
+.choose_your_engage_wrapper .rythm_prices_wrapper {
+  width: 65%;
+}
+.choose_your_engage_wrapper .base_btn_design {
+  font-size: 0.8rem;
+}
+.choose_your_engage_wrapper .corporate_btn_wrapper {
+  flex-wrap: wrap;
+}
+.choose_your_engage_wrapper .rythm_prices_wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+}
+.choose_your_engage_wrapper .launch_pad {
+  padding: 20px 20px 20px 20px !important;
+}
+.choose_your_engage_wrapper2 .launch_pad {
+  padding: 20px 20px 20px 20px !important;
+}
+
+.choose_your_engage_wrapper2 .solutions_engage_world {
+  width: 32%;
+  height: 75vh;
+  max-height: 525px;
+}
+.choose_your_engage_wrapper2 .rythm_prices_wrapper {
+  width: 65%;
+}
+.choose_your_engage_wrapper2 .base_btn_design {
+  font-size: 0.8rem;
+}
+.choose_your_engage_wrapper2 .corporate_btn_wrapper {
+  flex-wrap: wrap;
+}
+.choose_your_engage_wrapper2 .rythm_prices_wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+}
+.choose_your_engage_wrapper2 .rythm_package_prices_wrapper {
+  flex-direction: row !important;
+}
+@media (max-width: 1100px) {
+  .choose_your_engage_wrapper .solutions_engage_world {
+    width: 100%;
+  }
+  .choose_your_engage_wrapper .rythm_prices_wrapper {
+    width: 100%;
+  }
+  .choose_your_engage_wrapper2 .solutions_engage_world {
+    width: 100%;
+  }
+  .choose_your_engage_wrapper2 .rythm_prices_wrapper {
+    width: 100%;
+  }
+  .choose_your_engage_wrapper2 .rythm_package_prices_wrapper {
+    flex-direction: column !important;
+    row-gap: 40px;
+  }
+  .choose_your_engage_wrapper2 .base_btn_design:last-child {
+    margin-top: 0px;
+  }
+  .choose_your_engage_wrapper .base_btn_design:last-child {
+    margin-top: 0px;
+  }
+}
+
+@media(max-width:480px){
+  .live_events_wrapper{
+    padding: 40px 0;
+  }
+  .engamenet_report_Wrapper{
+    padding: 0 0 50px 0;
+  }
+  .rythm_package_prices_wrapper{
+    padding: 0 0 50px 0;
+  }
+  .choose_your_engage_wrapper2{
+    padding-bottom: 0px;
+  }
+  .choose_your_engage_wrapper{
+    padding-bottom: 0;
+  }
+}

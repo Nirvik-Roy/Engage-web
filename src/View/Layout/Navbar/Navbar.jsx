@@ -72,7 +72,8 @@ const Navbar = () => {
               {/* <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/engagement'}>Solution Hub</NavLink> */}
               <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ongoing-engage'}>Ngage  Rhythm</NavLink>
               <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/onboarding'}>Ngage Launchpad</NavLink>
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/facilitated-team'}>Ngage Playday</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/facilitated-team'}>Ngage Play Day</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ngage-live'}>Ngage Live</NavLink>
             </div>}
           </div>
           <div ref={togglebtnref2} onClick={(() => { setgamesDropdown(!gamesDropdown) })} className='nav_dropdown'>

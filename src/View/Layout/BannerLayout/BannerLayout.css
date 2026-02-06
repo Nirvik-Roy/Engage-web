@@ -35,6 +35,7 @@
 @media(max-width:576px){
     .banner_layout_wrapper h1{
         width: 90%;
+        font-size: 1.5rem;
     }
      .banner_layout_wrapper h3{
         width: 90%;

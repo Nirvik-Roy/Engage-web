@@ -16,11 +16,10 @@ const Rythmpackage = () => {
             totalPrice: 699,
             list: [
                 {
-                    title: '1-Day Experience',
-                    point1: 'Single, ready-made engagement experience',
-                    point2: 'Up to 50 participants included',
-                    point3: 'Perfect for testing Rhythm or running a one-off activity',
-
+                    title: 'Best for a quick energy boost or light team activation',
+                    point1: '1-Day Ready-to-run Spark experience',
+                    point2: 'Up to 75 users included, $2.50 /additional user',
+                    point3: '1 Engagement report (NES)',
                 },
 
             ],
@@ -33,10 +32,10 @@ const Rythmpackage = () => {
             totalPrice: 1499,
             list: [
                 {
-                    title: '3-Day Experience',
-                    point1: 'Extended engagement window',
-                    point2: 'Multiple challenges over 3 days',
-                    point3: 'Up to 50 participants included'
+                    title: 'Perfect for testing Rhythm or a one-off activity',
+                    point1: '3-Day Ready-to-run Pulse experience',
+                    point2: 'Up to 150 users included, $2.25 /additional user',
+                    point3: '1 Engagement report (NES)'
                 },
 
             ],
@@ -56,7 +55,11 @@ const Rythmpackage = () => {
                 }} className='container world_solutions_wrapper'>
                     <div className='solutions_engage_world'>
                         <img src={img} />
-                        <h1>One-Off Experiences</h1>
+                        <h1>One-time Experiences</h1>
+                        <h1 style={{
+                            fontSize:'1rem',
+                            lineHeight:'1.2rem'
+                        }}>Buy once, boost engagement now. No facilitation required. Runs alongside work with minimal disruption. Remote support included.</h1>
                     </div>
                     <div className='rythm_spark_wrapper'>
                         {data.map((e, i) => (

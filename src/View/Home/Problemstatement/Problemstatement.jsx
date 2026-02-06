@@ -1,22 +1,12 @@
-import React, { useState } from 'react'
 import './Problemstatement.css'
-import afterImg from '../../../assets/Homepage - Engageent Simplified AFTER IMAGE.png'
-import beforeImg from '../../../assets/Homepage - Engageent Simplified BEFORE image.png'
+import afterImg from '../../../assets/image.png'
+import beforeImg from '../../../assets/After.png'
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import ReactCompareImage from "react-compare-image";
 import buttonImg from '../../../assets/Button.svg'
 const Problemstatement = () => {
-    const [position, setPosition] = useState(50);
-
-    const handlePositionChange = (rawPos) => {
-        // rawPos is from 0 to 1
-        const speedFactor = 10; // >1 makes it faster, <1 slower
-        let scaledPos = rawPos * speedFactor;
-        // clamp (keep between 0 and 1)
-        scaledPos = Math.max(0, Math.min(1, scaledPos));
-        setPosition(scaledPos * 100);
-    };
+  
 
     const FIRST_IMAGE = {
         imageUrl: beforeImg

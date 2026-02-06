@@ -21,6 +21,7 @@ import { Toaster } from 'react-hot-toast'
 import Checkout from './View/Checkout/Checkout'
 import Engagelayout from './View/Engageexperience/Engagelayout'
 import Engageexperience from './View/Engageexperience/Engageexperience'
+import NgageLive from './View/NgageLive/NgageLive'
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [isModalClosed,setisModalClosed] = useState(false)
@@ -67,6 +68,7 @@ function App() {
           <Route path='/solutions/ongoing-engage' element={<Ongoingengage />} />
           <Route path='/solutions/onboarding' element={<Onboarding />} />
           <Route path='/solutions/facilitated-team' element={<Facilitatedteam />} />
+          <Route path='/solutions/ngage-live' element={<NgageLive/>}/>
           <Route path='/games' element={<Gameslayout />}>
             <Route path='library' element={<Gameslibrary />} />
             <Route path='experience' element={<Gamesexperience/>}/>

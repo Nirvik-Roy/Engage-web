@@ -27,8 +27,10 @@ const NavbarSidebar = ({ show, setShow }) => {
                         {solutionDropdown && <div className='solution_dropdown5463'>
                             {/* <NavLink to={'/solutions/engagement'}>Solution Hub</NavLink> */}
                             <NavLink to={'/solutions/ongoing-engage'}>NGAGE Rhythm</NavLink>
-                            <NavLink to={'/solutions/facilitated-team'}>NGAGE Playday</NavLink>
+                            <NavLink to={'/solutions/facilitated-team'}>NGAGE Play Day</NavLink>
                             <NavLink to={'/solutions/onboarding'}>NGAGE Launchpad</NavLink>
+                            <NavLink to={'/solutions/ngage-live'}>NGAGE Live</NavLink>
+
                         </div>}
                     </div>
 
