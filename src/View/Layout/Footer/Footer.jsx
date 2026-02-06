@@ -33,6 +33,8 @@ const Footer = () => {
               {/* <Link to='/'>Blogs</Link> */}
               <Link to='/faq'>FAQ</Link>
               <Link to='/contact-us'>Contact</Link>
+              <Link onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))}>Book a demo</Link>
+
             </div>
 
 
@@ -42,7 +44,7 @@ const Footer = () => {
               <Link to='/privacy-policy'>Privacy Policy</Link>
               <Link to='/refund-policy'>Refund Policy</Link>
             </div>
-            
+
 
 
             <div className='footer_1'>
