@@ -1,6 +1,6 @@
 import React from 'react'
 import bgImg from '../../../assets/Rectangle 6682.png'
-import img from '../../../assets/623e89ba689da139c2cb8b68eb186ba6e717c610.jpg'
+import img from '../../../assets/Play Day 2 - Team building vertical.png'
 import button from '../../../assets/svg159.svg'
 import buttonIcon2 from '../../../assets/svg159 (2).svg'
 import './Teambuilding.css'
