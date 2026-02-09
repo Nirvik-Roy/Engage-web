@@ -56,12 +56,14 @@ const Rythmpackage = () => {
                     <div className='solutions_engage_world'>
                         <img src={img} />
                         <h1>One-time Experiences</h1>
-                        <h1 style={{
-                            fontSize:'1rem',
-                            lineHeight:'1.2rem'
-                        }}>Buy once, boost engagement now. No facilitation required. Runs alongside work with minimal disruption. Remote support included.</h1>
+                        
                     </div>
                     <div className='rythm_spark_wrapper'>
+                        <h1 style={{
+                            fontSize: '1rem',
+                            lineHeight: '1.2rem',
+                            gridColumn:'1/-1'
+                        }}>Buy once, boost engagement now. No facilitation required. Runs alongside work with minimal disruption. Remote support included.</h1>
                         {data.map((e, i) => (
                             <div className='launch_pad' key={i}>
                                 <div>

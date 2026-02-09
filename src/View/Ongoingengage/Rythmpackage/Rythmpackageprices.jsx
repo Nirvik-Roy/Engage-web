@@ -73,13 +73,15 @@ const Rythmpackageprices = () => {
                         fontSize: '2.7rem',
                         lineHeight: '3.1rem'
                     }}>Subscription Plans</h1>
+                
+                </div>
+                <div className='rythm_prices_wrapper'>
                     <h1 style={{
                         fontSize: '1rem',
                         lineHeight: '1.2rem',
-                        textAlign:'right'
+                        textAlign: 'left',
+                        gridColumn:'1/-1'
                     }}>Choose your rhythm once, keep engagement moving all year. No facilitator required. Runs alongside work with minimal disruption. Remote support included.</h1>
-                </div>
-                <div className='rythm_prices_wrapper'>
                     {data.map((e, i) => (
                         <div className='launch_pad' style={{
                             padding: '20px 20px 40px 20px'
@@ -124,7 +126,7 @@ const Rythmpackageprices = () => {
                         </div>
                     ))}
 
-                    <p className='additional_players_para' style={{
+                    {/* <p className='additional_players_para' style={{
                         gridColumn: '1/-1',
                         color: 'rgba(55, 54, 54, 1)',
                         fontWeight: '600',
@@ -135,7 +137,7 @@ const Rythmpackageprices = () => {
                         marginLeft: 'auto',
                         marginTop: '20px'
                     }}>First 50 players included<span>|</span>Additional players: $2.50 per person
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </>

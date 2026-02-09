@@ -7,7 +7,9 @@ const Teamchoose = () => {
             <div className='team_participate_Wrappper'>
                 <div className='container team_participate_content_Wrapper'>
                     <div className='team_participate_img'>
-                        <img src={img} />
+                        <img src={img} style={{
+                            objectPosition:'right'
+                        }}/>
                     </div>
                     <div className='team_participate_content'>
                         <h1 className='heading'>Why teams choose Ngage Rhythm</h1>

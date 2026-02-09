@@ -464,11 +464,17 @@ const Checkout = () => {
                             fontWeight: '600',
                             fontSize: '1rem'
                         }}>Note - You can have unlimited experiences with this package</small>}
-                        {subcategory == 'Boost Rhythm' || subcategory == 'Build Rhythm' && <small style={{
+                        {subcategory == 'Boost Rhythm'  && <small style={{
                             color: '#000379',
                             fontWeight: '600',
                             fontSize: '1rem'
                         }}>Note - 3 more experiences will be part of this package</small>}
+
+                        {subcategory == 'Build Rhythm' && <small style={{
+                            color: '#000379',
+                            fontWeight: '600',
+                            fontSize: '1rem'
+                        }}>Note - 11 more experiences will be part of this package</small>}
                     </div>
 
                     <div className='select_add_on_wrapper'>
@@ -584,6 +590,8 @@ const Checkout = () => {
                                     <option>51-200</option>
                                     <option>201-500</option>
                                     <option>500+</option>
+                                    <option>1000+</option>
+                                    <option>2000+</option>
                                 </select>
                             </div>
 
