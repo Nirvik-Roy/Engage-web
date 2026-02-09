@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../../assets/Rectangle 6679 (2).png'
+import img from '../../../assets/Play Day 2 - Team building vertical.png'
 import listimg from '../../../assets/Vector (8).svg'
 import button from '../../../assets/svg159.svg'
 import buttonIcon2 from '../../../assets/svg159 (2).svg'

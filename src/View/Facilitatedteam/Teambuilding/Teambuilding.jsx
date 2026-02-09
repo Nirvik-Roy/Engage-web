@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../../assets/Rectangle 6674 (5).png'
+import img from '../../../assets/Play Day 1 - Team building outdoors.png'
 import shadow from '../../../assets/Rectangle 6684.png'
 import '../../Onboarding/Buildonboarding/Buildonboarding.css'
 import Corporateteam from './Corporateteam'

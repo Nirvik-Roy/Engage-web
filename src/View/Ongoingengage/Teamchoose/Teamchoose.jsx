@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../../assets/Rectangle 6674 (8).png'
+import img from '../../../assets/Rectangle 6674 (6).png'
 import '../Teamparticipate/Teamparticipate.css'
 const Teamchoose = () => {
     return (
@@ -7,9 +7,7 @@ const Teamchoose = () => {
             <div className='team_participate_Wrappper'>
                 <div className='container team_participate_content_Wrapper'>
                     <div className='team_participate_img'>
-                        <img src={img} style={{
-                            objectPosition:'right'
-                        }}/>
+                        <img src={img} />
                     </div>
                     <div className='team_participate_content'>
                         <h1 className='heading'>Why teams choose Ngage Rhythm</h1>
