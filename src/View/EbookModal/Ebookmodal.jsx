@@ -29,12 +29,15 @@ const Ebookmodal = ({ setShowModal }) => {
                         <form class="email-form" onSubmit={((e) => e.preventDefault())}>
                             <div class="email-field">
                                 <input type="email" placeholder="Your Email" />
-                                <button onClick={(() => setShowModal(false))} class="email-submit" type="submit">
-                                    Submit
+                                <button onClick={(() => {
+                                    downloadPDF()
+                                    setShowModal(false)
+                                })} class="email-submit" type="submit">
+                                    Get the Playbook
                                     <img src={icon} />
                                 </button>
                             </div>
-                            <button onClick={downloadPDF}
+                            {/* <button onClick={downloadPDF}
                                     style={{
                                         marginTop:'20px',
                                         padding: "5px 10px",
@@ -45,8 +48,8 @@ const Ebookmodal = ({ setShowModal }) => {
                                     className="base_btn_design"
                                 >
                                     Get the Playbook
-                                </button>
-                      
+                                </button> */}
+
 
                             <small style={{
                                 marginTop: '10px',
