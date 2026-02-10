@@ -17,6 +17,10 @@
   border-radius: 10px;
   margin-top: 40px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
 }
 .one_system h3 {
   font-weight: 700;

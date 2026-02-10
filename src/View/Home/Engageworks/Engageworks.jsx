@@ -13,12 +13,12 @@ const Engageworks = () => {
             <h1 className='heading'>How Ngage Works</h1>
             <p>Choose an experience, invite your team, and watch participation grow.</p>
             <p>Employees join instantly, earn points for participating, and see progress live — while HR gets a clear view of engagement across the organization.</p>
-            <p>Ngage works by turning everyday moments into simple, interactive experiences employees actually want to join. Instead of relying on emails or announcements, engagement happens through play — making participation feel natural, inclusive, and low-pressure.</p>
+            <p>Instead of relying on emails or announcements, engagement happens through play — making participation feel natural, inclusive, and low-pressure.</p>
             <ul style={{
               marginLeft:'15px',
               color:'#3b4954'
             }}>
-              <li>Teams scan a QR code or tap a link </li>
+              <li>Teams scan a QR code or tap a link</li>
               <li>Participants complete challenges, puzzles, or activities</li>
               <li>Points, leaderboards, and rewards motivate participation</li>
               <li>Engagement is tracked automatically</li>
@@ -26,7 +26,8 @@ const Engageworks = () => {
 
             <p style={{
               marginTop:'20px'
-            }}>Because everything runs through one platform, HR teams don’t have to juggle tools or chase participation. Employees join from their phones, take part at their own pace, and engagement data is captured automatically — making it easy to see what’s working.</p>
+            }}>Keep employees motivated with real rewards, available in the Ngage marketplace. Because everything runs through one platform, HR teams don’t have to juggle tools or chase participation.
+</p>
           </div>
         </div>
       </div>

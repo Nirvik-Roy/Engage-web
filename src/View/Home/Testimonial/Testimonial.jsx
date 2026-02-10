@@ -62,16 +62,16 @@ const Testimonial = () => {
         }, {
             id: 4,
             img: kadia,
-            review: 'The post-lunch slump vanished — the room was buzzing again within minutes',
-            name: 'Conference Producer',
-            designation: 'Regional Business Summit'
+            review: '“My experience was very good. The fun and interactive challenges really stood out, many participants expressed how much they loved the light competition and the rewards. As a client, we especially appreciated the ability to report on and capture the activity, which provides far more value and insight than if we hadn’t used Ngage.”',
+            name: 'Kadia Burrell',
+            designation: 'Sagicor Group'
         },
         {
             id: 5,
             img: dellen,
-            review: 'Our booth stayed packed all day — Ngage made it fun for guests to engage and easy for us to collect leads.',
-            name: 'Marketing Manager,',
-            designation: 'Auto Show Exhibitor'
+            review: '“We held a Girls in ICT Day event for over 200 young ladies. Ngage created an immersive and cohesive experience to educate our girls on ICT. Participants were able to meet each other, complete challenges and earn points. Ngage was an amazing partner for us. It was a solid 10/10.” ',
+            name: 'Deleen Powell',
+            designation: ' Flow Jamaica'
         },
 
     ]

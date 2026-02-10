@@ -30,7 +30,7 @@ const Corporateteam = () => {
 
                             <strong>Ngage Play Day features Ngage games and activities designed</strong> to encourage collaboration, communication, and light competition — without requiring athletic ability, confidence, or prior experience to participate.
                             <pre />
-                            The result is team building that feels natural, inclusive, and genuinely engaging.
+                            {/* The result is team building that feels natural, inclusive, and genuinely engaging. */}
                         </p>
 
                         <p style={{
@@ -47,7 +47,7 @@ const Corporateteam = () => {
                             <strong>- Digital Ngage games </strong> (e.g. Small Talk, Treasure Hunt, Network Bingo)<br />
                         </p>
 
-                        <p>Facilitators guide the experience from start to finish, managing flow, energy, and participation — so teams stay engaged without pressure or awkward moments.</p>
+                        {/* <p>Facilitators guide the experience from start to finish, managing flow, energy, and participation — so teams stay engaged without pressure or awkward moments.</p> */}
                         <div className='corporate_btn_wrapper'>
                             <button className='base_btn_design' onClick={(()=>{
                                 navigate('/solutions/engagement')
