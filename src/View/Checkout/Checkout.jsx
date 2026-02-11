@@ -214,6 +214,7 @@ const Checkout = () => {
             ],
         },
     ]
+    console.log(selectedExperience)
 
     useEffect(() => {
         setCurrentData(...addOnData.filter((e) => e.title == category))
@@ -449,7 +450,9 @@ const Checkout = () => {
                                                 }}>Selected</span>
                                             </div>
                                             }
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p>  {e?.description?.length > 150
+                                                ? e.description.slice(0, 150) + '...'
+                                                : e.description}</p>
                                         </div>
 
                                     </div>

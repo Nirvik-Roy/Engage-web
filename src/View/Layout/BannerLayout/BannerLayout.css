@@ -9,14 +9,14 @@
 .banner_layout_wrapper h1{
     font-size: 3.7rem;
     color: #fff;
-    letter-spacing: 0.35rem;
+    letter-spacing: 0.1rem !important;
     width: 1100px;
     text-align: center;
 }
 .banner_layout_wrapper h3{
     font-size: 1.5rem;
     color: #fff;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem !important;
     font-weight: 500;
     width: 1100px;
     text-align: center;

@@ -85,10 +85,10 @@ const Engageexperience = () => {
                                         <h6>{element.reviews}</h6>
                                     </div>}
 
-                                    <div className='clock_wrapper'>
+                                    {/* <div className='clock_wrapper'>
                                         <img className='star_img56' src={cashImg} />
                                         <h6>{element.price} </h6>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <p><strong>Best for:</strong> {element.bestFor}</p>
 
@@ -190,10 +190,10 @@ const Engageexperience = () => {
                                             <h6>{element.reviews}</h6>
                                         </div>} */}
 
-                                        <div className='clock_wrapper'>
+                                        {/* <div className='clock_wrapper'>
                                             <img className='star_img56' src={cashImg} />
                                             <h6>{element.price} </h6>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <p><strong>Best for:</strong> {element.theme}</p>
 

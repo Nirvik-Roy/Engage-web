@@ -17,7 +17,15 @@
   width: 100%;
   /* height: fit-content; */
 }
-
+.launch_pad ul li{
+  font-size: 0.85rem;
+}
+.launch_pad h5{
+  font-size: 1rem;
+}
+.launch_pad h2{
+  letter-spacing: 0.1rem;
+}
 .rythm_package_wrapper .solutions_engage_world {
   height: 60dvh;
   max-height: 400px;

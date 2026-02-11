@@ -47,9 +47,9 @@ const Testimonial = () => {
         {
             id: 2,
             img: ellipse,
-            review: 'We held a Girls in ICT Day event for over 200 young ladies. Ngage created an immersive and cohesive experience to educate our girls on ICT. Participants were able to meet each other, complete challenges and earn points. Ngage was an amazing partner for us. It was a solid 10/10.  ',
+            review: 'It’s a solid 9/10. The report was extremely helpful and excellent value for money, especially for first-time users. The detailed feedback provided for each activity, along with the demographic breakouts, was very useful. These insights will greatly assist in making informed decisions and in better understanding and targeting the audience in the future. ',
             name: 'Shannon Jones',
-            designation: 'Flow Jamaica'
+            designation: 'Caribbean Broilers Group'
         },
 
 
@@ -62,14 +62,14 @@ const Testimonial = () => {
         }, {
             id: 4,
             img: kadia,
-            review: '“My experience was very good. The fun and interactive challenges really stood out, many participants expressed how much they loved the light competition and the rewards. As a client, we especially appreciated the ability to report on and capture the activity, which provides far more value and insight than if we hadn’t used Ngage.”',
+            review: 'My experience was very good. The fun and interactive challenges really stood out, many participants expressed how much they loved the light competition and the rewards. As a client, we especially appreciated the ability to report on and capture the activity, which provides far more value and insight than if we hadn’t used Ngage.',
             name: 'Kadia Burrell',
             designation: 'Sagicor Group'
         },
         {
             id: 5,
             img: dellen,
-            review: '“We held a Girls in ICT Day event for over 200 young ladies. Ngage created an immersive and cohesive experience to educate our girls on ICT. Participants were able to meet each other, complete challenges and earn points. Ngage was an amazing partner for us. It was a solid 10/10.” ',
+            review: 'We held a Girls in ICT Day event for over 200 young ladies. Ngage created an immersive and cohesive experience to educate our girls on ICT. Participants were able to meet each other, complete challenges and earn points. Ngage was an amazing partner for us. It was a solid 10/10.',
             name: 'Deleen Powell',
             designation: ' Flow Jamaica'
         },

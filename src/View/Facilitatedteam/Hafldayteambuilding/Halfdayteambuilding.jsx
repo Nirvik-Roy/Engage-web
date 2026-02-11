@@ -90,7 +90,7 @@ const Halfdayteambuilding = () => {
                             <button onClick={() => {
                                 navigate({
                                     pathname: '/engage/experience',
-                                    search: `?category=NGAGE Playday&price=${2999}&filter=${'Half-Day Team Building'}&totalprice=${2999}`
+                                    search: `?category=NGAGE Play Day&price=${2999}&filter=${'Half-Day Team Building'}&totalprice=${2999}`
                                 })
                             }} className='base_btn_design'>Request a Quote<img src={button} /></button>
                             <button onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))} className='base_btn_design'>Talk to an Expert<img src={buttonIcon2} /></button>

@@ -50,7 +50,7 @@ const Footer = () => {
             <div className='footer_1'>
               <h3>Contact</h3>
               <Link><strong>Address</strong> - 5 Old Church Rd. Kingston 8, Kingston Jamaica</Link>
-              <Link><strong>Phone</strong> - 8762767188</Link>
+              <Link><strong>Phone</strong> - +1 (876) 276-7188</Link>
               <Link><strong>Email</strong> - sales@ngageworld.com</Link>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
             color: 'rgba(19, 19, 19, 1)',
             fontSize: '1rem',
             width: 'fit-content'
-          }}>© Copyright 2024, All Rights Reserved</p>
+          }}>Copyright 2026. All rights reserved.</p>
         </div>
         <img src={bgImg} style={{
           position: 'absolute',

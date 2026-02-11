@@ -92,7 +92,7 @@ const Contact = () => {
                             <div className='contact__box'>
                                 <img src={phone} />
                                 <h4>Phone</h4>
-                                <p>8762767188</p>
+                                <p>+1 (876) 276-7188</p>
                             </div>
 
                             <div className='contact__box'>

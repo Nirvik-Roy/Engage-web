@@ -60,8 +60,8 @@ const Ongoingengage = () => {
                     </div>
                 </div>
             </div>
-            <Rythmsteps />
             <Rythmpackage />
+            <Rythmsteps />
             <Teamchoose />
             <Buildengagement demobtn={true} explorebtn={true} para={'Ngage Rhythm gives teams a simple way to stay connected — without turning engagement into a project.'} title={'Ready to build your rhythm?'} />
         </>

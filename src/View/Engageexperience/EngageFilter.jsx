@@ -87,7 +87,7 @@ const EngageFilter = () => {
             ]
         },
         {
-            title: 'NGAGE Playday',
+            title: 'NGAGE Play Day',
             list: [
                 {
                     title: '90-Minute Team Building',

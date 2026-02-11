@@ -17,9 +17,10 @@ const Rythmpackage = () => {
             list: [
                 {
                     title: 'Best for a quick energy boost or light team activation',
-                    point1: '1-Day Ready-to-run Spark experience',
-                    point2: 'Up to 75 users included, $2.50 /additional user',
-                    point3: '1 Engagement report (NES)',
+                    point1: '1-Day Ready-to-Run experience',
+                    point2: '75 users included ($2.50 /extra user)',
+                    point3: '1 Engagement Report (NES)',
+                    point4: 'Ngage Experience Support'
                 },
 
             ],
@@ -33,9 +34,11 @@ const Rythmpackage = () => {
             list: [
                 {
                     title: 'Perfect for testing Rhythm or a one-off activity',
-                    point1: '3-Day Ready-to-run Pulse experience',
-                    point2: 'Up to 150 users included, $2.25 /additional user',
-                    point3: '1 Engagement report (NES)'
+                    point1: '3-Day Ready-to-Run experience',
+                    point2: '150 users included ($2.25 /extra user)',
+                    point3: '1 Engagement Report (NES)',
+                    point4:'Top 3 Featured Prizes included',
+                    point5:'Ngage Experience Support'
                 },
 
             ],
@@ -45,10 +48,25 @@ const Rythmpackage = () => {
     return (
         <>
             <div className='rythm_package_wrapper'>
-                <h1 className='heading' style={{
+
+                {/* <h1 className='heading' style={{
                     textAlign: 'center',
                 }}>
                     Buy a Rhythm Package Today
+                </h1> */}
+
+                <h1 className='heading' style={{
+                    textAlign: 'center',
+                }}>
+                    Subscribe to Rhythm
+                </h1>
+                <Rythmpackageprices />
+
+                <h1 className='heading' style={{
+                    textAlign: 'center',
+                    margin: '70px 0 20px 0'
+                }}>
+                    Activate Rhythm
                 </h1>
                 <div style={{
                     padding: '40px 0'
@@ -56,14 +74,14 @@ const Rythmpackage = () => {
                     <div className='solutions_engage_world'>
                         <img src={img} />
                         <h1>One-time Experiences</h1>
-                        
+
                     </div>
                     <div className='rythm_spark_wrapper'>
                         <h1 style={{
                             fontSize: '1rem',
                             lineHeight: '1.2rem',
-                            gridColumn:'1/-1'
-                        }}>Buy once, boost engagement now. No facilitation required. Runs alongside work with minimal disruption. Remote support included.</h1>
+                            gridColumn: '1/-1'
+                        }}>Run Rhytm once. Boost engagement now. No facilitation required. Runs alongside work with minimal disruption. </h1>
                         {data.map((e, i) => (
                             <div className='launch_pad' key={i}>
                                 <div>
@@ -81,6 +99,8 @@ const Rythmpackage = () => {
                                                 <li><img src={listimg} />{ele.point1}</li>
                                                 <li><img src={listimg} />{ele.point2}</li>
                                                 <li><img src={listimg} />{ele.point3}</li>
+                                             {  ele?.point4 && <li><img src={listimg} />{ele.point4}</li>}
+                                                {ele?.point5 && <li><img src={listimg} />{ele.point5}</li>}
                                             </ul>
                                             <button className='base_btn_design' onClick={() => {
                                                 navigate({
@@ -95,7 +115,7 @@ const Rythmpackage = () => {
                         ))}
                     </div>
                 </div>
-                <Rythmpackageprices />
+
             </div>
         </>
     )

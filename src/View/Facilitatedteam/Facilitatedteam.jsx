@@ -9,7 +9,7 @@ import Buildengagement from '../Home/Buildengagement/Buildengagement.jsx'
 const Facilitatedteam = () => {
   return (
     <>
-      <BannerLayout subTitle={'Facilitated team building experiences that bring everyone in'} title={'NGAGE Playday'}/>
+      <BannerLayout subTitle={'Facilitated team building experiences that bring everyone in'} title={'NGAGE Play Day'}/>
       <Teambuilding/>
       <Chooseyourteam/>
       <Corporatefunday/>
