@@ -49,14 +49,15 @@ const Rythmpackage = () => {
         <>
             <div className='rythm_package_wrapper'>
 
-                {/* <h1 className='heading' style={{
+                 <h1 className='heading' style={{
                     textAlign: 'center',
                 }}>
                     Buy a Rhythm Package Today
-                </h1> */}
+                </h1> 
 
                 <h1 className='heading' style={{
                     textAlign: 'center',
+                    fontSize:'2rem'
                 }}>
                     Subscribe to Rhythm
                 </h1>

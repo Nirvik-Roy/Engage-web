@@ -88,28 +88,38 @@ const Rythmpackageprices = () => {
                         gridColumn: '1/-1'
                     }}>Choose your rhythm once, keep engagement moving all year. No facilitator required. Runs alongside work with minimal disruption.</h1>
                     {data.map((e, i) => (
-                        <div className='launch_pad' style={{
-                            padding: '20px 20px 40px 20px'
+                        <div className='launch_pad' style={e?.mostPopular ? {
+                            padding: '20px 20px 40px 20px',
+                            border:'1px solid #010085',
+                        }:{
+                                padding: '20px 20px 40px 20px'
                         }} key={i}>
                             <div>
-                                {e?.mostPopular && <span style={{
-                                    color: '#010085',
-                                    fontSize: '0.9rem',
-                                    fontWeight: '800'
-                                }}>“Most Popular”</span>}
-                                <h2>{e.title}</h2>
-                                <h2 style={{
-                                    fontWeight: '800',
-                                    fontSize: '20px',
-                                    margin: '12px 0',
-                                    letterSpacing: '0.0rem'
-                                }}>{e.title2}</h2>
-                                <h3 style={{
-                                    letterSpacing: '0.3rem',
-                                    fontSize: '1rem',
-                                    fontWeight: '400'
-                                }}>{e.title3}</h3>
-
+                            <div  className='launchpad_heading' >
+                                   {e?.mostPopular && <span style={{
+                                        color:'rgba(1, 3, 248, 1)',
+                                        fontWeight:'700',
+                                        fontSize:'0.9rem',
+                                        letterSpacing:'0.1rem',
+                                        marginBottom:'5px',
+                                        display:'block'
+                                   }}>Most Popular</span>}
+                                    <h2>{e.title}</h2>
+                                    <h3 style={{
+                                        fontWeight: '800',
+                                        fontSize: '20px',
+                                        margin: '12px 0',
+                                        letterSpacing: '0.0rem'
+                                    }}>{e.title2}</h3>
+                                    <h4 style={{
+                                        letterSpacing: '0.3rem',
+                                        fontSize: '1rem',
+                                        fontWeight: '400',
+                                        marginTop:'-15px'
+                                    }}>{e.title3}</h4>
+                            </div>
+                              
+                              
                                 {e.list.map((ele,) => (
                                     <>
                                         <h5 style={{

@@ -30,6 +30,31 @@
   height: 60dvh;
   max-height: 400px;
 }
+.launchpad_heading{
+  min-height: 140px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+  margin-bottom: 10px;
+}
+.launchpad_heading h2{
+  background-color: rgba(218, 228, 255, 1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.launch_pad h3{
+  border-bottom: none;
+  margin: 5px 0 !important;
+  font-weight: 600 !important;
+}
+.ngage_pricing_wrapper .launch_pad h2{
+  background-color: rgba(218, 228, 255, 1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.rythm_spark_wrapper .launch_pad h2{
+  background-color: rgba(218, 228, 255, 1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
 .rythm_prices_wrapper .launch_pad {
   width: 100%;

@@ -35,7 +35,7 @@ const Engageexperience = () => {
     const price = searchParams.get('price');
     const totalprice = searchParams.get('totalprice')
     const [index, setIndex] = useState();
-    const [finalExperienceData,setfinalExperienceData] = useState()
+    const [finalExperienceData, setfinalExperienceData] = useState()
     const indexFunction = (i) => {
         if (index === i) {
             setIndex(null)
@@ -44,9 +44,9 @@ const Engageexperience = () => {
         }
     }
 
-    useEffect(()=>{
-      setfinalExperienceData(experienceData.filter((e)=>e.subCategory== filter.trim()))
-    },[filter])
+    useEffect(() => {
+        setfinalExperienceData(experienceData.filter((e) => e.subCategory == filter.trim()))
+    }, [filter])
     return (
         <>
 
@@ -80,28 +80,28 @@ const Engageexperience = () => {
                                         <img src={clock} />
                                         <h6>{element.time}</h6>
                                     </div>
-                                 { element.reviews &&  <div className='clock_wrapper'>
+                                    {/* {element.reviews && <div className='clock_wrapper'>
                                         <img className='star_img56' src={star} />
                                         <h6>{element.reviews}</h6>
-                                    </div>}
+                                    </div>} */}
 
                                     {/* <div className='clock_wrapper'>
                                         <img className='star_img56' src={cashImg} />
                                         <h6>{element.price} </h6>
                                     </div> */}
                                 </div>
-                                <p><strong>Best for:</strong> {element.bestFor}</p>
+                                {element.bestFor &&     <p><strong>Best for:</strong> {element.bestFor}</p>}
 
-                                <p><strong>Scope Tag:</strong> {element.scope}</p>
+                                {/* <p><strong>Scope Tag:</strong> {element.scope}</p> */}
                                 <div>
                                     <strong>What this experience is</strong>
                                     <p> {element.experience}</p>
                                 </div>
 
-                                <div>
+                                {/* <div>
                                     <strong>How it works</strong>
                                     <p> {element.howItWorks}</p>
-                                </div>
+                                </div> */}
                                 {/* <div>
                                     <strong>What’s included</strong>
                                     <ul style={{
@@ -116,12 +116,30 @@ const Engageexperience = () => {
 
                                     </ul>
                                 </div> */}
-                            { element.Outcomes &&    <div>
+                                {element.outcomes && <div>
                                     <strong>
                                         Outcomes
                                     </strong>
-                                    <p>{element.Outcomes}</p>
+                                    <p>{element.outcomes}</p>
                                 </div>}
+                                {element?.games &&
+                                    <>
+
+                                        <strong>
+                                            Games
+                                        </strong>
+                                        <div style={{
+                                            display: 'flex',
+                                            gap: '15px',
+                                            flexWrap: 'wrap'
+                                        }}>
+                                            {element?.games.map((e) => (
+                                                <button >{e}</button>
+                                            ))}
+
+                                        </div>
+                                    </>
+                                }
 
                                 {/* 
                                 <div className='btn_wrapper_game_experience' style={{
@@ -145,7 +163,7 @@ const Engageexperience = () => {
                                     fontSize: '1rem',
                                     marginTop: '10px',
                                     color: 'rgba(31, 144, 31, 1)',
-                                    cursor:'pointer'
+                                    cursor: 'pointer'
                                 }} onClick={(() => {
                                     navigate(`/checkout?category=${category}&subcategory=${filter}&price=${price}&totalprice=${totalprice}&experience=${element.title}`)
                                 })}>Procced</p> : <p style={{
@@ -157,7 +175,7 @@ const Engageexperience = () => {
                                     gap: '5px',
                                     fontSize: '1rem',
                                     marginTop: '10px',
-                                    cursor:'pointer'
+                                    cursor: 'pointer'
                                 }}>Select your first experience <img src={icon} /></p>}
                             </div>
 
@@ -166,7 +184,7 @@ const Engageexperience = () => {
                     ))}
 
                     {
-                        category.trim() == 'NGAGE Rythm' && EngageRythmCardData?.map((element,i)=>(
+                        category.trim() == 'NGAGE Rythm' && EngageRythmCardData?.map((element, i) => (
                             <div onClick={(() => indexFunction(i))} style={index === i ? {
                                 border: '1px solid #040480'
                             } : {}} key={element} className='game_experience_box'>
@@ -195,7 +213,7 @@ const Engageexperience = () => {
                                             <h6>{element.price} </h6>
                                         </div> */}
                                     </div>
-                                    <p><strong>Best for:</strong> {element.theme}</p>
+                                    {element.bestFor &&   <p><strong>Best for:</strong> {element.theme}</p>}
 
                                     <p><strong>Season:</strong> {element.season}</p>
 
@@ -210,23 +228,23 @@ const Engageexperience = () => {
                                         <strong>How you win</strong>
                                         <p> {element.howToWin}</p>
                                     </div>
-                                   
-                                  
+
+
                                     <p><strong>Activities Used:</strong> {element.activities.length}</p>
 
-                                    <p><strong>Prizes:</strong> {element.prizes}</p>
-                                    
-                                <div className='btn_wrapper_game_experience' style={{
-                                    display: 'flex',
-                                    justifyContent: 'flex-start',
-                                    alignItems: 'center',
-                                    gap: '10px',
-                                    flexWrap:'wrap'
-                                }}>
-                                       {element.activities.map((e)=>(
-                                        <button >{e}</button>
-                                       ))}
-                                </div> 
+                                    {/* <p><strong>Prizes:</strong> {element.prizes}</p> */}
+
+                                    <div className='btn_wrapper_game_experience' style={{
+                                        display: 'flex',
+                                        justifyContent: 'flex-start',
+                                        alignItems: 'center',
+                                        gap: '10px',
+                                        flexWrap: 'wrap'
+                                    }}>
+                                        {element.activities.map((e) => (
+                                            <button >{e}</button>
+                                        ))}
+                                    </div>
                                     {index === i ? <p style={{
                                         fontWeight: '600',
                                         marginLeft: 'auto',
@@ -234,7 +252,7 @@ const Engageexperience = () => {
                                         marginTop: '10px',
                                         color: 'rgba(31, 144, 31, 1)',
                                         cursor: 'pointer'
-                                    }} onClick={(()=>{
+                                    }} onClick={(() => {
                                         navigate(`/checkout?category=${category}&subcategory=${filter}&price=${price}&totalprice=${totalprice}&experience=${element.subTitle}`)
                                     })}>Procced</p> : <p style={{
                                         display: 'flex',

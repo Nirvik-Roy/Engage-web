@@ -357,7 +357,7 @@ const Checkout = () => {
         setPriceOfAddons(Number(Math.floor(totalCalculatedPriceofAddOns())))
     }, [addOnsFeatures])
 
-
+    console.log(selectedExperience)
     const subMitEnqury = async () => {
         setLoaders(true)
         if (
@@ -453,6 +453,11 @@ const Checkout = () => {
                                             <p>  {e?.description?.length > 150
                                                 ? e.description.slice(0, 150) + '...'
                                                 : e.description}</p>
+
+
+                                            <p>  {e?.experience?.length > 150
+                                                ? e.experience.slice(0, 150) + '...'
+                                                : e.experience}</p>
                                         </div>
 
                                     </div>
@@ -762,7 +767,7 @@ const Checkout = () => {
                             </>}
                         </div>}
 
-                        {category == 'NGAGE Rythm' && <h1 className='total_number'>Total <span>${totalprice && Number(totalprice) + priceOfAddons}.00</span></h1>}
+                        {category == 'NGAGE Rythm' && <h1 className='total_number'>Total <span>${price && Number(price) + priceOfAddons}.00</span></h1>}
                     </div>
 
                     {category == 'NGAGE Rythm' && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
