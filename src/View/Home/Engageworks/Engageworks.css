@@ -42,4 +42,7 @@
   .engage_works_content {
     width: 100%;
   }
+  .engage_works_wrapper{
+    background-image: none;
+  }
 }
