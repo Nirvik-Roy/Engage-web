@@ -230,7 +230,7 @@ const Engageexperience = () => {
                                     </div>
 
 
-                                    {/* <p><strong>Activities Used:</strong> {element.activities.length}</p> */}
+                                    <p><strong>Activities Used:</strong> {element.activities.length}</p>
 
                                     {/* <p><strong>Prizes:</strong> {element.prizes}</p> */}
 
