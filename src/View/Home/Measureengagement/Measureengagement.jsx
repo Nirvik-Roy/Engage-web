@@ -1,6 +1,6 @@
 import React from 'react'
 import './Measureengagement.css'
-import sample from '../../../assets/image 222.png'
+import sample from '../../../assets/Ngage NES Report Template V3 Aug 2025 (3).png'
 import ellipse from '../../../assets/Ellipse 254.svg'
 import star from '../../../assets/Frame 1984078715.svg'
 import event from '../../../assets/Event colour fill.svg'
@@ -12,7 +12,7 @@ import img5 from '../../../assets/Frame 1984078717.svg'
 const Measureengagement = () => {
     return (
         <>
-            <div className='measure_engagement_wrapper'>
+            <div className='measure_engagement_wrapper engage_measure_rythm_wrapper'>
                 <div className='container measure_engagement_content_wrapper'>
                     <div className='measure_engagement_content'>
                         <h1 className='heading' style={{
