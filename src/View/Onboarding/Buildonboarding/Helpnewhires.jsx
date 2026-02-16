@@ -12,11 +12,15 @@ const Helpnewhires = () => {
         }} />
         <div className='container  help_new_hires_content_wrapper'>
           <div className='help_new_hires_content'>
-            <h1 className='heading'> A smarter way to onboard</h1>
-            <p>Ngage Launchpad is a custom-built onboarding experience designed specifically for your organization.
+            {/* <h1 className='heading'> A smarter way to onboard</h1> */}
+            <h1 className='heading'>Onboarding that actually builds connection — not just compliance.</h1>
+            <p>Ngage Launchpad turns onboarding into an interactive experience new hires complete on their phone. 
               <br />
               <br />
-              Built once using your content, Launchpad becomes a reusable journey that introduces new hires to your culture, people, policies, and workplace — without repeating presentations.
+              Instead of repeating presentations, your culture, values, and expectations are delivered through structured, gamified modules that employees explore at their own pace.
+              <br />
+              <br />
+              Built once using your content. Used for every hire.
             </p>
 
           </div>

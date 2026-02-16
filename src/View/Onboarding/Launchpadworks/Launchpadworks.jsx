@@ -55,16 +55,16 @@ const Launchpadworks = () => {
     };
     const data = [
         {
-            title: 'Assemble your onboarding journey',
-            para: 'We help you turn your content into selected modules, levels, and challenges.'
+            title: 'Design your journey',
+            para: 'We help you convert your onboarding content into interactive modules and structured levels.'
         },
         {
-            title: 'New hires complete the journey',
-            para: 'Employees progress through modules during their first days — completing challenges, watching videos, and exploring your organization.'
+            title: 'New hires complete the experience',
+            para: 'Employees progress through onboarding challenges, watch short videos, answer quizzes, and explore your organization — all from their phone.'
         },
         {
-            title: 'Track onboarding with confidence',
-            para: 'HR can see completion, engagement, and retention insights through the NES report.'
+            title: 'Track onboarding impact',
+            para: 'HR sees completion rates, participation levels, and engagement insights through the NES report.'
         }
     ]
     return (

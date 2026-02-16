@@ -18,3 +18,16 @@
 .ngage_pricing_wrapper .solutions_engage_world{
     max-height: 480px;
 }
+
+@media(max-width:1199px){
+    .sub_heading{
+        width: 80% !important;
+    }
+}
+
+@media(max-width:500px){
+    .sub_heading{
+        width: 90% !important;
+        font-size: 1rem;
+    }
+}

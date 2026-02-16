@@ -41,62 +41,62 @@ const Onboardingmoudles = () => {
         {
             id: 1,
             img: cardImg,
-            title: 'Launchpad Starter — Foundations Journey',
-            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
+            title: 'Culture & Values Quest',
+            para: ' Turn company values into practical workplace behaviors through interactive scenarios that make culture clear, relatable, and actionable.'
         },
         {
             id: 2,
             img: cardImg2,
-            title: 'Launchpad Pro (AI) — Guided Culture Journey',
-            para: ' An AI-guided onboarding experience that delivers culture and compliance content through conversational scenarios and interactive challenges.'
+            title: ' Meet the Team',
+            para: ' Help new hires quickly learn departments, leaders, and reporting lines through interactive introductions and guided connection challenges.'
         },
         {
             id: 3,
             img: cardImg3,
-            title: 'Launchpad Ultimate — Immersive Onboarding Quest',
-            para: ' A fully branded, story-driven onboarding experience using real people, locations, and quests to accelerate connection and understanding.'
+            title: 'Policies & Compliance (Gamified)',
+            para: ' Transform policies into short interactive knowledge checks that improve understanding, retention, and documented completion.'
         },
         {
             id: 1,
             img: cardImg,
-            title: 'Launchpad Starter — Foundations Journey',
-            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
+            title: 'Workplace & Tools Tour',
+            para: ' Guide new hires through key locations, systems, and resources using interactive discovery challenges.'
         },
         {
             id: 2,
             img: cardImg2,
-            title: 'Launchpad Pro (AI) — Guided Culture Journey',
-            para: ' An AI-guided onboarding experience that delivers culture and compliance content through conversational scenarios and interactive challenges.'
+            title: ' Role Readiness',
+            para: ' Clarify role expectations, KPIs, and early priorities so new hires understand what success looks like from the start.'
         },
         {
             id: 3,
             img: cardImg3,
-            title: 'Launchpad Ultimate — Immersive Onboarding Quest',
-            para: ' A fully branded, story-driven onboarding experience using real people, locations, and quests to accelerate connection and understanding.'
+            title: ' Manager Welcome & Early Success Plan',
+            para: 'Align managers and new hires around clear expectations, early goals, and structured progress checkpoints.'
         },
         {
             id: 1,
             img: cardImg,
-            title: 'Launchpad Starter — Foundations Journey',
-            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
+            title: ' Customer & Brand Experience',
+            para: 'Introduce brand standards and customer expectations through practical scenarios tied directly to everyday responsibilities.'
         },
         {
             id: 2,
             img: cardImg2,
-            title: 'Launchpad Pro (AI) — Guided Culture Journey',
-            para: ' An AI-guided onboarding experience that delivers culture and compliance content through conversational scenarios and interactive challenges.'
+            title: 'Technology & Systems Onboarding',
+            para: 'Build confidence using core systems and tools through guided tasks and structured digital walkthroughs.'
         },
         {
             id: 3,
             img: cardImg3,
-            title: 'Launchpad Ultimate — Immersive Onboarding Quest',
-            para: ' A fully branded, story-driven onboarding experience using real people, locations, and quests to accelerate connection and understanding.'
+            title: ' Culture Stories',
+            para: 'Strengthen emotional connection through leadership stories and reflection prompts that reinforce identity and purpose.'
         },
         {
             id: 1,
             img: cardImg,
-            title: 'Launchpad Starter — Foundations Journey',
-            para: ' A structured onboarding journey that introduces culture, values, policies, and people through interactive challenges completed during new hires’ first week.'
+            title: 'Wellness & Workplace Etiquette',
+            para: 'Reinforce workplace conduct, inclusion, and communication standards through interactive real-world scenarios.'
         },
 
     ]
@@ -108,8 +108,8 @@ const Onboardingmoudles = () => {
 
                 <div className='container engage_rythm_content_wrapper'>
                     <h1 className='heading'>Choose your onboarding modules</h1>
-                    <p>Launchpad onboarding journeys are built using a set of modular experiences.
-                        Each organization selects the modules that best reflect its culture and onboarding needs.
+                    <p>Launchpad onboarding journeys are built using modular experiences.
+                        You select the modules that reflect your culture, structure, and compliance needs — and we assemble them into a guided onboarding path.
                     </p>
 
                 </div>

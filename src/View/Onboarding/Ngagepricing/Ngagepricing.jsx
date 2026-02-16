@@ -9,18 +9,19 @@ const Ngagepricing = () => {
     const data = [
         {
             id: 1,
-            title: 'Starter',
+            title: 'FOUNDATION',
             subhHeading: '',
             title2: 'Starting from ',
-            price: 'US$4,499',
-            onlyPrice:4499,
-            totalPrice:4499,
-            listHead: 'Includes:',
+            price: 'US$2,999',
+            onlyPrice: 2999,
+            totalPrice: 2999,
+            listHead: 'Best for structured onboarding launch',
             list: [
-                'Up to 3 onboarding modules',
+                'Up to 3 modules',
                 'Guided onboarding journey',
-                'Leaderboard & progress dashboard',
-                '1-year access • unlimited employees',
+                ' Leaderboard & dashboard',
+                '1-year access',
+                "Unlimited employees"
             ],
 
 
@@ -28,38 +29,43 @@ const Ngagepricing = () => {
         },
         {
             id: 2,
-            title: 'Pro (AI)',
+            title: 'GROWTH ',
             subhHeading: '',
             title2: 'Starting from ',
-            price: 'US$6,999',
-            onlyPrice:6999,
-            totalPrice:6999,
-            listHead: 'Includes everything in Starter, plus:',
+            price: 'US$3,999',
+            onlyPrice: 3999,
+            totalPrice: 3999,
+            mostPopular: true,
+            listHead: 'Best for multi-department onboarding',
             list: [
-                'Up to 4 onboarding modules',
-                'AI characters guiding selected modules',
-                'Gamified compliance experiences',
-                'Custom branding & reporting dashboard',
-                '1-year access • unlimited employees',
+                'Up to 6 modules',
+                'Custom branding',
+                ' NES semi-annual review',
+                ' Progression levels',
+                '1-year access',
+                "Unlimited employees"
             ],
 
 
         },
         {
             id: 3,
-            title: 'Ultimate',
-            subhHeading: '(Video + Quests)',
+            title: 'ENTERPRISE',
+            subhHeading: '',
             title2: 'Starting from ',
-            price: 'US$6,999',
-            onlyPrice:6999,
-            totalPrice:6999,
-            listHead: 'Includes everything in Starter, plus:',
+            price: 'US$7,999',
+            onlyPrice: 7999,
+            totalPrice: 7999,
+            listHead: 'Full onboarding system',
+            enterPrise:true,
             list: [
-                'All onboarding modules included',
-                'Pre-recorded manager videos',
-                'Facility exploration quests',
-                '10 game levels + NES onboarding summary',
-                '1-year access • unlimited employees',
+                'All modules',
+                'Executive video integration',
+                'Custom progression levels',
+                'Advanced analytics + retention insights',
+                'Quarterly onboarding strategy review',
+                ' 1-year access',
+                'Unlimited employees'
             ],
 
         },
@@ -67,7 +73,12 @@ const Ngagepricing = () => {
     return (
         <>
             <div className='ngage_pricing_wrapper'>
-                <h1 className='heading'>Pricing</h1>
+                <h1 className='heading'>Buy Launchpad Today</h1>
+                <h3 className='sub_heading' style={{
+                    width: '1000px',
+                    marginInline: 'auto',
+                    textAlign: 'center'
+                }}> Launchpad is built once and reused for every new hire. Pricing reflects initial design and 12 months of access. All plans include: Unlimited employees, 1-year access, NES reporting.</h3>
                 <div className='container world_solutions_wrapper' style={{
                     paddingTop: '50px'
                 }}>
@@ -81,14 +92,33 @@ const Ngagepricing = () => {
                     </div>
                     <div className='soultions_launch_pad_wrapper'>
                         {data.map((e, i) => (
-                            <div className='launch_pad' key={i}>
+                            <div className='launch_pad' style={e?.mostPopular ?{
+                                border:'1px solid #00007f'
+                            } :{}} key={i}>
                                 <div>
-                                    <h2>{e.title}</h2>
-                                    <h3>{e.title2} <span style={{
+                                <div style={{
+                                    height:'100px'
+                                }}>
+                                        {e?.mostPopular && <small style={{
+                                            display: 'block',
+                                            color: '#00007f',
+                                            fontWeight: '700',
+                                            margin: '5px 0'
+                                        }}>Most Popular</small>}
 
-                                        fontWeight: '700'
-                                    }}>{e.price}</span></h3>
-                                    <h5 >{e.listHead}</h5>
+                                        {e?.enterPrise && <small style={{
+                                            display: 'block',
+                                            color: '#00007f',
+                                            fontWeight: '700',
+                                            margin: '5px 0'
+                                        }}>Enterprise Solution</small>}
+                                        <h2>{e.title}</h2>
+                                        <h3>{e.title2} <span style={{
+                                            fontWeight: '700'
+                                        }}>{e.price}</span></h3>
+                                       
+                                </div>
+                                    <h5>{e.listHead}</h5>
                                     <ul>
                                         {e.list.map((ele) => (
                                             <>
