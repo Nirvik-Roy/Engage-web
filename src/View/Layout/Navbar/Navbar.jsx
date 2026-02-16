@@ -85,7 +85,7 @@ const Navbar = () => {
             } : {}} class="fa-solid fa-angle-down"></i>
             {gamesDropdown && <div ref={dropdownRef} onClick={((e) => e.stopPropagation())} className='solutions_dropdown'>
               <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/library'}>Games Library</NavLink>
-              <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/experience'}>Game Experience</NavLink>
+              {/* <NavLink onClick={(() => setgamesDropdown(false))} to={'/games/experience'}>Game Experience</NavLink> */}
             </div>}
           </div>
           <NavLink to={'/about-engage'}>About</NavLink>

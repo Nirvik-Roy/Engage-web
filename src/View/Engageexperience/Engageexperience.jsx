@@ -1,12 +1,10 @@
 
 import '../Games/Gamesexperience/Gamesexperience.css'
-import img from '../../assets/df6013b58f9ded6dccb7decb8b982a7fe844a2fe.png'
-import img1 from '../../assets/71797a607c6f7a762dea1a84569e07d0a0b130b4(1).png'
-import img2 from '../../assets/612a7dea21b534a14577dc9810f1802d44410b3f(1).png'
-import img3 from '../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6(1).png'
-import star from '../../assets/Frame 1984078949 (1).svg'
+
 import icon from '../../assets/svg159 (3).svg'
 import clock from '../../assets/_x33_4_x2C__watch_x2C__Alarm_x2C__clock_x2C__reminder_x2C__time.svg'
+import season from '../../assets/glyph_copy_2.svg'
+import outcome from '../../assets/Layer_x0020_1.svg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -14,7 +12,6 @@ import Pagination from '../../Components/Pagination/Pagination';
 import { useEffect, useState } from 'react'
 import search from '../../assets/Search (1).svg'
 import filterImg from '../../assets/filter_list.svg'
-import cashImg from '../../assets/Frame (2).svg'
 import EngageFilterSidebar from './EngageFilterSidebar.jsx'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { experienceData } from './ExpereienceData.js'
@@ -62,15 +59,11 @@ const Engageexperience = () => {
             <div className="games_library_wrapper">
                 <div className="games_experience_box_wrapper">
                     {category != 'NGAGE Rythm' && finalExperienceData?.map((element, i) => (
-                        <div onClick={(() => indexFunction(i))} style={index === i ? {
-                            border: '1px solid #040480'
-                        } : {}} key={element} className='game_experience_box'>
-                            <div className='game_experience_img'>
-                                <Slider {...settings}>
-                                    {[1, 2, 3].map((e) => (
-                                        <img key={e} src={element.img} />
-                                    ))}
-                                </Slider>
+                        <div key={element} className='game_experience_box'>
+                            <div className='game_experience_img '>
+
+                                <img src={element.img} />
+
                             </div>
                             <div className='game_experience_details'>
                                 <h5>{element.subTitle}</h5>
@@ -80,6 +73,7 @@ const Engageexperience = () => {
                                         <img src={clock} />
                                         <h6>{element.time}</h6>
                                     </div>
+
                                     {/* {element.reviews && <div className='clock_wrapper'>
                                         <img className='star_img56' src={star} />
                                         <h6>{element.reviews}</h6>
@@ -90,7 +84,7 @@ const Engageexperience = () => {
                                         <h6>{element.price} </h6>
                                     </div> */}
                                 </div>
-                                {element.bestFor &&     <p><strong>Best for:</strong> {element.bestFor}</p>}
+                                {element.bestFor && <p><strong>Best for:</strong> {element.bestFor}</p>}
 
                                 {/* <p><strong>Scope Tag:</strong> {element.scope}</p> */}
                                 <div>
@@ -157,26 +151,18 @@ const Engageexperience = () => {
                                     }}>Scavenger Hunt</button>}
 
                                 </div> */}
-                                {index === i ? <p style={{
-                                    fontWeight: '600',
-                                    marginLeft: 'auto',
-                                    fontSize: '1rem',
-                                    marginTop: '10px',
-                                    color: 'rgba(31, 144, 31, 1)',
-                                    cursor: 'pointer'
-                                }} onClick={(() => {
+                                { <button className='base_btn_design' onClick={(() => {
                                     navigate(`/checkout?category=${category}&subcategory=${filter}&price=${price}&totalprice=${totalprice}&experience=${element.title}`)
-                                })}>Procced</p> : <p style={{
-                                    display: 'flex',
-                                    justifyContent: 'flex-end',
-                                    alignItems: 'center',
-                                    color: '#040480',
-                                    fontWeight: '600',
-                                    gap: '5px',
-                                    fontSize: '1rem',
-                                    marginTop: '10px',
-                                    cursor: 'pointer'
-                                }}>Select your first experience <img src={icon} /></p>}
+                                })} style={{
+                                        background: 'transparent',
+                                        border: '1px solid #00007f',
+                                        color: '#00007f',
+                                        marginLeft: 'auto',
+                                        marginTop: '30px',
+                                        padding: '10px 10px',
+                                        borderRadius: '25px',
+                                        marginBottom: '0px'
+                                    }}>Select your first experience <img src={icon} /></button>}
                             </div>
 
                         </div>
@@ -185,17 +171,12 @@ const Engageexperience = () => {
 
                     {
                         category.trim() == 'NGAGE Rythm' && EngageRythmCardData?.map((element, i) => (
-                            <div onClick={(() => indexFunction(i))} style={index === i ? {
-                                border: '1px solid #040480'
-                            } : {}} key={element} className='game_experience_box'>
-                                <div className='game_experience_img'>
-                                    <Slider {...settings}>
-                                        {[1, 2, 3].map((e) => (
-                                            <img key={e} src={element.img} />
-                                        ))}
-                                    </Slider>
+                            <div  key={element} className='game_experience_box'>
+                                <div className='game_experience_img engage_rythm_experience_cardImg'>
+                                    <img src={element.img} />
+
                                 </div>
-                                <div className='game_experience_details'>
+                                <div className='game_experience_details engage_rythm_experience_details'>
                                     <h5>{element.name}</h5>
                                     <h1>{element.subTitle}</h1>
                                     <div className='clock_star_wrapper'>
@@ -203,6 +184,16 @@ const Engageexperience = () => {
                                             <img src={clock} />
                                             <h6>{element.duration}</h6>
                                         </div>
+
+                                        {element.season && <div className='clock_wrapper'>
+                                            <img src={season} />
+                                            <h6>{element.season}</h6>
+                                        </div>}
+
+                                        {element.outcome && <div className='clock_wrapper'>
+                                            <img src={outcome} />
+                                            <h6>{element.outcome}</h6>
+                                        </div>}
                                         {/* {element.reviews && <div className='clock_wrapper'>
                                             <img className='star_img56' src={star} />
                                             <h6>{element.reviews}</h6>
@@ -213,11 +204,8 @@ const Engageexperience = () => {
                                             <h6>{element.price} </h6>
                                         </div> */}
                                     </div>
-                                    {element.bestFor &&   <p><strong>Best for:</strong> {element.theme}</p>}
+                                    {element.bestFor && <p><strong>Best for:</strong> {element.theme}</p>}
 
-                                    <p><strong>Season:</strong> {element.season}</p>
-
-                                    <p><strong>Outcome:</strong> {element.outcome}</p>
 
                                     <div>
                                         <strong>What it’s about</strong>
@@ -230,7 +218,7 @@ const Engageexperience = () => {
                                     </div>
 
 
-                                    <p><strong>Activities Used:</strong> {element.activities.length}</p>
+                                    <p><strong>Activities Used</strong></p>
 
                                     {/* <p><strong>Prizes:</strong> {element.prizes}</p> */}
 
@@ -245,26 +233,16 @@ const Engageexperience = () => {
                                             <button >{e}</button>
                                         ))}
                                     </div>
-                                    {index === i ? <p style={{
-                                        fontWeight: '600',
+                                    {<button onClick={(() => navigate(`/checkout?category=${category}&subcategory=${filter}&price=${price}&totalprice=${totalprice}&experience=${element.subTitle}`))} className='base_btn_design' style={{
+                                        background: 'transparent',
+                                        border: '1px solid #00007f',
+                                        color: '#00007f',
                                         marginLeft: 'auto',
-                                        fontSize: '1rem',
-                                        marginTop: '10px',
-                                        color: 'rgba(31, 144, 31, 1)',
-                                        cursor: 'pointer'
-                                    }} onClick={(() => {
-                                        navigate(`/checkout?category=${category}&subcategory=${filter}&price=${price}&totalprice=${totalprice}&experience=${element.subTitle}`)
-                                    })}>Procced</p> : <p style={{
-                                        display: 'flex',
-                                        justifyContent: 'flex-end',
-                                        alignItems: 'center',
-                                        color: '#040480',
-                                        fontWeight: '600',
-                                        gap: '5px',
-                                        fontSize: '1rem',
-                                        marginTop: '10px',
-                                        cursor: 'pointer'
-                                    }}>Select your first experience <img src={icon} /></p>}
+                                        marginTop: '30px',
+                                        padding: '10px 10px',
+                                        borderRadius: '25px',
+                                        marginBottom: '0px'
+                                    }}>Select your first experience <img src={icon} /></button>}
                                 </div>
 
                             </div>

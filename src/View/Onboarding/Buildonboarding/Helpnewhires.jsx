@@ -13,7 +13,10 @@ const Helpnewhires = () => {
         <div className='container  help_new_hires_content_wrapper'>
           <div className='help_new_hires_content'>
             {/* <h1 className='heading'> A smarter way to onboard</h1> */}
-            <h1 className='heading'>Onboarding that actually builds connection — not just compliance.</h1>
+            <h1 className='heading' style={{
+              lineHeight: '3.8rem',
+              marginBottom:'20px'
+            }}>Onboarding that actually builds connection — not just compliance.</h1>
             <p>Ngage Launchpad turns onboarding into an interactive experience new hires complete on their phone. 
               <br />
               <br />

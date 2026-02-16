@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../../assets/Group 1597882936.png'
+import img from '../../../assets/Rectangle 6674 (10).png'
 import './LiveEvents.css'
 const LiveEvents = () => {
     return (

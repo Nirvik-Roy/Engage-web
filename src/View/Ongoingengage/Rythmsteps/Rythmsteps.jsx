@@ -27,7 +27,7 @@ const Rythmsteps = () => {
                     <div className='rythm_img_wrapper'>
                         <img src={img} />
                         <h1>Start building your engagement rhythm</h1>
-                        <h4>Rhythm works best for:</h4>
+                        <h4>Rhythm works best for</h4>
                     </div>
                     <div className='rythm_steps_wrapper'>
                         <div className='rythm_step' style={{

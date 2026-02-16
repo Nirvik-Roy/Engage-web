@@ -135,7 +135,7 @@ export const experienceData = [
     },
     {
         subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
-        subCategory: "Starter",
+        subCategory: "FOUNDATION",
         category: "NGAGE Launchpad",
         title: "Launchpad Starter — Foundations Journey",
         time: "5 Levels (self-paced over Week 1)",
@@ -152,7 +152,7 @@ export const experienceData = [
     },
     {
         subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
-        subCategory: "Pro (AI)",
+        subCategory: "GROWTH",
         category: "NGAGE Launchpad",
         title: "Launchpad Pro (AI) — Guided Culture Journey",
         time: "5 Themed Levels (self-paced over Week 1)",
@@ -169,7 +169,7 @@ export const experienceData = [
     },
     {
         subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
-        subCategory: "Ultimate",
+        subCategory: "ENTERPRISE",
         category: "NGAGE Launchpad",
         title: "Launchpad Ultimate — Immersive Onboarding Quest",
         time: "10 Levels (self-paced over Week 1–2)",

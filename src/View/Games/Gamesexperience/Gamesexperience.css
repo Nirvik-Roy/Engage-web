@@ -1,127 +1,131 @@
-.games_experience_box_wrapper{
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
+.games_experience_box_wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
-.game_experience_box{
-    border-radius: 15px;
-    padding: 20px;
-    border: 1px solid rgba(244, 244, 244, 1);
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.game_experience_box {
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(244, 244, 244, 1);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07);
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
 }
-.game_experience_details{
-    width: 52%;
-    padding: 30px 20px;
-    background-color: rgba(249, 249, 249, 1);
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    justify-content: center;
-    border-radius: 10px;
+.game_experience_details {
+  width: 52%;
+  padding: 10px 20px;
+  background-color: rgba(249, 249, 249, 1);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  border-radius: 10px;
 }
-.game_experience_img{
-    width: 45%;
-    border-radius: 10px;
+.engage_rythm_experience_cardImg {
+  max-height: 480px !important;
 }
-.game_experience_img img{
-    width: 100%;
-    height: auto;
-    max-height:535px;
-    border-radius: 20px;
-    object-fit: cover;
+.game_experience_img {
+  width: 45%;
+  border-radius: 10px;
+  max-height: 541px;
 }
-.game_experience_img .slick-dots{
-    bottom: 10px !important;
+.game_experience_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.game_experience_img .slick-dots {
+  bottom: 10px !important;
 }
 .game_experience_img .slick-dots li.slick-active button:before {
-    color: #fff;
+  color: #fff;
 }
-.game_experience_img .slick-dots li button:before{
-    color: #fff;
+.game_experience_img .slick-dots li button:before {
+  color: #fff;
 }
-.game_experience_details h5{
-    color: rgba(19, 19, 19, 1);
-    letter-spacing: 0.2rem;
-    font-weight: 700;
-    font-size: 15px;
+.game_experience_details h5 {
+  color: rgba(19, 19, 19, 1);
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  font-size: 15px;
 }
-.game_experience_details button{
-    width: fit-content;
+.game_experience_details button {
+  width: fit-content;
 }
-.game_experience_details h1{
-    font-weight: 700;
-    color: rgba(19, 19, 19, 1);
-    font-size: 2rem;
+.game_experience_details h1 {
+  font-weight: 700;
+  color: rgba(19, 19, 19, 1);
+  font-size: 2rem;
 }
-.clock_star_wrapper{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
+.clock_star_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
 }
-.clock_wrapper{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
+.clock_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
 }
-.clock_wrapper h6{
-    font-size: 0.8rem;
-    font-weight: 600;
+.clock_wrapper h6 {
+  font-size: 0.8rem;
+  font-weight: 600;
 }
-.game_experience_details p{
-    font-weight: 400;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+.game_experience_details p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
-.game_experience_details button{
-    background-color: rgba(1, 130, 252, 1);
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+.game_experience_details button {
+  background-color: rgba(1, 130, 252, 1);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
-@media(max-width:1199px){
-    .game_experience_box{
-        flex-direction: column;
-    }
-    .game_experience_img{
-        width: 100%;
-    }
-    .game_experience_img img{
+@media (max-width: 1199px) {
+  .game_experience_box {
+    flex-direction: column;
+  }
+  .game_experience_img {
     width: 100%;
-    height: auto;
+    max-height: max-content !important;
+  }
+  .game_experience_img img {
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
     object-fit: cover;
+  }
+  .game_experience_details {
+    width: 100%;
+  }
 }
-    .game_experience_details{
-        width: 100%;
-    }
+@media (max-width: 480px) {
+  .clock_star_wrapper {
+    gap: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .star_img56 {
+    width: auto;
+  }
+  .game_experience_details h1 {
+    font-size: 1.7rem;
+  }
+
+  .btn_wrapper_game_experience button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
 }
-@media(max-width:480px){
-    .clock_star_wrapper{
-        gap: 15px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .star_img56{
-        width: auto;
-    }
-    .game_experience_details h1{
-        font-size: 1.7rem;
-    }
-    
-    .btn_wrapper_game_experience button{
-        padding: 5px 10px;
-        font-size: 0.8rem;
-    }
-}
-@media(max-width:420px){
-    .btn_wrapper_game_experience{
-        flex-wrap: wrap;
-    }
+@media (max-width: 420px) {
+  .btn_wrapper_game_experience {
+    flex-wrap: wrap;
+  }
 }

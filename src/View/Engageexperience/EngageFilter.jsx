@@ -70,17 +70,17 @@ const EngageFilter = () => {
             title: 'NGAGE Launchpad',
             list: [
                 {
-                    title: 'Starter',
+                    title: 'FOUNDATION',
                     price: 4499,
                     totalPrice: 4499
                 },
                 {
-                    title: 'Pro (AI)',
+                    title: 'GROWTH',
                     price: 6999,
                     totalPrice: 6999
                 },
                 {
-                    title: 'Ultimate',
+                    title: 'ENTERPRISE',
                     price: 6999,
                     totalPrice: 6999
                 },

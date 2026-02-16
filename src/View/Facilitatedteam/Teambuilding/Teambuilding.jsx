@@ -18,7 +18,9 @@ const Teambuilding = () => {
                         <img src={img} />
                     </div>
                     <div className='build_culture_content'>
-                        <h1 className='heading'>Turn team building into shared moments — not spectator activities.</h1>
+                        <h1 className='heading' style={{
+                            lineHeight:'3.3rem'
+                        }}>Turn team building into shared moments — not spectator activities.</h1>
                         <p>Too often, team building sessions engage the same few people while others sit out.<br /> <br />
                             Ngage Play Day is designed to create inclusive, facilitator-led team building experiences where participation is built in — not left to chance. <br />
                             <br />

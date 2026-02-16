@@ -37,8 +37,8 @@ const Rythmpackage = () => {
                     point1: '3-Day Ready-to-Run experience',
                     point2: '150 users included ($2.25 /extra user)',
                     point3: '1 Engagement Report (NES)',
-                    point4:'Top 3 Featured Prizes included',
-                    point5:'Ngage Experience Support'
+                    point4: 'Top 3 Featured Prizes included',
+                    point5: 'Ngage Experience Support'
                 },
 
             ],
@@ -49,26 +49,15 @@ const Rythmpackage = () => {
         <>
             <div className='rythm_package_wrapper'>
 
-                 <h1 className='heading' style={{
+                <h1 className='heading' style={{
                     textAlign: 'center',
                 }}>
                     Buy a Rhythm Package Today
-                </h1> 
-
-                <h1 className='heading' style={{
-                    textAlign: 'center',
-                    fontSize:'2rem'
-                }}>
-                    Subscribe to Rhythm
                 </h1>
+
+
                 <Rythmpackageprices />
 
-                <h1 className='heading' style={{
-                    textAlign: 'center',
-                    margin: '70px 0 20px 0'
-                }}>
-                    Activate Rhythm
-                </h1>
                 <div style={{
                     padding: '40px 0'
                 }} className='container world_solutions_wrapper'>
@@ -78,10 +67,18 @@ const Rythmpackage = () => {
 
                     </div>
                     <div className='rythm_spark_wrapper'>
+
+                        <h1 className='heading' style={{
+                            fontSize:'3rem'
+                        }}>
+                            Activate Rhythm
+                        </h1>
                         <h1 style={{
                             fontSize: '1rem',
-                            lineHeight: '1.2rem',
-                            gridColumn: '1/-1'
+                            lineHeight: '1.4rem',
+                            gridColumn: '1/-1',
+                            fontWeight:'500',
+                            marginTop:'-20px'
                         }}>Run Rhytm once. Boost engagement now. No facilitation required. Runs alongside work with minimal disruption. </h1>
                         {data.map((e, i) => (
                             <div className='launch_pad' key={i}>
@@ -100,7 +97,7 @@ const Rythmpackage = () => {
                                                 <li><img src={listimg} />{ele.point1}</li>
                                                 <li><img src={listimg} />{ele.point2}</li>
                                                 <li><img src={listimg} />{ele.point3}</li>
-                                             {  ele?.point4 && <li><img src={listimg} />{ele.point4}</li>}
+                                                {ele?.point4 && <li><img src={listimg} />{ele.point4}</li>}
                                                 {ele?.point5 && <li><img src={listimg} />{ele.point5}</li>}
                                             </ul>
                                             <button className='base_btn_design' onClick={() => {

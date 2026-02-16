@@ -26,8 +26,8 @@ const Onboarding = () => {
                     <div className='measure_engagement_content'>
                         <h1 className='heading' style={{
                             marginBottom: '15px',
-                            fontSize: '3.5rem',
-                            lineHeight: '4.5rem'
+                            fontSize: '3.2rem',
+                            lineHeight: '4rem'
                         }}>Measure onboarding with confidence</h1>
 
                         <div style={{
@@ -71,8 +71,8 @@ const Onboarding = () => {
                     </div>
                 </div>
             </div>
-            <Launchpadsteps />
             <Ngagepricing />
+            <Launchpadsteps />
             <Buildengagement demobtn={true} explorebtn={true} para={'Ngage Launchpad helps organizations build culture, clarity, and connection from the first week.'} title={'Start onboarding the Ngage way'} />
         </>
     )

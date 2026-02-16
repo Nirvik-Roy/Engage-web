@@ -77,7 +77,8 @@ const Ngagepricing = () => {
                 <h3 className='sub_heading' style={{
                     width: '1000px',
                     marginInline: 'auto',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    fontWeight:'500'
                 }}> Launchpad is built once and reused for every new hire. Pricing reflects initial design and 12 months of access. All plans include: Unlimited employees, 1-year access, NES reporting.</h3>
                 <div className='container world_solutions_wrapper' style={{
                     paddingTop: '50px'
@@ -92,13 +93,14 @@ const Ngagepricing = () => {
                     </div>
                     <div className='soultions_launch_pad_wrapper'>
                         {data.map((e, i) => (
-                            <div className='launch_pad' style={e?.mostPopular ?{
-                                border:'1px solid #00007f'
-                            } :{}} key={i}>
+                            <div className='launch_pad' key={i}>
                                 <div>
-                                <div style={{
-                                    height:'100px'
-                                }}>
+                                    <div style={{
+                                        height: '120px',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'end',
+                                    }}>
                                         {e?.mostPopular && <small style={{
                                             display: 'block',
                                             color: '#00007f',

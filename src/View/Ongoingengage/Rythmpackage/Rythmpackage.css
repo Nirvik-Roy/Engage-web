@@ -27,13 +27,23 @@
   letter-spacing: 0.1rem;
 }
 .rythm_package_wrapper .solutions_engage_world {
-  height: 60dvh;
-  max-height: 400px;
+    height: 80dvh;
+    max-height: 600px;
 }
 .launchpad_heading{
-  min-height: 140px;
+  height: 140px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.185);
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 20px;
+}
+.launch_pad{
+  transition: 0.2s linear all;
+}
+.launch_pad:hover{
+  border: 1px solid #00007f;
 }
 .launchpad_heading h2{
   background-color: rgba(218, 228, 255, 1);

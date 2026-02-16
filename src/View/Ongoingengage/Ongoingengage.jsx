@@ -40,12 +40,14 @@ const Ongoingengage = () => {
                     <div className='measure_engagement_content'>
                         <h1 className='heading' style={{
                             marginBottom: '15px',
-                            fontSize: '3.8rem',
-                            lineHeight: '5rem'
+                            fontSize: '3.5rem',
+                            lineHeight: '4.1rem'
                         }}>Measure engagement with confidence</h1>
                         <p>Ngage tracks participation and engagement trends using the Ngage Engagement Score (NES) — a clear, leadership-ready view of engagement over time.
                         </p>
-                        <div className='content_wrapper5656'>
+                        <div className='content_wrapper5656' style={{
+                            paddingBottom:'0px'
+                        }}>
                             <div style={{
                                 marginBottom: '15px'
                             }} className='measure_box_div_wrapper'>

@@ -77,7 +77,9 @@ const Chooseyourengagelive = () => {
           </div>
           <div className='rythm_prices_wrapper'>
             <div className='team_building_head'>
-              <h1 className='heading'>Choose your Ngage Live experience format</h1>
+              <h1 className='heading'  style={{
+                lineHeight:'3.5rem'
+              }}>Choose your Ngage Live experience format</h1>
               {/* <h6 style={{
                 fontSize: '1.6rem',
               }}>Signature Experience</h6>

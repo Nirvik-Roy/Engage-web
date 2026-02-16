@@ -41,7 +41,7 @@ const NavbarSidebar = ({ show, setShow }) => {
                         }:{}} onClick={(() => { setgamesDropdown(!gamesDropdown) })}>Games <i class="fa-solid fa-angle-down"></i></p>
                         {gamesDropdown && <div className='solution_dropdown5463'>
                             <NavLink to={'/games/library'} >Games Library</NavLink>
-                            <NavLink to={'/games/experience'}>Games Experience</NavLink>
+                            {/* <NavLink to={'/games/experience'}>Games Experience</NavLink> */}
                         </div>}
                     </div>
                     <NavLink to={'/contact-us'}>Contact Us</NavLink>

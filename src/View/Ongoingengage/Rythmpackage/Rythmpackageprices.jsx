@@ -70,7 +70,9 @@ const Rythmpackageprices = () => {
     ]
     return (
         <>
-            <div className='container rythm_package_prices_wrapper'>
+            <div className='container rythm_package_prices_wrapper' style={{
+                padding:'32px 0'
+            }}>
                 <div className='solutions_engage_world'>
                     <img src={img} />
                     <h1 style={{
@@ -81,29 +83,38 @@ const Rythmpackageprices = () => {
 
                 </div>
                 <div className='rythm_prices_wrapper'>
+                    <h1 className='heading' style={{
+                        fontSize: '2rem',
+                        textAlign: 'left',
+                        gridColumn: '1/-1',
+                        marginBottom:'0px'
+                    }}>
+                        Subscribe to Rhythm
+                    </h1>
                     <h1 style={{
                         fontSize: '1rem',
-                        lineHeight: '1.2rem',
+                        lineHeight: '1.4rem',
                         textAlign: 'left',
-                        gridColumn: '1/-1'
+                        gridColumn: '1/-1',
+                        marginTop:'-20px',
+                        fontWeight:'600'
                     }}>Choose your rhythm once, keep engagement moving all year. No facilitator required. Runs alongside work with minimal disruption.</h1>
                     {data.map((e, i) => (
                         <div className='launch_pad' style={e?.mostPopular ? {
                             padding: '20px 20px 40px 20px',
-                            border:'1px solid #010085',
-                        }:{
-                                padding: '20px 20px 40px 20px'
+                        } : {
+                            padding: '20px 20px 40px 20px'
                         }} key={i}>
                             <div>
-                            <div  className='launchpad_heading' >
-                                   {e?.mostPopular && <span style={{
-                                        color:'rgba(1, 3, 248, 1)',
-                                        fontWeight:'700',
-                                        fontSize:'0.9rem',
-                                        letterSpacing:'0.1rem',
-                                        marginBottom:'5px',
-                                        display:'block'
-                                   }}>Most Popular</span>}
+                                <div className='launchpad_heading' >
+                                    {e?.mostPopular && <span style={{
+                                        color: 'rgba(1, 3, 248, 1)',
+                                        fontWeight: '700',
+                                        fontSize: '0.9rem',
+                                        letterSpacing: '0.1rem',
+                                        marginBottom: '5px',
+                                        display: 'block'
+                                    }}>Most Popular</span>}
                                     <h2>{e.title}</h2>
                                     <h3 style={{
                                         fontWeight: '800',
@@ -115,11 +126,11 @@ const Rythmpackageprices = () => {
                                         letterSpacing: '0.3rem',
                                         fontSize: '1rem',
                                         fontWeight: '400',
-                                        marginTop:'-15px'
+                                        marginTop: '-15px'
                                     }}>{e.title3}</h4>
-                            </div>
-                              
-                              
+                                </div>
+
+
                                 {e.list.map((ele,) => (
                                     <>
                                         <h5 style={{
@@ -132,7 +143,7 @@ const Rythmpackageprices = () => {
                                             <li><img src={listimg} />{ele.point3}</li>
                                             {ele?.point4 && <li><img src={listimg} />{ele.point4}</li>}
                                             {ele?.point5 && <li><img src={listimg} />{ele.point5}</li>}
-                                            
+
                                         </ul>
 
                                     </>

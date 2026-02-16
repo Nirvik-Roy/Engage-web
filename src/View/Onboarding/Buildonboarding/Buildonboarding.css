@@ -13,8 +13,15 @@
 .help_new_hires_img {
     width: 48%;
     border-radius: 15px;
-    height: 110dvh;
-    max-height: 764px;
+    height: 80dvh;
+    max-height: 556px;
+    overflow: hidden;
+}
+.build_it_once_img {
+    width: 48%;
+    border-radius: 15px;
+    height: 60dvh;
+    max-height: 417px;
     overflow: hidden;
 }
 .help_new_hires_img img{
