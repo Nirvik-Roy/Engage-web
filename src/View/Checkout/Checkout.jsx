@@ -752,7 +752,8 @@ const Checkout = () => {
                             <h3>Payment Summary</h3>
                             <p style={{
                                 marginBottom: '10px'
-                            }}>Plan Price <span>${price && price}.00</span></p>
+                            }}>Plan Price <span>${price && price}.00 {subcategory == 'Boost Rhythm' ?  '*4' : subcategory == 'Build Rhythm' ?
+                                    '*12' : subcategory == 'Sustain Rhythm' ? '*12' : ""}</span></p>
                             {/* <p>Discount <span>-$0.00</span></p> */}
 
                             {addOnsFeatures?.length > 0 && <>
@@ -767,7 +768,7 @@ const Checkout = () => {
                             </>}
                         </div>}
 
-                        {category == 'NGAGE Rythm' && <h1 className='total_number'>Total <span>${price && Number(price) + priceOfAddons}.00</span></h1>}
+                        {category == 'NGAGE Rythm' && <h1 className='total_number'>Total <span>${totalprice && Number(totalprice) + priceOfAddons}.00</span></h1>}
                     </div>
 
                     {category == 'NGAGE Rythm' && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
