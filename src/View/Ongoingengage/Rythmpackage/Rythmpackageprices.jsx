@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img from '../../../assets/Rectangle 6679 (4).png'
 import listimg from '../../../assets/Vector (8).svg'
 import buttonIconNew from '../../../assets/svg159.svg'
 import { useNavigate } from 'react-router-dom'
+import ComingSoonModal from './ComingSoonModal'
 
 const Rythmpackageprices = () => {
     const navigate = useNavigate()
+    const [comingSoonModal, setcomingSoonModal] = useState(false)
     const data = [
         {
             id: 1,
@@ -14,6 +16,7 @@ const Rythmpackageprices = () => {
             title3: 'Billed Annually',
             onlyPrice: 1249,
             totalPrice: 4996,
+            comingSoon: true,
             list: [
                 {
                     title: 'Quarterly engagement pulse',
@@ -34,6 +37,7 @@ const Rythmpackageprices = () => {
             title3: 'Billed Annually',
             onlyPrice: 999,
             totalPrice: 11988,
+            comingSoon: true,
             list: [
                 {
                     title: 'Monthly culture-building rhythm',
@@ -54,6 +58,7 @@ const Rythmpackageprices = () => {
             title3: 'Billed Annually',
             onlyPrice: 1999,
             totalPrice: 23988,
+            comingSoon: true,
             list: [
                 {
                     title: 'Full-scale engagement system',
@@ -70,8 +75,9 @@ const Rythmpackageprices = () => {
     ]
     return (
         <>
+            {comingSoonModal && <ComingSoonModal setcomingSoonModal={setcomingSoonModal} />}
             <div className='container rythm_package_prices_wrapper' style={{
-                padding:'32px 0'
+                padding: '32px 0'
             }}>
                 <div className='solutions_engage_world'>
                     <img src={img} />
@@ -87,7 +93,7 @@ const Rythmpackageprices = () => {
                         fontSize: '2rem',
                         textAlign: 'left',
                         gridColumn: '1/-1',
-                        marginBottom:'0px'
+                        marginBottom: '0px'
                     }}>
                         Subscribe to Rhythm
                     </h1>
@@ -96,17 +102,18 @@ const Rythmpackageprices = () => {
                         lineHeight: '1.4rem',
                         textAlign: 'left',
                         gridColumn: '1/-1',
-                        marginTop:'-20px',
-                        fontWeight:'600'
+                        marginTop: '-20px',
+                        fontWeight: '600'
                     }}>Choose your rhythm once, keep engagement moving all year. No facilitator required. Runs alongside work with minimal disruption.</h1>
                     {data.map((e, i) => (
                         <div className='launch_pad' style={e?.mostPopular ? {
-                            padding: '20px 20px 40px 20px',
+                            padding: '20px 20px 20px 20px',
                         } : {
-                            padding: '20px 20px 40px 20px'
+                            padding: '20px 20px 20px 20px'
                         }} key={i}>
                             <div>
                                 <div className='launchpad_heading' >
+
                                     {e?.mostPopular && <span style={{
                                         color: 'rgba(1, 3, 248, 1)',
                                         fontWeight: '700',
@@ -148,14 +155,29 @@ const Rythmpackageprices = () => {
 
                                     </>
                                 ))}
+
                             </div>
 
-                            <button className='base_btn_design' onClick={() => {
+                            {!e?.comingSoon && <button className='base_btn_design' onClick={() => {
                                 navigate({
                                     pathname: '/engage/experience',
                                     search: `?category=NGAGE Rhythm&price=${e.onlyPrice}&filter=${e.title}&totalprice=${e.totalPrice}`
                                 })
-                            }}>Buy Now <img src={buttonIconNew} /></button>
+                            }}>Buy Now <img src={buttonIconNew} /></button>}
+
+                            {e?.comingSoon && <span style={{
+                                color: 'red',
+                                fontWeight: '700',
+                                fontSize: '0.9rem',
+                                letterSpacing: '0.1rem',
+                                display: 'block',
+                                marginTop: '15px',
+                                width: 'fit-content'
+                            }}>Coming Soon</span>}
+                            {e?.comingSoon && <button style={{
+                                marginTop:'15px'
+                            }} onClick={(() => setcomingSoonModal(true))} className='base_btn_design'>Join the waitlist <img src={buttonIconNew} /></button>}
+
                         </div>
                     ))}
 
