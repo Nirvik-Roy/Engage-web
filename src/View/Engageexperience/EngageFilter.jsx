@@ -37,7 +37,7 @@ const EngageFilter = () => {
 
     const filterData = [
         {
-            title: 'NGAGE Rythm',
+            title: 'NGAGE Rhythm',
             list: [
                 {
                     title: 'Rhythm Spark',
