@@ -73,7 +73,7 @@ const Checkout = () => {
 
     const addOnData = [
         {
-            title: 'NGAGE Rythm',
+            title: 'NGAGE Rhythm',
             addOns: [
                 {
                     title: 'Grand Prizes',
@@ -221,7 +221,7 @@ const Checkout = () => {
     }, [])
 
     useEffect(() => {
-        if (category == 'NGAGE Rythm') {
+        if (category == 'NGAGE Rhythm') {
             setselectedExperience(EngageRythmCardData.filter((e) => e.subTitle == experience))
 
         } else {
@@ -679,7 +679,7 @@ const Checkout = () => {
                             <div className='order_head_left' style={{
                                 rowGap: '0'
                             }}>
-                                {category != 'NGAGE Rythm' && <p>Starting from</p>}
+                                {category != 'NGAGE Rhythm' && <p>Starting from</p>}
                                 <h3>${price && price}.00</h3>
                             </div>
                         </div>
@@ -732,7 +732,7 @@ const Checkout = () => {
 
                         </div>}
 
-                        {(category != 'NGAGE Rythm' && addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
+                        {(category != 'NGAGE Rhythm' && addOnsFeatures?.length > 0) && <div className='payment_summary_wrapper' style={{
                             border: 'none',
                             marginTop: '-50px'
                         }}>
@@ -748,7 +748,7 @@ const Checkout = () => {
                                 }}>{e?.title}<span>${e?.price} <small onClick={(() => deleteFunc(e.id))}>Remove</small></span></p>
                             ))}
                         </div>}
-                        {category == 'NGAGE Rythm' && <div className='payment_summary_wrapper'>
+                        {category == 'NGAGE Rhythm' && <div className='payment_summary_wrapper'>
                             <h3>Payment Summary</h3>
                             <p style={{
                                 marginBottom: '10px'
@@ -768,12 +768,12 @@ const Checkout = () => {
                             </>}
                         </div>}
 
-                        {category == 'NGAGE Rythm' && <h1 className='total_number'>Total <span>${totalprice && Number(totalprice) + priceOfAddons}.00</span></h1>}
+                        {category == 'NGAGE Rhythm' && <h1 className='total_number'>Total <span>${totalprice && Number(totalprice) + priceOfAddons}.00</span></h1>}
                     </div>
 
-                    {category == 'NGAGE Rythm' && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
+                    {category == 'NGAGE Rhythm' && <button disabled={loaders} onClick={(() => paymentRequest())} className='proceed_btn'>{loaders ? 'Proceeding....' : 'Proceed to pay'}<img src={icon2} /></button>}
 
-                    {category != 'NGAGE Rythm' && <button onClick={(() => subMitEnqury())} className='proceed_btn'>
+                    {category != 'NGAGE Rhythm' && <button onClick={(() => subMitEnqury())} className='proceed_btn'>
 
                         {loaders ? "Submitting.." : 'Submit Enquiry'} <img src={icon2} /></button>}
                 </div>
