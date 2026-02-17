@@ -225,7 +225,6 @@ const Checkout = () => {
             setselectedExperience(EngageRythmCardData.filter((e) => e.subTitle == experience))
 
         } else {
-
             setselectedExperience(experienceData.filter((e) => e.title == experience))
         }
     }, [])
@@ -441,7 +440,7 @@ const Checkout = () => {
                                                 display: 'flex',
                                                 justifyContent: 'space-between',
                                             }}>
-                                                <h4>{category == 'NGAGE Rythm' ? e.subTitle : e.title}</h4>
+                                                <h4>{category == 'NGAGE Rhythm' ? e.subTitle : e.title}</h4>
 
                                                 <span style={{
                                                     fontSize: '0.9rem',

@@ -19,7 +19,7 @@ import salesSprint from '../../assets/1dd31dac9e356c1160e31c950b7780716e6e7d5d.p
 import hiddentalents from '../../assets/091ca18ad4cae01028d1012bab19f788c9c0a3ad.png'
 export const EngageRythmCardData = [
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Culture Quest 1",
         category: "NGAGE Rhythm",
         img: img1,
@@ -34,7 +34,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Wellness Recharge",
         category: "NGAGE Rhythm",
         img: img2,
@@ -49,7 +49,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "World Cup Challenge",
         category: "NGAGE Rhythm",
         img:img3,
@@ -64,7 +64,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Team Trivia League",
         category: "NGAGE Rhythm",
         img: img4,
@@ -79,7 +79,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Easter Scavenger Hunt",
         category: "NGAGE Rhythm",
         img: img5,
@@ -94,7 +94,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Rep Your Alma Mater",
         category: "NGAGE Rhythm",
         img: almaMater,
@@ -109,7 +109,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Safety Smart",
         category: "NGAGE Rhythm",
         img: safetySmart,
@@ -124,7 +124,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Culture Quest 2",
         category: "NGAGE Rhythm",
         img: img1,
@@ -139,7 +139,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Data Privacy Challenge",
         category: "NGAGE Rhythm",
         img: dataprivacy,
@@ -154,7 +154,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "AML Awareness Sprint",
         category: "NGAGE Rhythm",
         img: awarnessSprint,
@@ -169,7 +169,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     // {
-    //     name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+    //     name: "NGAGE RHYTHM",
     //     subTitle: "Innovation Jam",
     //     category: "NGAGE Rhythm",
     //     img: innovationJam,
@@ -184,7 +184,7 @@ export const EngageRythmCardData = [
     //     prizes: "Included"
     // },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Recognition Rally",
         category: "NGAGE Rhythm",
         img: officeOlmypics,
@@ -199,7 +199,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Year-End Wrap-Up",
         category: "NGAGE Rhythm",
         img: yearend,
@@ -214,7 +214,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "New Year Kickoff Challenge",
         category: "NGAGE Rhythm",
         img: newyearkickoff,
@@ -229,7 +229,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Customer First Challenge",
         category: "NGAGE Rhythm",
         img: customerChallenge,
@@ -244,7 +244,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "ESG Awareness Week",
         category: "NGAGE Rhythm",
         img: awarnessWeek,
@@ -259,7 +259,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Cybersecurity Basics",
         category: "NGAGE Rhythm",
         img: cyberSecurtiy,
@@ -274,7 +274,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Diversity & Inclusion Week",
         category: "NGAGE Rhythm",
         img: diversityWeek,
@@ -289,7 +289,7 @@ export const EngageRythmCardData = [
         prizes: "Optional"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Sales Sprint",
         category: "NGAGE Rhythm",
         img: salesSprint,
@@ -304,7 +304,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Hidden Talents Showcase",
         category: "NGAGE Rhythm",
         img: hiddentalents,
@@ -319,7 +319,7 @@ export const EngageRythmCardData = [
         prizes: "Included"
     },
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Office Olympics (Virtual Edition)",
         category: "NGAGE Rhythm",
         img:officeOlmypics,
@@ -335,7 +335,7 @@ export const EngageRythmCardData = [
     },
 
     {
-        name: "NGAGE RHYTHM — EXPERIENCE LIBRARY",
+        name: "NGAGE RHYTHM",
         subTitle: "Innovation Jam",
         category: "NGAGE Rhythm",
         img: innovationJam,
