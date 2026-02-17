@@ -103,7 +103,7 @@ const Rythmpackage = () => {
                                             <button className='base_btn_design' onClick={() => {
                                                 navigate({
                                                     pathname: '/engage/experience',
-                                                    search: `?category=NGAGE Rythm&price=${e.onlyPrice}&filter=${e.title}&totalprice=${e.totalPrice}`
+                                                    search: `?category=NGAGE Rhythm&price=${e.onlyPrice}&filter=${e.title}&totalprice=${e.totalPrice}`
                                                 })
                                             }} >Buy Now <img src={buttonIconNew} /></button>
                                         </>

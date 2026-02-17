@@ -58,7 +58,7 @@ const Engageexperience = () => {
             </div>
             <div className="games_library_wrapper">
                 <div className="games_experience_box_wrapper">
-                    {category != 'NGAGE Rythm' && finalExperienceData?.map((element, i) => (
+                    {category != 'NGAGE Rhythm' && finalExperienceData?.map((element, i) => (
                         <div key={element} className='game_experience_box'>
                             <div className='game_experience_img '>
 
@@ -170,7 +170,7 @@ const Engageexperience = () => {
                     ))}
 
                     {
-                        category.trim() == 'NGAGE Rythm' && EngageRythmCardData?.map((element, i) => (
+                        category.trim() == 'NGAGE Rhythm' && EngageRythmCardData?.map((element, i) => (
                             <div  key={element} className='game_experience_box'>
                                 <div className='game_experience_img engage_rythm_experience_cardImg'>
                                     <img src={element.img} />
