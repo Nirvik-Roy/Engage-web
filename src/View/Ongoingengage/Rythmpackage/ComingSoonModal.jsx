@@ -19,26 +19,34 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
             [name]: value
         })
     }
-    const handleSubmit = async() => {
+    const handleSubmit = async () => {
         if (formData?.email != "" && formData?.first_name != "" && formData?.last_name != "" && formData?.address != "") {
-            try {
-                setloading(true);
-                const res = await axios.post('https://joz8jiulr0.execute-api.ap-south-1.amazonaws.com/dev/users', {
+
+            setloading(true);
+            const res = await fetch('https://joz8jiulr0.execute-api.ap-south-1.amazonaws.com/dev/users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
                     email: formData?.email,
+                    mode: 'details',
                     first_name: formData?.first_name,
                     last_name: formData?.last_name,
                     address: formData?.address,
-                    mode: 'details',
                     phone: formData?.phone || ""
                 })
-
-                console.log(res)
-            } catch (err) {
-                console.log(err)
-                toast.error("Something went wrong..")
-            } finally {
+            });
+            const data = await res.json();
+            if (res?.status == 201) {
+                setcomingSoonModal(false)
                 setloading(false)
+                toast.success(data?.message && data?.message)
             }
+            if (res?.status == 409) {
+                setloading(false)
+                toast.error(data?.error && data?.error)
+            }
+            console.log(res)
+
         } else {
             toast.error('Plz enter the fileds...')
         }

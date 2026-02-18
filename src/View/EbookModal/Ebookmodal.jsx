@@ -1,6 +1,8 @@
 import './EbookModal.css'
 import icon from '../../assets/svg159 (1).svg'
 import img from '../../assets/27e42ede90ca830e0df76305541be0f3199f6da0.jpg'
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const Ebookmodal = ({ setShowModal }) => {
     const downloadPDF = () => {
@@ -9,6 +11,40 @@ const Ebookmodal = ({ setShowModal }) => {
         link.download = "Playbook.pdf";
         link.click();
     };
+
+    const [email, setemail] = useState('');
+    const [loading, setloading] = useState(false)
+    const handleSubmit = async () => {
+        if (email != "") {
+
+            setloading(true);
+            const res = await fetch('https://joz8jiulr0.execute-api.ap-south-1.amazonaws.com/dev/users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    mode: 'onlyemail',
+                })
+            });
+            const data = await res.json();
+            if (res?.status == 201) {
+                downloadPDF()
+                toast.success(data?.message && data?.message)
+                setloading(false)
+                setShowModal(false)
+            }
+            if (res?.status == 409) {
+                setloading(false)
+                toast.error(data?.error && data?.error)
+            }
+            console.log(res)
+
+        } else {
+            toast.error('Plz enter your email...')
+        }
+
+    }
+
     return (
         <>
             <div class="modal-overlay" onClick={(() => setShowModal(false))}>
@@ -28,12 +64,11 @@ const Ebookmodal = ({ setShowModal }) => {
 
                         <form class="email-form" onSubmit={((e) => e.preventDefault())}>
                             <div class="email-field">
-                                <input type="email" placeholder="Your Email" />
-                                <button onClick={(() => {
-                                    downloadPDF()
-                                    setShowModal(false)
+                                <input onChange={((e) => setemail(e.target.value))} type="email" placeholder="Your Email" />
+                                <button disabled={loading} onClick={(() => {
+                                    handleSubmit()
                                 })} class="email-submit" type="submit">
-                                    Get the Playbook
+                                    {loading ? 'Submiting...' : 'Get the Playbook'}
                                     <img src={icon} />
                                 </button>
                             </div>
