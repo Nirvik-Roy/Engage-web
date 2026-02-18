@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import cardImg from '../../../assets/71797a607c6f7a762dea1a84569e07d0a0b130b4(1).png'
-import cardImg2 from '../../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png'
-import cardImg3 from '../../../assets/b7fc6a43317d91ab7ecca081234f00dec40cc88f.jpg'
+import img from '../../../assets/Launchpad Culture Values Quest.png'
+import img2 from '../../../assets/Launchpad Meet The Teams.png'
+import img3 from '../../../assets/Launchpad Policies & Compliance.png'
+import img4 from '../../../assets/Launchpad Workplace & Tools Tour.png'
+import img5 from '../../../assets/Launchpad  Role Readiness.png'
+import img6 from '../../../assets/Launchpad Manager Welcome & Early Success Plan.png'
+import img7 from '../../../assets/Launchpad Customer & Brand Experience.png'
+import img8 from '../../../assets/Launchpad Technology & System Onboarding.png'
+import img9 from '../../../assets/Launchpad  Culture Stories.png'
+import img10 from '../../../assets/Launchpad Wellness & Workplace Etiquette.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
@@ -40,61 +47,61 @@ const Onboardingmoudles = () => {
     const cardData = [
         {
             id: 1,
-            img: cardImg,
+            img: img,
             title: 'Culture & Values Quest',
             para: ' Turn company values into practical workplace behaviors through interactive scenarios that make culture clear, relatable, and actionable.'
         },
         {
             id: 2,
-            img: cardImg2,
+            img: img2,
             title: ' Meet the Team',
             para: ' Help new hires quickly learn departments, leaders, and reporting lines through interactive introductions and guided connection challenges.'
         },
         {
             id: 3,
-            img: cardImg3,
+            img: img3,
             title: 'Policies & Compliance (Gamified)',
             para: ' Transform policies into short interactive knowledge checks that improve understanding, retention, and documented completion.'
         },
         {
-            id: 1,
-            img: cardImg,
+            id: 4,
+            img: img4,
             title: 'Workplace & Tools Tour',
             para: ' Guide new hires through key locations, systems, and resources using interactive discovery challenges.'
         },
         {
-            id: 2,
-            img: cardImg2,
+            id: 5,
+            img: img5,
             title: ' Role Readiness',
             para: ' Clarify role expectations, KPIs, and early priorities so new hires understand what success looks like from the start.'
         },
         {
-            id: 3,
-            img: cardImg3,
+            id: 6,
+            img: img6,
             title: ' Manager Welcome & Early Success Plan',
             para: 'Align managers and new hires around clear expectations, early goals, and structured progress checkpoints.'
         },
         {
-            id: 1,
-            img: cardImg,
+            id: 7,
+            img: img7,
             title: ' Customer & Brand Experience',
             para: 'Introduce brand standards and customer expectations through practical scenarios tied directly to everyday responsibilities.'
         },
         {
-            id: 2,
-            img: cardImg2,
+            id: 8,
+            img: img8,
             title: 'Technology & Systems Onboarding',
             para: 'Build confidence using core systems and tools through guided tasks and structured digital walkthroughs.'
         },
         {
-            id: 3,
-            img: cardImg3,
+            id: 9,
+            img: img9,
             title: ' Culture Stories',
             para: 'Strengthen emotional connection through leadership stories and reflection prompts that reinforce identity and purpose.'
         },
         {
-            id: 1,
-            img: cardImg,
+            id: 10,
+            img: img10,
             title: 'Wellness & Workplace Etiquette',
             para: 'Reinforce workplace conduct, inclusion, and communication standards through interactive real-world scenarios.'
         },

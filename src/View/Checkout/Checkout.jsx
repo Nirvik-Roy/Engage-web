@@ -174,7 +174,7 @@ const Checkout = () => {
             ],
         },
         {
-            title: 'NGAGE Playday',
+            title: 'NGAGE Play Day',
             addOns: [
                 {
                     title: 'Grand Prizes',
@@ -233,8 +233,12 @@ const Checkout = () => {
     const [loaders, setLoaders] = useState(false);
     const [index, setIndex] = useState(null)
     // const jamaicaCurrencyValue = 120
-    const result = (Number(totalprice.trim()) * 161) + 0;
-    const totalWithDecimals = result.toFixed(2);
+    // const result = (Number(totalprice.trim()) * 161) + 0;
+    const result = (Number(totalprice.trim())) + priceOfAddons + 0;
+    const exchangeRate = 155.98;
+    const jmdTotal = result * exchangeRate;
+    const totalWithDecimals = jmdTotal.toFixed(2);
+    console.log(totalWithDecimals)
     const uniqueOrderId = `oid_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const paymentRequest = async () => {
         if (
@@ -278,6 +282,7 @@ const Checkout = () => {
                 // Make the POST request using axios
                 const response = await axios.post(
                     'https://tt.wipayfinancial.com/plugins/payments/request',
+                    
                     formData,
                     {
                         headers: headers,
@@ -366,7 +371,7 @@ const Checkout = () => {
             forminputData.phone !== '' &&
             forminputData.companyName !== '' &&
             forminputData.country !== '' &&
-            forminputData.companySize !== '' &&          
+            forminputData.companySize !== '' &&
             forminputData.addressLine1 !== '' &&
             forminputData.addressLine2 !== '' &&
             forminputData.city !== '' &&
@@ -471,7 +476,7 @@ const Checkout = () => {
                             fontWeight: '600',
                             fontSize: '1rem'
                         }}>Note - You can have unlimited experiences with this package</small>}
-                        {subcategory == 'Boost Rhythm'  && <small style={{
+                        {subcategory == 'Boost Rhythm' && <small style={{
                             color: '#000379',
                             fontWeight: '600',
                             fontSize: '1rem'
@@ -751,8 +756,8 @@ const Checkout = () => {
                             <h3>Payment Summary</h3>
                             <p style={{
                                 marginBottom: '10px'
-                            }}>Plan Price <span>${price && price}.00 {subcategory == 'Boost Rhythm' ?  '*4' : subcategory == 'Build Rhythm' ?
-                                    '*12' : subcategory == 'Sustain Rhythm' ? '*12' : ""}</span></p>
+                            }}>Plan Price <span>${price && price}.00 {subcategory == 'Boost Rhythm' ? '*4' : subcategory == 'Build Rhythm' ?
+                                '*12' : subcategory == 'Sustain Rhythm' ? '*12' : ""}</span></p>
                             {/* <p>Discount <span>-$0.00</span></p> */}
 
                             {addOnsFeatures?.length > 0 && <>

@@ -28,7 +28,7 @@
 .game_experience_img {
   width: 45%;
   border-radius: 10px;
-  max-height: 541px;
+  /* max-height: 541px; */
 }
 .game_experience_img img {
   width: 100%;

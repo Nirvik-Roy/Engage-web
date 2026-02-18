@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import cardImg from '../../../assets/c916209092a6d3fef78320b3722db5f4b286cbe1.jpg'
-import cardImg2 from '../../../assets/76eb601ae8cbdb510a11f197e2af52a513a36fc9.jpg'
-import cardImg3 from '../../../assets/b191c8ca226e6d6e84daec673db7abc4b9a3a71b.jpg'
 import cardImg4 from '../../../assets/f1aaa1a90a5023be4ecca72b9a91f46d4508a73f.png'
 import cardImg5 from '../../../assets/df6013b58f9ded6dccb7decb8b982a7fe844a2fe(1).png'
 import cardImg6 from '../../../assets/612a7dea21b534a14577dc9810f1802d44410b3f.png'
 import cardImg7 from '../../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6.png'
 import cardImg8 from '../../../assets/1dd31dac9e356c1160e31c950b7780716e6e7d5d.png'
-import cardImg9 from '../../../assets/091ca18ad4cae01028d1012bab19f788c9c0a3ad.png'
-import cardImg10 from '../../../assets/df6013b58f9ded6dccb7decb8b982a7fe844a2fe.png'
+import kingOfJungle from '../../../assets/Play Day-  King of the Jungle.png'
+import search from '../../../assets/Play Day- Search & Rescue Mission.png'
+import family from '../../../assets/Playday Family Fun Day.png'
+import corporate from '../../../assets/PlayDay- Corporate Sport Day.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
@@ -51,62 +50,63 @@ const Chooseyourteam = () => {
             id: 1,
             img: cardImg5,
             title: 'Team Ignite ',
-            para: ' A fast-paced team-building session using short challenges to boost communication, collaboration, and energy through inclusive, facilitator-led activities.'
+            para: 'A fast-paced team session packed with short, high-energy challenges that spark connection, collaboration, and friendly competition in just 90 minutes.'
         },
         {
             id: 2,
             img: cardImg4,
             title: 'Puzzle Breakout ',
-            para: ' A problem-solving experience where teams solve riddles and logic challenges, earning points through collaboration, accuracy, and strategic thinking.'
+            para: ' A strategy-driven team challenge where riddles, puzzles, and clues unlock points — rewarding communication, logic, and smart teamwork under pressure.'
         },
         {
             id: 3,
-            img: cardImg6,
-            title: ' Amazing Race: Team Edition ',
-            para: ' A location-based team challenge where groups follow clues, complete tasks, and unlock checkpoints while earning points collaboratively.'
+            img: kingOfJungle,
+            title: ' King of the Jungle ',
+            para: ' A social strategy showdown blending collectible challenges, trivia, and team tasks to crown the highest-scoring team on the leaderboard.'
         },
         {
             id: 4,
-            img: cardImg7,
-            title: 'Office Olympics ',
-            para: 'An inclusive competition featuring varied mental, social, and light physical challenges that encourage participation, teamwork, and friendly rivalry.'
+            img: cardImg6,
+            title: ' Amazing Race: Team Edition',
+            para: 'A location-based adventure where teams follow digital clues, complete checkpoints, and race to the top through strategy and collaboration.'
         },
         {
             id: 5,
-            img: cardImg8,
-            title: 'Corporate Play Day (Signature) ',
-            para: ' A fully gamified, all-staff experience combining sports, games, and social activities where every interaction contributes to shared team scoring.'
+            img: cardImg7,
+            title: 'Office Olympics ',
+            para: 'An inclusive, Olympic-inspired competition combining light physical, mental, and social challenges to boost morale and crown a team champion.'
         },
         {
-            id: 1,
+            id: 6,
+            img: search,
+            title: 'Search & Rescue Mission ',
+            para: 'An immersive, clue-driven mission where teams solve riddles, unlock challenges, and work together to complete a coordinated rescue adventure.'
+        },
+        {
+            id: 7,
+            img: corporate,
+            title: 'Corporate Play Day (Signature) ',
+            para: 'A full-scale, multi-activity team-building event featuring sports, games, and inclusive challenges designed for mass participation and lasting company pride.'
+        },
+        {
+            id: 8,
+            img: family,
+            title: 'Family Fun Day ',
+            para: ' A company-wide celebration where staff and families earn points across activities, creating shared memories and crowning the ultimate champion family.'
+        },
+        {
+            id: 9,
             img: cardImg5,
             title: 'Team Ignite ',
-            para: ' A fast-paced team-building session using short challenges to boost communication, collaboration, and energy through inclusive, facilitator-led activities.'
+            para: 'A fast-paced team session packed with short, high-energy challenges that spark connection, collaboration, and friendly competition in just 90 minutes.'
         },
         {
-            id: 2,
+            id: 10,
             img: cardImg4,
             title: 'Puzzle Breakout ',
-            para: ' A problem-solving experience where teams solve riddles and logic challenges, earning points through collaboration, accuracy, and strategic thinking.'
+            para: ' A strategy-driven team challenge where riddles, puzzles, and clues unlock points — rewarding communication, logic, and smart teamwork under pressure.'
         },
-        {
-            id: 3,
-            img: cardImg6,
-            title: ' Amazing Race: Team Edition ',
-            para: ' A location-based team challenge where groups follow clues, complete tasks, and unlock checkpoints while earning points collaboratively.'
-        },
-        {
-            id: 4,
-            img: cardImg7,
-            title: 'Office Olympics ',
-            para: 'An inclusive competition featuring varied mental, social, and light physical challenges that encourage participation, teamwork, and friendly rivalry.'
-        },
-        {
-            id: 5,
-            img: cardImg8,
-            title: 'Corporate Play Day (Signature) ',
-            para: ' A fully gamified, all-staff experience combining sports, games, and social activities where every interaction contributes to shared team scoring.'
-        },
+      
     ]
     return (
         <>

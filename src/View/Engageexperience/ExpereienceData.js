@@ -6,7 +6,7 @@ import img4 from '../../assets/091ca18ad4cae01028d1012bab19f788c9c0a3ad.png'
 import img5 from '../../assets/1dd31dac9e356c1160e31c950b7780716e6e7d5d.png'
 import starter from '../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png'
 import pro from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png'
-import ultimate from '../../assets/b7fc6a43317d91ab7ecca081234f00dec40cc88f.jpg'
+import ultimate from '../../assets/Group 1597882971.png'
 export const experienceData = [
     {
         category: 'ENGAGE Playday',

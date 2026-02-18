@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import icon from '../../../assets/svg159.svg'
-import axios from 'axios'
 import toast from 'react-hot-toast'
 const ComingSoonModal = ({ setcomingSoonModal }) => {
     const [loading, setloading] = useState(false)
@@ -8,7 +7,6 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
         email: '',
         first_name: "",
         last_name: "",
-        address: "",
         phone: ""
     })
 
@@ -31,7 +29,7 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
                     mode: 'details',
                     first_name: formData?.first_name,
                     last_name: formData?.last_name,
-                    address: formData?.address,
+                    address: 'dummy address',
                     phone: formData?.phone || ""
                 })
             });
@@ -75,10 +73,7 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
                         <label>Phone</label>
                         <input name='phone' value={setformData.phone} onChange={handleChange} placeholder='Enter phone number' />
                     </div>
-                    <div className='input_div'>
-                        <label>Address <span>*</span></label>
-                        <textarea name='address' value={setformData.address} onChange={handleChange} placeholder='Enter address' />
-                    </div>
+                    
 
                     <button disabled={loading} onClick={((e) => {
                         e.preventDefault();

@@ -38,7 +38,7 @@ const Ngagepricing = () => {
             mostPopular: true,
             listHead: 'Best for multi-department onboarding',
             list: [
-                'Up to 6 modules',
+                'Up to 5 modules',
                 'Custom branding',
                 ' NES semi-annual review',
                 ' Progression levels',
@@ -103,7 +103,7 @@ const Ngagepricing = () => {
                                     }}>
                                         {e?.mostPopular && <small style={{
                                             display: 'block',
-                                            color: '#00007f',
+                                            color: '#2e2aee',
                                             fontWeight: '700',
                                             margin: '5px 0'
                                         }}>Most Popular</small>}

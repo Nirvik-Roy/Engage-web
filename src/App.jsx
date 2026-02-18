@@ -58,7 +58,7 @@ function App() {
 
   return (
     <>
-    <Toaster position='top-right'/>
+    <Toaster position='top-left'/>
       {showModal && <Ebookmodal setShowModal={setShowModal}/>}
       <Routes>
         <Route path='/' element={<Mainlayout />}>
