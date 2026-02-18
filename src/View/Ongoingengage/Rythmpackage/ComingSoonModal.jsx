@@ -1,6 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import icon from '../../../assets/svg159.svg'
+import axios from 'axios'
+import toast from 'react-hot-toast'
 const ComingSoonModal = ({ setcomingSoonModal }) => {
+    const [loading, setloading] = useState(false)
+    const [formData, setformData] = useState({
+        email: '',
+        first_name: "",
+        last_name: "",
+        address: "",
+        phone: ""
+    })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setformData({
+            ...formData,
+            [name]: value
+        })
+    }
+    const handleSubmit = async() => {
+        if (formData?.email != "" && formData?.first_name != "" && formData?.last_name != "" && formData?.address != "") {
+            try {
+                setloading(true);
+                const res = await axios.post('https://joz8jiulr0.execute-api.ap-south-1.amazonaws.com/dev/users', {
+                    email: formData?.email,
+                    first_name: formData?.first_name,
+                    last_name: formData?.last_name,
+                    address: formData?.address,
+                    mode: 'details',
+                    phone: formData?.phone || ""
+                })
+
+                console.log(res)
+            } catch (err) {
+                console.log(err)
+            } finally {
+                setloading(false)
+            }
+        } else {
+            toast.error('Plz enter the fileds...')
+        }
+
+    }
     return (
         <>
             <div className='coming_soon_modal_wrapper' onClick={(() => setcomingSoonModal(false))}></div>
@@ -9,23 +51,30 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
                 <form className='join_waitList_form_wrapper'>
                     <div className='input_div'>
                         <label>First Name <span>*</span></label>
-                        <input placeholder='Enter first name' />
+                        <input name='first_name' value={setformData.first_name} onChange={handleChange} placeholder='Enter first name' />
                     </div>
                     <div className='input_div'>
                         <label>Last Name <span>*</span></label>
-                        <input placeholder='Enter last name' />
+                        <input name='last_name' value={setformData.last_name} onChange={handleChange} placeholder='Enter last name' />
                     </div>
                     <div className='input_div'>
                         <label>Email <span>*</span></label>
-                        <input placeholder='Enter email' />
+                        <input name='email' value={setformData.email} onChange={handleChange} placeholder='Enter email' />
                     </div>
 
                     <div className='input_div'>
                         <label>Phone</label>
-                        <input placeholder='Enter phone number' />
+                        <input name='phone' value={setformData.phone} onChange={handleChange} placeholder='Enter phone number' />
+                    </div>
+                    <div className='input_div'>
+                        <label>Address <span>*</span></label>
+                        <textarea name='address' value={setformData.address} onChange={handleChange} placeholder='Enter address' />
                     </div>
 
-                    <button className='base_btn_design' style={{
+                    <button disabled={loading} onClick={((e) => {
+                        e.preventDefault();
+                        handleSubmit()
+                    })} className='base_btn_design' style={{
                         border: '1px solid ',
                         padding: '8px 10px',
                         background: 'transparent',
@@ -33,7 +82,7 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
                         display: 'flex',
                         justifyContent: 'space-between',
                         marginLeft: 'auto',
-                    }}>Submit <img src={icon} /></button>
+                    }}>{loading ? 'Submiting...' : 'Submit'} <img src={icon} /></button>
                 </form>
                 <button onClick={(() => setcomingSoonModal(false))} type="button" class="modal-close" >×</button>
             </div>
