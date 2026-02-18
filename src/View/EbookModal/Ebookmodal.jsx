@@ -29,7 +29,7 @@ const Ebookmodal = ({ setShowModal }) => {
             const data = await res.json();
             if (res?.status == 201) {
                 downloadPDF()
-                toast.success(data?.message && data?.message)
+                toast.success('Email submitted successfully!')
                 setloading(false)
                 setShowModal(false)
             }

@@ -7,7 +7,8 @@ import ComingSoonModal from './ComingSoonModal'
 
 const Rythmpackageprices = () => {
     const navigate = useNavigate()
-    const [comingSoonModal, setcomingSoonModal] = useState(false)
+    const [comingSoonModal, setcomingSoonModal] = useState(false);
+    const [title,settile] = useState('')
     const data = [
         {
             id: 1,
@@ -75,7 +76,7 @@ const Rythmpackageprices = () => {
     ]
     return (
         <>
-            {comingSoonModal && <ComingSoonModal setcomingSoonModal={setcomingSoonModal} />}
+            {comingSoonModal && <ComingSoonModal title={title} setcomingSoonModal={setcomingSoonModal} />}
             <div className='container rythm_package_prices_wrapper' style={{
                 padding: '32px 0'
             }}>
@@ -176,7 +177,9 @@ const Rythmpackageprices = () => {
                             }}>Coming Soon</span>}
                             {e?.comingSoon && <button style={{
                                 marginTop:'15px'
-                            }} onClick={(() => setcomingSoonModal(true))} className='base_btn_design'>Join the waitlist <img src={buttonIconNew} /></button>}
+                            }} onClick={(() =>{ 
+                                settile(e?.title)
+                                setcomingSoonModal(true)})} className='base_btn_design'>Join the waitlist <img src={buttonIconNew} /></button>}
 
                         </div>
                     ))}

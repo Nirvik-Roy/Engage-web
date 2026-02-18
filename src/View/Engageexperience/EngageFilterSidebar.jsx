@@ -50,21 +50,21 @@ const EngageFilterSidebar = ({ setshowFilter }) => {
                     price: 1499,
                     totalPrice: 1499
                 },
-                {
-                    title: 'Boost Rhythm',
-                    price: 1249,
-                    totalPrice: 4996
-                },
-                {
-                    title: 'Build Rhythm',
-                    price: 999,
-                    totalPrice: 11988
-                },
-                {
-                    title: 'Sustain Rhythm',
-                    price: 1999,
-                    totalPrice: 23988
-                }
+                // {
+                //     title: 'Boost Rhythm',
+                //     price: 1249,
+                //     totalPrice: 4996
+                // },
+                // {
+                //     title: 'Build Rhythm',
+                //     price: 999,
+                //     totalPrice: 11988
+                // },
+                // {
+                //     title: 'Sustain Rhythm',
+                //     price: 1999,
+                //     totalPrice: 23988
+                // }
             ]
         },
         {

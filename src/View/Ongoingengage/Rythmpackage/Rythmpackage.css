@@ -57,7 +57,8 @@
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 9999;
-  height: 68vh;
+  height: fit-content;
+
   border-radius: 15px;
   padding: 10px 20px;
 }
@@ -147,6 +148,9 @@
 @media (max-width: 576px) {
   .additional_players_para {
     display: none !important;
+  }
+  .coming_soon_modal_div{
+    width: 90%;
   }
 }
 @media (max-width: 499px) {

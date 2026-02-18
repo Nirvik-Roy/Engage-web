@@ -44,7 +44,7 @@ function App() {
     return () => clearTimeout(timeOut);
   }, []);
 
-
+  
 
   // useEffect(() => {
   //   if(isModalClosed){
@@ -58,7 +58,7 @@ function App() {
 
   return (
     <>
-    <Toaster position='top-left'/>
+    <Toaster position='top-center'/>
       {showModal && <Ebookmodal setShowModal={setShowModal}/>}
       <Routes>
         <Route path='/' element={<Mainlayout />}>

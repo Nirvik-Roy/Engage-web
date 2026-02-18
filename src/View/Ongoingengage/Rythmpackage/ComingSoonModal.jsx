@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import icon from '../../../assets/svg159.svg'
 import toast from 'react-hot-toast'
-const ComingSoonModal = ({ setcomingSoonModal }) => {
+const ComingSoonModal = ({ setcomingSoonModal, title }) => {
     const [loading, setloading] = useState(false)
     const [formData, setformData] = useState({
         email: '',
@@ -30,14 +30,15 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
                     first_name: formData?.first_name,
                     last_name: formData?.last_name,
                     address: 'dummy address',
-                    phone: formData?.phone || ""
+                    phone: formData?.phone || "",
+                    selectedPackage: title
                 })
             });
             const data = await res.json();
             if (res?.status == 201) {
                 setcomingSoonModal(false)
                 setloading(false)
-                toast.success(data?.message && data?.message)
+                toast.success('You have successfully added to the waitlist')
             }
             if (res?.status == 409) {
                 setloading(false)
@@ -73,7 +74,12 @@ const ComingSoonModal = ({ setcomingSoonModal }) => {
                         <label>Phone</label>
                         <input name='phone' value={setformData.phone} onChange={handleChange} placeholder='Enter phone number' />
                     </div>
-                    
+
+                    {title && <small style={{
+                        fontWeight: '600',
+                        color: '#000180'
+                    }}>You have selected {title} subscription</small>}
+
 
                     <button disabled={loading} onClick={((e) => {
                         e.preventDefault();

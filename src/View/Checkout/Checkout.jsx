@@ -380,7 +380,7 @@ const Checkout = () => {
         ) {
             try {
                 const res = await PostContact({
-                    name: forminputData.name,
+                    name: forminputData.name + forminputData.lastName,
                     email: forminputData.email,
                     phonenumber: forminputData.phonenumber,
                     message: `Select Solution:${category}, Sub- category:${subcategory}, Select Experience:${experience} , Select Addons: ${addOnsFeatures.map((e) => e.title)}, Starting Price (with addons): ${Number(Math.floor(totalCalculatedPriceofAddOns())) + Number(totalprice)}`
