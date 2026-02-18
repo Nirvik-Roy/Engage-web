@@ -40,7 +40,7 @@ const ComingSoonModal = ({ setcomingSoonModal, title }) => {
             if (res?.status == 201) {
                 setcomingSoonModal(false)
                 setloading(false)
-                toast.success('You have successfully added to the waitlist')
+                toast.success('You are successfully added to the waitlist')
             }
             if (res?.status == 409) {
                 setloading(false)
