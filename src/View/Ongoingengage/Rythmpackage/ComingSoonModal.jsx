@@ -21,7 +21,7 @@ const ComingSoonModal = ({ setcomingSoonModal, title }) => {
         if (formData?.email != "" && formData?.first_name != "" && formData?.last_name != "" && formData?.address != "") {
 
             setloading(true);
-            const res = await fetch('https://joz8jiulr0.execute-api.ap-south-1.amazonaws.com/dev/users', {
+            const res = await fetch('https://joz8jiulr0.execute-api.ap-south-1.amazonaws.com/dev/waitlist', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -31,7 +31,9 @@ const ComingSoonModal = ({ setcomingSoonModal, title }) => {
                     last_name: formData?.last_name,
                     address: 'dummy address',
                     phone: formData?.phone || "",
-                    selectedPackage: title
+                    waitlistdata: {
+                        selectedPackage: title
+                    }
                 })
             });
             const data = await res.json();
