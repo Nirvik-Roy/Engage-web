@@ -27,6 +27,8 @@ const Checkout = () => {
     const [accountDetailsDropdown, setaccountDetailsDropdown] = useState(true);
     const sliderRef = useRef()
     const [searchParams, setSearchParams] = useSearchParams();
+    const [eventStartDate, seteventStartDate] = useState("")
+    const [specialMessage, setspecialMessage] = useState('')
     const [addOnsFeatures, setaddOnfeatures] = useState([])
     const category = searchParams.get('category');
     const subcategory = searchParams.get('subcategory').trim();
@@ -75,61 +77,61 @@ const Checkout = () => {
         {
             title: 'NGAGE Rhythm',
             addOns: [
-                {
-                    title: 'Grand Prizes',
-                    list: [
-                        {
-                            title: 'Top 10',
-                            price: '299',
-                            onlyPrice: 299
-                        },
-                        {
-                            title: 'Prize pack: top 3 pro',
-                            price: '399',
-                            onlyPrice: 399
-                        },
-                        {
-                            title: 'Pack: top 3 deluxe',
-                            price: '699',
-                            onlyPrice: 699
+                // {
+                //     title: 'Grand Prizes',
+                //     list: [
+                //         {
+                //             title: 'Top 10',
+                //             price: '299',
+                //             onlyPrice: 299
+                //         },
+                //         {
+                //             title: 'Prize pack: top 3 pro',
+                //             price: '399',
+                //             onlyPrice: 399
+                //         },
+                //         {
+                //             title: 'Pack: top 3 deluxe',
+                //             price: '699',
+                //             onlyPrice: 699
 
-                        }
-                    ]
-                },
-                {
-                    title: 'Prize pack',
-                    list: [
-                        {
-                            title: 'Prize pack: 25 digital prize',
-                            price: '499',
-                            onlyPrice: 499
+                //         }
+                //     ]
+                // },
+                // {
+                //     title: 'Prize pack',
+                //     list: [
+                //         {
+                //             title: 'Prize pack: 25 digital prize',
+                //             price: '499',
+                //             onlyPrice: 499
 
-                        },
-                        {
-                            title: 'Prize pack: 50 digital prize',
-                            price: '999',
-                            onlyPrice: 999
+                //         },
+                //         {
+                //             title: 'Prize pack: 50 digital prize',
+                //             price: '999',
+                //             onlyPrice: 999
 
-                        },
-                        {
-                            title: 'Prize pack: 100 digital prize',
-                            price: '1599',
-                            onlyPrice: 1599
+                //         },
+                //         {
+                //             title: 'Prize pack: 100 digital prize',
+                //             price: '1599',
+                //             onlyPrice: 1599
 
-                        }
-                    ]
-                },
-                {
-                    title: 'Other',
-                    list: [
-                        {
-                            title: 'Extra players',
-                            price: ' 2.50 each',
-                            onlyPrice: 2.50
-                        }
+                //         }
+                //     ]
+                // },
+                // {
+                //     title: 'Other',
+                //     list: [
+                //         {
+                //             title: 'Extra players',
+                //             price: ' 2.50 each',
+                //             onlyPrice: 2.50
+                //         }
 
-                    ]
-                }
+                //     ]
+                // }
             ],
         },
 
@@ -282,7 +284,7 @@ const Checkout = () => {
                 // Make the POST request using axios
                 const response = await axios.post(
                     'https://tt.wipayfinancial.com/plugins/payments/request',
-                    
+
                     formData,
                     {
                         headers: headers,
@@ -335,7 +337,8 @@ const Checkout = () => {
         addressLine2: '',
         city: '',
         state: '',
-        zipCode: ''
+        zipCode: '',
+        date: ''
     })
     const onChange = (e) => {
         const { name, value } = e.target;
@@ -376,13 +379,17 @@ const Checkout = () => {
             forminputData.addressLine2 !== '' &&
             forminputData.city !== '' &&
             forminputData.state !== '' &&
-            forminputData.zipCode !== ''
+            forminputData.zipCode !== '' &&
+            forminputData.date !== '',
+            forminputData.phonenumber !== ''
         ) {
             try {
                 const res = await PostContact({
                     name: forminputData.name + forminputData.lastName,
                     email: forminputData.email,
                     phonenumber: forminputData.phonenumber,
+                    specialmessage: specialMessage || "",
+                    eventStartDate: forminputData.date,
                     message: `Select Solution:${category}, Sub- category:${subcategory}, Select Experience:${experience} , Select Addons: ${addOnsFeatures.map((e) => e.title)}, Starting Price (with addons): ${Number(Math.floor(totalCalculatedPriceofAddOns())) + Number(totalprice)}`
                 })
                 console.log(res)
@@ -489,7 +496,7 @@ const Checkout = () => {
                         }}>Note - 11 more experiences will be part of this package</small>}
                     </div>
 
-                    <div className='select_add_on_wrapper'>
+                    {currentData?.addOns?.length > 0 && <div className='select_add_on_wrapper'>
                         <div className='select_experience_head'>
                             <h1>Select Add-on</h1>
                             <div className='arrow_circle' onClick={(() => setaddonDropdown(!addonDropdown))}>
@@ -516,10 +523,10 @@ const Checkout = () => {
                             ))}
 
                         </div>}
-                    </div>
+                    </div>}
                     {category != 'NGAGE Rythm' && <div className='account_input_form'>
                         <label>Special Message</label>
-                        <textarea name='specialMessage' placeholder='Enter message' ></textarea>
+                        <textarea name='specialMessage' onChange={((e) => setspecialMessage(e.target.value))} placeholder='Enter message' ></textarea>
                     </div>}
                     <div className='ngage_account_details_wrapper'>
                         <div className='select_experience_head'>
