@@ -6,15 +6,20 @@ import img3 from '../../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6(1).pn
 import star from '../../../assets/Frame 1984078949 (1).svg'
 import icon from '../../../assets/svg159 (3).svg'
 import clock from '../../../assets/_x33_4_x2C__watch_x2C__Alarm_x2C__clock_x2C__reminder_x2C__time.svg'
+import season from '../../../assets/glyph_copy_2.svg'
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Pagination from '../../../Components/Pagination/Pagination';
 import { useState } from 'react'
 import search from '../../../assets/Search (1).svg'
+import outcome from '../../../assets/Layer_x0020_1.svg'
 import filterImg from '../../../assets/filter_list.svg'
 import cashImg from '../../../assets/Frame (2).svg'
 import GamesFilterSidebar from '../Gamesfilter/GamesFilterSidebar.jsx'
+import { experienceData } from '../../Engageexperience/ExpereienceData.js'
+import { EngageRythmCardData } from '../../Engageexperience/EngageRythmCardData.js'
 const Gamesexperience = () => {
     const [showFilter, setshowFilter] = useState(false);
     var settings = {
@@ -24,69 +29,69 @@ const Gamesexperience = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    const [index,setIndex] = useState()
+    const [index, setIndex] = useState()
 
-    const data = [
-        {
-            subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
-            title: 'Team Ignite',
-            time: '90 Minutes',
-            reviews: '(4.k reviews)',
-            price: 'Starting at:US$1,999 ',
-            bestFor: 'Quick team reset, department sessions, icebreakers',
-            scope: 'Team Building',
-            experience: 'Team Ignite is a fast, high-energy team-building session designed to get everyone involved quickly. It focuses on communication, collaboration, and light competition without requiring athletic ability.',
-            howItWorks: 'Participants are grouped into small teams and rotate through short, facilitator-led challenges. Each activity earns points that feed into a live Ngage leaderboard, keeping momentum high throughout the session.',
-            Outcomes: 'Quick energy boost, improved interaction, shared momentum.',
-            img: img
-        },
-        {
-            subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
-            title: 'Puzzle Breakout',
-            time: '90 Minutes',
-            reviews: '(4.k reviews)',
-            price: 'Starting at:US$1,999 ',
-            bestFor: 'Analytical teams, problem solvers, strategy sessions',
-            scope: 'Problem Solving',
-            experience: 'Puzzle Breakout is a mentally engaging team-building experience centered on riddles, logic puzzles, and clue-based challenges. It rewards communication, critical thinking, and teamwork rather than speed or physical ability.',
-            howItWorks: 'Teams race against the clock to unlock puzzles and progress through levels. Points are awarded for accuracy, speed, and completing bonus challenges.',
-            Outcomes: 'Stronger problem-solving, better communication, focused collaboration.',
-            img: img1
-        },
-        {
-            subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
-            title: 'Amazing Race: Team Edition',
-            time: 'Half Day',
-            reviews: '(4.k reviews)',
-            price: 'Starting at:US$1,999 ',
-            bestFor: 'Off-sites, retreats, cross-department bonding',
-            scope: 'Collaboration',
-            experience: 'Amazing Race: Team Edition is a location-based team-building experience where teams follow clues, complete tasks, and unlock checkpoints. It blends movement, creativity, and strategy in a way that keeps participation high.',
-            howItWorks: 'Teams receive digital clues through Ngage and move through a series of checkpoints. Each completed task unlocks the next challenge and adds points to the leaderboard.',
+    // const data = [
+    //     {
+    //         subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
+    //         title: 'Team Ignite',
+    //         time: '90 Minutes',
+    //         reviews: '(4.k reviews)',
+    //         price: 'Starting at:US$1,999 ',
+    //         bestFor: 'Quick team reset, department sessions, icebreakers',
+    //         scope: 'Team Building',
+    //         experience: 'Team Ignite is a fast, high-energy team-building session designed to get everyone involved quickly. It focuses on communication, collaboration, and light competition without requiring athletic ability.',
+    //         howItWorks: 'Participants are grouped into small teams and rotate through short, facilitator-led challenges. Each activity earns points that feed into a live Ngage leaderboard, keeping momentum high throughout the session.',
+    //         Outcomes: 'Quick energy boost, improved interaction, shared momentum.',
+    //         img: img
+    //     },
+    //     {
+    //         subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
+    //         title: 'Puzzle Breakout',
+    //         time: '90 Minutes',
+    //         reviews: '(4.k reviews)',
+    //         price: 'Starting at:US$1,999 ',
+    //         bestFor: 'Analytical teams, problem solvers, strategy sessions',
+    //         scope: 'Problem Solving',
+    //         experience: 'Puzzle Breakout is a mentally engaging team-building experience centered on riddles, logic puzzles, and clue-based challenges. It rewards communication, critical thinking, and teamwork rather than speed or physical ability.',
+    //         howItWorks: 'Teams race against the clock to unlock puzzles and progress through levels. Points are awarded for accuracy, speed, and completing bonus challenges.',
+    //         Outcomes: 'Stronger problem-solving, better communication, focused collaboration.',
+    //         img: img1
+    //     },
+    //     {
+    //         subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
+    //         title: 'Amazing Race: Team Edition',
+    //         time: 'Half Day',
+    //         reviews: '(4.k reviews)',
+    //         price: 'Starting at:US$1,999 ',
+    //         bestFor: 'Off-sites, retreats, cross-department bonding',
+    //         scope: 'Collaboration',
+    //         experience: 'Amazing Race: Team Edition is a location-based team-building experience where teams follow clues, complete tasks, and unlock checkpoints. It blends movement, creativity, and strategy in a way that keeps participation high.',
+    //         howItWorks: 'Teams receive digital clues through Ngage and move through a series of checkpoints. Each completed task unlocks the next challenge and adds points to the leaderboard.',
 
-            Outcomes: 'Cross-team connection, collaboration under pressure, memorable shared moments.',
-            img: img2
-        },
-        {
-            subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
-            title: 'Office Olympics',
-            time: 'Half Day',
-            reviews: '(4.k reviews)',
-            price: 'Starting at:US$1,999 ',
-            bestFor: 'Wellness days, morale boosts, department competitions',
-            scope: 'Energy & Morale',
-            experience: 'Office Olympics is an inclusive, playful competition inspired by Olympic-style events. Activities are designed so everyone can participate, regardless of fitness level.',
-            howItWorks: 'Teams compete across a series of short events — mental, social, and light physical challenges. Points accumulate across events to crown an overall champion.',
+    //         Outcomes: 'Cross-team connection, collaboration under pressure, memorable shared moments.',
+    //         img: img2
+    //     },
+    //     {
+    //         subTitle: 'NGAGE PLAY DAY: 90-MINUTE EXPERIENCES',
+    //         title: 'Office Olympics',
+    //         time: 'Half Day',
+    //         reviews: '(4.k reviews)',
+    //         price: 'Starting at:US$1,999 ',
+    //         bestFor: 'Wellness days, morale boosts, department competitions',
+    //         scope: 'Energy & Morale',
+    //         experience: 'Office Olympics is an inclusive, playful competition inspired by Olympic-style events. Activities are designed so everyone can participate, regardless of fitness level.',
+    //         howItWorks: 'Teams compete across a series of short events — mental, social, and light physical challenges. Points accumulate across events to crown an overall champion.',
 
-            Outcomes: 'Cross-team connection, collaboration under pressure, memorable shared moments.',
-            img: img3
-        },
-    ]
+    //         Outcomes: 'Cross-team connection, collaboration under pressure, memorable shared moments.',
+    //         img: img3
+    //     },
+    // ]
 
-    const indexFunction = (i) =>{
-        if(index === i){
+    const indexFunction = (i) => {
+        if (index === i) {
             setIndex(null)
-        }else{
+        } else {
             setIndex(i)
         }
     }
@@ -103,19 +108,10 @@ const Gamesexperience = () => {
             </div>
             <div className="games_library_wrapper">
                 <div className="games_experience_box_wrapper">
-                    {data.map((element) => (
-                        <div 
-                        // onClick={(() => indexFunction(i))} style={index === i ?{
-                        //     border:'1px solid #040480'
-                        // }:{}} 
-                        
-                        key={element} className='game_experience_box'>
-                            <div className='game_experience_img'>
-                                <Slider {...settings}>
-                                    {[1, 2, 3].map((e) => (
-                                        <img key={e} src={element.img} />
-                                    ))}
-                                </Slider>
+                    {experienceData.map((element) => (
+                        <div key={element} className='game_experience_box'>
+                            <div className='game_experience_img '>
+                                <img src={element.img} />
                             </div>
                             <div className='game_experience_details'>
                                 <h5>{element.subTitle}</h5>
@@ -125,74 +121,182 @@ const Gamesexperience = () => {
                                         <img src={clock} />
                                         <h6>{element.time}</h6>
                                     </div>
-                                    <div className='clock_wrapper'>
-                                        <img className='star_img56' src={star} />
-                                        <h6>{element.reviews}</h6>
-                                    </div>
 
                                     <div className='clock_wrapper'>
-                                        <img className='star_img56' src={cashImg} />
-                                        <h6>:{element.price} </h6>
+                                        <img src={outcome} />
+                                        <h6>{element.outcomes}</h6>
                                     </div>
+
+                                    {/* {element.reviews && <div className='clock_wrapper'>
+                                                              <img className='star_img56' src={star} />
+                                                              <h6>{element.reviews}</h6>
+                                                          </div>} */}
+
+                                    {/* <div className='clock_wrapper'>
+                                                              <img className='star_img56' src={cashImg} />
+                                                              <h6>{element.price} </h6>
+                                                          </div> */}
                                 </div>
-                                <p><strong>Best for:</strong> {element.bestFor}</p>
+                                {element.bestFor && <p><strong>Best for:</strong> {element.bestFor}</p>}
 
-                                <p><strong>Scope Tag:</strong> {element.scope}</p>
+                                {/* <p><strong>Scope Tag:</strong> {element.scope}</p> */}
                                 <div>
                                     <strong>What this experience is</strong>
                                     <p> {element.experience}</p>
                                 </div>
 
-                                <div>
-                                    <strong>How it works</strong>
-                                    <p> {element.howItWorks}</p>
-                                </div>
-                               
-                                <div>
-                                    <strong>
-                                        Outcomes
-                                    </strong>
-                                    <p>{element.Outcomes}</p>
-                                </div>
-                               
+                                {/* <div>
+                                                          <strong>How it works</strong>
+                                                          <p> {element.howItWorks}</p>
+                                                      </div> */}
+                                {/* <div>
+                                                          <strong>What’s included</strong>
+                                                          <ul style={{
+                                                              marginLeft: '20px'
+                                                          }}>
+                                                              {element.whatsIncludedList.map((e,) => (
+                                                                  <>
+                                                                      <li>{e}</li>
+                      
+                                                                  </>
+                                                              ))}
+                      
+                                                          </ul>
+                                                      </div> */}
+                                {/* {element.outcomes && <div>
+                                                          <strong>
+                                                              Outcomes
+                                                          </strong>
+                                                          <p>{element.outcomes}</p>
+                                                      </div>} */}
+                                {element?.games &&
+                                    <>
+                                        <strong>
+                                            Games
+                                        </strong>
+                                        <div style={{
+                                            display: 'flex',
+                                            gap: '15px',
+                                            flexWrap: 'wrap'
+                                        }}>
+                                            {element?.games.map((e) => (
+                                                <button >{e}</button>
+                                            ))}
+
+                                        </div>
+                                    </>
+                                }
+
                                 {/* 
+                                                      <div className='btn_wrapper_game_experience' style={{
+                                                          display: 'flex',
+                                                          justifyContent: 'flex-start',
+                                                          alignItems: 'center',
+                                                          gap: '10px'
+                                                      }}>
+                                                          {e > 2 && <button style={{
+                                                              background: 'rgba(190, 83, 173, 1)'
+                                                          }}>Picture Puzzle</button>}
+                                                          <button>Treasure Hunt</button>
+                                                          {e > 2 && <button style={{
+                                                              background: 'rgba(254, 153, 0, 1)'
+                                                          }}>Scavenger Hunt</button>}
+                      
+                                                      </div> */}
+                                {<button className='base_btn_design' style={{
+                                    background: 'transparent',
+                                    border: '1px solid #00007f',
+                                    color: '#00007f',
+                                    marginLeft: 'auto',
+                                    marginTop: '30px',
+                                    padding: '10px 10px',
+                                    borderRadius: '25px',
+                                    marginBottom: '0px'
+                                }}>Select your first experience <img src={icon} /></button>}
+                            </div>
+
+                        </div>
+
+                    ))}
+
+                    {EngageRythmCardData.map((element) => (
+                        <div key={element} className='game_experience_box'>
+                            <div className='game_experience_img engage_rythm_experience_cardImg'>
+                                <img src={element.img} />
+
+                            </div>
+                            <div className='game_experience_details engage_rythm_experience_details'>
+                                <h5>{element.name}</h5>
+                                <h1>{element.subTitle}</h1>
+                                <div className='clock_star_wrapper'>
+                                    <div className='clock_wrapper'>
+                                        <img src={clock} />
+                                        <h6>{element.duration}</h6>
+                                    </div>
+
+                                    {element.season && <div className='clock_wrapper'>
+                                        <img src={season} />
+                                        <h6>{element.season}</h6>
+                                    </div>}
+
+                                    {element.outcome && <div className='clock_wrapper'>
+                                        <img src={outcome} />
+                                        <h6>{element.outcome}</h6>
+                                    </div>}
+                                    {/* {element.reviews && <div className='clock_wrapper'>
+                                                                <img className='star_img56' src={star} />
+                                                                <h6>{element.reviews}</h6>
+                                                            </div>} */}
+
+                                    {/* <div className='clock_wrapper'>
+                                                                <img className='star_img56' src={cashImg} />
+                                                                <h6>{element.price} </h6>
+                                                            </div> */}
+                                </div>
+                                {element.bestFor && <p><strong>Best for:</strong> {element.theme}</p>}
+
+
+                                <div>
+                                    <strong>What it’s about</strong>
+                                    <p> {element.description}</p>
+                                </div>
+
+                                <div>
+                                    <strong>How you win</strong>
+                                    <p> {element.howToWin}</p>
+                                </div>
+
+
+                                <p><strong>Activities Used</strong></p>
+
+                                {/* <p><strong>Prizes:</strong> {element.prizes}</p> */}
+
                                 <div className='btn_wrapper_game_experience' style={{
                                     display: 'flex',
                                     justifyContent: 'flex-start',
                                     alignItems: 'center',
-                                    gap: '10px'
+                                    gap: '10px',
+                                    flexWrap: 'wrap'
                                 }}>
-                                    {e > 2 && <button style={{
-                                        background: 'rgba(190, 83, 173, 1)'
-                                    }}>Picture Puzzle</button>}
-                                    <button>Treasure Hunt</button>
-                                    {e > 2 && <button style={{
-                                        background: 'rgba(254, 153, 0, 1)'
-                                    }}>Scavenger Hunt</button>}
-
-                                </div> */}
-                            {/* { index === i ? <p style={{
-                                fontWeight:'600',
-                                marginLeft:'auto',
-                                fontSize:'1rem',
-                                marginTop:'10px',
-                                    color:'rgba(31, 144, 31, 1)'
-                            }}>Selected</p> :    <p style={{
-                                    display:'flex',
-                                    justifyContent:'flex-end',
-                                    alignItems:'center',
-                                    color:'#040480',
-                                    fontWeight:'600',
-                                    gap:'5px',
-                                    fontSize:'1rem',
-                                    marginTop:'10px'
-                                }}>Select <img src={icon} /></p>} */}
+                                    {element.activities.map((e) => (
+                                        <button >{e}</button>
+                                    ))}
+                                </div>
+                                {<button className='base_btn_design' style={{
+                                    background: 'transparent',
+                                    border: '1px solid #00007f',
+                                    color: '#00007f',
+                                    marginLeft: 'auto',
+                                    marginTop: '30px',
+                                    padding: '10px 10px',
+                                    borderRadius: '25px',
+                                    marginBottom: '0px'
+                                }}>Select your first experience <img src={icon} /></button>}
                             </div>
-                            
+
                         </div>
-                        
                     ))}
-              
+
                 </div>
                 {/* <Pagination /> */}
             </div>
