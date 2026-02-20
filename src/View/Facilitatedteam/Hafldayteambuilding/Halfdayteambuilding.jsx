@@ -49,7 +49,7 @@ const Halfdayteambuilding = () => {
                         <img src={img} />
                         <h1 style={{
                             textAlign: 'right',
-                        }}>Play Day plus</h1>
+                        }}>Play Day Plus</h1>
                     </div>
                     <div className='rythm_prices_wrapper'>
                         <div className='team_building_head'>
@@ -57,7 +57,7 @@ const Halfdayteambuilding = () => {
                             <h6 style={{
                                 fontSize: '1.6rem',
                             }}>Plus Experience</h6>
-                            <h4> Starting at US$2,999</h4>
+                            <h4> Starting at US$2,499</h4>
                             <p>A half-day, retreat-ready Play Day experience built for deeper connection and collaboration. Perfect for off-sites, team resets, and retreats where teams need time to engage and build connection.</p>
                         </div>
                         {data.map((e, i) => (

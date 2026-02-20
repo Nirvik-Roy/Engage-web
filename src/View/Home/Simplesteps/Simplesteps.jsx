@@ -54,28 +54,22 @@ const Simplesteps = () => {
         {
             id: 3,
             step: '3',
-            title: 'Launch & invite',
-            para: 'Launch and engage your team.'
+            title: 'Launch and engage',
+            para: 'Teams play and earn rewards.'
         },
         {
             id: 4,
             step: '4',
-            title: 'Your staff participate',
-            para: 'Teams play and earn rewards.'
-        },
-
-        {
-            id: 5,
-            step: '5',
-            title: 'Track & improve',
+            title: 'Track and Improve',
             para: 'Track engagement. Improve outcomes.'
         },
+
     ]
     return (
         <>
             <div className='simple_steps_wrapper'>
                 <div className='container simple_steps_content_Wrapper'>
-                    <h1 className='heading'>Your experience in 5 simple steps</h1>
+                    <h1 className='heading'>Your experience in 4 simple steps</h1>
                     <div className='steps_wrapper'>
                         {data.map((e, i) => (
                             <div key={i} className='step'>

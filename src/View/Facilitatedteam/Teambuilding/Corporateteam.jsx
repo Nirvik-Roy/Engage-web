@@ -47,6 +47,8 @@ const Corporateteam = () => {
                             <strong>- Digital Ngage games </strong> (e.g. Small Talk, Treasure Hunt, Network Bingo)<br />
                         </p>
 
+                        <p>Facilitators guide the experience from start to finish, managing flow, energy, and participation — so teams stay engaged without pressure or awkward moments.</p>
+
                         {/* <p>Facilitators guide the experience from start to finish, managing flow, energy, and participation — so teams stay engaged without pressure or awkward moments.</p> */}
                         <div className='corporate_btn_wrapper'>
                             <button className='base_btn_design' onClick={(()=>{

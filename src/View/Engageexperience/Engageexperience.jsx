@@ -61,9 +61,7 @@ const Engageexperience = () => {
                     {category != 'NGAGE Rhythm' && finalExperienceData?.map((element, i) => (
                         <div key={element} className='game_experience_box'>
                             <div className='game_experience_img '>
-
                                 <img src={element.img} />
-
                             </div>
                             <div className='game_experience_details'>
                                 <h5>{element.subTitle}</h5>
@@ -72,6 +70,11 @@ const Engageexperience = () => {
                                     <div className='clock_wrapper'>
                                         <img src={clock} />
                                         <h6>{element.time}</h6>
+                                    </div>
+
+                                    <div className='clock_wrapper'>
+                                        <img src={outcome} />
+                                        <h6>{element.outcomes}</h6>
                                     </div>
 
                                     {/* {element.reviews && <div className='clock_wrapper'>
@@ -110,15 +113,14 @@ const Engageexperience = () => {
 
                                     </ul>
                                 </div> */}
-                                {element.outcomes && <div>
+                                {/* {element.outcomes && <div>
                                     <strong>
                                         Outcomes
                                     </strong>
                                     <p>{element.outcomes}</p>
-                                </div>}
+                                </div>} */}
                                 {element?.games &&
                                     <>
-
                                         <strong>
                                             Games
                                         </strong>
@@ -151,18 +153,18 @@ const Engageexperience = () => {
                                     }}>Scavenger Hunt</button>}
 
                                 </div> */}
-                                { <button className='base_btn_design' onClick={(() => {
+                                {<button className='base_btn_design' onClick={(() => {
                                     navigate(`/checkout?category=${category}&subcategory=${filter}&price=${price}&totalprice=${totalprice}&experience=${element.title}`)
                                 })} style={{
-                                        background: 'transparent',
-                                        border: '1px solid #00007f',
-                                        color: '#00007f',
-                                        marginLeft: 'auto',
-                                        marginTop: '30px',
-                                        padding: '10px 10px',
-                                        borderRadius: '25px',
-                                        marginBottom: '0px'
-                                    }}>Select your first experience <img src={icon} /></button>}
+                                    background: 'transparent',
+                                    border: '1px solid #00007f',
+                                    color: '#00007f',
+                                    marginLeft: 'auto',
+                                    marginTop: '30px',
+                                    padding: '10px 10px',
+                                    borderRadius: '25px',
+                                    marginBottom: '0px'
+                                }}>Select your first experience <img src={icon} /></button>}
                             </div>
 
                         </div>
@@ -171,7 +173,7 @@ const Engageexperience = () => {
 
                     {
                         category.trim() == 'NGAGE Rhythm' && EngageRythmCardData?.map((element, i) => (
-                            <div  key={element} className='game_experience_box'>
+                            <div key={element} className='game_experience_box'>
                                 <div className='game_experience_img engage_rythm_experience_cardImg'>
                                     <img src={element.img} />
 

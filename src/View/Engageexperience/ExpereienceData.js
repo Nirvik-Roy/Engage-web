@@ -2,6 +2,7 @@ import img from '../../assets/df6013b58f9ded6dccb7decb8b982a7fe844a2fe.png'
 import img1 from '../../assets/71797a607c6f7a762dea1a84569e07d0a0b130b4(1).png'
 import img2 from '../../assets/612a7dea21b534a14577dc9810f1802d44410b3f(1).png'
 import img3 from '../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6(1).png'
+import jungleImg from '../../assets/Play Day-  King of the Jungle.jpg'
 import img4 from '../../assets/091ca18ad4cae01028d1012bab19f788c9c0a3ad.png'
 import img5 from '../../assets/1dd31dac9e356c1160e31c950b7780716e6e7d5d.png'
 import starter from '../../assets/be8e7845ad736f6d29490a1f02e4cad52b90d8b4.png'
@@ -45,6 +46,24 @@ export const experienceData = [
     },
     {
         category: 'ENGAGE Playday',
+        subTitle: "90-MINUTE EXPERIENCES",
+        subCategory: "90-Minute Team Building",
+        title: "King of the Jungle",
+        time: "90 Minutes",
+        duration: "90 Minutes",
+        reviews: "",
+        price: "Starting at: US$1,999",
+        bestFor: "Analytical teams, problem solvers, strategy sessions",
+        scope: "Problem Solving",
+        experience: "King of the Jungle is a social team-building experience cantered on the love of collectable items, visual awareness, and team-based problem solving. It rewards communication, critical thinking, and teamwork rather than speed or physical ability.Staff complete a combination of individual and team based challenges to score the most points on the leaderboard.Points are awarded for speed, and completing team challenges.",
+        howItWorks: "Teams race against the clock to unlock puzzles and progress through levels. Points are awarded for accuracy, speed, and completing bonus challenges.",
+        outcomes: " Stronger social skills, collaboration, improved team thinking",
+        img: jungleImg, // Add image path/URL here when available
+        games: ["Card Collector", "Timed Trivia", " House of Cards"],
+
+    },
+    {
+        category: 'ENGAGE Playday',
         subTitle: "HALF-DAY EXPERIENCES",
         subCategory: "Half-Day Team Building",
         title: "Amazing Race: Team Edition",
@@ -75,7 +94,7 @@ export const experienceData = [
         howItWorks: "Teams compete across a series of short events — mental, social, and light physical challenges. Points accumulate across events to crown an overall champion.",
         outcomes: "High participation, laughter, team pride, morale lift.",
         img: img3, // Add image path/URL here when available
-        games: ["Small Talk", "Relays", "Scavenger Hunt", "Organizational Jenga", " Hunt"],
+        games: ["Small Talk", "Relays", "Scavenger Hunt", "Organizational Jenga", " Hoops"],
     },
 
 
@@ -101,7 +120,7 @@ export const experienceData = [
         category: 'ENGAGE Playday',
         subTitle: "FULL-DAY EXPERIENCE",
         subCategory: "Corporate Fun Day / Sports Day",
-        title: "Corporate Play Day (Signature Experience)",
+        title: "Corporate Sports Day",
         time: "8hours",
         duration: "8hours",
         reviews: "",
@@ -134,7 +153,7 @@ export const experienceData = [
         games: ['Races', "Quests", "Treasure Hunt", "Network Bingo"]
     },
     {
-        subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
+        subTitle: "NGAGE LAUNCHPAD",
         subCategory: "FOUNDATION",
         category: "NGAGE Launchpad",
         title: "Launchpad Starter — Foundations Journey",
@@ -151,7 +170,7 @@ export const experienceData = [
         img: starter // Add image path/URL here when available
     },
     {
-        subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
+        subTitle: "NGAGE LAUNCHPAD",
         subCategory: "GROWTH",
         category: "NGAGE Launchpad",
         title: "Launchpad Pro (AI) — Guided Culture Journey",
@@ -168,7 +187,7 @@ export const experienceData = [
         img: pro // Add image path/URL here when available
     },
     {
-        subTitle: "NGAGE LAUNCHPAD — ONBOARDING EXPERIENCES",
+        subTitle: "NGAGE LAUNCHPAD",
         subCategory: "ENTERPRISE",
         category: "NGAGE Launchpad",
         title: "Launchpad Ultimate — Immersive Onboarding Quest",

@@ -40,7 +40,7 @@ const Testimonial = () => {
         {
             id: 1,
             img: ellipse2,
-            review: 'Our company fun Day was a hit!. The games and overall experience provided to our team was excellent! We are looking forward to future engagements. Thanks team Ngage ',
+            review: 'Our company fun Day was a hit!. The games and overall experience provided to our team was excellent! We are looking forward to future engagements. Thanks team Ngage.',
             name: 'Yanique Dixon',
             designation: 'J. Wray & Nephew'
         },
