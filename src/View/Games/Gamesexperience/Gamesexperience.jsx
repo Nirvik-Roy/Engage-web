@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Pagination from '../../../Components/Pagination/Pagination';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import search from '../../../assets/Search (1).svg'
 import outcome from '../../../assets/Layer_x0020_1.svg'
 import filterImg from '../../../assets/filter_list.svg'
@@ -20,8 +20,13 @@ import cashImg from '../../../assets/Frame (2).svg'
 import GamesFilterSidebar from '../Gamesfilter/GamesFilterSidebar.jsx'
 import { experienceData } from '../../Engageexperience/ExpereienceData.js'
 import { EngageRythmCardData } from '../../Engageexperience/EngageRythmCardData.js'
+import { useParams, useSearchParams } from 'react-router-dom'
 const Gamesexperience = () => {
     const [showFilter, setshowFilter] = useState(false);
+    const [finalExperienceData, setfinalExperienceData] = useState([]);
+    const [searchParams] = useSearchParams()
+    const filter = searchParams.get('filter')
+
     var settings = {
         dots: true,
         infinite: true,
@@ -95,6 +100,22 @@ const Gamesexperience = () => {
             setIndex(i)
         }
     }
+
+    useEffect(() => {
+        if (!filter || filter.trim() === "") {
+            // no filter → show all
+            setfinalExperienceData(experienceData);
+            return;
+        }
+
+        const filtered = experienceData?.filter(
+            (e) => e.category == filter.trim()
+        );
+
+        setfinalExperienceData(filtered);
+    }, [filter]);
+
+    console.log(finalExperienceData)
     return (
         <>
             {showFilter && <GamesFilterSidebar setshowFilter={setshowFilter} />}
@@ -108,7 +129,7 @@ const Gamesexperience = () => {
             </div>
             <div className="games_library_wrapper">
                 <div className="games_experience_box_wrapper">
-                    {experienceData.map((element) => (
+                    {finalExperienceData.map((element) => (
                         <div key={element} className='game_experience_box'>
                             <div className='game_experience_img '>
                                 <img src={element.img} />
@@ -219,7 +240,7 @@ const Gamesexperience = () => {
 
                     ))}
 
-                    {EngageRythmCardData.map((element) => (
+                    {filter?.trim() == 'NGAGE Rhythm' && EngageRythmCardData.map((element) => (
                         <div key={element} className='game_experience_box'>
                             <div className='game_experience_img engage_rythm_experience_cardImg'>
                                 <img src={element.img} />
@@ -296,7 +317,6 @@ const Gamesexperience = () => {
 
                         </div>
                     ))}
-
                 </div>
                 {/* <Pagination /> */}
             </div>

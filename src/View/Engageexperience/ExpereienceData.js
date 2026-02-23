@@ -10,7 +10,7 @@ import pro from '../../assets/d7b43ef75f494d3f2a7700377a82f16037ece4a2.png'
 import ultimate from '../../assets/Group 1597882971.png'
 export const experienceData = [
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "90-MINUTE EXPERIENCES",
         subCategory: '90-Minute Team Building',
         title: "Team Ignite",
@@ -27,7 +27,7 @@ export const experienceData = [
         img: img
     },
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "90-MINUTE EXPERIENCES",
         subCategory: "90-Minute Team Building",
         title: "Puzzle Breakout",
@@ -45,7 +45,7 @@ export const experienceData = [
 
     },
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "90-MINUTE EXPERIENCES",
         subCategory: "90-Minute Team Building",
         title: "King of the Jungle",
@@ -63,7 +63,7 @@ export const experienceData = [
 
     },
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "HALF-DAY EXPERIENCES",
         subCategory: "Half-Day Team Building",
         title: "Amazing Race: Team Edition",
@@ -80,7 +80,7 @@ export const experienceData = [
         games: ["Network Bingo", "Relays", "Scavenger Hunt", "Wordify", "Treasure Hunt", "Tower Building"],
     },
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "HALF-DAY EXPERIENCES",
         subCategory: "Half-Day Team Building",
         title: "Office Olympics",
@@ -99,7 +99,7 @@ export const experienceData = [
 
 
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "HALF-DAY EXPERIENCES",
         subCategory: "Half-Day Team Building",
         title: "Search and Rescue Mission",
@@ -117,7 +117,7 @@ export const experienceData = [
         games: ["Card Collector", "Small Talk,", "Quests", "Treasure Hunt", "Trivia"],
     },
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "FULL-DAY EXPERIENCE",
         subCategory: "Corporate Fun Day / Sports Day",
         title: "Corporate Sports Day",
@@ -136,7 +136,7 @@ export const experienceData = [
     },
 
     {
-        category: 'ENGAGE Playday',
+        category: 'NGAGE Play Day',
         subTitle: "FULL-DAY EXPERIENCE",
         subCategory: "Corporate Fun Day / Sports Day",
         title: "Family Fun Day",
@@ -156,7 +156,7 @@ export const experienceData = [
         subTitle: "NGAGE LAUNCHPAD",
         subCategory: "FOUNDATION",
         category: "NGAGE Launchpad",
-        title: "Launchpad Starter — Foundations Journey",
+        title: "Foundations Journey",
         time: "5 Levels (self-paced over Week 1)",
         duration: "5 Levels (self-paced over Week 1)",
         reviews: "",
@@ -173,7 +173,7 @@ export const experienceData = [
         subTitle: "NGAGE LAUNCHPAD",
         subCategory: "GROWTH",
         category: "NGAGE Launchpad",
-        title: "Launchpad Pro (AI) — Guided Culture Journey",
+        title: " Guided Culture Journey",
         time: "5 Themed Levels (self-paced over Week 1)",
         duration: "5 Themed Levels (self-paced over Week 1)",
         reviews: "",
@@ -190,7 +190,7 @@ export const experienceData = [
         subTitle: "NGAGE LAUNCHPAD",
         subCategory: "ENTERPRISE",
         category: "NGAGE Launchpad",
-        title: "Launchpad Ultimate — Immersive Onboarding Quest",
+        title: "Immersive Onboarding Quest",
         time: "10 Levels (self-paced over Week 1–2)",
         duration: "10 Levels (self-paced over Week 1–2)",
         reviews: "",
