@@ -70,9 +70,9 @@ const Navbar = () => {
             } : {}} class="fa-solid fa-angle-down"></i>
             {solutionDropdown && <div ref={dropdownRef} onClick={((e) => e.stopPropagation())} className='solutions_dropdown'>
               {/* <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/engagement'}>Solution Hub</NavLink> */}
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ongoing-engage'}>Ngage  Rhythm</NavLink>
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/onboarding'}>Ngage Launchpad</NavLink>
-              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/facilitated-team'}>Ngage Play Day</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ngage-rhythm'}>Ngage  Rhythm</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ngage-launchpad'}>Ngage Launchpad</NavLink>
+              <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ngage-play-day'}>Ngage Play Day</NavLink>
               <NavLink onClick={(() => setsolutiondropdown(false))} to={'/solutions/ngage-live'}>Ngage Live</NavLink>
             </div>}
           </div>

@@ -23,18 +23,23 @@ const Gamesfilter = () => {
 
                         {useCase && <div className='games_filter_checkbox_Wrapper'>
                             <div className='games_filter_checkbox'>
-                                <input type='checkbox' value={'Staff'} />
+                                <input type='checkbox' value={'NGAGE Rhythm'} />
                                 <p>NGAGE Rhythm</p>
                             </div>
 
                             <div className='games_filter_checkbox'>
-                                <input type='checkbox' value={'Conferences'} />
-                                <p>NGAGE PlayDay</p>
+                                <input type='checkbox' value={'NGAGE Play Day'} />
+                                <p>NGAGE Play Day</p>
                             </div>
 
                             <div className='games_filter_checkbox'>
-                                <input type='checkbox' value={'Expos'} />
+                                <input type='checkbox' value={'NGAGE Launchpad'} />
                                 <p>NGAGE Launchpad</p>
+                            </div>
+
+                            <div className='games_filter_checkbox'>
+                                <input type='checkbox' value={'NGAGE Live'} />
+                                <p>NGAGE Live</p>
                             </div>
                         </div>}
                     </div>
@@ -44,20 +49,42 @@ const Gamesfilter = () => {
                             <i class="fa-solid fa-angle-down"></i>
                         </div>
 
+
                         {duration && <div className='games_filter_checkbox_Wrapper'>
                             <div className='games_filter_checkbox'>
-                                <input type='checkbox' value={'1–5'} />
-                                <p>1–5</p>
+                                <input type='checkbox' value={'30 min'} />
+                                <p>30 min</p>
                             </div>
 
                             <div className='games_filter_checkbox'>
-                                <input type='checkbox' value={'5–10'} />
-                                <p>5–10</p>
+                                <input type='checkbox' value={'60 min'} />
+                                <p>60 min</p>
                             </div>
 
                             <div className='games_filter_checkbox'>
-                                <input type='checkbox' value={'10–20 '} />
-                                <p>10–20 </p>
+                                <input type='checkbox' value={'90 min '} />
+                                <p>90 min </p>
+                            </div>
+
+                            <div className='games_filter_checkbox'>
+                                <input type='checkbox' value={'0.5 day '} />
+                                <p>0.5 day </p>
+                            </div>
+                            <div className='games_filter_checkbox'>
+                                <input type='checkbox' value={'1 day'} />
+                                <p>1 day</p>
+                            </div>
+                            <div className='games_filter_checkbox'>
+                                <input type='checkbox' value={'3 days'} />
+                                <p>3 days</p>
+                            </div>
+                            <div className='games_filter_checkbox'>
+                                <input type='checkbox' value={'5+ days'} />
+                                <p>5+ days</p>
+                            </div>
+                            <div className='games_filter_checkbox'>
+                                <input type='checkbox' value={'Custom'} />
+                                <p>Custom</p>
                             </div>
                         </div>}
                     </div>

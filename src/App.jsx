@@ -65,9 +65,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/solutions/engagement' element={<EngagementSolutions />} />
           <Route path='/about-engage' element={<Aboutengage />} />
-          <Route path='/solutions/ongoing-engage' element={<Ongoingengage />} />
-          <Route path='/solutions/onboarding' element={<Onboarding />} />
-          <Route path='/solutions/facilitated-team' element={<Facilitatedteam />} />
+          <Route path='/solutions/ngage-rhythm' element={<Ongoingengage />} />
+          <Route path='/solutions/ngage-launchpad' element={<Onboarding />} />
+          <Route path='/solutions/ngage-play-day' element={<Facilitatedteam />} />
           <Route path='/solutions/ngage-live' element={<NgageLive/>}/>
           <Route path='/games' element={<Gameslayout />}>
             <Route path='library' element={<Gameslibrary />} />
