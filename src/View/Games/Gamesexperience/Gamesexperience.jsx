@@ -216,7 +216,7 @@ const Gamesexperience = () => {
                                                           }}>Scavenger Hunt</button>}
                       
                                                       </div> */}
-                                {<button className='base_btn_design' style={{
+                                {/* {<button className='base_btn_design' style={{
                                     background: 'transparent',
                                     border: '1px solid #00007f',
                                     color: '#00007f',
@@ -225,14 +225,14 @@ const Gamesexperience = () => {
                                     padding: '10px 10px',
                                     borderRadius: '25px',
                                     marginBottom: '0px'
-                                }}>Select your first experience <img src={icon} /></button>}
+                                }}>Select your first experience <img src={icon} /></button>} */}
                             </div>
 
                         </div>
 
                     ))}
 
-                    {filter?.trim() == 'NGAGE Rhythm' && EngageRythmCardData.map((element) => (
+                    {(filter?.trim() == 'NGAGE Rhythm' || !filter) && EngageRythmCardData.map((element) => (
                         <div key={element} className='game_experience_box'>
                             <div className='game_experience_img engage_rythm_experience_cardImg'>
                                 <img src={element.img} />
@@ -295,7 +295,7 @@ const Gamesexperience = () => {
                                         <button >{e}</button>
                                     ))}
                                 </div>
-                                {<button className='base_btn_design' style={{
+                                {/* {<button className='base_btn_design' style={{
                                     background: 'transparent',
                                     border: '1px solid #00007f',
                                     color: '#00007f',
@@ -304,7 +304,7 @@ const Gamesexperience = () => {
                                     padding: '10px 10px',
                                     borderRadius: '25px',
                                     marginBottom: '0px'
-                                }}>Select your first experience <img src={icon} /></button>}
+                                }}>Select your first experience <img src={icon} /></button>} */}
                             </div>
 
                         </div>

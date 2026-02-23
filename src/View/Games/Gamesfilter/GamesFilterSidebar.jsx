@@ -3,9 +3,21 @@ import searchIcon from '../../../assets/Search (1).svg'
 import { useState } from 'react'
 import buttonIcon from '../../../assets/svg159.svg'
 import filterImg from '../../../assets/filter_list.svg'
+import { useSearchParams } from 'react-router-dom'
+import toast from 'react-hot-toast'
 const GamesFilterSidebar = ({ setshowFilter }) => {
     const [useCase, setuseCase] = useState(true);
     const [duration, setduration] = useState(true)
+    const [checkBoxValue, setcheckboxValue] = useState()
+    const [searchParams, setSearchParams] = useSearchParams();
+    const handleQuery = () => {
+        if (checkBoxValue != '') {
+            searchParams.set('filter', checkBoxValue)
+            setSearchParams(searchParams)
+        } else {
+            toast.error('Plz select any one filter!')
+        }
+    }
     return (
         <>
             <div className='games_responsive_filter_Wrapper' onClick={(() => setshowFilter(false))}>
@@ -27,27 +39,27 @@ const GamesFilterSidebar = ({ setshowFilter }) => {
 
                             {useCase && <div className='games_filter_checkbox_Wrapper'>
                                 <div className='games_filter_checkbox'>
-                                    <input type='checkbox' value={'NGAGE Rhythm'} />
+                                    <input type='checkbox' onChange={((e) => setcheckboxValue(e.target.value))} checked={checkBoxValue == 'NGAGE Rhythm'} value={'NGAGE Rhythm'} />
                                     <p>NGAGE Rhythm</p>
                                 </div>
 
                                 <div className='games_filter_checkbox'>
-                                    <input type='checkbox' value={'NGAGE Play Day'} />
+                                    <input type='checkbox' onChange={((e) => setcheckboxValue(e.target.value))} checked={checkBoxValue == 'NGAGE Play Day'} value={'NGAGE Play Day'} />
                                     <p>NGAGE Play Day</p>
                                 </div>
 
                                 <div className='games_filter_checkbox'>
-                                    <input type='checkbox' value={'NGAGE Launchpad'} />
+                                    <input type='checkbox' onChange={((e) => setcheckboxValue(e.target.value))} checked={checkBoxValue == 'NGAGE Launchpad'} value={'NGAGE Launchpad'} />
                                     <p>NGAGE Launchpad</p>
                                 </div>
 
                                 <div className='games_filter_checkbox'>
-                                    <input type='checkbox' value={'NGAGE Live'} />
+                                    <input type='checkbox' onChange={((e) => setcheckboxValue(e.target.value))} checked={checkBoxValue == 'NGAGE Live'} value={'NGAGE Live'} />
                                     <p>NGAGE Live</p>
                                 </div>
                             </div>}
                         </div>
-                        <div className='games_filter'>
+                        {/* <div className='games_filter'>
                             <div onClick={(() => setduration(!duration))} className='games_filter_head'>
                                 <h4>Duration (min) </h4>
                                 <i class="fa-solid fa-angle-down"></i>
@@ -90,7 +102,7 @@ const GamesFilterSidebar = ({ setshowFilter }) => {
                                     <p>Custom</p>
                                 </div>
                             </div>}
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className='games_button_dropdown_rapper'>

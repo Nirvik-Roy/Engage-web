@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 const Gamesfilter = () => {
     const [useCase, setuseCase] = useState(true);
     const [duration, setduration] = useState(true)
-    const [checkBoxValue,setcheckboxValue] = useState('')
+    const [checkBoxValue, setcheckboxValue] = useState('')
     const [searchParams, setSearchParams] = useSearchParams();
     const handleQuery = () =>{
         if(checkBoxValue !=''){
@@ -54,7 +54,7 @@ const Gamesfilter = () => {
                             </div>
                         </div>}
                     </div>
-                    <div className='games_filter'>
+                    {/* <div className='games_filter'>
                         <div onClick={(() => setduration(!duration))} className='games_filter_head'>
                             <h4>Duration (min) </h4>
                             <i class="fa-solid fa-angle-down"></i>
@@ -98,7 +98,7 @@ const Gamesfilter = () => {
                                 <p>Custom</p>
                             </div>
                         </div>}
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='games_button_dropdown_rapper'>
