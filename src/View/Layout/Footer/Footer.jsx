@@ -26,7 +26,7 @@ const Footer = () => {
             <div className='footer_1'>
               <h3>Company</h3>
               <Link to='/'>Home</Link>
-              <Link to='/solutions/engagement'>Solutions</Link>
+              <Link to='/solutions/ngage-rhythm'>Solutions</Link>
               <Link to='/about-engage'>About</Link>
               <Link to='/games/library'>Ngage Game Library</Link>
               {/* <Link to='/games/experience'>Ngage Game Experience</Link> */}
@@ -34,7 +34,6 @@ const Footer = () => {
               <Link to='/faq'>FAQ</Link>
               <Link to='/contact-us'>Contact</Link>
               <Link onClick={(() => window.open('https://calendly.com/ngageworld-sales/30min', '_blank'))}>Book a demo</Link>
-
             </div>
 
 
