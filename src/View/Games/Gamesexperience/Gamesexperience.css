@@ -28,7 +28,7 @@
 .game_experience_img {
   width: 45%;
   border-radius: 10px;
-  /* max-height: 541px; */
+  max-height: 500px;
 }
 .only_game_experience_img{
     width: 45%;
@@ -74,7 +74,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 .clock_wrapper h6 {
   font-size: 0.8rem;

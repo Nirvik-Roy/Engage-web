@@ -3,6 +3,7 @@ import searchIcon from '../../assets/Search (1).svg'
 import { useState } from 'react'
 import buttonIcon from '../../assets/svg159.svg'
 import { useSearchParams } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 const EngageFilterSidebar = ({ setshowFilter }) => {
     const [useCase, setuseCase] = useState(true);
@@ -21,10 +22,15 @@ const EngageFilterSidebar = ({ setshowFilter }) => {
     console.log(filter)
     const handleQuery = () => {
         const newParams = new URLSearchParams(searchParams.toString());
-        newParams.set('filter', checkBoxValue);
-        newParams.set('price', price);
-        newParams.set('totalprice', totalPrice)
-        setSearchParams(newParams);
+        if (filter != checkBoxValue) {
+            newParams.set('filter', checkBoxValue);
+            newParams.set('price', price);
+            newParams.set('totalprice', totalPrice)
+            setSearchParams(newParams);
+            setshowFilter(false)
+        } else {
+            toast.error('Filter is already applied...')
+        }
     }
 
     const resetFunc = () => {
@@ -88,7 +94,7 @@ const EngageFilterSidebar = ({ setshowFilter }) => {
             ]
         },
         {
-            title: 'NGAGE Playday',
+            title: 'NGAGE Play Day',
             list: [
                 {
                     title: '90-Minute Team Building',

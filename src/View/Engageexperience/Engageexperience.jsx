@@ -82,7 +82,7 @@ const Engageexperience = () => {
                                 <img src={element.img} />
                             </div>
                             <div className='game_experience_details'>
-                                <h5>{element.subTitle}</h5>
+                                {category !='NGAGE Launchpad' &&  <h5>{element.subTitle}</h5>}
                                 <h1>{element.title}</h1>
                                 <div className='clock_star_wrapper'>
                                     <div className='clock_wrapper'>
