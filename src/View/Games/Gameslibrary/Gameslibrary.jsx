@@ -38,7 +38,7 @@ const Gameslibrary = () => {
         },
         {
             title: 'Match 3',
-            para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.',
+            para: 'Match three of the same images by flipping the tiles, to complete a set.',
             img: img4
         },
         {
