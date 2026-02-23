@@ -1,9 +1,4 @@
 import './Gamesexperience.css'
-import img from '../../../assets/df6013b58f9ded6dccb7decb8b982a7fe844a2fe(1).png'
-import img1 from '../../../assets/71797a607c6f7a762dea1a84569e07d0a0b130b4(1).png'
-import img2 from '../../../assets/612a7dea21b534a14577dc9810f1802d44410b3f(1).png'
-import img3 from '../../../assets/23aba9e2998a06376d9ecbc21fc6e302b30ca1c6(1).png'
-import star from '../../../assets/Frame 1984078949 (1).svg'
 import icon from '../../../assets/svg159 (3).svg'
 import clock from '../../../assets/_x33_4_x2C__watch_x2C__Alarm_x2C__clock_x2C__reminder_x2C__time.svg'
 import season from '../../../assets/glyph_copy_2.svg'
@@ -16,11 +11,10 @@ import { useEffect, useState } from 'react'
 import search from '../../../assets/Search (1).svg'
 import outcome from '../../../assets/Layer_x0020_1.svg'
 import filterImg from '../../../assets/filter_list.svg'
-import cashImg from '../../../assets/Frame (2).svg'
 import GamesFilterSidebar from '../Gamesfilter/GamesFilterSidebar.jsx'
 import { experienceData } from '../../Engageexperience/ExpereienceData.js'
 import { EngageRythmCardData } from '../../Engageexperience/EngageRythmCardData.js'
-import { useParams, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 const Gamesexperience = () => {
     const [showFilter, setshowFilter] = useState(false);
     const [finalExperienceData, setfinalExperienceData] = useState([]);
@@ -114,8 +108,6 @@ const Gamesexperience = () => {
 
         setfinalExperienceData(filtered);
     }, [filter]);
-
-    console.log(finalExperienceData)
     return (
         <>
             {showFilter && <GamesFilterSidebar setshowFilter={setshowFilter} />}
@@ -128,7 +120,7 @@ const Gamesexperience = () => {
                 <p>Sort 1 out of 4 <i class="fa-solid fa-angle-down"></i></p>
             </div>
             <div className="games_library_wrapper">
-                <div className="games_experience_box_wrapper">
+                <div className="games_experience_box_wrapper">                 
                     {finalExperienceData.map((element) => (
                         <div key={element} className='game_experience_box'>
                             <div className='game_experience_img '>

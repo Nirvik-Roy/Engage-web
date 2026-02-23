@@ -57,7 +57,7 @@ const Onesystem = () => {
                                     if (e?.title === 'Ngage Rhythm') {
                                         navigate({
                                             pathname: '/engage/experience',
-                                            search: `?category=NGAGE Rythm&price=699&filter=Rhythm Spark&totalprice=699`
+                                            search: `?category=NGAGE Rhythm&price=699&filter=Rhythm Spark&totalprice=699`
                                         })
                                     }
 
@@ -65,7 +65,7 @@ const Onesystem = () => {
 
                                         navigate({
                                             pathname: '/engage/experience',
-                                            search: `?category=NGAGE Launchpad&price=4499&filter=Starter&totalprice=4499`
+                                            search: `?category=NGAGE Launchpad&price=4499&filter=FOUNDATION&totalprice=4499`
                                         })
 
                                     }
@@ -73,7 +73,7 @@ const Onesystem = () => {
                                     if (e?.title === "Ngage PlayDay"){
                                         navigate({
                                             pathname: '/engage/experience',
-                                            search: `?category=NGAGE Playday&price=999&filter=${'90-Minute Team Building'}&totalprice=999`
+                                            search: `?category=NGAGE Play Day&price=999&filter=${'90-Minute Team Building'}&totalprice=999`
                                         })
                                     }
 
