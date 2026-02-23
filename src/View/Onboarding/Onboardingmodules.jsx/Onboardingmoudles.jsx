@@ -114,7 +114,7 @@ const Onboardingmoudles = () => {
             }}>
 
                 <div className='container engage_rythm_content_wrapper'>
-                    <h1 className='heading'>Choose your onboarding modules</h1>
+                    <h1 className='heading'>Choose your onboarding journey</h1>
                     <p>Launchpad onboarding journeys are built using modular experiences.
                         You select the modules that reflect your culture, structure, and compliance needs — and we assemble them into a guided onboarding path.
                     </p>
@@ -152,7 +152,7 @@ const Onboardingmoudles = () => {
                     </Slider>}
                 </div>
 
-                <h3 className='container' style={{
+                {/* <h3 className='container' style={{
                     textAlign: 'center'
                 }}>Available modules:
                     •	Culture & Values
@@ -161,10 +161,15 @@ const Onboardingmoudles = () => {
                     •	Your Workplace
                     •	Role Readiness
                 </h3>
+                
 
                 <p className='container' style={{
                     textAlign: 'center'
-                }}>Modules are assembled into a multi-level onboarding journey using your existing content.</p>
+                }}>Modules are assembled into a multi-level onboarding journey using your existing content.</p> */}
+
+                <p className='container' style={{
+                    textAlign: 'center'
+                }}>Each module includes: Interactive challenges, Short videos or prompts, Leaderboard scoring, Completion tracking</p>
             </div>
         </>
     )
