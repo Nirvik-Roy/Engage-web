@@ -3,6 +3,7 @@ import searchIcon from '../../assets/Search (1).svg'
 import { useState } from 'react'
 import buttonIcon from '../../assets/svg159.svg'
 import { useSearchParams } from 'react-router-dom'
+import toast from 'react-hot-toast'
 const EngageFilter = () => {
     const [useCase, setuseCase] = useState(true);
     const [searchParams, setSearchParams] = useSearchParams();
@@ -17,23 +18,24 @@ const EngageFilter = () => {
         setcheckboxValue(filter)
         setfirstValue(filter)
     }, [filter])
-    console.log(filter)
     const handleQuery = () => {
         const newParams = new URLSearchParams(searchParams.toString());
-        newParams.set('filter', checkBoxValue);
-        newParams.set('price', price);
-        newParams.set('totalprice', totalPrice)
-        setSearchParams(newParams);
+        if (filter != checkBoxValue) {
+            newParams.set('filter', checkBoxValue);
+            newParams.set('price', price);
+            newParams.set('totalprice', totalPrice)
+            setSearchParams(newParams);
+        } else {
+            toast.error('Filter is already applied...')
+        }
     }
 
     const resetFunc = () => {
         const newParams = new URLSearchParams(searchParams.toString());
         newParams.set('filter', firstValue);
-
         setSearchParams(newParams);
         setcheckboxValue(firstValue)
     }
-
 
     const filterData = [
         {
@@ -91,8 +93,8 @@ const EngageFilter = () => {
             list: [
                 {
                     title: '90-Minute Team Building',
-                    price:999,
-                    totalPrice:999
+                    price: 999,
+                    totalPrice: 999
                 },
                 {
                     title: 'Half-Day Team Building',

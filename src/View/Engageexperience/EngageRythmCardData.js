@@ -308,7 +308,7 @@ export const EngageRythmCardData = [
         subTitle: "Hidden Talents Showcase",
         category: "NGAGE Rhythm",
         img: hiddentalents,
-        duration: "1 days",
+        duration: "1 day",
         price: "US$1,499",
         season: "Year-round",
         theme: "Fun, Culture",

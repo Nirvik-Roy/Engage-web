@@ -18,7 +18,8 @@ import { experienceData } from './ExpereienceData.js'
 import { EngageRythmCardData } from './EngageRythmCardData.js'
 const Engageexperience = () => {
     const [showFilter, setshowFilter] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [ngageFinalCard, setngageFinalCard] = useState([])
     const [searchParams, setSearchParams] = useSearchParams();
     var settings = {
         dots: true,
@@ -44,6 +45,23 @@ const Engageexperience = () => {
     useEffect(() => {
         setfinalExperienceData(experienceData.filter((e) => e.subCategory == filter.trim()))
     }, [filter])
+
+    useEffect(() => {
+        console.log(filter)
+        if (filter.trim() == "Rhythm Spark") {
+            setngageFinalCard(
+                EngageRythmCardData.filter((el) => el.duration === '1 day')
+            );
+        }
+        else if (filter.trim() == "Rhythm Pulse") {
+            setngageFinalCard(
+                EngageRythmCardData.filter((el) => el.duration === '3 days')
+            );
+        } else {
+            setngageFinalCard(EngageRythmCardData)
+        }
+    }, [filter]);
+
     return (
         <>
 
@@ -172,7 +190,7 @@ const Engageexperience = () => {
                     ))}
 
                     {
-                        category.trim() == 'NGAGE Rhythm' && EngageRythmCardData?.map((element, i) => (
+                        category.trim() == 'NGAGE Rhythm' && ngageFinalCard?.map((element) => (
                             <div key={element} className='game_experience_box'>
                                 <div className='game_experience_img engage_rythm_experience_cardImg'>
                                     <img src={element.img} />
