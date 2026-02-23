@@ -123,7 +123,7 @@ const Gamesexperience = () => {
                 <div className="games_experience_box_wrapper">                 
                     {finalExperienceData.map((element) => (
                         <div key={element} className='game_experience_box'>
-                            <div className='game_experience_img '>
+                            <div className='game_experience_img only_game_experience_img '>
                                 <img src={element.img} />
                             </div>
                             <div className='game_experience_details'>

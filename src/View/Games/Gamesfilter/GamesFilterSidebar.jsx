@@ -14,6 +14,7 @@ const GamesFilterSidebar = ({ setshowFilter }) => {
         if (checkBoxValue != '') {
             searchParams.set('filter', checkBoxValue)
             setSearchParams(searchParams)
+            setshowFilter(false)
         } else {
             toast.error('Plz select any one filter!')
         }
@@ -106,7 +107,7 @@ const GamesFilterSidebar = ({ setshowFilter }) => {
                     </div>
 
                     <div className='games_button_dropdown_rapper'>
-                        <button className='base_btn_design'>Apply <img src={buttonIcon} /></button>
+                        <button className='base_btn_design' onClick={handleQuery}>Apply <img src={buttonIcon} /></button>
                         <button>Reset</button>
                     </div>
                 </div>
